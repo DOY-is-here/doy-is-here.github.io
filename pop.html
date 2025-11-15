@@ -65,45 +65,48 @@
         padding: 0 16px 40px 16px;
     }
 
-    .message-row {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 18px;
-    }
+    /* 발신자 전환 시 간격 */
+.message-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; /* 기존 18 → 20 */
+}
 
-    .message-row.continued {
-        margin-bottom: 10px;
-    }
+/* 연속 메시지 */
+.message-row.continued {
+    margin-bottom: 12px; /* 기존 10 → 12 */
+}
 
-    .profile {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        margin-right: 8px;
-        margin-top: 0px;
-    }
+/* 연속 메시지 들여쓰기 */
+.continued-wrap {
+    margin-left: 50px; /* 기존 48 → 50 */
+}
 
-    .doy-info {
-        display: flex;
-        align-items: baseline;
-        margin-top: 3px;
-        gap: 4px;
-    }
-    .doy-time {
-        font-size: 12px;
-        color: #8D8E9A;
-        position: relative;
-        top: -1px;
-    }
+/* 프로필 + DOY 정렬 (기존 유지) */
+.profile {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 0px;
+}
 
-    .bubble {
-        max-width: 300px;
-        padding: 10px 14px;
-        border-radius: 20px;
-        font-size: 15px;
-        line-height: 1.40;
-        background: #fff;
-    }
+.doy-info {
+    margin-top: 3px;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.bubble {
+    max-width: 300px;
+    background: #fff;
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-size: 15px;
+    line-height: 1.40;
+}
+
 
     .continued-wrap {
         margin-left: 48px;
