@@ -83,34 +83,58 @@
     }
 
     /* ----------------------------- PROFILE & NAME ----------------------------- */
+    /* 프로필 + DOY 정렬 */
     .profile {
         width: 36px;
         height: 36px;
         border-radius: 50%;
         margin-right: 8px;
 
-        /* POP 진짜처럼 프로필이 DOY보다 1~2px 위 */
-        margin-top: 1px;
+    /* 프로필은 DOY보다 2px 위 */
+    margin-top: 0px;
     }
 
     .doy-info {
         display: flex;
         align-items: baseline;
 
-        /* 실제 POP에서 글자가 프로필보다 약간 내려가 있음 */
-        margin-top: 1px;
+    /* DOY 텍스트 블록은 약 3px 아래 */
+        margin-top: 3px;
 
         font-size: 13px;
         color: #1B1B1E;
-        gap: 4px;
+        gap: 4px;    
     }
 
     .doy-time {
         font-size: 12px;
         color: #8D8E9A;
         position: relative;
-        top: 0.5px; /* POP은 시간 텍스트가 아주 약간 위로 올라감 */
+
+    /* 시간 문자열은 1px 위로 */
+        top: -1px;
     }
+
+    /* 말풍선 시작 위치 (연속 메시지) */
+    .message-row.continued {
+        margin-left: 48px;   /* 기존 44 → 실제 POP과 동일하게 48 */
+        margin-bottom: 10px; /* 연속 간격: 10px */
+    }
+
+    /* 발신자 전환 시 간격 */
+    .message-row {
+        margin-bottom: 18px;
+    }
+
+    /* 말풍선 스타일 */
+    .bubble {
+        max-width: 300px;
+        padding: 10px 14px;
+        border-radius: 20px; /* 더 둥글게! POP 실제와 동일 */
+        font-size: 15px;
+        line-height: 1.40;   /* POP 실제 줄간격 */
+    }
+
 
     /* ----------------------------- BUBBLES ----------------------------- */
     .bubble {
