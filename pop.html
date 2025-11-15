@@ -1,94 +1,147 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+        
+        .kakao-chat-wrapper * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .kakao-chat-wrapper {
+            font-family: 'Noto Sans KR', sans-serif !important;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
 
-<title>POP Style Chat</title>
+        /* iPhone 17 Pro 기준 width 394px */
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #CBD2EC; /* POP 배경 */
-        font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
-        display: flex;
-        justify-content: center;
-    }
+        .chat-container {
+            width: 100%;
+            background: #b2bfd9;
+            border-radius: 10px; /* 2.67cqw → 10.5px */
+            padding: 12px;       /* 3cqw → 11.8px */
+        }
 
-    .chat-wrapper {
-        width: 394px;              /* iPhone 17 Pro 화면 폭 기준 */
-        padding: 0 14px;
-        box-sizing: border-box;
-    }
+        .chat-header {
+            text-align: center;
+            margin-bottom: 21px; /* 5.33cqw → 21px */
+            padding-bottom: 16px;/* 4cqw → 15.7px */
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
 
-    /* 날짜 구분 */
-    .date-divider {
-        background: rgba(255, 255, 255, 0.35);
-        color: #7C86A4;
-        font-size: 13px;
-        padding: 6px 12px;
-        border-radius: 14px;
-        width: max-content;
-        margin: 18px auto 22px auto;
-    }
+        .chat-header h2 {
+            font-size: 16px;     /* 4cqw → 15.7px */
+            font-weight: 500;
+            margin-bottom: 5px;  /* 1.33cqw → 5.2px */
+            line-height: 1.4;
+            color: #000;
+        }
 
-    /* 메시지 줄 (프로필 포함된 첫 메시지) */
-    .message-row {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 20px; /* 첫 메시지 간격 */
-    }
+        .chat-header .subtitle {
+            font-size: 11.5px;   /* 2.93cqw → 11.5px */
+            color: #555;
+            line-height: 1.4;
+        }
 
-    /* 연속 메시지 */
-    .message-row.continued {
-        margin-left: 50px;  /* 프로필 없는 만큼 들여쓰기 */
-        margin-bottom: 12px; /* 연속 메시지 간격 */
-    }
+        .message-group {
+            margin-bottom: 16px; /* 4cqw → 15.7px */
+        }
 
-    /* 프로필 이미지 */
-    .profile {
-        width: 34px;
-        height: 34px;
-        border-radius: 50%;
-        margin-right: 10px;
-        object-fit: cover;
-    }
+        .message-left {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px; /* 2.13cqw → 8.3px */
+        }
 
-    /* 이름 + 시간 */
-    .meta {
-        display: flex;
-        align-items: center;
-        margin-bottom: 4px;
-        gap: 6px;
-    }
-    .name {
-        font-size: 13.5px;
-        font-weight: 600;
-        color: #2F2F32;
-    }
-    .time {
-        font-size: 11.5px;
-        color: #8B8B94;
-        margin-top: 2px;
-    }
+        .profile-pic {
+            width: 44px;          /* 11.2cqw → 44px (POP: 34px이지만 기존 비율 유지) */
+            height: 44px;
+            border-radius: 50%;
+            background: #ddd;
+            margin-right: 10px;   /* 2.67cqw → 10.5px */
+            flex-shrink: 0;
+            overflow: hidden;
+        }
 
-    /* 말풍선 */
-    .bubble {
-        background: #FFFFFF;
-        padding: 10px 16px;
-        border-radius: 18px;
-        font-size: 15px;
-        color: #222;
-        max-width: 75%;
-        line-height: 1.45;
-        box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-    }
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-</style>
+        .message-content-left {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .sender-name {
+            font-size: 11.5px;      /* 2.93cqw → 11.5px */
+            font-weight: 500;
+            margin-bottom: 5px;      /* 1.33cqw → 5.2px */
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            line-height: 1.4;
+            color: #000;
+        }
+
+        .sender-name span {
+            font-size: 9.5px;        /* 2.4cqw → 9.4px */
+            color: #666;
+            font-weight: 400;
+        }
+
+        .message-bubble {
+            background: #fff;
+            padding: 9px 13px;       /* 2.3cqw 3.2cqw → 9px 13px */
+            border-radius: 19px;     /* 4.8cqw → 18.9px */
+            display: inline-block;
+            max-width: 76%;
+            word-wrap: break-word;
+            word-break: break-word;
+            font-size: 13px;         /* 3.2cqw → 12.6px */
+            line-height: 1.5;
+            color: #000;
+            border: none;
+            box-shadow: none;
+        }
+
+        .message-bubble.emoji {
+            font-size: 33px;         /* 8.53cqw → 33px */
+            background: transparent;
+            padding: 5px;            /* 1.33cqw → 5.2px */
+        }
+
+        .message-bubble.ascii-art {
+            font-family: monospace;
+            white-space: pre;
+            font-size: 11.5px;       /* 2.93cqw → 11.5px */
+        }
+
+        .date-separator {
+            text-align: center;
+            margin: 14px 0;          /* 3.5cqw → 13.8px */
+        }
+
+        .date-separator span {
+            background: rgba(255,255,255,0.7);
+            padding: 6px 15px;       /* 1.6cqw 3.73cqw → 6.3px 14.7px */
+            border-radius: 16px;     /* 4cqw → 15.7px */
+            font-size: 11px;         /* 2.67cqw → 10.5px */
+            color: #555;
+            line-height: 1.4;
+            display: inline-block;
+        }
+    </style>
 </head>
-
 <body>
+
 <div class="chat-wrapper">
 
     <!-- 날짜 -->
