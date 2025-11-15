@@ -3,200 +3,687 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOY - b.stage POP</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+    /* 채팅창 */
+        .pop-chat {
+    width: 393px; /* iPhone 17 Pro 기준 */
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* --- 프로필 / 이름 영역 --- */
+
+.message-group {
+    margin-top: 18px; /* 새 발화자 상단 간격 */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 16px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 16px;
+    top: 0;
+}
+
+.header {
+    margin-left: 50px; /* 16px + 40px + 10px (말풍선 간격 포함) */
+    margin-bottom: 6px; /* 이름 → 첫 말풍선 */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+}
+
+.badge {
+    font-size: 14px;
+    color: #222;
+}
+
+.time {
+    font-size: 12px;
+    color: #6F6F6F;
+    margin-left: 6px;
+}
+
+/* --- 말풍선 (상대방) --- */
+
+.bubble {
+    max-width: 305px; /* 78% 기준 */
+    background: #ffffff;
+    border-radius: 16px;
+    margin-left: 66px; /* 전체 왼쪽 여백 */
+    margin-top: 7px;
+    padding: 10px 16px 12px 16px;
+    font-size:/* -------------------------------------------------
+   기본 레이아웃
+------------------------------------------------- */
+.pop-chat {
+    width: 393px; /* iPhone 17 Pro 기준 */
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #C9D0EB; /* POP 배경이 필요하면 추가 */
+}
+
+/* -------------------------------------------------
+   프로필 / 이름 영역
+------------------------------------------------- */
+.message-group {
+    margin-top: 18px; /* 새 발화자 시작 */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 16px; /* avatar 기준 */
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 16px;
+    top: 0;
+}
+
+.header {
+    margin-left: 50px; /* 16(left) + 40(avatar) - 6px = 50px → 실제 말풍선 시작은 66px */
+    margin-bottom: 6px; /* 이름 → 첫 말풍선 */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+}
+
+.badge {
+    font-size: 14px;
+    color: #222;
+}
+
+.time {
+    font-size: 12px;
+    color: #6F6F6F;
+    margin-left: 6px;
+}
+
+/* -------------------------------------------------
+   일반 텍스트 말풍선
+------------------------------------------------- */
+.bubble {
+    max-width: 305px;
+    background: #ffffff;
+    border-radius: 16px;
+    margin-left: 66px; 
+    margin-top: 7px;
+    padding: 10px 16px 12px 16px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #000;
+}
+
+/* -------------------------------------------------
+   음성 메시지
+------------------------------------------------- */
+.voice-message-wrapper {
+    margin-left: 66px;
+    margin-top: 7px;
+}
+
+.voice-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 6px;
+}
+
+.voice-header .name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+}
+
+.voice-header .badge {
+    font-size: 14px;
+    color: #222;
+}
+
+.voice-header .time {
+    font-size: 12px;
+    color: #6F6F6F;
+    margin-left: 6px;
+}
+
+.voice-bubble {
+    display: flex;
+    align-items: center;
+}
+
+.voice-left {
+    width: 234px;
+    height: 56px;
+    background: #fff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+.play-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-right: 14px;
+}
+
+.progress {
+    position: relative;
+    width: 115px;
+    height: 4px;
+    background: #D2D2D2;
+    border-radius: 2px;
+    margin-right: 12px;
+}
+
+.progress-thumb {
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+
+.duration {
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+
+.voice-expand {
+    width: 48px;
+    height: 56px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    font-size: 18px;
+}
+
+/* -------------------------------------------------
+   사진 / 영상 (자동 판별 주입 클래스)
+------------------------------------------------- */
+.media {
+    border-radius: 18px;
+    object-fit: cover;
+    margin-left: 66px;
+    margin-top: 7px;
+    overflow: hidden;
+}
+
+.media-vertical {
+    width: 240px;
+    max-height: 400px;
+}
+
+.media-square {
+    width: 305px;
+    height: 305px;
+}
+
+.media-wide {
+    max-width: 305px;
+    height: auto;
+}
+
+/* -------------------------------------------------
+   종료된 라이브 카드
+------------------------------------------------- */
+.live-card {
+    width: 260px;
+    padding: 14px 16px;
+    margin-left: 66px;
+    margin-top: 7px;
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.live-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.live-title-small {
+    font-size: 13px;
+    color: #A0A0A0;
+    margin-bottom: 2px;
+}
+
+.live-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    line-height: 22px;
+}
+
+/* -------------------------------------------------
+   답장(Reply)
+------------------------------------------------- */
+.reply-wrapper {
+    margin-left: 66px;
+    margin-top: 6px;
+}
+
+.reply-bubble {
+    max-width: 305px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reply-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #7C7C7C;
+}
+
+.reply-quoted {
+    font-size: 14px;
+    color: #9C9C9C;
+    margin-top: 4px;
+    line-height: 20px;
+}
+
+.reply-content {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    margin-top: 8px;
+    line-height: 22px;
+}
+ 15px;
+    line-height: 22px;
+    color: #000;
+}
+
+/* --- 내 메시지 --- */
+
+.my-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top:지 전체 영역 */
+.voice-message-wrapper {
+    padding-left: 66px; /* 왼쪽 전체 여백 (16 + 40 + 10) */
+    margin-top: 7px;    /* 연속 메시지 기준 */
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 이름 / 시간 */
+.voice-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 6px; /* 이름 → 음성 메시지 */
+}
+
+.voice-header .name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* 날짜 박스 */
+.voice-header .badge {
+    font-size: 14px;
+    color: #222;
+}
+
+.voice-header .time {
+    font-size: 12px;
+    color: #6F6F6F;
+    margin-left: 6px;
+}
+
+/* 음성 메시지 메인 박스 */
+.voice-bubble {
+    display: flex;
+    align-items: center;
+}
+
+/* 왼쪽 큰 박스 */
+.voice-left {
+    width: 234px;
+    height: 56px;
+    background: #fff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+/* 재생 버튼 */
+.play-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-right: 14px;
+}
+
+/* 진행 바 */
+.progress {
+    position: relative;
+    width: 115px;
+    height: 4px;
+    background: #D2D2D2;
+    border-radius: 2px;
+    margin-right: 12px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #000;
+    border-radius: 2px;
+}
+
+.progress-thumb {
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+
+/* 시간 */
+.duration {
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+
+/* 오른쪽 확장 버튼 */
+.voice-expand {
+    width: 48px;
+    height: 56px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-left: 0;
+    font-size: 18px;
+}
+
+/* 세로 영상 */
+.media {
+    width: 240px;
+    border-radius: 18px;
+    margin-left: 66px;
+    margin-top: 7px;
+    overflow: hidden;
+}
+
+/* 사진 */
+.media {
+    border-radius: 18px;
+    object-fit: cover;
+    margin-left: 66px; /* POP 규칙 */
+    margin-top: 7px;
+}
+
+/* 자동 적용될 클래스들 */
+.media-vertical {
+    width: 240px;
+    max-height: 400px;
+}
+
+.media-square {
+    width: 305px;
+    height: 305px;
+}
+
+.media-wide {
+    max-width: 305px;
+    height: auto;
+}
         
-        .kakao-chat-wrapper * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        .kakao-chat-wrapper {
-            font-family: 'Noto Sans KR', sans-serif !important;
-            width: 100%;
-            margin: 0 auto;
-            display: block;
-        }
+/* 종료된라이브 */
+.live-card {
+    width: 260px;
+    padding: 14px 16px;
+    margin-left: 66px;
+    margin-top: 7px;
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
 
-        /* iPhone 17 Pro 기준 width 394px */
+.live-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
 
-        .chat-container {
-            width: 100%;
-            background: #b2bfd9;
-            border-radius: 10px; /* 2.67cqw → 10.5px */
-            padding: 12px;       /* 3cqw → 11.8px */
-        }
+.live-title-small {
+    font-size: 13px;
+    color: #A0A0A0;
+    margin-bottom: 2px;
+}
 
-        .chat-header {
-            text-align: center;
-            margin-bottom: 21px; /* 5.33cqw → 21px */
-            padding-bottom: 16px;/* 4cqw → 15.7px */
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-        }
+.live-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    line-height: 22px;
+}
 
-        .chat-header h2 {
-            font-size: 16px;     /* 4cqw → 15.7px */
-            font-weight: 500;
-            margin-bottom: 5px;  /* 1.33cqw → 5.2px */
-            line-height: 1.4;
-            color: #000;
-        }
+/* 답창 채팅 */
+.reply-wrapper {
+    margin-left: 66px; /* POP 전체 왼쪽 여백 */
+    margin-top: 6px;   /* 이름 → reply 버블 */
+}
 
-        .chat-header .subtitle {
-            font-size: 11.5px;   /* 2.93cqw → 11.5px */
-            color: #555;
-            line-height: 1.4;
-        }
+.reply-bubble {
+    max-width: 305px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+}
 
-        .message-group {
-            margin-bottom: 16px; /* 4cqw → 15.7px */
-        }
+.reply-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #7C7C7C;
+}
 
-        .message-left {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 8px; /* 2.13cqw → 8.3px */
-        }
+.reply-quoted {
+    font-size: 14px;
+    color: #9C9C9C;
+    margin-top: 4px;
+    line-height: 20px;
+}
 
-        .profile-pic {
-            width: 44px;          /* 11.2cqw → 44px (POP: 34px이지만 기존 비율 유지) */
-            height: 44px;
-            border-radius: 50%;
-            background: #ddd;
-            margin-right: 10px;   /* 2.67cqw → 10.5px */
-            flex-shrink: 0;
-            overflow: hidden;
-        }
+.reply-content {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    margin-top: 8px;
+    line-height: 22px;
+}
 
-        .profile-pic img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
 
-        .message-content-left {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .sender-name {
-            font-size: 11.5px;      /* 2.93cqw → 11.5px */
-            font-weight: 500;
-            margin-bottom: 5px;      /* 1.33cqw → 5.2px */
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            line-height: 1.4;
-            color: #000;
-        }
-
-        .sender-name span {
-            font-size: 9.5px;        /* 2.4cqw → 9.4px */
-            color: #666;
-            font-weight: 400;
-        }
-
-        .message-bubble {
-            background: #fff;
-            padding: 9px 13px;       /* 2.3cqw 3.2cqw → 9px 13px */
-            border-radius: 19px;     /* 4.8cqw → 18.9px */
-            display: inline-block;
-            max-width: 76%;
-            word-wrap: break-word;
-            word-break: break-word;
-            font-size: 13px;         /* 3.2cqw → 12.6px */
-            line-height: 1.5;
-            color: #000;
-            border: none;
-            box-shadow: none;
-        }
-
-        .message-bubble.emoji {
-            font-size: 33px;         /* 8.53cqw → 33px */
-            background: transparent;
-            padding: 5px;            /* 1.33cqw → 5.2px */
-        }
-
-        .message-bubble.ascii-art {
-            font-family: monospace;
-            white-space: pre;
-            font-size: 11.5px;       /* 2.93cqw → 11.5px */
-        }
-
-        .date-separator {
-            text-align: center;
-            margin: 14px 0;          /* 3.5cqw → 13.8px */
-        }
-
-        .date-separator span {
-            background: rgba(255,255,255,0.7);
-            padding: 6px 15px;       /* 1.6cqw 3.73cqw → 6.3px 14.7px */
-            border-radius: 16px;     /* 4cqw → 15.7px */
-            font-size: 11px;         /* 2.67cqw → 10.5px */
-            color: #555;
-            line-height: 1.4;
-            display: inline-block;
-        }
     </style>
 </head>
-<body>
 
-<div class="chat-wrapper">
+<div class="pop-chat">
 
-    <!-- 날짜 -->
-    <div class="date-divider">2025년 10월 22일 수요일</div>
+    <!-- 날짜 구분 -->
+    <div class="date-divider">2025년 9월 15일 월요일</div>
 
+    <!-- DOY 메시지 그룹 시작 -->
+    <div class="message-group">
 
-    <!-- 메시지 1 -->
-    <div class="message-row">
-        <img class="profile" src="profile.jpg">
-        <div>
-            <div class="meta">
-                <div class="name">DOY</div>
-                <div class="time">오후 9:56</div>
-            </div>
-            <div class="bubble">아쉬움은 조금 있긴한데 ㅌㅌㅌ</div>
+        <img src="doy.jpg" class="avatar">
+
+        <div class="header">
+            <div class="name">DOY</div>
+            <div class="badge">✔</div>
+            <div class="time">오후 8:47</div>
+        </div>
+
+        <div class="bubble">잘</div>
+        <div class="bubble">할 걸?</div>
+        <div class="bubble">음</div>
+
+        <div class="bubble">sry</div>
+
+    </div>
+
+    <!-- 내 메시지 -->
+    <div class="my-group">
+        <div class="my-bubble">
+            거짓말 3조각 먹고 치킨무만 먹던걸 기억하는데
+        </div>
+        <div class="my-bubble">
+            ㅋㅋㅋㅋㅋㅋ<br>거짓말하면 코 길어진다~
         </div>
     </div>
 
-    <!-- 메시지 2 (연속) -->
-    <div class="message-row continued">
+    <!-- DOY 새로운 메시지 그룹 -->
+    <div class="message-group">
+
+        <img src="doy.jpg" class="avatar">
+
+        <div class="header">
+            <div class="name">DOY</div>
+            <div class="badge">✔</div>
+            <div class="time">오후 8:49</div>
+        </div>
+
+        <!-- START of Reply example -->
+        <div class="reply-wrapper">
+            <div class="reply-bubble">
+                <div class="reply-header">DOY님의 답장</div>
+                <div class="reply-quoted">거짓말하면 코 길어진다~</div>
+                <div class="reply-content">↳ im 피노키오</div>
+            </div>
+        </div>
+
+        <div class="bubble">입이 요즘 짧아졌어</div>
+
+    </div>
+
+    <!-- 사진 메시지 -->
+    <img src="photo1.jpg" class="media auto-media">
+    <img src="photo2.jpg" class="media auto-media">
+
+    <!-- DOY 또 다른 발화 -->
+    <div class="message-group">
+
+        <img src="doy.jpg" class="avatar">
+
+        <div class="header">
+            <div class="name">DOY</div>
+            <div class="badge">✔</div>
+            <div class="time">오후 9:56</div>
+        </div>
+
+        <div class="bubble">아쉬움은 조금 있긴한데 ㅎㅎㅎ</div>
         <div class="bubble">다음에 더 잘 해야겠다</div>
+        <div class="bubble">민경 하루는 어땠어 오늘</div>
+
     </div>
 
-    <!-- 메시지 3 (연속) -->
-    <div class="message-row continued">
-        <div class="bubble">너무 우상이었던…</div>
+    <!-- 내 답장 -->
+    <div class="my-group">
+        <div class="my-bubble">또 많이 배웠던 하루</div>
+        <div class="my-bubble">부산은 아직 비가 조금 와</div>
     </div>
 
-    <!-- 메시지 4 (새로운 시간) -->
-    <div class="message-row">
-        <img class="profile" src="profile.jpg">
-        <div>
-            <div class="meta">
-                <div class="name">DOY</div>
-                <div class="time">오후 10:09</div>
-            </div>
-            <div class="bubble">또 많이 배웠던 하루</div>
+    <!-- 음성 메시지 -->
+    <div class="voice-message-wrapper">
+
+        <div class="voice-header">
+            <div class="name">DOY</div>
+            <div class="badge">✔</div>
+            <div class="time">오전 1:12</div>
         </div>
+
+        <div class="voice-bubble">
+            <div class="voice-left">
+                <div class="play-button">▶</div>
+
+                <div class="progress">
+                    <div class="progress-thumb"></div>
+                </div>
+
+                <div class="duration">01:02</div>
+            </div>
+
+            <div class="voice-expand">⤢</div>
+        </div>
+
     </div>
 
-    <!-- 메시지 5 (연속) -->
-    <div class="message-row continued">
-        <div class="bubble">부산은 아직 비가 조금 와</div>
-    </div>
+    <!-- 종료된 라이브 -->
+    <div class="live-card">
+        <div class="live-icon">📞</div>
 
-    <!-- 메시지 6 (연속) -->
-    <div class="message-row continued">
-        <div class="bubble">거기도 비가 오려나</div>
-    </div>
-
-    <!-- 메시지 7 (연속) -->
-    <div class="message-row continued">
-        <div class="bubble">오랜만에 온 부산이라 또 새로웠다</div>
+        <div>
+            <div class="live-title-small">종료된 라이브</div>
+            <div class="live-title">대식가 둘이서 100인분 먹방</div>
+        </div>
     </div>
 
 </div>
-</body>
-</html>
+
