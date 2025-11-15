@@ -10,46 +10,51 @@
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
         background: #D4D8EE;
+        overflow-x: hidden;
     }
 
-    /* 상단 Navigation */
+    /* ----------------------------- NAVIGATION ----------------------------- */
     .navbar {
         padding-top: env(safe-area-inset-top);
-        padding: 12px 16px 8px 16px;
-        text-align: center;
-        background: #D4D8EE;
+        padding: 10px 16px 8px 16px;
         position: sticky;
         top: 0;
         z-index: 10;
+        text-align: center;
+        background: #D4D8EE;
     }
+
     .status-time {
         position: absolute;
         left: 16px;
-        top: 12px;
+        top: 8px;
         font-size: 17px;
         font-weight: 600;
         color: #000;
     }
+
     .nav-title {
-        margin-top: 32px;
+        margin-top: 24px;
         font-size: 17px;
         font-weight: 600;
-        color: #1D1D1F;
+        color: #1B1B1E;
     }
+
     .nav-subtitle {
         font-size: 12px;
         color: #8D8EA3;
         margin-top: 2px;
     }
+
     .nav-right-icon {
-        position: absolute;
-        right: 16px;
-        top: 10px;
         width: 22px;
         height: 22px;
+        position: absolute;
+        right: 16px;
+        top: 8px;
     }
 
-    /* 날짜 */
+    /* ----------------------------- DATE LABEL ----------------------------- */
     .date-label {
         background: #E3E5F0;
         color: #8D8E9A;
@@ -60,76 +65,93 @@
         font-size: 13px;
     }
 
-    /* 채팅 전체 영역 */
+    /* ----------------------------- CHAT AREA ----------------------------- */
     .chat-container {
-        padding: 0 16px 40px 16px;
+        padding: 0 16px 40px;
     }
 
-    /* 메시지 행 - 발신자 전환 */
+    /* 발신자 전환 시 간격 */
     .message-row {
         display: flex;
         align-items: flex-start;
-        margin-bottom: 16px; /* 수정된 POP 기준 */
+        margin-bottom: 16px;
     }
 
     /* 연속 메시지 */
     .message-row.continued {
-        margin-bottom: 8px; /* 수정됨 */
+        margin-bottom: 8px;
     }
 
+    /* ----------------------------- PROFILE & NAME ----------------------------- */
     .profile {
         width: 36px;
         height: 36px;
         border-radius: 50%;
         margin-right: 8px;
+
+        /* POP 진짜처럼 프로필이 DOY보다 1~2px 위 */
+        margin-top: 1px;
     }
 
     .doy-info {
-        font-size: 13px;
-        color: #1D1D1F;
-        margin-bottom: 4px;
         display: flex;
-        align-items: center;
+        align-items: baseline;
+
+        /* 실제 POP에서 글자가 프로필보다 약간 내려가 있음 */
+        margin-top: 1px;
+
+        font-size: 13px;
+        color: #1B1B1E;
         gap: 4px;
     }
+
     .doy-time {
         font-size: 12px;
         color: #8D8E9A;
+        position: relative;
+        top: 0.5px; /* POP은 시간 텍스트가 아주 약간 위로 올라감 */
     }
 
+    /* ----------------------------- BUBBLES ----------------------------- */
     .bubble {
         max-width: 300px;
         padding: 10px 14px;
-        border-radius: 16px;
+        border-radius: 18px; /* POP 실제보다 근접 */
         font-size: 15px;
-        line-height: 1.35;
+        line-height: 1.38; /* POP 특유 줄간격 */
         word-break: keep-all;
     }
+
     .bubble.doy {
         background: #FFFFFF;
-        color: #000;
+        color: #000000;
     }
 </style>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
-    <div class="status-time">12:36</div>
+    <div class="status-time">12:21</div>
     <div class="nav-title">DOY ▼</div>
     <div class="nav-subtitle">함께한지 473일</div>
-    <img src="translate-icon.png" class="nav-right-icon" />
+    <img src="translate.png" class="nav-right-icon">
 </div>
 
 <div class="chat-container">
 
+    <!-- DATE -->
     <div class="date-label">2025년 11월 14일 금요일</div>
 
     <!-- 첫 메시지 -->
     <div class="message-row">
         <img src="profile.jpg" class="profile" />
         <div>
-            <div class="doy-info">DOY <span class="doy-time">오후 9:56</span></div>
-            <div class="bubble doy">아쉬움은 조금 있지만데 ㅔㅔㅔ</div>
+            <div class="doy-info">
+                DOY <span class="doy-time">오후 9:56</span>
+            </div>
+            <div class="bubble doy">아쉬움은 조금 있긴한데 〃〃〃</div>
         </div>
     </div>
 
@@ -139,7 +161,11 @@
     </div>
 
     <div class="message-row continued" style="margin-left: 44px;">
-        <div class="bubble doy">너무 우상이었던...</div>
+        <div class="bubble doy">너무 우상이었던 대성 선배님 무대 직접 봐서도 꿈같은 하루였어</div>
+    </div>
+
+    <div class="message-row continued" style="margin-left: 44px;">
+        <div class="bubble doy">민경 하루는 어땠어 오늘</div>
     </div>
 
 </div>
