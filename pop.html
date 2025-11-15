@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>POP Chat Clone</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
+        background: #D4D8EE; /* POP 기본 배경색 */
+    }
+
+    /* 상단 Status + Navigation 영역 */
+    .navbar {
+        padding-top: env(safe-area-inset-top);
+        padding: 12px 16px 8px 16px;
+        text-align: center;
+        background: #D4D8EE;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .status-time {
+        position: absolute;
+        left: 16px;
+        top: 12px;
+        font-size: 17px;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .nav-right-icon {
+        position: absolute;
+        right: 16px;
+        top: 10px;
+        width: 22px;
+        height: 22px;
+    }
+
+    .back-btn {
+        position: absolute;
+        left: 16px;
+        top: 48px;
+        font-size: 20px;
+        color: #1D1D1F;
+        cursor: pointer;
+    }
+
+    .nav-title {
+        margin-top: 32px;
+        font-size: 17px;
+        font-weight: 600;
+        color: #1D1D1F;
+    }
+
+    .nav-subtitle {
+        font-size: 12px;
+        color: #8D8EA3;
+        margin-top: 2px;
+    }
+
+    /* 날짜 라벨 */
+    .date-label {
+        background: #E3E5F0;
+        color: #8D8E9A;
+        padding: 6px 16px;
+        border-radius: 18px;
+        width: fit-content;
+        margin: 20px auto;
+        font-size: 13px;
+    }
+
+    /* 메시지 컨테이너 */
+    .chat-container {
+        padding: 0 16px 40px 16px;
+    }
+
+    .message-row {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 12px; /* 발신자 전환 시 간격 */
+    }
+
+    .message-row.continued {
+        margin-bottom: 6px; /* 연속 메시지 간격 */
+    }
+
+    .profile {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+
+    .doy-info {
+        font-size: 13px;
+        color: #1D1D1F;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .doy-time {
+        font-size: 12px;
+        color: #8D8E9A;
+    }
+
+    /* 말풍선 */
+    .bubble {
+        max-width: 300px;
+        padding: 10px 14px;
+        border-radius: 16px;
+        font-size: 15px;
+        line-height: 1.35;
+        word-break: keep-all;
+    }
+
+    .bubble.doy {
+        background: #FFFFFF;
+        color: #000000;
+    }
+
+    .bubble.me {
+        background: #7C86C9;
+        color: #FFFFFF;
+        margin-left: auto;
+    }
+
+    /* DOY님의 답장 영역 */
+    .reply-header {
+        font-size: 12px;
+        color: #8D8EA1;
+        margin-bottom: 2px;
+    }
+
+    .reply-body {
+        font-size: 14px;
+        color: #1D1D1F;
+        padding-left: 10px;
+    }
+
+    /* 종료된 라이브 */
+    .live-ended {
+        background: #FFFFFF;
+        padding: 12px 16px;
+        border-radius: 18px;
+        max-width: 280px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .live-ended-icon {
+        width: 18px;
+        height: 18px;
+        opacity: 0.6;
+    }
+
+    .live-ended-title {
+        font-size: 15px;
+        color: #000;
+    }
+
+    .live-ended-sub {
+        font-size: 12px;
+        color: #8D8E9A;
+    }
+
+    /* 음성 메시지 */
+    .voice-box {
+        background: #FFFFFF;
+        padding: 12px;
+        border-radius: 16px;
+        width: 320px;
+    }
+
+    .play-btn {
+        width: 26px;
+        height: 26px;
+        background: #1D1D1F;
+        mask: url('play.svg') center/contain no-repeat;
+        -webkit-mask: url('play.svg') center/contain no-repeat;
+        display: inline-block;
+        margin-right: 12px;
+    }
+
+    .seekbar-bg {
+        width: 170px;
+        height: 4px;
+        background: #E1E1E8;
+        border-radius: 4px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .seekbar-progress {
+        width: 48px;
+        height: 4px;
+        background: #1D1D1F;
+    }
+
+    .voicetime {
+        font-size: 13px;
+        margin-left: 12px;
+        color: #1D1D1F;
+        vertical-align: middle;
+    }
+
+    .expand-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 12px;
+        opacity: 0.8;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="status-time">12:36</div>
+    <div class="nav-title">DOY ▼</div>
+    <div class="nav-subtitle">함께한지 473일</div>
+    <img src="translate-icon.png" class="nav-right-icon" />
+</div>
+
+<div class="chat-container">
+
+    <div class="date-label">2025년 11월 14일 금요일</div>
+
+    <div class="message-row">
+        <img src="profile.jpg" class="profile" />
+        <div>
+            <div class="doy-info">DOY <span class="doy-time">오전 1:13</span></div>
+            <div class="bubble doy">오늘 밤 노래 추천이야</div>
+        </div>
+    </div>
+
+    <div class="message-row continued">
+        <div style="margin-left: 44px;">
+            <div class="bubble doy">카니발 스케치 버전</div>
+        </div>
+    </div>
+
+    <div class="message-row">
+        <div class="bubble me">그래서 이거 언제올려준다고?ㅎㅎ</div>
+    </div>
+
+</div>
+
+</body>
+</html>
