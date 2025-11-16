@@ -1,0 +1,368 @@
+/* --- 기본 및 전체 컨테이너 --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0; /* 페이지 배경 */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.chat-container {
+    width: 393px; 
+    height: 850px; /* 임의의 높이 지정 */
+    background-color: #D7DDF1; 
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* --- 상단 고정 바 --- */
+.chat-header {
+    height: 58px; 
+    padding: 10px 16px; 
+    background-color: #D7DDF1; /* 스펙상 배경색  (일반적으론 #fff) */
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D2D6E6; 
+    flex-shrink: 0;
+}
+
+.header-left {
+    flex: 1;
+}
+.header-center {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.back-icon {
+    font-size: 22px; 
+    color: #000000; 
+    font-weight: bold;
+}
+
+.title-main {
+    display: flex;
+    align-items: center;
+    gap: 4px; 
+}
+.title-main .name {
+    font-size: 17px; 
+    font-weight: bold; 
+    color: #000000; 
+}
+.title-main .arrow {
+    font-size: 12px; 
+    color: #9C9C9C; 
+}
+.title-sub {
+    font-size: 12px; 
+    color: #6F6F6F; 
+    margin-top: 8px; /* DOY(이름) 라인과의 간격  */
+}
+
+.search-icon-wrapper {
+    width: 36px; 
+    height: 36px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.search-icon {
+    font-size: 24px; /* 아이콘 크기  */
+}
+
+/* --- 채팅 본문 --- */
+.chat-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px 0;
+}
+
+/* --- 날짜 구분 바 --- */
+.date-separator {
+    text-align: center; 
+    padding: 10px 0;
+}
+.date-separator span {
+    background-color: #D7DDF1;  /* 스펙상 배경색 (본문과 동일) */
+    /* background-color: #c8cde0; */ /* 가시성을 위한 대체 색상 */
+    color: #4A4A4A; 
+    font-size: 13px; 
+    padding: 4px 12px; 
+    border-radius: 12px; 
+}
+
+/* --- 채팅 메시지 공통 --- */
+.chat-message {
+    display: flex;
+    margin-top: 14px; [cite: 2]
+    padding: 0 16px; [cite: 2] /* 수신자 기준 좌측 여백 [cite: 2] */
+}
+.chat-message.consecutive {
+    margin-top: 4px; [cite: 2]
+}
+
+.profile-pic {
+    width: 40px; [cite: 2]
+    height: 40px; [cite: 2]
+    border-radius: 50%; [cite: 2]
+    margin-right: 10px; /* 66px - 16px(부모패딩) - 40px(사진) = 10px */
+    flex-shrink: 0;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sender-name {
+    font-size: 15px; [cite: 2]
+    font-weight: 600; [cite: 2]
+    color: #222222; [cite: 2]
+    margin-bottom: 6px; /* 프로필과 메시지(이름과 버블) 세로 간격 [cite: 2] */
+}
+
+.message-info {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px; [cite: 2]
+}
+
+.message-time {
+    font-size: 12px; [cite: 2]
+    color: #6F6F6F; [cite: 2]
+    flex-shrink: 0;
+}
+
+/* 연속 메시지일 때 프로필/이름 숨기기 */
+.chat-message.consecutive .profile-pic,
+.chat-message.consecutive .sender-name {
+    visibility: hidden;
+}
+/* 연속 메시지일 때 버블 위치 정렬 */
+.chat-message.consecutive .message-content {
+    margin-left: 50px; /* 프로필(40px) + 간격(10px) */
+}
+
+
+/* --- 메시지 말풍선 --- */
+.message-bubble {
+    background-color: #FFFFFF; [cite: 2]
+    border-radius: 20px; [cite: 2]
+    padding: 10px 16px 12px 16px; [cite: 3]
+    max-width: 305px; [cite: 2]
+    word-break: break-all; /* 긴 텍스트 줄바꿈 */
+}
+
+.message-bubble p {
+    margin: 0;
+    font-size: 15px; [cite: 2]
+    line-height: 22px; [cite: 2]
+    color: #000000; [cite: 2]
+}
+
+/* --- 발신자 메시지 (추정) --- */
+.chat-message.sender {
+    flex-direction: row-reverse;
+    padding: 0 16px; /* 우측 여백 */
+}
+.chat-message.sender .message-info {
+    flex-direction: row-reverse;
+}
+.chat-message.sender .message-bubble {
+    background-color: #FEE500; /* 카카오톡 노란색 (추정) */
+}
+.chat-message.sender .profile-pic,
+.chat-message.sender .sender-name {
+    display: none;
+}
+.chat-message.sender.consecutive .message-content {
+    margin-left: 0;
+}
+
+
+/* --- 답장 메시지 --- */
+.message-bubble.reply .reply-content {
+    margin-bottom: 8px; [cite: 3] /* 인용문과 실제 답장 간격 */
+    padding-left: 6px; /* '↳'와 답장 사이 간격 [cite: 3] (내부에 적용) */
+}
+.reply-title {
+    font-size: 13px; [cite: 3]
+    margin-bottom: 4px; [cite: 3] /* DOY님 답장과 인용문 간격 */
+}
+.reply-quote {
+    font-size: 14px; [cite: 3]
+    color: #9C9C9C; [cite: 3]
+}
+/* .message-bubble.reply p (실제 답장)는 기본 15px 스타일을 따름 [cite: 3] */
+
+
+/* --- 미디어 메시지 (사진, 영상 등) --- */
+.message-bubble.media {
+    padding: 0;
+    background-color: transparent;
+    max-width: 350px; /* 가로 사진 기준 [cite: 3] */
+}
+
+.photo-message img {
+    display: block;
+    border-radius: 18px; [cite: 3]
+    max-width: 100%; /* 버블 크기에 맞춤 */
+    max-height: 400px; [cite: 3] /* 세로 사진 최대 높이 */
+}
+/* 1:1 사진 [cite: 3] */
+.photo-message img[src*="305x305"] { width: 305px; height: 305px; }
+/* 세로 사진 [cite: 3] */
+.photo-message img[src*="240x400"] { width: 240px; height: 400px; }
+
+
+/* --- 동영상 메시지 --- */
+.video-message {
+    width: 240px; [cite: 3]
+    max-height: 400px; [cite: 3]
+    border-radius: 18px; [cite: 3]
+    overflow: hidden;
+    position: relative;
+}
+.video-message img { /* 썸네일용 임시 */
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 22px; [cite: 4]
+    background: rgba(0, 0, 0, 0.45); [cite: 3]
+    display: flex;
+    align-items: center;
+    padding: 0 8px; [cite: 4]
+}
+.video-play-icon {
+    font-size: 12px; [cite: 3]
+    color: #FFFFFF; [cite: 3]
+}
+.video-time {
+    font-size: 12px; [cite: 3]
+    color: #FFFFFF; [cite: 3]
+    margin-left: 6px; [cite: 3]
+}
+
+/* --- 종료된 라이브 --- */
+.live-ended-message {
+    width: 260px; [cite: 4]
+    height: 70px; [cite: 4]
+    border-radius: 20px; [cite: 4]
+    background-color: #FFFFFF;
+    padding: 16px 14px; [cite: 4]
+    display: flex;
+    align-items: center;
+}
+.live-icon-bg {
+    width: 40px; [cite: 4]
+    height: 40px; [cite: 4]
+    border-radius: 50%;
+    background: #E2E2E2; [cite: 4]
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px; [cite: 4] /* 아이콘과 텍스트 간격 [cite: 4] */
+    flex-shrink: 0;
+}
+.live-icon {
+    font-size: 22px; [cite: 4]
+}
+.live-text-content {
+    /* 아이콘 원형과 종료된 라이브 간격은 .live-icon-bg의 margin-right로 처리 [cite: 4] */
+}
+.live-status {
+    font-size: 13px; [cite: 4]
+    color: #A0A0A0; [cite: 4]
+    margin-bottom: 3px; [cite: 4]
+}
+.live-title {
+    font-size: 15px; [cite: 4]
+    color: #000; [cite: 4]
+}
+
+/* --- 음성 메시지 --- */
+.voice-message {
+    display: flex;
+    gap: 6px; [cite: 4]
+    background: transparent;
+}
+.voice-main {
+    width: 234px; [cite: 4]
+    height: 56px; [cite: 4]
+    border-radius: 16px; [cite: 4]
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 0 12px; [cite: 5] /* 재생버튼 좌측 여백 [cite: 5] */
+}
+.voice-play-btn {
+    width: 36px; [cite: 5]
+    height: 36px; [cite: 5]
+    border: 1px solid #E5E5E5; [cite: 5]
+    border-radius: 50%; [cite: 5]
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.voice-play-icon {
+    font-size: 14px; [cite: 5]
+}
+.voice-progress-bar {
+    width: 115px; [cite: 5]
+    height: 4px; [cite: 5]
+    background: #D2D2D2; [cite: 5]
+    border-radius: 2px; [cite: 5]
+    margin: 0 12px 0 14px; [cite: 5] /* 좌 14px [cite: 5], 우 12px [cite: 5] */
+    position: relative;
+}
+.voice-progress-handle {
+    width: 8px; [cite: 5]
+    height: 8px; [cite: 5]
+    background: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px; [cite: 5]
+    left: 0px; [cite: 5]
+}
+.voice-time-duration {
+    font-size: 14px; [cite: 5]
+    color: #000000; [cite: 5]
+}
+.voice-expand-btn {
+    width: 48px; [cite: 4]
+    height: 56px; [cite: 4]
+    border-radius: 16px; [cite: 4]
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.voice-expand-icon {
+    font-size: 18px; [cite: 4]
+}
