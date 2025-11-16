@@ -1,0 +1,415 @@
+/* 페이지 기본 설 */
+body {
+    display: flex;
+    justify-content: center;
+    background: #000;   /* 바깥 웹 배경은 검정/상관없음 */
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* POP 전체 화면 */
+.pop-chat {
+    width: 393px;
+    min-height: 100vh;
+    background: #D7DDF1;
+    overflow-y: auto;
+}
+
+/* 상단 헤더 전체 */
+.pop-header {
+    width: 393px;
+    height: 58px;
+    padding: 10px 16px;
+    background: #D7DDF1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 1px solid #D2D6E6;
+    box-sizing: border-box;
+}
+
+/* 뒤로가기 버튼 */
+.pop-header-back {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* 돋보기 버튼 */
+.pop-header-search {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* 가운데 타이틀 박스 */
+.pop-header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* DOY + ▼ */
+.pop-header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* DOY 텍스트 */
+.pop-header-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+    margin-right: 4px; /* DOY – ▼ 간격 */
+}
+
+/* ▼ */
+.pop-header-arrow {
+    font-size: 12px;
+    color: #9C9C9C;
+}
+
+/* 함께한지 000일 */
+.pop-header-subtitle {
+    margin-top: 8px; /* DOY – 함께한지 간격 */
+    font-size: 12px;
+    color: #6F6F6F;
+}
+
+/* 날짜 구분바 */
+.date-divider {
+    font-size: 13px;
+    color: #4A4A4A;
+    background: #D7DDF1;
+    padding: 4px 12px;
+    border-radius: 12px;
+    width: fit-content;
+    margin: 14px auto; /* 중앙 배치 */
+}
+
+.message-group {
+    margin-top: 18px;
+    padding-left: 16px;
+    position: relative;
+}
+
+/* 프로필 사진 */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.name-time {
+    margin-left: 50px; /* 16px + 40px - 약간 정렬용 */
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+/* DOY */
+.name-time .name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222222;
+}
+
+/* 시간 */
+.name-time .time {
+    font-size: 12px;
+    color: #6F6F6F;
+    margin-left: 6px;
+}
+
+/* 메시지 전체 그룹 */
+.message-group {
+    margin-top: 14px;         /* 이전 메시지 그룹과 간격 */
+    padding-left: 16px;       /* 프로필 기본 왼쪽 여백 */
+    position: relative;
+}
+
+/* 프로필 → 첫 말풍선 간격 6px */
+.bubble.first {
+    margin-top: 6px;
+}
+
+/* 연속 말풍선 간격 4px */
+.bubble + .bubble {
+    margin-top: 4px;
+}
+
+/* 기본 메시지 말풍선 */
+.bubble {
+    background: #FFFFFF;
+    max-width: 305px;         /* 말풍선 최대 너비 */
+    margin-left: 66px;        /* POP 공식 왼쪽 정렬 값 */
+    
+    /* 내부 여백 */
+    padding: 10px 16px 12px 16px;
+
+    /* 둥근 정도 */
+    border-radius: 20px;
+
+    /* 텍스트 */
+    font-size: 15px;
+    line-height: 22px;
+    color: #000;
+
+    /* 자동으로 크기 변하도록 */
+    display: inline-block;
+    word-wrap: break-word;
+
+    /* 기본 세로 위치 */
+    margin-top: 4px;
+}
+
+/* 최소 크기 보장 (56px × 56px, radius 28px) */
+.bubble.min {
+    min-width: 56px;
+    min-height: 56px;
+    border-radius: 28px;
+}
+
+.reply-bubble {
+    max-width: 305px;
+    background: #FFFFFF;
+
+    padding: 16px 18px;
+    border-radius: 20px;
+
+    margin-left: 66px;
+    margin-top: 6px; /* 첫 말풍선처럼 적용 가능 */
+}
+
+/* "DOY님의 답장" */
+.reply-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* 인용문 */
+.reply-quote {
+    font-size: 14px;
+    color: #9C9C9C;
+    margin-top: 4px;
+}
+
+/* 실제 답장 */
+.reply-content {
+    font-size: 15px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+
+/* ↳ */
+.reply-arrow {
+    margin-right: 6px;
+}
+
+/* 사진 가로 */
+.media-wide {
+    width: 350px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-left: 66px;
+    margin-top: 7px;
+}
+
+/* 사진 세로 */
+.media-vertical {
+    width: 240px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-left: 66px;
+    margin-top: 7px;
+}
+
+/* 사진 정사각 */
+.media-square {
+  width: 305px;
+  height: 305px;
+  border-radius: 18px;
+  object-fit: cover;
+  margin-left: 66px;
+  margin-top: 7px;
+}
+
+/* 동영상 */
+.video-box {
+    position: relative;
+    width: 240px;
+    max-height: 400px;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-left: 66px; /* POP 채팅 레이아웃 기준 */
+    margin-top: 7px;
+}
+
+/* 영상 자체 */
+.video-box video,
+.video-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+/* 오버레이 바 (시간/재생버튼이 들어가는 검은투명 바) */
+.video-overlay {
+    position: absolute;
+    bottom: 8px;          /* 영상 아래쪽과 겹치게 8px 위 */
+    right: 8px;           /* 오른쪽 여백 */
+    height: 22px;
+    padding: 0 8px;
+    background: rgba(0,0,0,0.45);
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px; /* 아이콘과 시간 텍스트 간격 */
+}
+
+/* 재생 아이콘 */
+.overlay-icon {
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+/* 시간 텍스트 */
+.overlay-time {
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+/* 종료된 라이브 카드 */
+.live-card {
+    width: 260px;
+    height: 70px;
+    background: #FFFFFF;
+    border-radius: 20px;
+
+    margin-left: 66px; /* POP 왼쪽 여백 */
+    margin-top: 7px;
+
+    padding: 16px 14px; /* 상하 16 / 좌우 14 */
+
+    display: flex;
+    align-items: flex-start;
+    gap: 10px; /* 아이콘 원형 → 텍스트 간격 */
+}
+
+/* 왼쪽 원형 아이콘 */
+.live-icon {
+    width: 40px;
+    height: 40px;
+    background: #E2E2E2;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px; /* 전화 아이콘 크기 */
+    color: #555;
+}
+
+/* 종료된 라이브 small title */
+.live-title-small {
+    font-size: 13px;
+    color: #A0A0A0;
+    margin-bottom: 3px; /* 위 → 아래 간격 */
+}
+
+/* 라이브 제목 */
+.live-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 20px;
+}
+
+.voice-wrapper {
+    margin-left: 66px;
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.voice-left {
+    width: 234px;
+    height: 56px;
+    background: #FFF;
+    border-radius: 16px 0 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.play-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 14px;
+    font-size: 14px;
+}
+
+.progress {
+    width: 115px;
+    height: 4px;
+    background: #D2D2D2;
+    border-radius: 2px;
+    margin-right: 12px;
+    position: relative;
+}
+
+.progress-thumb {
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+
+.duration {
+    font-size: 14px;
+    color: #000;
+}
+
+.voice-expand {
+    width: 48px;
+    height: 56px;
+    background: #FFF;
+    border-radius: 0 16px 16px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-left: 6px;
+}
