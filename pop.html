@@ -1,67 +1,304 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOY POP</title>
-
-    <!-- pop.css만 사용 -->
-    <link rel="stylesheet" href="pop.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POP Chat Interface</title>
+  <link rel="stylesheet" href="pop.css">
 </head>
-
 <body>
-<div class="pop-chat">
-
-    <!-- ⭐ 상단 고정바 -->
+  <div class="chat-container">
+    <!-- Header -->
     <div class="header">
-
-        <div class="header-left">
-            <span class="back-icon">←</span>
+      <div class="status-bar"></div>
+      <div class="header-content">
+        <div class="back-button">&lt;</div>
+        <div class="header-center">
+          <div class="chat-title">
+            <span class="chat-name">DOY</span>
+            <span class="dropdown-icon">▼</span>
+          </div>
+          <div class="days-together">함께한지 473일</div>
         </div>
-
-        <div class="title-box">
-            <span class="name">DOY</span>
-            <span class="arrow">▼</span>
-            <div class="days">함께한지 473일</div>
+        <div class="search-icon-touchable">
+          <div class="search-icon">🔍</div>
         </div>
+      </div>
+    </div>
 
-        <div class="header-right">
-            <div class="search-btn">
-                🔍
+    <!-- Chat Messages -->
+    <div class="chat-content">
+      <!-- Date Divider -->
+      <div class="date-divider">
+        <span class="date-badge">2025년 10월 22일 수요일</span>
+      </div>
+
+      <!-- Message 1: Simple emoji -->
+      <div class="message-wrapper">
+        <div class="profile-section">
+          <img src="https://via.placeholder.com/40" alt="DOY" class="profile-image">
+          <div class="message-header">
+            <span class="sender-name">DOY</span>
+            <span class="message-time">오전 1:33</span>
+          </div>
+        </div>
+        <div class="message-bubbles">
+          <div class="chat-bubble small">
+            <span class="chat-bubble-text">😊</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message 2: Text art -->
+      <div class="message-wrapper continuous">
+        <div class="profile-section">
+          <img src="https://via.placeholder.com/40" alt="DOY" class="profile-image">
+          <div class="message-header">
+            <span class="sender-name">DOY</span>
+            <span class="message-time">오전 1:34</span>
+          </div>
+        </div>
+        <div class="message-bubbles">
+          <div class="chat-bubble">
+            <span class="chat-bubble-text">*°<br>  /\ /\<br>c(˘(* ˘ ^ ˘)┐</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message 3: Simple text -->
+      <div class="message-wrapper continuous">
+        <div class="profile-section">
+          <img src="https://via.placeholder.com/40" alt="DOY" class="profile-image">
+          <div class="message-header">
+            <span class="sender-name">DOY</span>
+            <span class="message-time">오전 1:35</span>
+          </div>
+        </div>
+        <div class="message-bubbles">
+          <div class="chat-bubble">
+            <span class="chat-bubble-text">안 자고 뭐해요</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message 4: Multiple bubbles -->
+      <div class="message-wrapper continuous">
+        <div class="profile-section">
+          <img src="https://via.placeholder.com/40" alt="DOY" class="profile-image">
+          <div class="message-header">
+            <span class="sender-name">DOY</span>
+            <span class="message-time">오전 1:37</span>
+          </div>
+        </div>
+        <div class="message-bubbles">
+          <div class="chat-bubble">
+            <span class="chat-bubble-text">DOY님의 답장<br>ㅎㅎ 강수 생각중😊<br>↳ 내 생각도 해</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="chat-bubble-text">라이브는</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="chat-bubble-text">지금 내 비주얼이</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="chat-bubble-text">너무 프리스타일인데</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message 5: Short text -->
+      <div class="message-wrapper continuous">
+        <div class="profile-section">
+          <img src="https://via.placeholder.com/40" alt="DOY" class="profile-image">
+          <div class="message-header">
+            <span class="sender-name">DOY</span>
+            <span class="message-time">오전 1:40</span>
+          </div>
+        </div>
+        <div class="message-bubbles">
+          <div class="chat-bubble">
+            <span class="chat-bubble-text">그럼</span>
+          </div>
+          <div class="chat-bubble">
+            <span class="chat-bubble-text">간식 먹방을 잠깐 할까요</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Messages (Right-aligned) -->
+      <div class="message-user">
+        <span class="user-time">오전 3:38</span>
+        <div class="user-bubble">
+          <span class="user-bubble-text">나 이때똥도의좋아해</span>
+        </div>
+      </div>
+
+      <div class="message-user">
+        <span class="user-time">오전 3:38</span>
+        <div class="user-bubble">
+          <span class="user-bubble-text">탈색모똥도의</span>
+        </div>
+      </div>
+
+      <!-- Message with Photo -->
+      <div class="message-wrapper">
+        <div class="profile-section">
+          <img src="https://via.placeholder.com/40" alt="DOY" class="profile-image">
+          <div class="message-header">
+            <span class="sender-name">DOY</span>
+            <span class="message-time">오전 3:38</span>
+          </div>
+        </div>
+        <div class="photo-message">
+          <img src="https://via.placeholder.com/350x200" alt="Pool photo" class="photo-horizontal">
+        </div>
+      </div>
+
+      <div class="message-wrapper continuous">
+        <div class="profile-section">
+          <img src="https://via.placeholder.com/40" alt="DOY" class="profile-image">
+          <div class="message-header">
+            <span class="sender-name">DOY</span>
+            <span class="message-time">오전 3:38</span>
+          </div>
+        </div>
+        <div class="message-bubbles">
+          <div class="chat-bubble">
+            <span class="chat-bubble-text">제일 좋아하는 사진ㅋㅋ</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Messages -->
+      <div class="message-user">
+        <span class="user-time">오전 3:38</span>
+        <div class="user-bubble">
+          <span class="user-bubble-text">탈색모더죠 캘리더죠</span>
+        </div>
+      </div>
+
+      <div class="message-user">
+        <span class="user-time">오전 3:38</span>
+        <div class="user-bubble">
+          <span class="user-bubble-text">아 바지색따라 공더 카멀들은거나고 ㅋㅋㅋ</span>
+        </div>
+      </div>
+
+      <div class="message-user">
+        <span class="user-time">오전 3:39</span>
+        <div class="user-bubble">
+          <span class="user-bubble-text">물놀이 좋아하십니까?</span>
+        </div>
+      </div>
+
+      <div class="message-user">
+        <span class="user-time">오전 9:55</span>
+        <div class="user-bubble">
+          <span class="user-bubble-text">오늘의별자리운세<br>취미가 맞는 사람과 정보교환🎊</span>
+        </div>
+      </div>
+
+      <!-- Voice Message Example -->
+      <div class="message-wrapper">
+        <div class="profile-section">
+          <img src="https://via.placeholder.com/40" alt="DOY" class="profile-image">
+          <div class="message-header">
+            <span class="sender-name">DOY</span>
+            <span class="message-time">오후 2:15</span>
+          </div>
+        </div>
+        <div class="voice-message">
+          <div class="voice-main">
+            <div class="voice-play-button">
+              <span class="voice-play-icon">▶</span>
             </div>
+            <div class="voice-progress-wrapper">
+              <div class="voice-progress-bar">
+                <div class="voice-progress-handle"></div>
+              </div>
+              <span class="voice-time">0:23</span>
+            </div>
+          </div>
+          <div class="voice-expand-button">
+            <span class="voice-expand-icon">⋯</span>
+          </div>
         </div>
+      </div>
+
+      <!-- Ended Live Example -->
+      <div class="message-wrapper">
+        <div class="profile-section">
+          <img src="https://via.placeholder.com/40" alt="DOY" class="profile-image">
+          <div class="message-header">
+            <span class="sender-name">DOY</span>
+            <span class="message-time">오후 3:20</span>
+          </div>
+        </div>
+        <div class="ended-live">
+          <div class="live-container">
+            <div class="live-icon-wrapper">
+              <span class="live-icon">📞</span>
+            </div>
+            <div class="live-info">
+              <div class="live-status">종료된 라이브</div>
+              <div class="live-title">저녁 먹방 라이브</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Message Example -->
+      <div class="message-wrapper">
+        <div class="profile-section">
+          <img src="https://via.placeholder.com/40" alt="DOY" class="profile-image">
+          <div class="message-header">
+            <span class="sender-name">DOY</span>
+            <span class="message-time">오후 4:10</span>
+          </div>
+        </div>
+        <div class="video-message">
+          <div class="video-container">
+            <img src="https://via.placeholder.com/240x320" alt="Video thumbnail">
+            <div class="video-overlay">
+              <span class="video-play-icon">▶</span>
+              <span class="video-duration">1:24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reply Message Example -->
+      <div class="message-wrapper">
+        <div class="profile-section">
+          <img src="https://via.placeholder.com/40" alt="DOY" class="profile-image">
+          <div class="message-header">
+            <span class="sender-name">DOY</span>
+            <span class="message-time">오후 5:30</span>
+          </div>
+        </div>
+        <div class="message-bubbles">
+          <div class="reply-bubble">
+            <div class="reply-header">DOY님의 답장</div>
+            <div class="reply-quote">
+              <span class="reply-arrow">↳</span>
+              <span>오늘 저녁 뭐 먹을까요?</span>
+            </div>
+            <div class="reply-content">치킨 어때요? 🍗</div>
+          </div>
+        </div>
+      </div>
 
     </div>
 
-    <!-- ⭐ 날짜 라벨 -->
-    <div class="date-label">2025년 10월 22일 수요일</div>
-
-
-    <!-- ⭐ 메시지 그룹 -->
-    <div class="message-group">
-        <img class="avatar" src="https://via.placeholder.com/40">
-
-        <div class="name-time">
-            <span class="name">DOY</span>
-            <span class="time">오전 1:33</span>
-        </div>
-
-        <div class="bubble first">😊</div>
+    <!-- Input Area -->
+    <div class="input-area">
+      <div class="input-wrapper">
+        <input type="text" class="message-input" placeholder="메시지 보내기">
+        <button class="send-button">
+          <span style="color: white;">➤</span>
+        </button>
+      </div>
     </div>
-
-
-    <!-- 다음 메시지 -->
-    <div class="message-group">
-        <img class="avatar" src="https://via.placeholder.com/40">
-
-        <div class="name-time">
-            <span class="name">DOY</span>
-            <span class="time">오전 1:34</span>
-        </div>
-
-        <div class="bubble first">*°  ∧∧ <br> c(˘⌣˘ )⊃</div>
-    </div>
-
-</div>
+  </div>
 </body>
 </html>
