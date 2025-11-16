@@ -1,17 +1,17 @@
-body {
-    display: flex;
+ .kakao-chat-wrapper * {
+            display: flex;
     justify-content: center;
     background: #000;   /* 바깥 웹 배경은 검정/상관없음 */
     font-family: 'Noto Sans KR', sans-serif;
-}
-
-/* POP 전체 화면 */
-.pop-chat {
-    width: 393px;
+        }
+        
+        .kakao-chat-wrapper {
+                width: 393px;
     min-height: 100vh;
     background: #D7DDF1;
     overflow-y: auto;
-}
+        }
+
         
         .kakao-chat-wrapper .chat-container {
             width: 100%;
