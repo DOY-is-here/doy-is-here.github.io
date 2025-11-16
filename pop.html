@@ -1,197 +1,128 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-        
-        .kakao-chat-wrapper * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        .kakao-chat-wrapper {
-            font-family: 'Pretendard';
-            width: 100%;
-            margin: 0 auto;
-            display: block;
-            container-type: inline-size;
-        }
-        
-        .kakao-chat-wrapper .chat-container {
-            width: 100%;
-            background: #b2bfd9;
-            border-radius: 2.67cqw;
-            padding: 3cqw;
-        }
-        
-        .kakao-chat-wrapper .chat-header {
-            text-align: center;
-            margin-bottom: 5.33cqw;
-            padding-bottom: 4cqw;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-        }
-        
-        .kakao-chat-wrapper .chat-header h2 {
-            font-size: 4cqw !important;
-            font-weight: 500 !important;
-            margin-bottom: 1.33cqw !important;
-            line-height: 1.4 !important;
-            color: #000 !important;
-        }
-        
-        .kakao-chat-wrapper .chat-header .subtitle {
-            font-size: 2.93cqw !important;
-            color: #555 !important;
-            line-height: 1.4 !important;
-        }
-        
-        .kakao-chat-wrapper .message-group {
-            margin-bottom: 4cqw;
-        }
-        
-        .kakao-chat-wrapper .message-left {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 2.13cqw;
-        }
-        
-        .kakao-chat-wrapper .profile-pic {
-            width: 11.2cqw;
-            height: 11.2cqw;
-            border-radius: 50%;
-            background: #ddd;
-            margin-right: 2.67cqw;
-            flex-shrink: 0;
-            overflow: hidden;
-        }
-        
-        .kakao-chat-wrapper .profile-pic img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .kakao-chat-wrapper .message-content-left {
-            flex: 1;
-            min-width: 0;
-        }
-        
-        .kakao-chat-wrapper .sender-name {
-            font-size: 2.93cqw !important;
-            font-weight: 500 !important;
-            margin-bottom: 1.33cqw !important;
-            display: flex;
-            align-items: center;
-            gap: 1.33cqw;
-            line-height: 1.4 !important;
-            color: #000 !important;
-        }
-        
-        .kakao-chat-wrapper .sender-name span {
-            font-size: 2.4cqw !important;
-            color: #666 !important;
-            font-weight: 400 !important;
-        }
-        
-        .kakao-chat-wrapper .message-bubble {
-            background: white !important;
-            padding: 2.3cqw 3.2cqw !important;
-            border-radius: 4.8cqw !important;
-            display: inline-block !important;
-            max-width: 76.5% !important;
-            word-wrap: break-word !important;
-            word-break: break-word !important;
-            font-size: 3.42cqw !important;
-            line-height: 1.5 !important;
-            color: #000 !important;
-            border: none !important;
-            box-shadow: none !important;
-        }
-        
-        .kakao-chat-wrapper .message-bubble.emoji {
-            font-size: 8.53cqw !important;
-            background: transparent !important;
-            padding: 1.33cqw !important;
-        }
-        
-        .kakao-chat-wrapper .message-bubble.ascii-art {
-            font-family: monospace !important;
-            white-space: pre !important;
-            font-size: 2.93cqw !important;
-        }
-        
-        .kakao-chat-wrapper .date-separator {
-            text-align: center;
-            margin: 3.5cqw 0;
-        }
-        
-        .kakao-chat-wrapper .date-separator span {
-            background: rgba(255,255,255,0.7) !important;
-            padding: 1.6cqw 3.73cqw !important;
-            border-radius: 4cqw !important;
-            font-size: 2.67cqw !important;
-            color: #555 !important;
-            line-height: 1.4 !important;
-            display: inline-block;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POP Chat</title>
+    <link rel="stylesheet" href="pop.css" />
 </head>
+
 <body>
-    <div class="kakao-chat-wrapper">
-        <div class="chat-container">
-            <div class="chat-header">
-                <h2>DOY</h2>
-                <div class="subtitle">함께한지 393일</div>
+
+<div class="pop-chat">
+
+    <!-- 상단 헤더 -->
+    <header class="pop-header">
+
+        <!-- 뒤로가기 -->
+        <button class="pop-header-back">
+            <span style="font-size:22px;">&#x276E;</span>
+        </button>
+
+        <!-- 가운데 DOY -->
+        <div class="pop-header-center">
+            <div class="pop-header-title">
+                <span class="pop-header-name">DOY</span>
+                <span class="pop-header-arrow">&#9662;</span>
             </div>
-            
-            <div class="date-separator">
-                <span>2024년 8월 1일 목요일</span>
-            </div>
-            
-            <div class="message-group">
-                <div class="message-left">
-                    <div class="profile-pic"></div>
-                    <div class="message-content-left">
-                        <div class="sender-name">
-                            DOY
-                            <span>오후 12:30</span>
-                        </div>
-                        <div class="message-bubble">안녕하세요! 도의입니다😊<br>
-                      드디어 우리 제대로 소통할 수 있게 되었네요! 같이 잘 놀아보자구요🫨<br>
-                      재밌는 추억들, 시간들 잘 만들어가볼까요 !<br>
-                      Doy is here</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="date-separator">
-                <span>2025년 2월 9일 일요일</span>
-            </div>
-            
-            <div class="message-group">
-                <div class="message-left">
-                    <div class="profile-pic"></div>
-                    <div class="message-content-left">
-                        <div class="sender-name">
-                            DOY
-                            <span>오전 12:37</span>
-                        </div>
-                        <div class="message-bubble">오늘 카니발 함께해준 베이스도, 함께 못 한 베이스도 전부 다 고마워<br> 
-어떻게 보면 정말 오랜만에 보는 자리였는데 역시나 베이스가 있어서 힘이 많이 되고 응원도 받았나봐<br>
-덕분에 또 하나의 추억이 쌓였어<br>
-오늘 즐기웠길 바라고 즐기웠다면, 행복했다면 앞으로도 더 더 그런 나날들만 가득하길</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="date-separator">
-                <span>2025년 2월 10일 월요일</span>
+            <div class="pop-header-subtitle">함께한지 473일</div>
+        </div>
+
+        <!-- 검색 -->
+        <button class="pop-header-search">
+            <svg width="24" height="24">
+                <circle cx="11" cy="11" r="6" stroke="#000" stroke-width="2"></circle>
+                <line x1="15" y1="15" x2="19" y2="19" stroke="#000" stroke-width="2"></line>
+            </svg>
+        </button>
+
+    </header>
+
+    <!-- 날짜 -->
+    <div class="date-divider">2025년 10월 22일 수요일</div>
+
+
+    <!-- 메시지 그룹 -->
+    <div class="message-group">
+
+        <img class="avatar" src="https://via.placeholder.com/40" />
+
+        <div class="name-time">
+            <span class="name">DOY</span>
+            <span class="time">오전 1:33</span>
+        </div>
+
+        <div class="bubble first">😊</div>
+
+    </div>
+
+
+    <div class="message-group">
+        <img class="avatar" src="https://via.placeholder.com/40" />
+        <div class="name-time">
+            <span class="name">DOY</span>
+            <span class="time">오전 1:34</span>
+        </div>
+        <div class="bubble">*°　∧∧<br>c(˘⌣˘ )⊃</div>
+    </div>
+
+
+    <!-- 답장 포함 -->
+    <div class="message-group">
+        <img class="avatar" src="https://via.placeholder.com/40" />
+
+        <div class="name-time">
+            <span class="name">DOY</span>
+            <span class="time">오전 1:37</span>
+        </div>
+
+        <div class="reply-bubble">
+            <div class="reply-header">DOY님의 답장</div>
+            <div class="reply-quote">ㅇㅇ 강수 생각중😭</div>
+            <div class="reply-content">
+                <span class="reply-arrow">↳</span>
+                내 생각도 해
             </div>
         </div>
+
+        <div class="bubble">라이브는</div>
+        <div class="bubble">지금 내 비주얼이</div>
+        <div class="bubble">너무 프리스타일인데</div>
     </div>
+
+
+    <!-- 사진 -->
+    <img src="https://via.placeholder.com/350x200" class="media-wide" />
+
+    <!-- 동영상 -->
+    <div class="video-box">
+        <img src="https://via.placeholder.com/240x400" />
+        <div class="video-overlay">
+            <span class="overlay-icon">▶</span>
+            <span class="overlay-time">0:15</span>
+        </div>
+    </div>
+
+    <!-- 종료된 라이브 -->
+    <div class="live-card">
+        <div class="live-icon">📞</div>
+        <div>
+            <div class="live-title-small">종료된 라이브</div>
+            <div class="live-title">두유의 야밤 인터뷰</div>
+        </div>
+    </div>
+
+    <!-- 음성 메시지 -->
+    <div class="voice-wrapper">
+        <div class="voice-left">
+            <div class="play-button">▶</div>
+            <div class="progress"><div class="progress-thumb"></div></div>
+            <div class="duration">0:12</div>
+        </div>
+        <div class="voice-expand">⋯</div>
+    </div>
+
+</div>
+
 </body>
 </html>
