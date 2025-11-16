@@ -1,18 +1,17 @@
  .kakao-chat-wrapper * {
-            display: flex;
-    justify-content: center;
-    background: #000;   /* 바깥 웹 배경은 검정/상관없음 */
-    font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         .kakao-chat-wrapper {
-                width: 393px;
-    min-height: 100vh;
-    background: #D7DDF1;
-    overflow-y: auto;
+            font-family: 'Pretendard';
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+            container-type: inline-size;
         }
 
-        
         .kakao-chat-wrapper .chat-container {
             width: 100%;
             background: #b2bfd9;
