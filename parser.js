@@ -1,62 +1,107 @@
-// messages.txt를 불러와서 처리
+// messages.txt → POP 채팅 HTML 자동 렌더링
+
 fetch("messages.txt")
   .then(res => res.text())
   .then(text => parseChat(text));
 
-// POP 채팅 렌더링 함수
 function parseChat(text) {
-    const lines = text.split("\n");
-    const root = document.getElementById("chat-root");
+  const lines = text.split("\n").map(l => l.trim());
+  const root = document.getElementById("chat-root");
 
-    let currentGroup = null;
+  let currentGroup = null;
+  let currentSender = null;
 
-    lines.forEach((line, index) => {
-        line = line.trim();
+  const dateRegex = /^\d{4}년 \d{1,2}월 \d{1,2}일/;
+  const timeRegex = /^(오전|오후) \d{1,2}:\d{2}$/;
+  const durationRegex = /^\d{1,2}:\d{2}$/;
+  const imageRegex = /(jpeg|jpg|png|webp|gif)/i;
+  const urlRegex = /(http|https):\/\//;
 
-        // 날짜 줄 인식: "2024년 8월 01일 목요일"
-        if (/^\d{4}년/.test(line)) {
-            const dateDiv = document.createElement("div");
-            dateDiv.className = "date-divider";
-            dateDiv.innerHTML = `<div class="date-badge">${line}</div>`;
-            root.appendChild(dateDiv);
-            return;
-        }
+  lines.forEach((line, i) => {
+    if (!line) return;
 
-        // 발신자 줄 (DOY 또는 네 이름)
-        if (/^[A-Za-z가-힣]+$/.test(line) && lines[index + 1]?.includes(":") === false) {
-            currentGroup = document.createElement("div");
-            currentGroup.className = "message-group";
+    // ---------- 1) 날짜 ----------
+    if (dateRegex.test(line)) {
+      const dateDiv = document.createElement("div");
+      dateDiv.className = "date-divider";
+      dateDiv.innerHTML = `<div class="date-badge">${line}</div>`;
+      root.appendChild(dateDiv);
+      currentSender = null;
+      return;
+    }
 
-            const header = document.createElement("div");
-            header.className = "message-header";
-            header.innerHTML = `<span class="sender-name">${line}</span>`;
+    // ---------- 2) 발신자 ----------
+    if (/^[A-Za-z가-힣]+$/.test(line) && !timeRegex.test(lines[i+1])) {
+      currentSender = line;
+      currentGroup = document.createElement("div");
+      currentGroup.className = "message-group";
 
-            currentGroup.appendChild(header);
-            root.appendChild(currentGroup);
-            return;
-        }
+      const header = document.createElement("div");
+      header.className = "message-header";
+      header.innerHTML = `<span class="sender-name">${line}</span>`;
 
-        // 시간 줄 인식 (오전 1:23, 오후 12:20 등)
-        if (/^(오전|오후) \d{1,2}:\d{2}$/.test(line)) {
-            const timeSpan = document.createElement("span");
-            timeSpan.className = "message-time";
-            timeSpan.innerText = line;
-            currentGroup.querySelector(".message-header").appendChild(timeSpan);
-            return;
-        }
+      currentGroup.appendChild(header);
+      root.appendChild(currentGroup);
+      return;
+    }
 
-        // 메시지 내용 (여러 줄 가능)
-        if (line !== "") {
-            const row = document.createElement("div");
-            row.className = "message-row continued";
+    // ---------- 3) 시간 ----------
+    if (timeRegex.test(line)) {
+      if (currentGroup) {
+        const timeSpan = document.createElement("span");
+        timeSpan.className = "message-time";
+        timeSpan.innerText = line;
+        currentGroup.querySelector(".message-header").appendChild(timeSpan);
+      }
+      return;
+    }
 
-            const bubble = document.createElement("div");
-            bubble.className = "message-bubble";
+    // ---------- 4) 사진/이미지 ----------
+    if (imageRegex.test(line) || (urlRegex.test(line) && !durationRegex.test(line))) {
+      const imgDiv = document.createElement("div");
+      imgDiv.className = "message-image landscape";
+      imgDiv.innerHTML = `<img src="${line}" alt="image">`;
 
-            bubble.innerHTML = `<div class="message-text">${line.replace(/\n/g, "<br>")}</div>`;
+      currentGroup.appendChild(imgDiv);
+      return;
+    }
 
-            row.appendChild(bubble);
-            currentGroup.appendChild(row);
-        }
-    });
+    // ---------- 5) 영상 ----------
+    if (durationRegex.test(line)) {
+      const vDiv = document.createElement("div");
+      vDiv.className = "message-video";
+      vDiv.innerHTML = `
+        <img src="https://via.placeholder.com/240x400/000/FFFFFF?text=Video" class="video-thumbnail">
+        <div class="video-overlay">
+            <span class="video-play-icon">▶</span>
+            <span class="video-time">${line}</span>
+        </div>
+      `;
+      currentGroup.appendChild(vDiv);
+      return;
+    }
+
+    // ---------- 6) 답장 ----------
+    if (line.startsWith("↳")) {
+      const replyDiv = document.createElement("div");
+      replyDiv.className = "reply-bubble";
+      replyDiv.innerHTML = `
+        <div class="reply-header">${currentSender}님의 답장</div>
+        <div class="reply-text"><span class="reply-arrow">↳</span> ${line.substring(1).trim()}</div>
+      `;
+      currentGroup.appendChild(replyDiv);
+      return;
+    }
+
+    // ---------- 7) 일반 텍스트 메시지 ----------
+    const row = document.createElement("div");
+    row.className = "message-row continued";
+
+    const bubble = document.createElement("div");
+    bubble.className = "message-bubble";
+    bubble.innerHTML = `<div class="message-text">${line}</div>`;
+
+    row.appendChild(bubble);
+    currentGroup.appendChild(row);
+  });
 }
