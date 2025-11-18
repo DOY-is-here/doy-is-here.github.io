@@ -182,9 +182,9 @@ function createMessageRow(message, showProfile) {
 
 function createMessageContent(content) {
     // 답장 메시지 처리
-    if (content.includes('DOY님의 답장')) {
-        return createReplyMessage(content);
-    }
+    if (content.startsWith('종료된 라이브')) {
+    return createLiveEnded(content);
+}
     
     // 음성 메시지 처리
     if (content.match(/^\[음성메시지\] \d{2}:\d{2}$/)) {
@@ -256,12 +256,39 @@ function createReplyMessage(content) {
     replyBubble.appendChild(replyQuoted);
     
     // 답장 내용
+function createReplyMessage(content) {
+    const lines = content.split('\n').filter(line => line.trim() !== '');
+
+    const replyBubble = document.createElement('div');
+    replyBubble.className = 'reply-bubble';
+
+    // 인용 헤더 영역
+    const replyQuoted = document.createElement('div');
+    replyQuoted.className = 'reply-quoted-section';
+
+    const header = document.createElement('div');
+    header.className = 'reply-header';
+    header.textContent = lines[0]; // "DOY님의 답장"
+
+    const quoted = document.createElement('div');
+    quoted.className = 'reply-quoted-text';
+    quoted.textContent = lines[1]; // 인용된 메시지 "ㅋㅋㅋㅋㅋ 지금 라이브할게요??"
+
+    replyQuoted.appendChild(header);
+    replyQuoted.appendChild(quoted);
+    replyBubble.appendChild(replyQuoted);
+
+    // 실제 답장 내용
     if (lines.length > 2) {
         const replyText = document.createElement('div');
         replyText.className = 'reply-content';
         replyText.innerHTML = `↳ ${lines.slice(2).join('<br>')}`;
         replyBubble.appendChild(replyText);
     }
+
+    return replyBubble;
+}
+
     
     return replyBubble;
 }
@@ -292,26 +319,29 @@ function createVoiceMessage(content) {
     return voiceDiv;
 }
 
-function createLiveEnded() {
+function createLiveEnded(content) {
+    const lines = content.split('\n').filter(line => line.trim() !== '');
+
+    const status = lines[0]; // 종료된 라이브
+    const title = lines[1] || ''; // 먹방
+
     const liveDiv = document.createElement('div');
     liveDiv.className = 'live-ended';
-    
+
     liveDiv.innerHTML = `
-        <div class="live-container">
-            <div class="live-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                    <path d="M20 15.5c-1.2 0-2.4-.2-3.5-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.7-6.5-6.5l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/>
-                </svg>
-            </div>
-            <div class="live-info">
-                <div class="live-title">종료된 라이브</div>
-                <div class="live-time">ㅡ,ㅡ</div>
-            </div>
+        <div class="live-icon-circle">
+            <span class="phone-icon">📞</span>
+        </div>
+        <div class="live-info">
+            <div class="live-status">${status}</div>
+            <div class="live-title">${title}</div>
         </div>
     `;
-    
+
     return liveDiv;
 }
+
+
 
 function createEmoticon() {
     const bubble = document.createElement('div');
