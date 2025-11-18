@@ -158,7 +158,7 @@ function createMessageRow(message, showProfile) {
     
     // 연속 메시지는 프로필 공간만큼 왼쪽 여백 추가 (50px = 40px 프로필 + 10px gap)
     if (!showProfile) {
-        content.style.marginLeft = '50px';
+        content.style.marginLeft = '40px';
     }
     
     // 발신자 이름과 시간 (첫 메시지에만 표시)
