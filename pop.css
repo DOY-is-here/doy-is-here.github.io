@@ -12,7 +12,7 @@
         }
 
         .chat-container {
-            width: 395px;
+            width: 394px;
             max-width: 100%;
             background-color: #FFFFFF;
             position: relative;
@@ -414,7 +414,7 @@
         }
 
         .voice-time {
-            font-size: 10px;
+            font-size: 13px;
             color: #151515;
         }
 
