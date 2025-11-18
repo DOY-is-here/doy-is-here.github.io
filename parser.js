@@ -72,6 +72,28 @@ function parseAndRenderMessages(text) {
                 continue;
             }
         }
+
+         // ✅ "DOY님의 답장" 또는 "종료된 라이브" 감지 → 2줄 이상 묶기
+    if (
+        (line === 'DOY님의 답장' && i + 2 < lines.length) ||
+        (line === '종료된 라이브' && i + 1 < lines.length)
+    ) {
+        let collected = [line];
+        let maxLines = line === 'DOY님의 답장' ? 3 : 2;
+        for (let j = 1; j < maxLines && i + j < lines.length; j++) {
+            const next = lines[i + j].trim();
+            if (next.match(/^(오전|오후) \d{1,2}:\d{2}$/) || next === 'DOY') break;
+            collected.push(next);
+        }
+        messageGroup.push({
+            sender: currentSender,
+            time: currentTime,
+            content: collected.join('\n')
+        });
+        i += collected.length - 1;
+        continue;
+    }
+
         
         // 메시지 내용 수집
         if (currentSender && currentTime) {
