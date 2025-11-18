@@ -1,88 +1,371 @@
-// messages.txt 로드
-fetch("messages.txt")
-  .then(res => res.text())
-  .then(text => parseChat(text))
-  .catch(err => console.error("Failed to load messages:", err));
+// messages.txt 파일을 파싱하여 채팅 UI를 생성하는 스크립트
 
-// 도이 프로필 이미지
-const DOY_PROFILE = "profile/doy.png";  // ← 이미지 파일명
-
-function parseChat(text) {
-    const lines = text.split("\n").map(l => l.trim());
-    const root = document.getElementById("chat-root");
-
-    let currentGroup = null;
-    let currentMessages = [];
-
-    function flushMessages() {
-        if (!currentGroup || currentMessages.length === 0) return;
-
-        currentMessages.forEach(msg => {
-            const row = document.createElement("div");
-            row.className = "message-row";
-
-            const bubble = document.createElement("div");
-            bubble.className = "message-bubble continued";
-            bubble.innerHTML = msg.replace(/\n/g, "<br>");
-
-            row.appendChild(bubble);
-            currentGroup.appendChild(row);
-        });
-
-        currentMessages = [];
+async function loadMessages() {
+    try {
+        const response = await fetch('messages.txt');
+        const text = await response.text();
+        parseAndRenderMessages(text);
+    } catch (error) {
+        console.error('메시지 파일을 불러오는데 실패했습니다:', error);
     }
-
-    lines.forEach((line, index) => {
-        const nextLine = lines[index + 1] || "";
-
-        // 날짜 처리
-        if (/^\d{4}년 \d{1,2}월 \d{1,2}일/.test(line)) {
-            flushMessages();
-
-            const div = document.createElement("div");
-            div.className = "date-divider";
-            div.innerHTML = `<div class="date-badge">${line}</div>`;
-            root.appendChild(div);
-            return;
-        }
-
-        // DOY + 시간 → 새 메시지 그룹
-        if (line === "DOY" && /^(오전|오후) \d{1,2}:\d{2}$/.test(nextLine)) {
-            flushMessages();
-
-            const group = document.createElement("div");
-            group.className = "message-group";
-
-            const header = document.createElement("div");
-            header.className = "message-header";
-
-            header.innerHTML = `
-                <img class="profile-img" src="${DOY_PROFILE}">
-                <span class="sender-name">DOY</span>
-                <span class="message-time">${nextLine}</span>
-            `;
-
-            group.appendChild(header);
-            root.appendChild(group);
-
-            currentGroup = group;
-            return;
-        }
-
-        // 시간 줄 자체는 header에 넣었으므로 무시
-        if (/^(오전|오후) \d{1,2}:\d{2}$/.test(line)) {
-            return;
-        }
-
-        // 실제 메시지 줄
-        if (line !== "") {
-            currentMessages.push(line);
-            return;
-        }
-
-        // 빈 줄 → 메시지 flush
-        flushMessages();
-    });
-
-    flushMessages();
 }
+
+function parseAndRenderMessages(text) {
+    const lines = text.split('\n');
+    const chatRoot = document.getElementById('chat-root');
+    
+    // 채팅 컨테이너 생성
+    const chatContainer = document.createElement('div');
+    chatContainer.className = 'chat-container';
+    
+    // 헤더 생성
+    chatContainer.appendChild(createHeader());
+    
+    // 채팅 메시지 영역 생성
+    const chatMessages = document.createElement('div');
+    chatMessages.className = 'chat-messages';
+    
+    let currentDate = '';
+    let currentSender = '';
+    let currentTime = '';
+    let messageGroup = null;
+    let consecutiveMessages = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        
+        // 빈 줄 건너뛰기
+        if (line === '') continue;
+        
+        // 날짜 구분선 감지 (예: "2024년 8월 01일 목요일")
+        if (line.match(/^\d{4}년 \d{1,2}월 \d{1,2}일 [월화수목금토일]요일$/)) {
+            // 이전 메시지 그룹 처리
+            if (consecutiveMessages.length > 0) {
+                chatMessages.appendChild(createMessageGroup(consecutiveMessages));
+                consecutiveMessages = [];
+            }
+            
+            currentDate = line;
+            chatMessages.appendChild(createDateDivider(currentDate));
+            currentSender = '';
+            currentTime = '';
+            continue;
+        }
+        
+        // 발신자 감지 (예: "DOY")
+        if (line === 'DOY') {
+            // 다음 줄이 시간인지 확인
+            if (i + 1 < lines.length) {
+                const nextLine = lines[i + 1].trim();
+                if (nextLine.match(/^(오전|오후) \d{1,2}:\d{2}$/)) {
+                    // 발신자가 바뀌면 이전 메시지 그룹 렌더링
+                    if (currentSender !== line || consecutiveMessages.length === 0) {
+                        if (consecutiveMessages.length > 0) {
+                            chatMessages.appendChild(createMessageGroup(consecutiveMessages));
+                            consecutiveMessages = [];
+                        }
+                    }
+                    
+                    currentSender = line;
+                    i++; // 시간 줄로 이동
+                    currentTime = lines[i].trim();
+                    continue;
+                }
+            }
+        }
+        
+        // 메시지 내용
+        if (currentSender && currentTime) {
+            consecutiveMessages.push({
+                sender: currentSender,
+                time: currentTime,
+                content: line
+            });
+            
+            // 현재 메시지와 다음 메시지 사이에 발신자/시간이 있는지 확인
+            // 없으면 같은 그룹으로 처리
+            let isLastInGroup = true;
+            if (i + 1 < lines.length) {
+                const nextLine = lines[i + 1].trim();
+                // 다음이 빈 줄이거나, DOY가 아니거나, 새로운 날짜면 그룹 종료
+                if (nextLine === '' || nextLine === 'DOY' || nextLine.match(/^\d{4}년/)) {
+                    isLastInGroup = true;
+                } else {
+                    isLastInGroup = false;
+                }
+            }
+            
+            // 시간이 바뀌면 새 그룹 시작
+            if (i + 2 < lines.length) {
+                const next2Line = lines[i + 2].trim();
+                if (next2Line.match(/^(오전|오후) \d{1,2}:\d{2}$/)) {
+                    isLastInGroup = true;
+                }
+            }
+        }
+    }
+    
+    // 마지막 메시지 그룹 처리
+    if (consecutiveMessages.length > 0) {
+        chatMessages.appendChild(createMessageGroup(consecutiveMessages));
+    }
+    
+    chatContainer.appendChild(chatMessages);
+    chatRoot.appendChild(chatContainer);
+}
+
+function createHeader() {
+    const header = document.createElement('div');
+    header.className = 'header';
+    
+    header.innerHTML = `
+        <div class="status-bar">
+            <span>9:41</span>
+            <span>●●●</span>
+        </div>
+        <div class="header-content">
+            <div class="header-left">
+                <div class="back-button">‹</div>
+                <div class="header-title">
+                    <div class="title-row">
+                        <span class="chat-name">도의</span>
+                        <span class="dropdown-icon">▾</span>
+                    </div>
+                    <div class="days-together">함께한 지 600일 💙</div>
+                </div>
+            </div>
+            <div class="search-button">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+        </div>
+    `;
+    
+    return header;
+}
+
+function createDateDivider(dateText) {
+    const divider = document.createElement('div');
+    divider.className = 'date-divider';
+    divider.innerHTML = `<div class="date-badge">${dateText}</div>`;
+    return divider;
+}
+
+function createMessageGroup(messages) {
+    const group = document.createElement('div');
+    group.className = 'message-group';
+    
+    messages.forEach((msg, index) => {
+        const isFirstMessage = index === 0;
+        const messageRow = createMessageRow(msg, isFirstMessage);
+        group.appendChild(messageRow);
+    });
+    
+    return group;
+}
+
+function createMessageRow(message, showProfile) {
+    const row = document.createElement('div');
+    row.className = 'message-row' + (showProfile ? '' : ' continued');
+    
+    // 프로필 사진 (첫 메시지에만 표시)
+    if (showProfile) {
+        const profile = document.createElement('div');
+        profile.className = 'profile-pic';
+        row.appendChild(profile);
+    }
+    
+    const content = document.createElement('div');
+    content.className = 'message-content';
+    
+    // 발신자 이름과 시간 (첫 메시지에만 표시)
+    if (showProfile) {
+        const header = document.createElement('div');
+        header.className = 'message-header';
+        header.innerHTML = `
+            <span class="sender-name">${message.sender}</span>
+            <span class="message-time">${message.time}</span>
+        `;
+        content.appendChild(header);
+    }
+    
+    // 메시지 내용 생성
+    const messageElement = createMessageContent(message.content);
+    content.appendChild(messageElement);
+    
+    row.appendChild(content);
+    return row;
+}
+
+function createMessageContent(content) {
+    // 답장 메시지 처리
+    if (content.includes('DOY님의 답장')) {
+        return createReplyMessage(content);
+    }
+    
+    // 음성 메시지 처리
+    if (content.match(/^\[음성메시지\] \d{2}:\d{2}$/)) {
+        return createVoiceMessage(content);
+    }
+    
+    // 종료된 라이브 처리
+    if (content === '종료된 라이브') {
+        return createLiveEnded();
+    }
+    
+    // 이모티콘 처리
+    if (content === '[이모티콘]') {
+        return createEmoticon();
+    }
+    
+    // 사진 처리
+    if (content === '[사진]') {
+        return createImage();
+    }
+    
+    // 동영상 처리
+    if (content.match(/^\[동영상\] \d{2}:\d{2}$/)) {
+        return createVideo(content);
+    }
+    
+    // 일반 텍스트 메시지
+    return createTextMessage(content);
+}
+
+function createTextMessage(text) {
+    const bubble = document.createElement('div');
+    
+    // 짧은 메시지 판별 (15자 이하)
+    const isShort = text.length <= 15 && !text.includes('<br>');
+    
+    bubble.className = 'message-bubble' + (isShort ? ' small' : '');
+    
+    const messageText = document.createElement('div');
+    messageText.className = 'message-text';
+    messageText.innerHTML = text.replace(/<br>/g, '<br>');
+    
+    bubble.appendChild(messageText);
+    return bubble;
+}
+
+function createReplyMessage(content) {
+    const lines = content.split('\n').filter(line => line.trim() !== '');
+    
+    const replyBubble = document.createElement('div');
+    replyBubble.className = 'reply-bubble';
+    
+    // 답장 헤더
+    const header = document.createElement('div');
+    header.className = 'reply-header';
+    header.textContent = 'DOY님의 답장';
+    replyBubble.appendChild(header);
+    
+    // 원본 메시지 인용 (두 번째 줄)
+    if (lines.length > 1) {
+        const quoted = document.createElement('div');
+        quoted.className = 'reply-quoted';
+        quoted.innerHTML = lines[1].replace(/<br>/g, '<br>');
+        replyBubble.appendChild(quoted);
+    }
+    
+    // 답장 내용 (세 번째 줄 이후)
+    if (lines.length > 2) {
+        const replyText = document.createElement('div');
+        replyText.className = 'reply-text';
+        
+        const arrow = document.createElement('span');
+        arrow.className = 'reply-arrow';
+        arrow.textContent = '↳';
+        
+        const text = document.createElement('span');
+        text.innerHTML = lines.slice(2).join('<br>').replace(/<br>/g, '<br>');
+        
+        replyText.appendChild(arrow);
+        replyText.appendChild(text);
+        replyBubble.appendChild(replyText);
+    }
+    
+    return replyBubble;
+}
+
+function createVoiceMessage(content) {
+    const match = content.match(/\[음성메시지\] (\d{2}):(\d{2})/);
+    const duration = match ? `${match[1]}:${match[2]}` : '00:04';
+    
+    const voiceDiv = document.createElement('div');
+    voiceDiv.className = 'voice-message';
+    
+    voiceDiv.innerHTML = `
+        <div class="voice-main">
+            <div class="play-button">
+                <span class="play-icon">▶</span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill"></div>
+                <div class="progress-handle"></div>
+            </div>
+            <span class="voice-time">${duration}</span>
+        </div>
+        <div class="voice-expand">
+            <span class="expand-icon">↗</span>
+        </div>
+    `;
+    
+    return voiceDiv;
+}
+
+function createLiveEnded() {
+    const liveDiv = document.createElement('div');
+    liveDiv.className = 'live-ended';
+    
+    liveDiv.innerHTML = `
+        <div class="live-icon-circle">
+            <span class="phone-icon">📞</span>
+        </div>
+        <div class="live-info">
+            <div class="live-status">종료됨</div>
+            <div class="live-title">라이브</div>
+        </div>
+    `;
+    
+    return liveDiv;
+}
+
+function createEmoticon() {
+    const bubble = document.createElement('div');
+    bubble.className = 'message-bubble small';
+    bubble.innerHTML = '<div class="message-text">🎉</div>';
+    return bubble;
+}
+
+function createImage() {
+    const imageDiv = document.createElement('div');
+    imageDiv.className = 'message-image landscape';
+    imageDiv.innerHTML = `
+        <img src="https://via.placeholder.com/284x200/C9D0EA/646774?text=사진" alt="사진">
+    `;
+    return imageDiv;
+}
+
+function createVideo(content) {
+    const match = content.match(/\[동영상\] (\d{2}):(\d{2})/);
+    const duration = match ? `${match[1]}:${match[2]}` : '00:02';
+    
+    const videoDiv = document.createElement('div');
+    videoDiv.className = 'message-video';
+    
+    videoDiv.innerHTML = `
+        <img src="https://via.placeholder.com/174x300/C9D0EA/646774?text=동영상" alt="동영상" class="video-thumbnail">
+        <div class="video-overlay">
+            <span class="video-play-icon">▶</span>
+            <span class="video-time">${duration}</span>
+        </div>
+    `;
+    
+    return videoDiv;
+}
+
+// 페이지 로드시 실행
+document.addEventListener('DOMContentLoaded', loadMessages);
