@@ -98,8 +98,6 @@ function createHeader() {
     
     header.innerHTML = `
         <div class="status-bar">
-            <span>9:41</span>
-            <span>●●●</span>
         </div>
         <div class="header-content">
             <div class="header-left">
