@@ -43,13 +43,16 @@
             padding: 1px 16px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            position: relative;        
         }
 
         .header-left {
             display: flex;
             align-items: center;
             gap: 16px;
+            position: absolute;  
+            left: 16px;
         }
 
         .back-button {
@@ -100,6 +103,8 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            position: absolute;  
+            right: 16px;
         }
 
         .search-icon {
@@ -137,7 +142,7 @@
 
         .message-row {
             display: flex;
-            gap: 10px;
+            gap: 6px;
             margin-bottom: 6px;
         }
 
@@ -169,7 +174,7 @@
             align-items: center;
             gap: 6px;
             margin-bottom: 6px;
-            padding-left: 30px;
+            padding-left: 0px;
         }
 
         .sender-name {
@@ -188,7 +193,7 @@
             padding: 8px 14px 9px 14px;
             border-radius: 20px;
             max-width: 239px;
-            margin-left: 30px;
+            margin-left: 0px;
             display: inline-block;
         }
 
@@ -213,7 +218,7 @@
             padding: 10px 0px 10px 14px;
             border-radius: 20px;
             max-width: 239px;
-            margin-left: 30px;
+            margin-left: 0px;
         }
 
         .reply-header {
@@ -244,7 +249,7 @@
 
         /* 이미지 스타일 */
         .message-image {
-            margin-left: 30px;
+            margin-left: 0px;
             border-radius: 18px;
             overflow: hidden;
         }
@@ -272,7 +277,7 @@
 
         /* 동영상 스타일 */
         .message-video {
-            margin-left: 30px;
+            margin-left: 0px;
             width: 174px;
             max-height: 400px;
             border-radius: 18px;
@@ -290,14 +295,16 @@
 
         .video-overlay {
             position: absolute;
-            bottom: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             right: 0;
             background: rgba(0, 0, 0, 0.45);
-            height: 22px;
+            height: auto;
             padding: 0 8px;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 6px;
         }
 
@@ -308,12 +315,18 @@
 
         .video-time {
             font-size: 12px;
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
             color: #FFFFFF;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2px 6px;
+            border-radius: 4px;
         }
 
         /* 종료된 라이브 */
         .live-ended {
-            margin-left: 30px;
+            margin-left: 0px;
             width: 190px;
             background-color: #FFFFFF;
             border-radius: 15px;
@@ -336,16 +349,19 @@
 
         .phone-icon {
             font-size: 17px;
+            filter: grayscale(100%);
         }
 
         .live-info {
             display: flex;
             flex-direction: column;
+            gap: 2px;
         }
 
         .live-status {
             font-size: 12px;
             color: #999999;
+            font-weight: 500;
         }
 
         .live-title {
@@ -355,7 +371,7 @@
 
         /* 음성 메시지 */
         .voice-message {
-            margin-left: 30px;
+            margin-left: 0px;
             display: flex;
             gap: 2.5px;
             margin-bottom: 4px;
