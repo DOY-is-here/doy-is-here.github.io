@@ -104,10 +104,10 @@ function createHeader() {
                 <div class="back-button">‹</div>
                 <div class="header-title">
                     <div class="title-row">
-                        <span class="chat-name">도의</span>
-                        <span class="dropdown-icon">▾</span>
+                        <span class="chat-name">DOY</span>
+                        <span class="dropdown-icon">∨</span>
                     </div>
-                    <div class="days-together">함께한 지 600일 💙</div>
+                    <div class="days-together">함께한지 600일</div>
                 </div>
             </div>
             <div class="search-button">
@@ -158,7 +158,7 @@ function createMessageRow(message, showProfile) {
     
     // 연속 메시지는 프로필 공간만큼 왼쪽 여백 추가 (50px = 40px 프로필 + 10px gap)
     if (!showProfile) {
-        content.style.marginLeft = '50px';
+        content.style.marginLeft = '45px';
     }
     
     // 발신자 이름과 시간 (첫 메시지에만 표시)
@@ -237,34 +237,29 @@ function createReplyMessage(content) {
     const replyBubble = document.createElement('div');
     replyBubble.className = 'reply-bubble';
     
-    // 답장 헤더
+    // 답장 헤더와 인용문을 하나의 영역으로
+    const replyQuoted = document.createElement('div');
+    replyQuoted.className = 'reply-quoted-section';
+    
     const header = document.createElement('div');
     header.className = 'reply-header';
     header.textContent = 'DOY님의 답장';
-    replyBubble.appendChild(header);
     
-    // 원본 메시지 인용 (두 번째 줄)
+    const quoted = document.createElement('div');
+    quoted.className = 'reply-quoted-text';
     if (lines.length > 1) {
-        const quoted = document.createElement('div');
-        quoted.className = 'reply-quoted';
-        quoted.innerHTML = lines[1].replace(/<br>/g, '<br>');
-        replyBubble.appendChild(quoted);
+        quoted.textContent = lines[1];
     }
     
-    // 답장 내용 (세 번째 줄 이후)
+    replyQuoted.appendChild(header);
+    replyQuoted.appendChild(quoted);
+    replyBubble.appendChild(replyQuoted);
+    
+    // 답장 내용
     if (lines.length > 2) {
         const replyText = document.createElement('div');
-        replyText.className = 'reply-text';
-        
-        const arrow = document.createElement('span');
-        arrow.className = 'reply-arrow';
-        arrow.textContent = '↳';
-        
-        const text = document.createElement('span');
-        text.innerHTML = lines.slice(2).join('<br>').replace(/<br>/g, '<br>');
-        
-        replyText.appendChild(arrow);
-        replyText.appendChild(text);
+        replyText.className = 'reply-content';
+        replyText.innerHTML = `↳ ${lines.slice(2).join('<br>')}`;
         replyBubble.appendChild(replyText);
     }
     
@@ -302,12 +297,16 @@ function createLiveEnded() {
     liveDiv.className = 'live-ended';
     
     liveDiv.innerHTML = `
-        <div class="live-icon-circle">
-            <span class="phone-icon">📞</span>
-        </div>
-        <div class="live-info">
-            <div class="live-status">종료됨</div>
-            <div class="live-title">라이브</div>
+        <div class="live-container">
+            <div class="live-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M20 15.5c-1.2 0-2.4-.2-3.5-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.7-6.5-6.5l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/>
+                </svg>
+            </div>
+            <div class="live-info">
+                <div class="live-title">종료된 라이브</div>
+                <div class="live-time">ㅡ,ㅡ</div>
+            </div>
         </div>
     `;
     
@@ -341,8 +340,8 @@ function createVideo(content) {
         <img src="https://via.placeholder.com/174x300/C9D0EA/646774?text=동영상" alt="동영상" class="video-thumbnail">
         <div class="video-overlay">
             <span class="video-play-icon">▶</span>
-            <span class="video-time">${duration}</span>
         </div>
+        <div class="video-duration">${duration}</div>
     `;
     
     return videoDiv;
