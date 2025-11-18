@@ -28,8 +28,7 @@ function parseAndRenderMessages(text) {
     let currentDate = '';
     let currentSender = '';
     let currentTime = '';
-    let messageGroup = null;
-    let consecutiveMessages = [];
+    let messageGroup = [];
     
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
@@ -40,9 +39,9 @@ function parseAndRenderMessages(text) {
         // 날짜 구분선 감지 (예: "2024년 8월 01일 목요일")
         if (line.match(/^\d{4}년 \d{1,2}월 \d{1,2}일 [월화수목금토일]요일$/)) {
             // 이전 메시지 그룹 처리
-            if (consecutiveMessages.length > 0) {
-                chatMessages.appendChild(createMessageGroup(consecutiveMessages));
-                consecutiveMessages = [];
+            if (messageGroup.length > 0) {
+                chatMessages.appendChild(createMessageGroup(messageGroup));
+                messageGroup = [];
             }
             
             currentDate = line;
@@ -52,62 +51,41 @@ function parseAndRenderMessages(text) {
             continue;
         }
         
-        // 발신자 감지 (예: "DOY")
-        if (line === 'DOY') {
-            // 다음 줄이 시간인지 확인
-            if (i + 1 < lines.length) {
-                const nextLine = lines[i + 1].trim();
-                if (nextLine.match(/^(오전|오후) \d{1,2}:\d{2}$/)) {
-                    // 발신자가 바뀌면 이전 메시지 그룹 렌더링
-                    if (currentSender !== line || consecutiveMessages.length === 0) {
-                        if (consecutiveMessages.length > 0) {
-                            chatMessages.appendChild(createMessageGroup(consecutiveMessages));
-                            consecutiveMessages = [];
-                        }
+        // 발신자 + 시간 감지
+        if (line === 'DOY' && i + 1 < lines.length) {
+            const nextLine = lines[i + 1].trim();
+            if (nextLine.match(/^(오전|오후) \d{1,2}:\d{2}$/)) {
+                const newSender = line;
+                const newTime = nextLine;
+                
+                // 시간이 바뀌면 이전 그룹 렌더링
+                if (currentTime !== newTime || currentSender !== newSender) {
+                    if (messageGroup.length > 0) {
+                        chatMessages.appendChild(createMessageGroup(messageGroup));
+                        messageGroup = [];
                     }
-                    
-                    currentSender = line;
-                    i++; // 시간 줄로 이동
-                    currentTime = lines[i].trim();
-                    continue;
                 }
+                
+                currentSender = newSender;
+                currentTime = newTime;
+                i++; // 시간 줄 건너뛰기
+                continue;
             }
         }
         
-        // 메시지 내용
+        // 메시지 내용 수집
         if (currentSender && currentTime) {
-            consecutiveMessages.push({
+            messageGroup.push({
                 sender: currentSender,
                 time: currentTime,
                 content: line
             });
-            
-            // 현재 메시지와 다음 메시지 사이에 발신자/시간이 있는지 확인
-            // 없으면 같은 그룹으로 처리
-            let isLastInGroup = true;
-            if (i + 1 < lines.length) {
-                const nextLine = lines[i + 1].trim();
-                // 다음이 빈 줄이거나, DOY가 아니거나, 새로운 날짜면 그룹 종료
-                if (nextLine === '' || nextLine === 'DOY' || nextLine.match(/^\d{4}년/)) {
-                    isLastInGroup = true;
-                } else {
-                    isLastInGroup = false;
-                }
-            }
-            
-            // 시간이 바뀌면 새 그룹 시작
-            if (i + 2 < lines.length) {
-                const next2Line = lines[i + 2].trim();
-                if (next2Line.match(/^(오전|오후) \d{1,2}:\d{2}$/)) {
-                    isLastInGroup = true;
-                }
-            }
         }
     }
     
     // 마지막 메시지 그룹 처리
-    if (consecutiveMessages.length > 0) {
-        chatMessages.appendChild(createMessageGroup(consecutiveMessages));
+    if (messageGroup.length > 0) {
+        chatMessages.appendChild(createMessageGroup(messageGroup));
     }
     
     chatContainer.appendChild(chatMessages);
@@ -175,13 +153,11 @@ function createMessageRow(message, showProfile) {
         const profile = document.createElement('div');
         profile.className = 'profile-pic';
         row.appendChild(profile);
-    }
-    
-    const content = document.createElement('div');
-    content.className = 'message-content';
-    
-    // 발신자 이름과 시간 (첫 메시지에만 표시)
-    if (showProfile) {
+        
+        const content = document.createElement('div');
+        content.className = 'message-content';
+        
+        // 발신자 이름과 시간
         const header = document.createElement('div');
         header.className = 'message-header';
         header.innerHTML = `
@@ -189,13 +165,18 @@ function createMessageRow(message, showProfile) {
             <span class="message-time">${message.time}</span>
         `;
         content.appendChild(header);
+        
+        // 메시지 내용
+        const messageElement = createMessageContent(message.content);
+        content.appendChild(messageElement);
+        
+        row.appendChild(content);
+    } else {
+        // 연속 메시지는 말풍선만 표시 (margin-left로 위치 조정)
+        const messageElement = createMessageContent(message.content);
+        row.appendChild(messageElement);
     }
     
-    // 메시지 내용 생성
-    const messageElement = createMessageContent(message.content);
-    content.appendChild(messageElement);
-    
-    row.appendChild(content);
     return row;
 }
 
