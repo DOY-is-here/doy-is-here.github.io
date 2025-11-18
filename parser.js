@@ -5,7 +5,7 @@ fetch("messages.txt")
   .catch(err => console.error("Failed to load messages:", err));
 
 // 도이 프로필 이미지
-const DOY_PROFILE = "profile/doy.png";   // ← 파일명은 doy.png 로 저장해줘
+const DOY_PROFILE = "profile/doy.png";  // ← 이미지 파일명
 
 function parseChat(text) {
     const lines = text.split("\n").map(l => l.trim());
@@ -14,7 +14,6 @@ function parseChat(text) {
     let currentGroup = null;
     let currentMessages = [];
 
-    // 말풍선 묶음 완성
     function flushMessages() {
         if (!currentGroup || currentMessages.length === 0) return;
 
@@ -36,9 +35,10 @@ function parseChat(text) {
     lines.forEach((line, index) => {
         const nextLine = lines[index + 1] || "";
 
-        // 날짜
+        // 날짜 처리
         if (/^\d{4}년 \d{1,2}월 \d{1,2}일/.test(line)) {
             flushMessages();
+
             const div = document.createElement("div");
             div.className = "date-divider";
             div.innerHTML = `<div class="date-badge">${line}</div>`;
@@ -46,14 +46,13 @@ function parseChat(text) {
             return;
         }
 
-        // DOY + 시간 → 새 그룹
+        // DOY + 시간 → 새 메시지 그룹
         if (line === "DOY" && /^(오전|오후) \d{1,2}:\d{2}$/.test(nextLine)) {
             flushMessages();
 
             const group = document.createElement("div");
             group.className = "message-group";
 
-            // header
             const header = document.createElement("div");
             header.className = "message-header";
 
@@ -70,19 +69,19 @@ function parseChat(text) {
             return;
         }
 
-        // 시간 줄 자체는 무시 (이미 header에 넣음)
-        if (/^(오전|오후) \d{1,2}:\d{2}$/.test(line)) return;
+        // 시간 줄 자체는 header에 넣었으므로 무시
+        if (/^(오전|오후) \d{1,2}:\d{2}$/.test(line)) {
+            return;
+        }
 
-        // 메시지
+        // 실제 메시지 줄
         if (line !== "") {
             currentMessages.push(line);
             return;
         }
 
-        // 빈 줄
-        if (line === "") {
-            flushMessages();
-        }
+        // 빈 줄 → 메시지 flush
+        flushMessages();
     });
 
     flushMessages();
