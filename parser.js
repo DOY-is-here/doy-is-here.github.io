@@ -349,6 +349,32 @@ function createVideo(content) {
     
     return videoDiv;
 }
+function createVoiceMessage(content) {
+    const match = content.match(/\[음성메시지\] (\d{2}):(\d{2})/);
+    const duration = match ? `${match[1]}:${match[2]}` : '00:04';
+
+    const voiceDiv = document.createElement('div');
+    voiceDiv.className = 'voice-message';
+
+    voiceDiv.innerHTML = `
+        <div class="voice-main">
+            <div class="play-button">
+                <span class="play-icon">▶</span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill"></div>
+                <div class="progress-handle"></div>
+            </div>
+            <span class="voice-time">${duration}</span>
+        </div>
+        <div class="voice-expand">
+            <span class="expand-icon">↗</span>
+        </div>
+    `;
+
+    return voiceDiv;
+}
+
 
 // 페이지 로드시 실행
 document.addEventListener('DOMContentLoaded', loadMessages);
