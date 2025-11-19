@@ -315,10 +315,6 @@ function createReplyMessage(content) {
     return replyBubble;
 }
 
-    
-    return replyBubble;
-}
-
 function createVoiceMessage(content) {
     const match = content.match(/\[음성메시지\] (\d{2}):(\d{2})/);
     const duration = match ? `${match[1]}:${match[2]}` : '00:04';
