@@ -119,19 +119,23 @@ function createHeader() {
     header.className = 'header';
     
     header.innerHTML = `
-        <div class="status-bar">
-        </div>
-        <div class="header-content">
-            <div class="header-left">
-                <div class="back-button">‹</div>
-                <div class="header-title">
-                    <div class="title-row">
-                        <span class="chat-name">DOY</span>
-                        <span class="dropdown-icon">∨</span>
-                    </div>
-                    <div class="days-together">함께한지 600일</div>
-                </div>
-            </div>
+        header.innerHTML = `
+  <div class="status-bar"></div>
+  <div class="header-content">
+    <div class="header-left">
+      <div class="back-button">‹</div>
+    </div>
+    <div class="header-title">
+      <div class="title-row">
+        <span class="chat-name">DOY</span>
+        <span class="dropdown-icon">∨</span>
+      </div>
+      <div class="days-together">함께한지 600일</div>
+    </div>
+    <div class="search-button">...</div>
+  </div>
+`;
+
             <div class="search-button">
                 <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <circle cx="11" cy="11" r="8"></circle>
