@@ -203,6 +203,9 @@ function createMessageRow(message, showProfile) {
 }
 
 function createMessageContent(content) {
+    if (content.startsWith('DOY님의 답장')) {
+        return createReplyMessage(content);
+    }
     // 답장 메시지 처리
     if (content.startsWith('종료된 라이브')) {
     return createLiveEnded(content);
