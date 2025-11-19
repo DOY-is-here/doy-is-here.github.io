@@ -288,58 +288,33 @@ function createReplyMessage(content) {
     const replyBubble = document.createElement('div');
     replyBubble.className = 'reply-bubble';
 
-    // 인용 헤더 영역
+    // 인용 헤더 + 본문
     const replyQuoted = document.createElement('div');
     replyQuoted.className = 'reply-quoted-section';
 
     const header = document.createElement('div');
     header.className = 'reply-header';
-    header.textContent = lines[0]; // "DOY님의 답장"
+    header.textContent = lines[0] || '답장'; // 방어 코드
 
     const quoted = document.createElement('div');
     quoted.className = 'reply-quoted-text';
-    quoted.textContent = lines[1]; // 인용된 메시지 "ㅋㅋㅋㅋㅋ 지금 라이브할게요??"
+    if (lines.length > 1) {
+        quoted.textContent = lines[1];
+    }
 
     replyQuoted.appendChild(header);
     replyQuoted.appendChild(quoted);
     replyBubble.appendChild(replyQuoted);
 
-    // 실제 답장 내용
-    if (lines.length > 2) {
-        const replyText = document.createElement('div');
-        replyText.className = 'reply-content';
-        replyText.innerHTML = `↳ ${lines.slice(2).join('<br>')}`;
-        replyBubble.appendChild(replyText);
-    }
+    // 실제 답장 내용 (항상 생성)
+    const replyText = document.createElement('div');
+    replyText.className = 'reply-content';
+    replyText.innerHTML = `↳ ${lines.slice(2).join('<br>') || ''}`;
+    replyBubble.appendChild(replyText);
 
     return replyBubble;
 }
 
-function createVoiceMessage(content) {
-    const match = content.match(/\[음성메시지\] (\d{2}):(\d{2})/);
-    const duration = match ? `${match[1]}:${match[2]}` : '00:04';
-    
-    const voiceDiv = document.createElement('div');
-    voiceDiv.className = 'voice-message';
-    
-    voiceDiv.innerHTML = `
-        <div class="voice-main">
-            <div class="play-button">
-                <span class="play-icon">▶</span>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-bar-fill"></div>
-                <div class="progress-handle"></div>
-            </div>
-            <span class="voice-time">${duration}</span>
-        </div>
-        <div class="voice-expand">
-            <span class="expand-icon">↗</span>
-        </div>
-    `;
-    
-    return voiceDiv;
-}
 
 function createLiveEnded(content) {
     const lines = content.split('\n').filter(line => line.trim() !== '');
