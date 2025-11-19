@@ -117,25 +117,20 @@ function parseAndRenderMessages(text) {
 function createHeader() {
     const header = document.createElement('div');
     header.className = 'header';
-    
-    header.innerHTML = `
-        header.innerHTML = `
-  <div class="status-bar"></div>
-  <div class="header-content">
-    <div class="header-left">
-      <div class="back-button">‹</div>
-    </div>
-    <div class="header-title">
-      <div class="title-row">
-        <span class="chat-name">DOY</span>
-        <span class="dropdown-icon">∨</span>
-      </div>
-      <div class="days-together">함께한지 600일</div>
-    </div>
-    <div class="search-button">...</div>
-  </div>
-`;
 
+    header.innerHTML = `
+        <div class="status-bar"></div>
+        <div class="header-content">
+            <div class="header-left">
+                <div class="back-button">‹</div>
+            </div>
+            <div class="header-title">
+                <div class="title-row">
+                    <span class="chat-name">DOY</span>
+                    <span class="dropdown-icon">∨</span>
+                </div>
+                <div class="days-together">함께한지 600일</div>
+            </div>
             <div class="search-button">
                 <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <circle cx="11" cy="11" r="8"></circle>
@@ -144,9 +139,10 @@ function createHeader() {
             </div>
         </div>
     `;
-    
+
     return header;
 }
+
 
 function createDateDivider(dateText) {
     const divider = document.createElement('div');
@@ -257,29 +253,6 @@ function createTextMessage(text) {
     return bubble;
 }
 
-function createReplyMessage(content) {
-    const lines = content.split('\n').filter(line => line.trim() !== '');
-    
-    const replyBubble = document.createElement('div');
-    replyBubble.className = 'reply-bubble';
-    
-    // 답장 헤더와 인용문을 하나의 영역으로
-    const replyQuoted = document.createElement('div');
-    replyQuoted.className = 'reply-quoted-section';
-    
-    const header = document.createElement('div');
-    header.className = 'reply-header';
-    header.textContent = 'DOY님의 답장';
-    
-    const quoted = document.createElement('div');
-    quoted.className = 'reply-quoted-text';
-    if (lines.length > 1) {
-        quoted.textContent = lines[1];
-    }
-    
-    replyQuoted.appendChild(header);
-    replyQuoted.appendChild(quoted);
-    replyBubble.appendChild(replyQuoted);
     
     // 답장 내용
 function createReplyMessage(content) {
