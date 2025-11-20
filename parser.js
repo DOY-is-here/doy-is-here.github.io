@@ -275,3 +275,7 @@ function createVoiceMessage(content, url) {
         const percent = (audio.currentTime / audio.duration) * 100;
         bar.style.width = percent + '%';
         handle.style.left = percent + '%';
+    });
+
+    return div;
+}
