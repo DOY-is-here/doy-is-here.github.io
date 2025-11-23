@@ -66,15 +66,17 @@ function parseAndRenderMessages(text) {
 
         const next = lines[i + 1]?.trim();
 
-        function push(type) {
-            messageGroup.push({
-                sender: currentSender,
-                time: currentTime,
-                content: line,
-                mediaUrl: next
-            });
-            i++;
-        }
+function push(type) {
+    messageGroup.push({
+        sender: currentSender,
+        time: currentTime,
+        content: line,
+        mediaUrl: next,
+        type: type     // ← 타입 저장
+    });
+    i++;
+}
+
 
         if (line.startsWith('[음성메시지]') && next?.startsWith('https://')) {
             push('voice');
