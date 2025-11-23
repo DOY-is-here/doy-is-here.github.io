@@ -19,7 +19,7 @@ DOY
 DOY
 오후 12:42
 [음성메시지] 00:04
-https://drive.google.com/uc?export=download&id=1blJOcpkAzxBASPmdnJ0gp3PBJgJmO8_I
+https://drive.google.com/uc?export=preview&id=1blJOcpkAzxBASPmdnJ0gp3PBJgJmO8_I
 DOY
 오후 12:54
 베이스
@@ -13047,6 +13047,7 @@ DOY
 DOY
 오전 2:09
 열심히 조용히 했지
+
 
 
 
