@@ -1,64 +1,61 @@
-// 🌟 Updated parser.js — supports Voice/Photo/Video/Emoticon with Google Drive URLs
-// messages.txt 파일을 파싱하여 채팅 UI를 생성하는 스크립트
+// 🌟 parser.js — 완성본 (Voice / Photo / Video / Emoticon 지원)
+
+document.addEventListener("DOMContentLoaded", loadMessages);
 
 async function loadMessages() {
     try {
-        const response = await fetch('messages.txt');
+        const response = await fetch("messages.txt");
         const text = await response.text();
         parseAndRenderMessages(text);
     } catch (error) {
-        console.error('메시지 파일을 불러오는데 실패했습니다:', error);
+        console.error("메시지 파일 로드 실패:", error);
     }
 }
 
 function parseAndRenderMessages(text) {
-    const lines = text.split('\n');
-    const chatRoot = document.getElementById('chat-root');
+    const lines = text.split("\n");
+    const chatRoot = document.getElementById("chat-root");
 
-    const chatContainer = document.createElement('div');
-    chatContainer.className = 'chat-container';
+    const chatContainer = document.createElement("div");
+    chatContainer.className = "chat-container";
 
     chatContainer.appendChild(createHeader());
 
-    const chatMessages = document.createElement('div');
-    chatMessages.className = 'chat-messages';
+    const chatMessages = document.createElement("div");
+    chatMessages.className = "chat-messages";
 
-    let currentDate = '';
-    let currentSender = '';
-    let currentTime = '';
+    let currentDate = "";
+    let currentSender = "";
+    let currentTime = "";
     let messageGroup = [];
 
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
-        if (line === '') continue;
+        if (!line) continue;
 
-        if (line.match(/^\d{4}년 \d{1,2}월 \d{1,2}일 [월화수목금토일]요일$/)) {
+        // 날짜
+        if (line.match(/^\d{4}년 \d{1,2}월 \d{1,2}일/)) {
             if (messageGroup.length > 0) {
                 chatMessages.appendChild(createMessageGroup(messageGroup));
                 messageGroup = [];
             }
             currentDate = line;
             chatMessages.appendChild(createDateDivider(currentDate));
-            currentSender = '';
-            currentTime = '';
+            currentSender = "";
+            currentTime = "";
             continue;
         }
 
-        if (line === 'DOY' && i + 1 < lines.length) {
+        // 송신자 + 시간
+        if (line === "DOY" && i + 1 < lines.length) {
             const nextLine = lines[i + 1].trim();
             if (nextLine.match(/^(오전|오후) \d{1,2}:\d{2}$/)) {
-                const newSender = line;
-                const newTime = nextLine;
-
-                if (currentTime !== newTime || currentSender !== newSender) {
-                    if (messageGroup.length > 0) {
-                        chatMessages.appendChild(createMessageGroup(messageGroup));
-                        messageGroup = [];
-                    }
+                if (messageGroup.length > 0) {
+                    chatMessages.appendChild(createMessageGroup(messageGroup));
+                    messageGroup = [];
                 }
-
-                currentSender = newSender;
-                currentTime = newTime;
+                currentSender = line;
+                currentTime = nextLine;
                 i++;
                 continue;
             }
@@ -66,38 +63,41 @@ function parseAndRenderMessages(text) {
 
         const next = lines[i + 1]?.trim();
 
-function push(type) {
-    messageGroup.push({
-        sender: currentSender,
-        time: currentTime,
-        content: line,
-        mediaUrl: next,
-        type: type     // ← 타입 저장
-    });
-    i++;
-}
+        const pushMedia = () => {
+            messageGroup.push({
+                sender: currentSender,
+                time: currentTime,
+                content: line,
+                mediaUrl: next
+            });
+            i++;
+        };
 
-
-        if (line.startsWith('[음성메시지]') && next?.startsWith('https://')) {
-            push('voice');
+        // 음성
+        if (line.startsWith("[음성메시지]") && next?.startsWith("https://")) {
+            pushMedia();
             continue;
         }
 
-        if (line === '[사진]' && next?.startsWith('https://')) {
-            push('image');
+        // 사진
+        if (line === "[사진]" && next?.startsWith("https://")) {
+            pushMedia();
             continue;
         }
 
-        if (line.startsWith('[동영상]') && next?.startsWith('https://')) {
-            push('video');
+        // 동영상
+        if (line.startsWith("[동영상]") && next?.startsWith("https://")) {
+            pushMedia();
             continue;
         }
 
-        if (line === '[이모티콘]' && next?.startsWith('https://')) {
-            push('emoticon');
+        // 이모티콘
+        if (line === "[이모티콘]" && next?.startsWith("https://")) {
+            pushMedia();
             continue;
         }
 
+        // 일반 텍스트
         messageGroup.push({
             sender: currentSender,
             time: currentTime,
@@ -113,16 +113,15 @@ function push(type) {
     chatRoot.appendChild(chatContainer);
 }
 
-function createHeader() {
-    const header = document.createElement('div');
-    header.className = 'header';
+/* ---------------- UI 생성 ---------------- */
 
-    header.innerHTML = `
+function createHeader() {
+    const h = document.createElement("div");
+    h.className = "header";
+    h.innerHTML = `
         <div class="status-bar"></div>
         <div class="header-content">
-            <div class="header-left">
-                <div class="back-button">‹</div>
-            </div>
+            <div class="header-left"><div class="back-button">‹</div></div>
             <div class="header-title">
                 <div class="title-row">
                     <span class="chat-name">DOY</span>
@@ -131,51 +130,49 @@ function createHeader() {
                 <div class="days-together">함께한지 600일</div>
             </div>
             <div class="search-button">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24">
                     <circle cx="11" cy="11" r="8"></circle>
                     <path d="m21 21-4.35-4.35"></path>
                 </svg>
             </div>
         </div>
     `;
-    return header;
+    return h;
 }
 
 function createDateDivider(text) {
-    const div = document.createElement('div');
-    div.className = 'date-divider';
+    const div = document.createElement("div");
+    div.className = "date-divider";
     div.innerHTML = `<div class="date-badge">${text}</div>`;
     return div;
 }
 
 function createMessageGroup(messages) {
-    const group = document.createElement('div');
-    group.className = 'message-group';
-
-    messages.forEach((msg, idx) => {
-        group.appendChild(createMessageRow(msg, idx === 0));
-    });
-
+    const group = document.createElement("div");
+    group.className = "message-group";
+    messages.forEach((msg, idx) =>
+        group.appendChild(createMessageRow(msg, idx === 0))
+    );
     return group;
 }
 
 function createMessageRow(message, showProfile) {
-    const row = document.createElement('div');
-    row.className = 'message-row' + (showProfile ? '' : ' continued');
+    const row = document.createElement("div");
+    row.className = "message-row" + (showProfile ? "" : " continued");
 
     if (showProfile) {
-        const profile = document.createElement('div');
-        profile.className = 'profile-pic';
+        const profile = document.createElement("div");
+        profile.className = "profile-pic";
         row.appendChild(profile);
     }
 
-    const content = document.createElement('div');
-    content.className = 'message-content';
-    if (!showProfile) content.style.marginLeft = '45px';
+    const content = document.createElement("div");
+    content.className = "message-content";
+    if (!showProfile) content.style.marginLeft = "45px";
 
     if (showProfile) {
-        const header = document.createElement('div');
-        header.className = 'message-header';
+        const header = document.createElement("div");
+        header.className = "message-header";
         header.innerHTML = `
             <span class="sender-name">${message.sender}</span>
             <span class="message-time">${message.time}</span>
@@ -183,26 +180,30 @@ function createMessageRow(message, showProfile) {
         content.appendChild(header);
     }
 
-    content.appendChild(createMessageContent(message.content, message.mediaUrl));
+    content.appendChild(
+        createMessageContent(message.content, message.mediaUrl)
+    );
 
     row.appendChild(content);
     return row;
 }
 
 function createMessageContent(content, mediaUrl) {
-    if (content.startsWith('[음성메시지]')) return createVoiceMessage(content, mediaUrl);
-    if (content === '[사진]') return createImage(mediaUrl);
-    if (content.startsWith('[동영상]')) return createVideo(content, mediaUrl);
-    if (content === '[이모티콘]') return createEmoticon(mediaUrl);
+    if (content.startsWith("[음성메시지]")) return createVoiceMessage(content, mediaUrl);
+    if (content === "[사진]") return createImage(mediaUrl);
+    if (content.startsWith("[동영상]")) return createVideo(content, mediaUrl);
+    if (content === "[이모티콘]") return createEmoticon(mediaUrl);
     return createTextMessage(content);
 }
 
-function createTextMessage(text) {
-    const bubble = document.createElement('div');
-    bubble.className = 'message-bubble';
+/* ----------- 메시지 타입 ----------- */
 
-    const msg = document.createElement('div');
-    msg.className = 'message-text';
+function createTextMessage(text) {
+    const bubble = document.createElement("div");
+    bubble.className = "message-bubble";
+
+    const msg = document.createElement("div");
+    msg.className = "message-text";
     msg.innerHTML = text;
 
     bubble.appendChild(msg);
@@ -210,36 +211,38 @@ function createTextMessage(text) {
 }
 
 function createImage(url) {
-    const div = document.createElement('div');
-    div.className = 'message-image';
+    const div = document.createElement("div");
+    div.className = "message-image";
     div.innerHTML = `<img src="${url}" style="width:260px; border-radius:18px;">`;
     return div;
 }
 
 function createVideo(content, url) {
-    const div = document.createElement('div');
-    div.className = 'message-video';
+    const div = document.createElement("div");
+    div.className = "message-video";
     div.innerHTML = `
-        <video src="${url}" controls style="width:200px; border-radius:18px;"></video>
+        <video src="${url}" controls preload="metadata"
+        style="width:200px; border-radius:18px;"></video>
     `;
     return div;
 }
 
 function createEmoticon(url) {
-    const div = document.createElement('div');
-    div.className = 'message-image';
+    const div = document.createElement("div");
+    div.className = "message-image";
     div.innerHTML = `
-        <video src="${url}" autoplay loop muted playsinline style="width:150px; background:transparent"></video>
+        <video src="${url}" autoplay loop muted playsinline
+        style="width:150px; background:transparent; border-radius:18px;"></video>
     `;
     return div;
 }
 
 function createVoiceMessage(content, url) {
     const match = content.match(/\[음성메시지\] (\d{2}):(\d{2})/);
-    const duration = match ? `${match[1]}:${match[2]}` : '00:04';
+    const duration = match ? `${match[1]}:${match[2]}` : "00:04";
 
-    const div = document.createElement('div');
-    div.className = 'voice-message';
+    const div = document.createElement("div");
+    div.className = "voice-message";
 
     div.innerHTML = `
         <audio src="${url}" preload="auto"></audio>
@@ -254,29 +257,36 @@ function createVoiceMessage(content, url) {
         <div class="voice-expand"><span class="expand-icon">↗</span></div>
     `;
 
-    const audio = div.querySelector('audio');
-    const playBtn = div.querySelector('.play-button');
-    const bar = div.querySelector('.progress-bar-fill');
-    const handle = div.querySelector('.progress-handle');
+    const audio = div.querySelector("audio");
+    const playBtn = div.querySelector(".play-button");
+    const bar = div.querySelector(".progress-bar-fill");
+    const handle = div.querySelector(".progress-handle");
 
     let playing = false;
 
-    playBtn.onclick = () => {
+    playBtn.addEventListener("click", () => {
         if (playing) {
             audio.pause();
-            playing = false;
-            playBtn.querySelector('.play-icon').textContent = '▶';
+            playBtn.querySelector(".play-icon").textContent = "▶";
         } else {
             audio.play();
-            playing = true;
-            playBtn.querySelector('.play-icon').textContent = '⏸';
+            playBtn.querySelector(".play-icon").textContent = "⏸";
         }
-    };
+        playing = !playing;
+    });
 
-    audio.addEventListener('timeupdate', () => {
+    audio.addEventListener("timeupdate", () => {
+        if (!audio.duration) return;
         const percent = (audio.currentTime / audio.duration) * 100;
-        bar.style.width = percent + '%';
-        handle.style.left = percent + '%';
+        bar.style.width = percent + "%";
+        handle.style.left = percent + "%";
+    });
+
+    audio.addEventListener("ended", () => {
+        playing = false;
+        playBtn.querySelector(".play-icon").textContent = "▶";
+        bar.style.width = "0%";
+        handle.style.left = "0%";
     });
 
     return div;
