@@ -246,31 +246,40 @@ function createVoiceMessage(content, url) {
 
     div.innerHTML = `
         <audio src="${url}" preload="auto"></audio>
+
         <div class="voice-main">
-            <div class="play-button"><span class="play-icon">▶</span></div>
+            <div class="play-button">
+                <span class="play-icon">▶</span>
+            </div>
+
             <div class="progress-bar-container">
                 <div class="progress-bar-fill"></div>
                 <div class="progress-handle"></div>
             </div>
+
             <span class="voice-time">${duration}</span>
         </div>
-        <div class="voice-expand"><span class="expand-icon">↗</span></div>
+
+        <div class="voice-expand">
+            <span class="expand-icon">↗</span>
+        </div>
     `;
 
     const audio = div.querySelector("audio");
     const playBtn = div.querySelector(".play-button");
+    const playIcon = div.querySelector(".play-icon");
     const bar = div.querySelector(".progress-bar-fill");
     const handle = div.querySelector(".progress-handle");
 
     let playing = false;
 
     playBtn.addEventListener("click", () => {
-        if (playing) {
-            audio.pause();
-            playBtn.querySelector(".play-icon").textContent = "▶";
-        } else {
+        if (!playing) {
             audio.play();
-            playBtn.querySelector(".play-icon").textContent = "⏸";
+            playIcon.textContent = "⏸";
+        } else {
+            audio.pause();
+            playIcon.textContent = "▶";
         }
         playing = !playing;
     });
@@ -284,10 +293,11 @@ function createVoiceMessage(content, url) {
 
     audio.addEventListener("ended", () => {
         playing = false;
-        playBtn.querySelector(".play-icon").textContent = "▶";
+        playIcon.textContent = "▶";
         bar.style.width = "0%";
         handle.style.left = "0%";
     });
 
     return div;
 }
+
