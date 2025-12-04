@@ -1,10 +1,32 @@
-// [parser.js]
+// 🌟 parser.js — Reply / LiveEnded / Media / Search 기능 통합 완전체
 
-document.addEventListener("DOMContentLoaded", loadMessages);
+document.addEventListener("DOMContentLoaded", () => {
+    loadMessages();
+
+    // 검색 버튼 클릭 시 검색창 표시/숨김
+    document.addEventListener("click", (e) => {
+        if (e.target.closest(".search-button")) {
+            const searchBar = document.querySelector(".search-bar");
+
+            if (!searchBar) return;
+
+            const isHidden = searchBar.style.display === "" || searchBar.style.display === "none";
+            searchBar.style.display = isHidden ? "block" : "none";
+
+            if (isHidden) searchBar.focus();
+        }
+    });
+
+    // 검색 입력 시 메시지 필터링
+    document.addEventListener("input", (e) => {
+        if (e.target.classList.contains("search-bar")) {
+            searchMessages(e.target.value);
+        }
+    });
+});
 
 async function loadMessages() {
     try {
-        // messages.txt 파일이 같은 폴더에 있어야 합니다.
         const response = await fetch("messages.txt");
         const text = await response.text();
         parseAndRenderMessages(text);
@@ -17,9 +39,9 @@ function parseAndRenderMessages(text) {
     const lines = text.split("\n");
     const chatRoot = document.getElementById("chat-root");
 
-    // 기본 컨테이너 생성
     const chatContainer = document.createElement("div");
     chatContainer.className = "chat-container";
+
     chatContainer.appendChild(createHeader());
 
     const chatMessages = document.createElement("div");
@@ -34,7 +56,7 @@ function parseAndRenderMessages(text) {
         const line = lines[i].trim();
         if (!line) continue;
 
-        // 1. 날짜 파싱 (예: 2025년 12월 2일)
+        /* ---------------- 날짜 ---------------- */
         if (line.match(/^\d{4}년 \d{1,2}월 \d{1,2}일/)) {
             if (messageGroup.length > 0) {
                 chatMessages.appendChild(createMessageGroup(messageGroup));
@@ -47,8 +69,7 @@ function parseAndRenderMessages(text) {
             continue;
         }
 
-        // 2. 송신자/시간 파싱 (예: DOY / 오전 10:20)
-        // (텍스트 파일에서 이름 바로 다음 줄에 시간이 나온다고 가정)
+        /* ---------------- 송신자 + 시간 ---------------- */
         if (line === "DOY" && i + 1 < lines.length) {
             const nextLine = lines[i + 1].trim();
             if (nextLine.match(/^(오전|오후) \d{1,2}:\d{2}$/)) {
@@ -58,78 +79,77 @@ function parseAndRenderMessages(text) {
                 }
                 currentSender = line;
                 currentTime = nextLine;
-                i++; // 시간 줄 건너뜀
+                i++;
                 continue;
             }
         }
 
         const next = lines[i + 1]?.trim();
 
-        // 헬퍼 함수: 미디어 메시지 추가
-        const pushMsg = (type, content, extra = null) => {
+        /* ---------------- Reply 메시지 ---------------- */
+        if (line.endsWith("님의 답장") && next && lines[i + 2]) {
+            const original = next;
+            const replyLine = lines[i + 2].trim();
+
             messageGroup.push({
                 sender: currentSender,
                 time: currentTime,
-                type: type,
-                content: content,
-                extra: extra
+                replyHeader: line,
+                replyOriginal: original,
+                replyText: replyLine.replace(/^↳\s*/, "")
             });
+
+            i += 2;
+            continue;
+        }
+
+        /* ---------------- 종료된 라이브 ---------------- */
+        if (line === "종료된 라이브" && next) {
+            messageGroup.push({
+                sender: currentSender,
+                time: currentTime,
+                liveTitle: next
+            });
+            i++;
+            continue;
+        }
+
+        /* ---------------- 미디어 ---------------- */
+
+        const pushMedia = () => {
+            messageGroup.push({
+                sender: currentSender,
+                time: currentTime,
+                content: line,
+                mediaUrl: next
+            });
+            i++;
         };
 
-        // --- 기능별 파싱 로직 ---
-
-        // 1) 음성 메시지: [음성메시지] 00:04 (다음줄 URL)
         if (line.startsWith("[음성메시지]") && next?.startsWith("https://")) {
-            pushMsg("voice", next, line); // line에 시간 정보 포함됨
-            i++; continue;
+            pushMedia(); continue;
         }
 
-        // 2) 사진: [사진] (다음줄 URL)
         if (line === "[사진]" && next?.startsWith("https://")) {
-            pushMsg("image", next);
-            i++; continue;
+            pushMedia(); continue;
         }
 
-        // 3) 동영상: [동영상] 03:25 (다음줄 URL) 또는 그냥 [동영상]
-        // 시간 파싱 추가
         if (line.startsWith("[동영상]") && next?.startsWith("https://")) {
-            let duration = "";
-            const timeMatch = line.match(/(\d{2}:\d{2})/);
-            if (timeMatch) duration = timeMatch[1];
-            
-            pushMsg("video", next, duration);
-            i++; continue;
+            pushMedia(); continue;
         }
 
-        // 4) 이모티콘
         if (line === "[이모티콘]" && next?.startsWith("https://")) {
-            pushMsg("emoticon", next);
-            i++; continue;
+            pushMedia(); continue;
         }
 
-        // 5) 라이브 (새 기능): [라이브] 제목
-        if (line.startsWith("[라이브]") || line.startsWith("[LIVE]")) {
-            const title = line.replace(/^\[(라이브|LIVE)\]\s*/, "");
-            pushMsg("live", title);
-            continue;
-        }
-
-        // 6) 답장 (새 기능): [답장:원본이름:원본내용] 할말
-        // 예: [답장:친구:밥먹자] 그래 좋아
-        const replyMatch = line.match(/^\[답장:(.*?):(.*?)\]\s*(.*)/);
-        if (replyMatch) {
-            pushMsg("reply", replyMatch[3], {
-                name: replyMatch[1],
-                orgMsg: replyMatch[2]
-            });
-            continue;
-        }
-
-        // 7) 일반 텍스트
-        pushMsg("text", line);
+        /* ---------------- 일반 텍스트 ---------------- */
+        messageGroup.push({
+            sender: currentSender,
+            time: currentTime,
+            content: line
+        });
     }
 
-    // 남은 메시지 처리
     if (messageGroup.length > 0) {
         chatMessages.appendChild(createMessageGroup(messageGroup));
     }
@@ -138,7 +158,24 @@ function parseAndRenderMessages(text) {
     chatRoot.appendChild(chatContainer);
 }
 
-/* ---------------- UI 생성 함수들 ---------------- */
+/* ---------------- 검색 기능 ---------------- */
+
+function searchMessages(keyword) {
+    const items = document.querySelectorAll(".message-item");
+    keyword = keyword.trim();
+
+    if (!keyword) {
+        items.forEach(m => (m.style.display = ""));
+        return;
+    }
+
+    items.forEach(msg => {
+        const text = msg.innerText;
+        msg.style.display = text.includes(keyword) ? "" : "none";
+    });
+}
+
+/* ---------------- UI 생성 ---------------- */
 
 function createHeader() {
     const h = document.createElement("div");
@@ -146,17 +183,25 @@ function createHeader() {
     h.innerHTML = `
         <div class="status-bar"></div>
         <div class="header-content">
-            <div class="header-left"><div class="back-button">‹</div></div>
+            <div class="header-left"><div class="back-button"></div></div>
             <div class="header-title">
                 <div class="title-row">
                     <span class="chat-name">DOY</span>
-                    <span class="dropdown-icon">∨</span>
+                    <span class="dropdown-icon"></span>
                 </div>
-                <div class="days-together">함께한지 600일</div>
+                <div class="days-together">함께한지 490일</div>
             </div>
-            <div class="search-button">🔍</div>
+            <div class="search-button"></div>
         </div>
     `;
+
+    // 검색창 생성
+    const searchBar = document.createElement("input");
+    searchBar.className = "search-bar";
+    searchBar.placeholder = "검색어 입력...";
+    searchBar.style.display = "none";
+
+    h.appendChild(searchBar);
     return h;
 }
 
@@ -170,181 +215,201 @@ function createDateDivider(text) {
 function createMessageGroup(messages) {
     const group = document.createElement("div");
     group.className = "message-group";
-    // 첫 메시지만 프로필 표시 (idx === 0)
+
     messages.forEach((msg, idx) => {
-        group.appendChild(createMessageRow(msg, idx === 0));
+        const prev = messages[idx - 1];
+        const showProfile =
+            idx === 0 || msg.sender !== prev?.sender || msg.time !== prev?.time;
+
+        group.appendChild(createMessageRow(msg, showProfile));
     });
+
     return group;
 }
 
-// 핵심 수정: 시간 정렬 오류 해결을 위한 DOM 구조 변경
-function createMessageRow(msg, showProfile) {
+function createMessageRow(message, showProfile) {
     const row = document.createElement("div");
-    row.className = "message-row";
+    row.className = "message-row message-item" + (showProfile ? "" : " continued");
 
-    // 1. 프로필 사진 (그룹의 첫 메시지일 때만)
     if (showProfile) {
         const profile = document.createElement("div");
         profile.className = "profile-pic";
-        // 실제 이미지가 있다면 src 변경
-        profile.innerHTML = `<img src="https://via.placeholder.com/40" alt="profile">`;
         row.appendChild(profile);
-    } else {
-        // 프로필 없을 때 들여쓰기 (프로필 너비 40px + gap 10px)
-        const spacer = document.createElement("div");
-        spacer.style.width = "50px"; 
-        // row.appendChild(spacer); // Flex gap으로 처리하거나 margin-left 사용
-        row.style.marginLeft = "50px"; 
     }
 
-    // 2. 메시지 컨텐츠 영역
-    const contentArea = document.createElement("div");
-    contentArea.className = "message-content";
+    const content = document.createElement("div");
+    content.className = "message-content";
 
-    // 2-1. 이름 (프로필 있는 경우에만 표시)
     if (showProfile) {
-        const name = document.createElement("div");
-        name.className = "sender-name";
-        name.innerText = msg.sender;
-        contentArea.appendChild(name);
+        const header = document.createElement("div");
+        header.className = "message-header";
+        header.innerHTML = `
+            <span class="sender-name">${message.sender}</span>
+            <span class="message-time">${message.time}</span>
+        `;
+        content.appendChild(header);
     }
 
-    // 2-2. 말풍선 + 시간 래퍼 (하단 정렬을 위해 div로 감쌈)
-    const wrapper = document.createElement("div");
-    wrapper.className = "msg-wrapper";
-
-    // 내용 생성 (말풍선 등)
-    const bubble = createContentByType(msg);
-    
-    // 시간 생성
-    const timeSpan = document.createElement("span");
-    timeSpan.className = "msg-time";
-    timeSpan.innerText = msg.time;
-
-    // 래퍼에 추가 (내용 + 시간)
-    wrapper.appendChild(bubble);
-    wrapper.appendChild(timeSpan);
-
-    contentArea.appendChild(wrapper);
-    row.appendChild(contentArea);
-
+    content.appendChild(createMessageContent(message));
+    row.appendChild(content);
     return row;
 }
 
-// 메시지 타입별 내용 생성
-function createContentByType(msg) {
-    switch (msg.type) {
-        case "text":
-            return createTextBubble(msg.content);
-        case "image":
-            return createMediaBubble(`<img src="${msg.content}">`);
-        case "video":
-            return createVideoBubble(msg.content, msg.extra); // extra is duration
-        case "live":
-            return createLiveCard(msg.content);
-        case "reply":
-            return createReplyBubble(msg.content, msg.extra); // extra is {name, orgMsg}
-        case "voice":
-            return createVoiceBubble(msg.content, msg.extra);
-        case "emoticon":
-            return createMediaBubble(`<img src="${msg.content}" style="width:150px;">`);
-        default:
-            return createTextBubble("알 수 없는 메시지");
-    }
+/* ---------------- 메시지 유형 분기 ---------------- */
+
+function createMessageContent(message) {
+    if (message.replyHeader) return createReplyMessage(message);
+    if (message.liveTitle) return createLiveEnded(message.liveTitle);
+    if (message.content?.startsWith("[음성메시지]")) return createVoiceMessage(message.content, message.mediaUrl);
+    if (message.content === "[사진]") return createImage(message.mediaUrl);
+    if (message.content?.startsWith("[동영상]")) return createVideo(message.content, message.mediaUrl);
+    if (message.content === "[이모티콘]") return createEmoticon(message.mediaUrl);
+
+    return createTextMessage(message.content);
 }
 
-/* --- 세부 UI 컴포넌트 --- */
+/* ---------------- Reply UI ---------------- */
 
-function createTextBubble(text) {
+function createReplyMessage(msg) {
     const div = document.createElement("div");
-    div.className = "message-bubble";
-    div.innerText = text;
+    div.className = "reply-bubble";
+
+    div.innerHTML = `
+        <div class="reply-header">${msg.replyHeader}</div>
+        <div class="reply-quoted">${msg.replyOriginal}</div>
+
+        <div class="reply-text">
+            <span class="reply-arrow"></span>
+            <span class="reply-text-content">${msg.replyText}</span>
+        </div>
+    `;
+
     return div;
 }
 
-function createMediaBubble(html) {
+/* ---------------- 종료된 라이브 ---------------- */
+
+function createLiveEnded(title) {
+    const div = document.createElement("div");
+    div.className = "live-ended";
+
+    div.innerHTML = `
+        <div class="live-icon-circle">
+            <span class="phone-icon"></span>
+        </div>
+        <div class="live-info">
+            <div class="live-status">종료된 라이브</div>
+            <div class="live-title">${title}</div>
+        </div>
+    `;
+
+    return div;
+}
+
+/* ---------------- 일반 텍스트 ---------------- */
+
+function createTextMessage(text) {
+    const bubble = document.createElement("div");
+    bubble.className = "message-bubble";
+    bubble.innerHTML = `<div class="message-text">${text}</div>`;
+    return bubble;
+}
+
+/* ---------------- 이미지 ---------------- */
+
+function createImage(url) {
     const div = document.createElement("div");
     div.className = "message-image";
-    div.innerHTML = html;
+    div.innerHTML = `<img src="${url}" style="width:260px; border-radius:18px;">`;
     return div;
 }
 
-// 동영상 UI (시간 표시 추가)
-function createVideoBubble(url, duration) {
+/* ---------------- 동영상 ---------------- */
+
+function createVideo(content, url) {
     const div = document.createElement("div");
     div.className = "message-video";
-    
-    let timeBadge = "";
-    if (duration) {
-        timeBadge = `<div class="video-time-badge">${duration}</div>`;
-    }
-
     div.innerHTML = `
-        <video src="${url}" preload="metadata"></video>
-        <div class="video-play-icon">▶</div>
-        ${timeBadge}
+        <video src="${url}" controls preload="metadata"
+        style="width:200px; border-radius:18px;"></video>
     `;
     return div;
 }
 
-// 라이브 UI
-function createLiveCard(title) {
+/* ---------------- 이모티콘 ---------------- */
+
+function createEmoticon(url) {
     const div = document.createElement("div");
-    div.className = "live-card";
+    div.className = "message-image";
     div.innerHTML = `
-        <div class="live-icon">LIVE</div>
-        <div class="live-text">
-            <span class="live-title">${title}</span>
-            <span class="live-desc">방송 보러가기</span>
-        </div>
+        <video src="${url}" autoplay loop muted playsinline
+        style="width:150px; background:transparent; border-radius:18px;"></video>
     `;
     return div;
 }
 
-// 답장 UI
-function createReplyBubble(text, info) {
-    const div = document.createElement("div");
-    div.className = "reply-container";
-    div.innerHTML = `
-        <div class="reply-header">
-            <span class="reply-user">${info.name}에게 답장</span>
-            <span class="reply-org-msg">${info.orgMsg}</span>
-        </div>
-        <div class="reply-text">${text}</div>
-    `;
-    return div;
-}
+/* ---------------- 음성 메시지 ---------------- */
 
-// 음성 UI
-function createVoiceBubble(url, rawText) {
-    // rawText 예: [음성메시지] 00:04
-    const match = rawText.match(/(\d{2}:\d{2})/);
-    const duration = match ? match[1] : "00:04";
+function createVoiceMessage(content, url) {
+    const match = content.match(/\[음성메시지\] (\d{2}):(\d{2})/);
+    const duration = match ? `${match[1]}:${match[2]}` : "00:04";
 
     const div = document.createElement("div");
     div.className = "voice-message";
+
     div.innerHTML = `
-        <div class="voice-icon">▶</div>
-        <div class="voice-bar-container">
-            <div class="voice-bar-fill"></div>
+        <audio src="${url}" preload="auto"></audio>
+
+        <div class="voice-main">
+            <div class="play-button">
+                <span class="play-icon"></span>
+            </div>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill"></div>
+                <div class="progress-handle"></div>
+            </div>
+
+            <span class="voice-time">${duration}</span>
         </div>
-        <div class="voice-duration">${duration}</div>
-        <audio src="${url}"></audio>
+
+        <div class="voice-expand">
+            <span class="expand-icon"></span>
+        </div>
     `;
 
-    // 간단 재생 로직
-    const icon = div.querySelector(".voice-icon");
     const audio = div.querySelector("audio");
-    icon.onclick = () => {
-        if (audio.paused) {
+    const playBtn = div.querySelector(".play-button");
+    const bar = div.querySelector(".progress-bar-fill");
+    const handle = div.querySelector(".progress-handle");
+
+    let playing = false;
+
+    // ▶ ↔ ⏸ 전환은 JS가 아니라 CSS가 담당
+    playBtn.addEventListener("click", () => {
+        if (!playing) {
             audio.play();
-            icon.innerText = "⏸";
+            div.classList.add("voice-playing");
         } else {
             audio.pause();
-            icon.innerText = "▶";
+            div.classList.remove("voice-playing");
         }
-    };
-    audio.onended = () => { icon.innerText = "▶"; };
+        playing = !playing;
+    });
+
+    audio.addEventListener("timeupdate", () => {
+        if (!audio.duration) return;
+        const percent = (audio.currentTime / audio.duration) * 100;
+        bar.style.width = percent + "%";
+        handle.style.left = percent + "%";
+    });
+
+    audio.addEventListener("ended", () => {
+        playing = false;
+        div.classList.remove("voice-playing");
+        bar.style.width = "0%";
+        handle.style.left = "0%";
+    });
 
     return div;
 }
