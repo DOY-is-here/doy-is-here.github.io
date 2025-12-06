@@ -1,0 +1,97 @@
+/* 캘린더 팝업 */
+.calendar-popup {
+    position: absolute; /* fixed -> absolute로 변경 */
+    top: 100%; /* 🔥 헤더 바로 아래 */
+    right: 16px;
+    width: 320px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    z-index: 1000;
+    margin-top: 4px; /* 약간의 여백 */
+}
+
+/* 캘린더 헤더 */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.calendar-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1E1E1E;
+}
+
+.calendar-nav {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.calendar-nav:hover {
+    background: #F0F0F0;
+}
+
+/* 요일 */
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.calendar-weekdays div {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+    padding: 8px 0;
+}
+
+/* 날짜 그리드 */
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: default;
+}
+
+.calendar-day.empty {
+    visibility: hidden;
+}
+
+/* 채팅이 있는 날짜 */
+.calendar-day.has-chat {
+    background: #C9D0EA;
+    color: #1E1E1E;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.calendar-day.has-chat:hover {
+    background: #B0B8DB;
+}
+
+/* 채팅이 없는 날짜 */
+.calendar-day.no-chat {
+    color: #CCCCCC;
+}
