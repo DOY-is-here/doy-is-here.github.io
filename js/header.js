@@ -1,5 +1,5 @@
-import { handleSearch, nextResult, prevResult, clearSearch } from "./search.js"; // 🔥 clearSearch 추가
-import { toggleCalendar } from "./calendar.js";
+import { handleSearch, nextResult, prevResult, clearSearch } from "./search.js";
+import { closeCalendar } from "./calendar.js"; // toggleCalendar는 제거
 
 export function createHeader() {
     const h = document.createElement("div");
@@ -13,7 +13,7 @@ export function createHeader() {
 
             <div class="header-title">
                 <div class="title-row">
-                    <span class="chat-name">도의</span>
+                    <span class="chat-name">DOY</span>
                     <span class="dropdown-icon"></span>
                 </div>
                 <div class="days-together">함께한지 490일</div>
@@ -44,10 +44,6 @@ export function initHeaderEvents() {
             toggleSearchBar();
             return;
         }
-        if (e.target.closest(".calendar-btn")) {
-            toggleCalendar();
-            return;
-        }
         if (e.target.id === "prev-result") {
             prevResult();
             return;
@@ -75,8 +71,9 @@ function toggleSearchBar() {
         const bar = wrapper.querySelector(".search-bar");
         bar.focus();
     } else {
-        // 🔥 닫기 - 검색 초기화
+        //  닫기 - 캘린더도 같이 닫기
         wrapper.style.display = "none";
-        clearSearch(); // 🔥 추가!
+        closeCalendar(); // 캘린더 닫기
+        clearSearch();
     }
 }
