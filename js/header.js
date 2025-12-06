@@ -1,4 +1,4 @@
-import { handleSearch, nextResult, prevResult } from "./search.js";
+import { handleSearch, nextResult, prevResult, clearSearch } from "./search.js"; // 🔥 clearSearch 추가
 import { toggleCalendar } from "./calendar.js";
 
 export function createHeader() {
@@ -69,10 +69,14 @@ function toggleSearchBar() {
     const wrapper = document.querySelector(".search-wrapper");
     const hidden = !wrapper.style.display || wrapper.style.display === "none";
 
-    wrapper.style.display = hidden ? "flex" : "none";
-
     if (hidden) {
+        // 열기
+        wrapper.style.display = "flex";
         const bar = wrapper.querySelector(".search-bar");
         bar.focus();
+    } else {
+        // 🔥 닫기 - 검색 초기화
+        wrapper.style.display = "none";
+        clearSearch(); // 🔥 추가!
     }
 }
