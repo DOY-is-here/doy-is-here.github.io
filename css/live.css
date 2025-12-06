@@ -1,6 +1,6 @@
 .live-ended {
     margin-left: 0px;
-    width: 185px;
+    width: 195px;
     background-color: #FFFFFF;
     border-radius: 16px;
     padding: 8.5px 11px;
@@ -46,6 +46,6 @@
 
 .live-title {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 450;
     color: #121212;
 }
