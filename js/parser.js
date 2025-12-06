@@ -40,7 +40,7 @@ export function parseMessages(text) {
         }
 
         // 2. 송신자 + 시간 파싱 (DOY 오전 12:00)
-        if (line === "DOY" && i + 1 < lines.length) {
+        if (line === "도의" && i + 1 < lines.length) {
             const nextLine = lines[i + 1].trim();
             if (nextLine.match(/^(오전|오후) \d{1,2}:\d{2}$/)) {
                 flushBuffer(); // 이전 메시지 저장
