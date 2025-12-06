@@ -56,6 +56,7 @@ function createImage(url) {
     div.className = "message-image";
     const img = new Image();
     img.src = url;
+    img.loading = "lazy";
     img.onload = () => {
         if(typeof classifyRatio === 'function') {
              const type = classifyRatio(img.width, img.height);
@@ -74,6 +75,8 @@ function createVideo(content, url) {
     const video = document.createElement("video");
     video.className = "video-thumbnail";
     video.src = url;
+    video.preload = "none";
+    video.loading = "lazy";
     video.preload = "metadata";
     video.controls = false;
 
@@ -107,8 +110,13 @@ function createVideo(content, url) {
 // 이모티콘
 function createEmoticon(url) {
     const div = document.createElement("div");
-    div.className = "message-image";
-    div.innerHTML = `<video src="${url}" autoplay loop muted playsinline style="width:150px; background:transparent; border-radius:18px;"></video>`;
+    div.className = "message-emoticon";
+    
+    const img = document.createElement("img");
+    img.src = url;
+    img.className = "emoticon-image";
+    
+    div.appendChild(img);
     return div;
 }
 
