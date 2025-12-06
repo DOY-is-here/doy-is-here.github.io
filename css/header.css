@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard';
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.chat-container {
+    width: 394px;
+    max-width: 100%;
+    background-color: #FFFFFF;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 상단 고정바 */
+.header {
+    background-color: #C9D0EA;;
+    top: 0;
+    z-index: 999;
+    position: sticky;
+    border-bottom: 1px solid #BDC3DC;
+}
+
+.status-bar {
+    height: 16px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+}
+
+.header-content {
+    height: 42px;
+    padding: 1px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* 뒤로가기 */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: absolute;  
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 36L18 24L30 12' stroke='%2350535D' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.back-button {
+    position: absolute;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 1.5px;
+}
+
+.chat-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #0E0E10;
+}
+
+.dropdown-icon {
+    width: 15px;
+    height: 15px;
+    color: #50535D;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 18L24 30L36 18' stroke='%2350535D' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.days-together {
+    font-size: 10.5px;
+    color: #50535D;
+}
+
+/* 검색 */
+.search-button {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;  
+    right: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35 35L27.75 27.75M31.6667 18.3333C31.6667 25.6971 25.6971 31.6667 18.3333 31.6667C10.9695 31.6667 5 25.6971 5 18.3333C5 10.9695 10.9695 5 18.3333 5C25.6971 5 31.6667 10.9695 31.6667 18.3333Z' stroke='%2350535D' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
