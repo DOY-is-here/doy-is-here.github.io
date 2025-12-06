@@ -1,143 +1,100 @@
-let textCache = [];
-let htmlCache = [];
-let elements = [];
-let initialized = false;
 
-let highlightPositions = [];
-let currentIndex = -1;
+.search-wrapper {
+    display: none;
+    position: relative;
+    align-items: center;
+    padding: 30px 0px;
+}    
 
-function initCache() {
-    if (initialized) return;
-
-    elements = Array.from(document.querySelectorAll(".message-text"));
-    textCache = elements.map(el => el.innerText);
-    htmlCache = elements.map(el => el.innerHTML);
-
-    initialized = true;
+.search-bar {
+    width: 325px;
+    margin: 8px 8px 8px 0px; 
+    padding: 8px 12px 8px 18px;
+    border-radius: 20px;
+    padding-right: 80px; 
+    border: 1px solid #C0C4D3;
+    font-size: 16px;
+    line-height: 20px;
+    outline: none;
+    background: #FFFFFF;
+    box-sizing: border-box;   
 }
 
-export function handleSearch(input) {
-    const keyword = input.value.trim().toLowerCase();
-    initCache();
-
-    highlight(keyword);
-    collectHighlights();
-
-    if (!keyword || highlightPositions.length === 0) {
-        hideSearchNav();
-        updateIndexDisplay();
-        return;
-    }
-
-    showSearchNav();
-
-    currentIndex = 0;
-    scrollToHighlight(0);
-    updateIndexDisplay();
+.search-bar-container {
+    left: 16px;
+    position: absolute;
+    display: flex;
+    align-items: center;
 }
 
-// 하이라이트 렌더링 - HTML 보존
-function highlight(keyword) {
-    if (!keyword) {
-        elements.forEach((el, i) => el.innerHTML = htmlCache[i]);
-        highlightPositions = [];
-        currentIndex = -1;
-        updateIndexDisplay();
-        return;
-    }
+.calendar-btn {
+    position: absolute;
+    right: 16px;
 
-    const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const reg = new RegExp(`(${escaped})`, "gi");
-
-    elements.forEach((el, i) => {
-        const originalHTML = htmlCache[i];
-        const newHTML = originalHTML.replace(reg, `<mark class="highlight">$1</mark>`);
-
-        if (el.innerHTML !== newHTML) {
-            el.innerHTML = newHTML;
-        }
-    });
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32 4V12M16 4V12M6 20H42M10 8H38C40.2091 8 42 9.79086 42 12V40C42 42.2091 40.2091 44 38 44H10C7.79086 44 6 42.2091 6 40V12C6 9.79086 7.79086 8 10 8Z' stroke='%2350535D' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
 }
 
-// 하이라이트 위치 수집
-function collectHighlights() {
-    highlightPositions = Array.from(document.querySelectorAll("mark.highlight"));
-    currentIndex = highlightPositions.length > 0 ? 0 : -1;
+/* 
+.calendar-picker {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    pointer-events: none;
+}
+*/
+
+.highlight {
+    background: rgba(231, 181, 191, 0.5);
 }
 
-// 이동 기능
-export function nextResult() {
-    if (highlightPositions.length === 0) return;
-
-    currentIndex = (currentIndex + 1) % highlightPositions.length;
-    scrollToHighlight(currentIndex);
-    updateIndexDisplay();
+.active-highlight {
+    background: #E7B5BF;
 }
 
-export function prevResult() {
-    if (highlightPositions.length === 0) return;
-
-    currentIndex = (currentIndex - 1 + highlightPositions.length) % highlightPositions.length;
-    scrollToHighlight(currentIndex);
-    updateIndexDisplay();
+/* 검색 네비 */
+.search-nav {
+    position: absolute; 
+    right: 8px;
+    display: none;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 12px;
 }
 
-// 해당 하이라이트로 스크롤 이동
-function scrollToHighlight(index) {
-    const el = highlightPositions[index];
-    if (!el) return;
-
-    el.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
-
-    highlightPositions.forEach(h => h.classList.remove("active-highlight"));
-    el.classList.add("active-highlight");
+#next-result,
+#prev-result {
+    width: 13px;
+    height: 13px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
 }
 
-// UI 업데이트
-function updateIndexDisplay() {
-    const counter = document.getElementById("search-index");
-    if (!counter) return;
-
-    if (highlightPositions.length === 0) {
-        counter.textContent = "";
-        return;
-    }
-
-    counter.textContent = `${currentIndex + 1} / ${highlightPositions.length}`;
+#next-result {
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 18L24 30L36 18' stroke='%231E1E1E' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-// 검색 초기화 함수
-export function clearSearch() {
-    if (!initialized) return;
-    
-    // 하이라이트 제거
-    elements.forEach((el, i) => el.innerHTML = htmlCache[i]);
-    
-    // 검색바 비우기
-    const searchBar = document.getElementById("searchBar");
-    if (searchBar) {
-        searchBar.value = "";
-    }
-    
-    // 상태 초기화
-    highlightPositions = [];
-    currentIndex = -1;
-    
-    // 네비게이션 숨기기
-    hideSearchNav();
-    updateIndexDisplay();
+#prev-result {
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 30L24 18L12 30' stroke='%231E1E1E' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-// 네비게이션 보이기/숨기기 기능
-function showSearchNav() {
-    const nav = document.querySelector(".search-nav");
-    if (nav) nav.style.display = "flex";
-}
-
-function hideSearchNav() {
-    const nav = document.querySelector(".search-nav");
-    if (nav) nav.style.display = "none";
+#search-index {
+    font-size: 11px;
+    color: #666;
+    white-space: nowrap;
+    min-width: 35px;
+    text-align: center;
 }
