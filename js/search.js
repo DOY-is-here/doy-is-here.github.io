@@ -1,15 +1,17 @@
 let textCache = [];
+let htmlCache = [];
 let elements = [];
 let initialized = false;
 
-let highlightPositions = [];   // 모든 하이라이트 위치 요소들
-let currentIndex = -1;         // 현재 선택된 하이라이트
+let highlightPositions = [];
+let currentIndex = -1;
 
 function initCache() {
     if (initialized) return;
 
     elements = Array.from(document.querySelectorAll(".message-text"));
     textCache = elements.map(el => el.innerText);
+    htmlCache = elements.map(el => el.innerHTML);
 
     initialized = true;
 }
@@ -21,14 +23,12 @@ export function handleSearch(input) {
     highlight(keyword);
     collectHighlights();
 
-    // 🔥 검색창이 비었을 때 - 네비게이션 숨기기
     if (!keyword || highlightPositions.length === 0) {
         hideSearchNav();
         updateIndexDisplay();
         return;
     }
 
-    // 🔥 검색결과가 있을 때 - 네비게이션 표시
     showSearchNav();
 
     currentIndex = 0;
@@ -36,10 +36,10 @@ export function handleSearch(input) {
     updateIndexDisplay();
 }
 
-//  하이라이트 렌더링
+// 하이라이트 렌더링 - HTML 보존
 function highlight(keyword) {
     if (!keyword) {
-        elements.forEach((el, i) => el.innerHTML = textCache[i]);
+        elements.forEach((el, i) => el.innerHTML = htmlCache[i]);
         highlightPositions = [];
         currentIndex = -1;
         updateIndexDisplay();
@@ -50,8 +50,8 @@ function highlight(keyword) {
     const reg = new RegExp(`(${escaped})`, "gi");
 
     elements.forEach((el, i) => {
-        const original = textCache[i];
-        const newHTML = original.replace(reg, `<mark class="highlight">$1</mark>`);
+        const originalHTML = htmlCache[i];
+        const newHTML = originalHTML.replace(reg, `<mark class="highlight">$1</mark>`);
 
         if (el.innerHTML !== newHTML) {
             el.innerHTML = newHTML;
@@ -59,13 +59,13 @@ function highlight(keyword) {
     });
 }
 
-//  하이라이트 위치 수집
+// 하이라이트 위치 수집
 function collectHighlights() {
     highlightPositions = Array.from(document.querySelectorAll("mark.highlight"));
     currentIndex = highlightPositions.length > 0 ? 0 : -1;
 }
 
-//  이동 기능
+// 이동 기능
 export function nextResult() {
     if (highlightPositions.length === 0) return;
 
@@ -82,7 +82,7 @@ export function prevResult() {
     updateIndexDisplay();
 }
 
-//  해당 하이라이트로 스크롤 이동
+// 해당 하이라이트로 스크롤 이동
 function scrollToHighlight(index) {
     const el = highlightPositions[index];
     if (!el) return;
@@ -96,7 +96,7 @@ function scrollToHighlight(index) {
     el.classList.add("active-highlight");
 }
 
-//  UI 업데이트
+// UI 업데이트
 function updateIndexDisplay() {
     const counter = document.getElementById("search-index");
     if (!counter) return;
@@ -107,6 +107,28 @@ function updateIndexDisplay() {
     }
 
     counter.textContent = `${currentIndex + 1} / ${highlightPositions.length}`;
+}
+
+// 검색 초기화 함수
+export function clearSearch() {
+    if (!initialized) return;
+    
+    // 하이라이트 제거
+    elements.forEach((el, i) => el.innerHTML = htmlCache[i]);
+    
+    // 검색바 비우기
+    const searchBar = document.getElementById("searchBar");
+    if (searchBar) {
+        searchBar.value = "";
+    }
+    
+    // 상태 초기화
+    highlightPositions = [];
+    currentIndex = -1;
+    
+    // 네비게이션 숨기기
+    hideSearchNav();
+    updateIndexDisplay();
 }
 
 // 네비게이션 보이기/숨기기 기능
