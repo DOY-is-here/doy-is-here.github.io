@@ -18,21 +18,15 @@ export function initCalendar(parsedData) {
 
 // 캘린더 HTML 생성
 export function createCalendar() {
-    const header = document.querySelector(".header");
-    if (!header) return;
-    
-    // 🔥 어두운 배경 생성
+    //  어두운 배경 - body에 추가
     const overlay = document.createElement("div");
     overlay.className = "calendar-overlay";
     overlay.id = "calendar-overlay";
     overlay.style.display = "none";
-    
-    // 🔥 배경 클릭하면 캘린더 닫기
-    overlay.addEventListener("click", toggleCalendar);
-    
+    overlay.addEventListener("click", closeCalendar);
     document.body.appendChild(overlay);
     
-    // 캘린더 생성
+    //  캘린더 - body에 추가 (고정 위치)
     const cal = document.createElement("div");
     cal.className = "calendar-popup";
     cal.id = "calendar-popup";
@@ -61,9 +55,16 @@ export function createCalendar() {
         e.stopPropagation();
     });
     
-    header.appendChild(cal);
+    document.body.appendChild(cal);
+    
     renderCalendar();
     attachCalendarEvents();
+    
+    //  캘린더 버튼 이벤트
+    const calendarBtn = document.getElementById("calendar-btn");
+    if (calendarBtn) {
+        calendarBtn.addEventListener("click", toggleCalendar);
+    }
 }
 
 // 캘린더 렌더링
@@ -142,19 +143,14 @@ function scrollToDate(dateKey) {
     const [year, month, day] = dateKey.split("-");
     const targetText = `${year}년 ${parseInt(month)}월 ${parseInt(day)}일`;
     
-    toggleCalendar(); // 캘린더 닫기
+    closeCalendar(); // 캘린더 닫기
     
     const dateDividers = document.querySelectorAll(".date-badge");
     for (let divider of dateDividers) {
         if (divider.textContent.includes(targetText)) {
-            // 헤더 높이 계산
             const header = document.querySelector(".header");
             const headerHeight = header ? header.offsetHeight : 0;
-            
-            // 날짜 구분선 위치 계산
             const dividerTop = divider.getBoundingClientRect().top + window.scrollY;
-            
-            // 헤더 바로 아래에 오도록 스크롤
             const targetPosition = dividerTop - headerHeight - 8;
             
             window.scrollTo({
@@ -168,13 +164,15 @@ function scrollToDate(dateKey) {
 }
 
 // 캘린더 토글
-export function toggleCalendar() {
+function toggleCalendar() {
     const cal = document.getElementById("calendar-popup");
     const overlay = document.getElementById("calendar-overlay");
     
     if (!cal) return;
     
-    if (cal.style.display === "none") {
+    const isHidden = !cal.style.display || cal.style.display === "none";
+    
+    if (isHidden) {
         // 열기
         cal.style.display = "block";
         if (overlay) overlay.style.display = "block";
@@ -183,4 +181,15 @@ export function toggleCalendar() {
         cal.style.display = "none";
         if (overlay) overlay.style.display = "none";
     }
+}
+
+//  캘린더 닫기
+export function closeCalendar() {
+    const cal = document.getElementById("calendar-popup");
+    const overlay = document.getElementById("calendar-overlay");
+    
+    if (!cal) return;
+    
+    cal.style.display = "none";
+    if (overlay) overlay.style.display = "none";
 }
