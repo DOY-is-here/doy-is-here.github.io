@@ -18,6 +18,7 @@ body {
     position: relative;
     min-height: 100vh;
     box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 상단 고정바 */
@@ -132,3 +133,4 @@ body {
     width: 20px;
     height: 20px;
 }
+
