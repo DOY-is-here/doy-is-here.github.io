@@ -1,15 +1,27 @@
 /* 캘린더 팝업 */
 .calendar-popup {
-    position: absolute; /* fixed -> absolute로 변경 */
-    top: 100%; /* 🔥 헤더 바로 아래 */
-    right: 16px;
-    width: 320px;
+    position: fixed;
+    bottom: 0;
+    width: 362px;
+    max-width: 100%;
     background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     padding: 16px;
     z-index: 1000;
-    margin-top: 4px; /* 약간의 여백 */
+    border-radius:20px 20px 0 0 ;
+}
+
+.calendar-overlay {
+    width: 394px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    display: none;
 }
 
 /* 캘린더 헤더 */
@@ -18,6 +30,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
+    padding: 0 17px; 
 }
 
 .calendar-title {
@@ -27,8 +40,8 @@
 }
 
 .calendar-nav {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border: none;
     background: transparent;
     font-size: 20px;
@@ -61,7 +74,9 @@
 .calendar-days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     gap: 4px;
+    min-height: 240px; 
 }
 
 .calendar-day {
@@ -71,6 +86,7 @@
     justify-content: center;
     font-size: 13px;
     border-radius: 8px;
+    border-radius: 50%;
     cursor: default;
 }
 
