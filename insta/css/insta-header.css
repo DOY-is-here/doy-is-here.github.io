@@ -23,8 +23,7 @@
 
 .header-title {
     position: absolute;
-    left: 21%;
-    transform: translateX(-65%);
+    left: 65px;
     font-size: 20px;
     font-weight: bold;
     text-align: center;

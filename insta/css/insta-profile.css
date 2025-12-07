@@ -1,12 +1,12 @@
 /* 프로필 헤더 */
 .profile-header {
-    padding: 16px 45px 20px 20px;
+    padding: 16px 45px 20px 19px;
     display: flex;
     align-items: center;
 }
 
 .profile-avatar {
-    width: 85px;
+    width: 84px;
     height: 85px;
     border-radius: 50%;
     background-color: #E1E8ED;
