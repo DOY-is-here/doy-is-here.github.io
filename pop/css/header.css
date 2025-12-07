@@ -5,21 +5,45 @@
 
 body {
     font-family: 'Pretendard';
-    background-color: #FFFFFF;
+    background-color: #FAFAFA;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
+    overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 
 .chat-container {
     width: 394px;
-    max-width: 100%;
     background-color: #FFFFFF;
     position: relative;
     min-height: 100vh;
     box-sizing: border-box;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform-origin: top center;
 }
+
+/* 📱 모바일: 화면 크기에 맞춰 확대/축소 */
+@media (max-width: 767px) {
+    .chat-container {
+        transform: scale(calc(100vw / 394));
+    }
+}
+
+/* 📱 태블릿 세로: 화면 크기에 맞춰 확대/축소 */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .chat-container {
+        transform: scale(calc(100vw / 394));
+    }
+}
+
+/* 💻 태블릿 가로 & 노트북: 최대 화면 너비의 1/3까지만 */
+@media (min-width: 768px) and (orientation: landscape),
+       (min-width: 1025px) {
+    .chat-container {
+        transform: scale(calc(min(100vw / 3, 100vh * 0.8) / 394));
+    }
+}
+
 
 /* 상단 고정바 */
 .header {
@@ -57,7 +81,7 @@ body {
     left: 16px;
     width: 20px;
     height: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 36L18 24L30 12' stroke='%2350535D' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 36L18 24L30 12' stroke='%230B1014' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

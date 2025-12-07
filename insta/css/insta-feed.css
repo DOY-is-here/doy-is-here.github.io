@@ -1,0 +1,99 @@
+/* 피드 포스트 */
+.feed-container {
+    padding-bottom: 60px;
+}
+
+.post {
+    margin-bottom: 12px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+/* 포스트 헤더 */
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 12px;
+}
+
+.post-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #E1E8ED;
+}
+
+.post-user-info {
+    flex: 1;
+}
+
+.post-username {
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+}
+
+.post-location {
+    font-size: 12px;
+    color: #8E8E8E;
+}
+
+.post-more {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* 포스트 이미지 */
+.post-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: #F0F0F0;
+}
+
+/* 포스트 액션 */
+.post-actions {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 16px;
+}
+
+.action-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.action-right {
+    margin-left: auto;
+}
+
+/* 포스트 내용 */
+.post-likes {
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+    margin-bottom: 8px;
+}
+
+.post-caption {
+    padding: 0 16px;
+    font-size: 14px;
+    color: #262626;
+    margin-bottom: 8px;
+}
+
+.post-caption .username {
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.post-time {
+    padding: 0 16px 12px;
+    font-size: 10px;
+    color: #8E8E8E;
+}

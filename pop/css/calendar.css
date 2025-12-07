@@ -8,6 +8,7 @@
     padding: 16px;
     z-index: 1000;
     border-radius:20px 20px 0 0 ;
+    transform-origin: bottom center;
 }
 
 .calendar-overlay {
@@ -22,6 +23,38 @@
     background: rgba(0, 0, 0, 0.3);
     z-index: 99;
     display: none;
+    transform-origin: top center;
+}
+
+/* 📱 모바일: 화면 크기에 맞춰 확대/축소 */
+@media (max-width: 767px) {
+    .calendar-overlay {
+        transform: scale(calc(100vw / 394));
+    }
+    .calendar-popup {
+        transform: scale(calc(100vw / 394));
+    }
+}
+
+/* 📱 태블릿 세로: 화면 크기에 맞춰 확대/축소 */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .calendar-overlay {
+        transform: scale(calc(100vw / 394));
+    }
+    .calendar-popup {
+        transform: scale(calc(100vw / 394));
+    }
+}
+
+/* 💻 태블릿 가로 & 노트북: 최대 화면 너비의 1/3까지만 */
+@media (min-width: 768px) and (orientation: landscape),
+       (min-width: 1025px) {
+    .calendar-overlay {
+        transform: scale(calc(min(100vw / 3, 100vh * 0.8) / 394));
+    }
+    .calendar-popup {
+        transform: scale(calc(min(100vw / 3, 100vh * 0.8) / 394));
+    }
 }
 
 /* 캘린더 헤더 */
