@@ -36,7 +36,6 @@ export function handleSearch(input) {
     updateIndexDisplay();
 }
 
-// 하이라이트 렌더링 - HTML 보존
 function highlight(keyword) {
     if (!keyword) {
         elements.forEach((el, i) => el.innerHTML = htmlCache[i]);
@@ -59,13 +58,11 @@ function highlight(keyword) {
     });
 }
 
-// 하이라이트 위치 수집
 function collectHighlights() {
     highlightPositions = Array.from(document.querySelectorAll("mark.highlight"));
     currentIndex = highlightPositions.length > 0 ? 0 : -1;
 }
 
-// 이동 기능
 export function nextResult() {
     if (highlightPositions.length === 0) return;
 
@@ -82,7 +79,6 @@ export function prevResult() {
     updateIndexDisplay();
 }
 
-// 해당 하이라이트로 스크롤 이동
 function scrollToHighlight(index) {
     const el = highlightPositions[index];
     if (!el) return;
@@ -96,7 +92,6 @@ function scrollToHighlight(index) {
     el.classList.add("active-highlight");
 }
 
-// UI 업데이트
 function updateIndexDisplay() {
     const counter = document.getElementById("search-index");
     if (!counter) return;
@@ -109,29 +104,23 @@ function updateIndexDisplay() {
     counter.textContent = `${currentIndex + 1} / ${highlightPositions.length}`;
 }
 
-// 검색 초기화 함수
 export function clearSearch() {
     if (!initialized) return;
     
-    // 하이라이트 제거
     elements.forEach((el, i) => el.innerHTML = htmlCache[i]);
     
-    // 검색바 비우기
     const searchBar = document.getElementById("searchBar");
     if (searchBar) {
         searchBar.value = "";
     }
     
-    // 상태 초기화
     highlightPositions = [];
     currentIndex = -1;
     
-    // 네비게이션 숨기기
     hideSearchNav();
     updateIndexDisplay();
 }
 
-// 네비게이션 보이기/숨기기 기능
 function showSearchNav() {
     const nav = document.querySelector(".search-nav");
     if (nav) nav.style.display = "flex";
