@@ -4,11 +4,17 @@
     padding-bottom: 60px;
 }
 
+
+
 /* 상단바 (게시물 / 아이디 중앙 정렬) */
 
 .post-topbar {
+    position: sticky;
+    top: 0;
+    background: #FFFFFF;
+    z-index: 100;
     position: relative;
-    height: 50px;
+    height: 44px;
     display: flex;
     align-items: center;
     padding: 0 16px;
@@ -118,10 +124,16 @@
 
 .slider-item {
     min-width: 100%;
-    aspect-ratio: 4/5;
+    width: 394px;
+    max-height: 600px;
     scroll-snap-align: start;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slider-counter {
@@ -155,6 +167,12 @@
     background: #5465F6;
 }
 
+/* 이미지 비율 자동 조정 */
+.slider-item::before {
+    content: '';
+    display: block;
+    padding-top: 125%; /* 기본 4:5 비율 */
+}
 
 /* 포스트 액션 (좋아요/댓글/보내기/저장) */
 .post-actions {
