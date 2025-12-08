@@ -13,7 +13,7 @@ export function createHeader() {
 
             <div class="header-title">
                 <div class="title-row">
-                    <span class="chat-name">DOY</span>
+                    <span class="chat-name">도의</span>
                     <span class="dropdown-icon"></span>
                 </div>
                 <div class="days-together">함께한지 490일</div>
