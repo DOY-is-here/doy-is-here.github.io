@@ -34,10 +34,11 @@ function parseFileName(fileName) {
 
 // 날짜를 표시 형식으로 변환
 function formatDisplayDate(dateStr) {
-    // 250203 -> "2월 3일"
+    // 250203 -> "2025년 2월 3일"
+    const year = "20" + dateStr.substring(0, 2);
     const month = parseInt(dateStr.substring(2, 4));
     const day = parseInt(dateStr.substring(4, 6));
-    return `${month}월 ${day}일`;
+    return `${year}년 ${month}월 ${day}일`;
 }
 
 // 날짜를 ISO 형식으로 변환
