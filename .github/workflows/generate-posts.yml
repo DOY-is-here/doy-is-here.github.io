@@ -1,0 +1,32 @@
+name: Generate Posts.js
+
+on:
+  push:
+    paths:
+      - 'insta-photo/**'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Generate posts.js
+        run: node scripts/generate-posts.js
+      
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add insta/js/posts.js
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update posts.js from images" && git push)
