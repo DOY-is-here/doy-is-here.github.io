@@ -17,17 +17,20 @@ function getImageFiles() {
     return files.filter(file => /\.(jpg|jpeg|png)$/i.test(file));
 }
 
-// 파일명에서 날짜와 순서 추출
+// 파일명에서 날짜, 게시물 번호, 이미지 순서 추출
 function parseFileName(fileName) {
-    // 250203.jpg -> { date: "250203", sequence: null }
-    // 250203 (1).jpg -> { date: "250203", sequence: 1 }
-    const match = fileName.match(/^(\d{6})(?:\s*\((\d+)\))?/);
+    // 240202-1.jpg -> { date: "240202", postNum: 1, sequence: null }
+    // 240202-1 (1).jpg -> { date: "240202", postNum: 1, sequence: 1 }
+    // 240202-2.jpg -> { date: "240202", postNum: 2, sequence: null }
+    // 240202.jpg -> { date: "240202", postNum: null, sequence: null }
+    const match = fileName.match(/^(\d{6})(?:-(\d+))?(?:\s*\((\d+)\))?/);
     
     if (!match) return null;
     
     return {
         date: match[1],
-        sequence: match[2] ? parseInt(match[2]) : null,
+        postNum: match[2] ? parseInt(match[2]) : null,
+        sequence: match[3] ? parseInt(match[3]) : null,
         fileName: fileName
     };
 }
@@ -56,25 +59,36 @@ function groupImagesByPost(imageFiles) {
         .map(parseFileName)
         .filter(p => p !== null);
     
-    // 날짜별로 그룹화
+    // 날짜 + 게시물 번호로 그룹화
     const grouped = {};
     
     parsed.forEach(item => {
-        const date = item.date;
-        if (!grouped[date]) {
-            grouped[date] = [];
+        // 게시물 키 생성: "240202-1", "240202-2", "240202" (번호 없으면)
+        const postKey = item.postNum !== null 
+            ? `${item.date}-${item.postNum}`
+            : item.date;
+        
+        if (!grouped[postKey]) {
+            grouped[postKey] = {
+                date: item.date,
+                postNum: item.postNum,
+                images: []
+            };
         }
-        grouped[date].push(item);
+        
+        grouped[postKey].images.push(item);
     });
     
     // 각 그룹을 게시물로 변환
     const posts = [];
     
-    Object.keys(grouped).forEach(date => {
-        const images = grouped[date];
+    Object.keys(grouped).forEach(postKey => {
+        const group = grouped[postKey];
+        const images = group.images;
         
-        // 순서대로 정렬 (sequence가 없는 것이 먼저, 있으면 숫자 순)
+        // 이미지를 순서대로 정렬 (sequence가 없는 것이 먼저, 있으면 숫자 순)
         images.sort((a, b) => {
+            if (a.sequence === null && b.sequence === null) return 0;
             if (a.sequence === null) return -1;
             if (b.sequence === null) return 1;
             return a.sequence - b.sequence;
@@ -83,22 +97,22 @@ function groupImagesByPost(imageFiles) {
         // 이미지 URL 배열 생성
         const imageUrls = images.map(img => `${GITHUB_RAW_BASE}/${encodeURIComponent(img.fileName)}`);
         
-        // ID 생성 (날짜만 사용)
-        const postId = date;
-        
         posts.push({
-            id: postId,
-            date: formatISODate(date),
-            displayDate: formatDisplayDate(date),
+            id: postKey,  // "240202-1", "240202-2", "240202"
+            date: formatISODate(group.date),
+            displayDate: formatDisplayDate(group.date),
             username: "doy.is.here",
             images: imageUrls,
-            caption: `${formatDisplayDate(date)} 게시물`,
+            caption: `${formatDisplayDate(group.date)} 게시물`,
             type: "photo"
         });
     });
     
-    // 날짜 내림차순 정렬 (최신순)
-    posts.sort((a, b) => b.id.localeCompare(a.id));
+    // 정렬: 날짜 내림차순, 같은 날짜면 게시물 번호 내림차순
+    posts.sort((a, b) => {
+        // ID를 비교 (문자열 비교로 "240202-2" > "240202-1" > "240202")
+        return b.id.localeCompare(a.id);
+    });
     
     return posts;
 }

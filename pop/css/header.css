@@ -1,49 +1,48 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard', -apple-system, system-ui, sans-serif;
     background-color: #FAFAFA;
     display: flex;
     justify-content: center;
-    box-sizing: border-box;
     overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 
-.chat-container {
+#insta-root {
     width: 394px;
+    max-width: 100%;
     background-color: #FFFFFF;
-    position: relative;
     min-height: 100vh;
-    box-sizing: border-box;
+    position: relative;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transform-origin: top center;
+    transform-origin: top center; 
 }
 
-/* 📱 모바일: 화면 크기에 맞춰 확대/축소 */
+/* 모바일: 화면 크기에 맞춰 확대/축소 */
 @media (max-width: 767px) {
-    .chat-container {
+    #insta-root {
         transform: scale(calc(100vw / 394));
     }
 }
 
-/* 📱 태블릿 세로: 화면 크기에 맞춰 확대/축소 */
+/* 태블릿 세로: 화면 크기에 맞춰 확대/축소 */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .chat-container {
+    #insta-root {
         transform: scale(calc(100vw / 394));
     }
 }
 
-/* 💻 태블릿 가로 & 노트북: 최대 화면 너비의 1/3까지만 */
+/* 태블릿 가로 & 노트북: 최대 화면 너비의 1/3까지만 */
 @media (min-width: 768px) and (orientation: landscape),
        (min-width: 1025px) {
-    .chat-container {
+    #insta-root {
         transform: scale(calc(min(100vw / 3, 100vh * 0.8) / 394));
     }
 }
-
 
 /* 상단 고정바 */
 .header {
