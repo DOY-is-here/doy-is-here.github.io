@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const text = await loadText();
     const parsedData = parseMessages(text);
 
-    const root = document.getElementById("chat-root");
+    const root = document.getElementById("chat-container");
     const chatContainer = document.createElement("div");
     chatContainer.className = "chat-container";
 
