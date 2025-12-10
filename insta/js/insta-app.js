@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ${renderReelsGrid(getReels())}
                 </div>
                 <div class="tab-content" data-content="tagged">
-                    ${renderGrid(getPhotos())}
+                    ${renderEmptyTag()}
                 </div>
             </div>
         `;
@@ -126,6 +126,17 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="reel-views"></div>
                     </div>
                 `).join('')}
+            </div>
+        `;
+    }
+    
+    // 빈 태그 탭 렌더링
+    function renderEmptyTag() {
+        return `
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; color: #8e8e8e;">
+                <div style="font-size: 60px; margin-bottom: 20px;">📷</div>
+                <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">태그된 게시물 없음</div>
+                <div style="font-size: 14px;">사진에 태그되면 여기에 표시됩니다.</div>
             </div>
         `;
     }
@@ -237,7 +248,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="post-slider">
                     <div class="slider-container" data-slider="${post.id}">
                         ${post.images.map(img => `
-                            <div class="slider-item" style="background-image: url('${img}')"></div>
+                            <div class="slider-item">
+                                <img src="${img}" alt="${post.caption}">
+                            </div>
                         `).join('')}
                     </div>
                     ${post.images.length > 1 ? `
