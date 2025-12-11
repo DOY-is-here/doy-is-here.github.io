@@ -424,12 +424,22 @@ export const posts = [
         "type": "photo"
     },
     {
+        "id": "240111-2",
+        "date": "2024-01-11",
+        "displayDate": "2024년 1월 11일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111-2.jpg"
+        ],
+        "caption": "2024년 1월 11일 게시물",
+        "type": "photo"
+    },
+    {
         "id": "240111",
         "date": "2024-01-11",
         "displayDate": "2024년 1월 11일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111-2.jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(3).jpg",
