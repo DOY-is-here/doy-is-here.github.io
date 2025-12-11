@@ -2,13 +2,14 @@
 .calendar-popup {
     position: fixed;
     bottom: 0;
-    width: 362px;
-    max-width: 100%;
+    width: 394px;
     background: white;
-    padding: 16px;
+    padding: 20px;
     z-index: 1000;
     border-radius:20px 20px 0 0 ;
-    transform-origin: bottom center;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
 }
 
 .calendar-overlay {
@@ -87,7 +88,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 14px;
     border-radius: 8px;
     border-radius: 50%;
     cursor: default;
