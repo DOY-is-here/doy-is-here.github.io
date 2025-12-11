@@ -11,7 +11,6 @@
     margin: 8px 8px 8px 0px; 
     padding: 8px 12px 8px 18px;
     border-radius: 20px;
-    padding-right: 80px; 
     border: 1px solid #C0C4D3;
     font-size: 16px;
     line-height: 20px;
@@ -22,6 +21,7 @@
 
 .search-bar-container {
     left: 16px;
+    padding-right: 56px; 
     position: absolute;
     display: flex;
     align-items: center;
@@ -30,7 +30,6 @@
 .calendar-btn {
     position: absolute;
     right: 16px;
-    margin-left: 16px;
     width: 20px;
     height: 20px;
     border: none;
