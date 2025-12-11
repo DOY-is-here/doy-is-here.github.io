@@ -16,7 +16,9 @@ body {
 }
 
 .scale-wrapper {
-    width: 100%;
+    width: 394px;     /* 기준 UI 폭 */
+    max-width: 100%;  /* 작은 화면에서 자동으로 줄어듦 */
+    margin: 0 auto;   /* 가운데 정렬 */
     transform-origin: top center;
 }
 
