@@ -1,26 +1,19 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
 body {
     font-family: 'Pretendard';
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+    box-sizing: border-box;
     background: #FAFAFA;
     overflow-x: hidden;
     min-height: 100vh;
-
+    margin: 0;
+    padding: 0;
 }
 
+/* scale-wrapper가 가운데로 고정되지 않도록 */
 .scale-wrapper {
     width: 100%;
     max-width: 394px;
     transform-origin: top center;
+    margin: 0 auto 0 0; /* ← PC에서 왼쪽 정렬됨! */
 }
 
 /* ① 모바일: 줄어듦 */
