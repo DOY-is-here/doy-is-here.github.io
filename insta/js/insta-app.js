@@ -1,8 +1,10 @@
-import { posts, getPostCount, getReels, getPhotos, getPostById } from './posts.js';
+import { posts, getPostCount, getReels, getPhotos, getPostById, getTaggedPosts, getStories } from './posts.js';
 
 let currentTab = 'grid'; 
 let touchStartX = 0;
 let touchEndX = 0;
+let currentStoryIndex = 0;
+let storyProgressInterval = null;
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("insta-root");
@@ -48,7 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="follower-avatars">
                         <div class="follower-avatar"></div>
                         <div class="follower-avatar"></div>
-                        <div class="follower-avatar"></div>
+                    </div>
+                    <div class="follower-text">
+                        <span class="follower-name">j__nnie</span>님과 <span class="follower-name">roses_are_rosie</span>님이 팔로우합니다
                     </div>
                 </div>
             </div>
@@ -100,13 +104,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <div class="tab-content" data-content="tagged">
-                    ${renderEmptyTag()}
+                    ${renderTaggedGrid()}
                 </div>
                 <div class="tab-content" data-content="story">
-                    ${renderEmptyTag()}
+                    ${renderStoryGrid()}
                 </div>
                 <div class="tab-content" data-content="repost">
-                    ${renderGrid([...getPhotos(), ...getReels()])}
+                    ${renderRepostGrid()}
                 </div>                
             </div>
         `;
@@ -129,14 +133,79 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }
     
-    // 릴스 그리드 렌더링 (9:16 비율)
-    function renderReelsGrid(reelsArray) {
+    // 태그 그리드 렌더링
+    function renderTaggedGrid() {
+        const tagged = getTaggedPosts();
+        if (tagged.length === 0) {
+            return renderEmptyTag();
+        }
+        
         return `
-            <div class="posts-grid grid-916">
-                ${reelsArray.map(post => `
-                    <div class="grid-item reel-item" onclick="showPost('${post.id}')" style="background-image: url('${post.images[0]}')">
-                        <div class="reel-icon"></div>
-                        <div class="reel-views"></div>
+            <div class="posts-grid grid-34">
+                ${tagged.map(tag => `
+                    <div class="grid-item" onclick="showPost('${tag.postId}')" style="background-image: url('${tag.image}')">
+                        <div class="tagged-icon"></div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+    
+    // 스토리 그리드 렌더링
+    function renderStoryGrid() {
+        const stories = getStories();
+        if (stories.length === 0) {
+            return renderEmptyTag();
+        }
+        
+        return `
+            <div class="posts-grid grid-34">
+                ${stories.map((story, index) => `
+                    <div class="grid-item story-grid-item" onclick="showStory(${index})" style="background-image: url('${story.image}')">
+                        <div class="story-date">${story.displayDate}</div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+    
+    // 리포스트 그리드 렌더링
+    function renderRepostGrid() {
+        const allPosts = [...posts];
+        const tagged = getTaggedPosts();
+        
+        const repostItems = [];
+        
+        // 모든 일반 포스트의 모든 이미지 추가
+        allPosts.forEach(post => {
+            post.images.forEach((img, idx) => {
+                repostItems.push({
+                    id: `${post.id}-${idx}`,
+                    postId: post.id,
+                    image: img,
+                    isMulti: post.images.length > 1,
+                    type: post.type
+                });
+            });
+        });
+        
+        // 태그된 포스트도 추가
+        tagged.forEach(tag => {
+            repostItems.push({
+                id: tag.id,
+                postId: tag.postId,
+                image: tag.image,
+                isTagged: true
+            });
+        });
+        
+        return `
+            <div class="posts-grid grid-34">
+                ${repostItems.map(item => `
+                    <div class="grid-item" onclick="showPost('${item.postId}')" style="background-image: url('${item.image}')">
+                        ${item.isMulti ? '<div class="multi-icon"></div>' : ''}
+                        ${item.type === 'reel' ? '<div class="reel-icon"></div>' : ''}
+                        ${item.isTagged ? '<div class="tagged-icon"></div>' : ''}
                     </div>
                 `).join('')}
             </div>
@@ -148,8 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
         return `
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; color: #8e8e8e;">
                 <div style="font-size: 60px; margin-bottom: 20px;">📷</div>
-                <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">태그된 게시물 없음</div>
-                <div style="font-size: 14px;">사진에 태그되면 여기에 표시됩니다.</div>
+                <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">콘텐츠 없음</div>
+                <div style="font-size: 14px;">아직 아무것도 없습니다.</div>
             </div>
         `;
     }
@@ -225,6 +294,136 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     
+    // 스토리 보기
+    window.showStory = function(index) {
+        currentStoryIndex = index;
+        const stories = getStories();
+        
+        root.innerHTML = `
+            <div class="story-viewer">
+                ${renderStoryViewer(stories)}
+            </div>
+        `;
+        
+        initStoryViewer(stories);
+    };
+    
+    // 스토리 뷰어 렌더링
+    function renderStoryViewer(stories) {
+        return `
+            <!-- 스토리 헤더 -->
+            <div class="story-header">
+                <div class="story-progress-bars">
+                    ${stories.map((_, i) => `
+                        <div class="story-progress-bar">
+                            <div class="story-progress-fill ${i === currentStoryIndex ? 'active' : ''} ${i < currentStoryIndex ? 'completed' : ''}"></div>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="story-top-info">
+                    <div class="story-avatar"></div>
+                    <div class="story-username">doy.is.here</div>
+                    <div class="story-time">${stories[currentStoryIndex].displayDate}</div>
+                    <div class="story-close" onclick="location.reload()">✕</div>
+                </div>
+            </div>
+            
+            <!-- 스토리 이미지 컨테이너 -->
+            <div class="story-images">
+                ${stories.map((story, i) => `
+                    <div class="story-image ${i === currentStoryIndex ? 'active' : ''}" style="background-image: url('${story.image}')"></div>
+                `).join('')}
+            </div>
+            
+            <!-- 스토리 네비게이션 영역 -->
+            <div class="story-nav-left" onclick="previousStory()"></div>
+            <div class="story-nav-right" onclick="nextStory()"></div>
+        `;
+    }
+    
+    // 스토리 뷰어 초기화
+    function initStoryViewer(stories) {
+        startStoryProgress(stories);
+    }
+    
+    // 스토리 진행 시작
+    function startStoryProgress(stories) {
+        if (storyProgressInterval) {
+            clearInterval(storyProgressInterval);
+        }
+        
+        const progressFill = document.querySelector('.story-progress-fill.active');
+        if (!progressFill) return;
+        
+        let progress = 0;
+        const duration = stories[currentStoryIndex].duration;
+        const interval = 50;
+        const increment = (interval / duration) * 100;
+        
+        storyProgressInterval = setInterval(() => {
+            progress += increment;
+            progressFill.style.width = `${Math.min(progress, 100)}%`;
+            
+            if (progress >= 100) {
+                clearInterval(storyProgressInterval);
+                window.nextStory();
+            }
+        }, interval);
+    }
+    
+    // 다음 스토리
+    window.nextStory = function() {
+        const stories = getStories();
+        
+        if (currentStoryIndex < stories.length - 1) {
+            currentStoryIndex++;
+            updateStory(stories);
+        } else {
+            location.reload();
+        }
+    };
+    
+    // 이전 스토리
+    window.previousStory = function() {
+        const stories = getStories();
+        
+        if (currentStoryIndex > 0) {
+            currentStoryIndex--;
+            updateStory(stories);
+        }
+    };
+    
+    // 스토리 업데이트
+    function updateStory(stories) {
+        // 모든 스토리 숨기기
+        document.querySelectorAll('.story-image').forEach((img, i) => {
+            img.classList.remove('active');
+            if (i === currentStoryIndex) {
+                img.classList.add('active');
+            }
+        });
+        
+        // 프로그레스바 업데이트
+        document.querySelectorAll('.story-progress-fill').forEach((bar, i) => {
+            bar.classList.remove('active', 'completed');
+            if (i === currentStoryIndex) {
+                bar.classList.add('active');
+                bar.style.width = '0%';
+            } else if (i < currentStoryIndex) {
+                bar.classList.add('completed');
+                bar.style.width = '100%';
+            } else {
+                bar.style.width = '0%';
+            }
+        });
+        
+        // 시간 업데이트
+        document.querySelector('.story-time').textContent = stories[currentStoryIndex].displayDate;
+        
+        // 새 스토리 진행 시작
+        startStoryProgress(stories);
+    }
+    
     // 포스트 상세 페이지
     window.showPost = function(postId) {
         const post = getPostById(postId);
@@ -284,7 +483,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <!-- 액션 버튼 -->
                 <div class="post-actions">
                     <div class="action-icon icon-heart"></div>
+                    <div class="action-count"></div>
                     <div class="action-icon icon-chat"></div>
+                    <div class="action-count"></div>
                     <div class="action-icon icon-loop"></div>
                     <div class="action-icon icon-send"></div>
                     <div class="action-icon action-right icon-bookmark"></div>
