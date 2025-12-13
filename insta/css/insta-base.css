@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     overflow-x: hidden;  /* 가로 스크롤 방지 */
+    overflow-y: scroll;  /* 항상 스크롤바 공간 확보 */
     width: 100%;
     min-height: 100vh;
 }

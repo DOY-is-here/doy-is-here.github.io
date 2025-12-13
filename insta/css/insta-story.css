@@ -2,8 +2,10 @@
 .story-viewer {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 394px;
+    max-width: 100vw;
     height: 100vh;
     background: #000000;
     z-index: 9999;
@@ -161,4 +163,95 @@
     background-size: contain;
     background-repeat: no-repeat;
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+/* 스토리 하이라이트 그리드 */
+.story-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
+
+.story-highlight-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.story-highlight-cover {
+    cursor: pointer;
+}
+
+.story-highlight-ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-highlight-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.story-highlight-title {
+    font-size: 12px;
+    color: #262626;
+    text-align: center;
+    font-weight: 400;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 스토리 미디어 스타일 */
+.story-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+}
+
+.story-media.active {
+    display: flex;
+}
+
+.story-img,
+.story-video {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.story-video {
+    display: block;
+}
+
+.story-highlight-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    pointer-events: none;
+}
+
+.story-highlight-video::-webkit-media-controls {
+    display: none !important;
 }

@@ -4626,3 +4626,23 @@ export function getPrevPost(currentId, tab = 'grid') {
     if (currentIndex <= 0) return null;
     return posts[currentIndex - 1];
 }
+
+// 추가 호환성 함수들
+export function getPhotos() {
+    return photoPosts;
+}
+
+export function getReels() {
+    return []; // 릴스가 없으면 빈 배열 반환
+}
+
+export function getTaggedPosts() {
+    return groupPosts;
+}
+
+export function getStories() {
+    return storyPosts;
+}
+
+// posts 변수 (기존 코드와의 호환성)
+export const posts = photoPosts;
