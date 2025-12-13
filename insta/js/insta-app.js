@@ -1,6 +1,6 @@
 import { posts, getPostCount, getReels, getPhotos, getPostById } from './posts.js';
 
-let currentTab = 'grid'; // 'grid', 'reels', 'tagged'
+let currentTab = 'grid'; 
 let touchStartX = 0;
 let touchEndX = 0;
 
@@ -71,30 +71,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </div>
 
-            <!-- 탭 메뉴 -->
-            <div class="profile-tabs" id="profile-tabs">
-                <div class="tab-item active" data-tab="grid">
-                    <div class="tab-icon grid"></div>
-                </div>
-                <div class="tab-item" data-tab="reels">
-                    <div class="tab-icon reels"></div>
-                </div>
-                <div class="tab-item" data-tab="tagged">
-                    <div class="tab-icon tagged"></div>
-                </div>
-            </div>
+<!-- 탭 메뉴 -->
+
+<div class="profile-tabs" id="profile-tabs">
+    <!-- 그리드 -->
+    <div class="tab-item active" data-tab="grid">
+        <div class="tab-icon grid"></div>
+    </div>
+    <!-- 태그 -->
+    <div class="tab-item" data-tab="tagged">
+        <div class="tab-icon tagged"></div>
+    </div>
+    <!-- 스토리 -->
+    <div class="tab-item" data-tab="story">
+        <div class="tab-icon story"></div>
+    </div>
+    <!-- 리포스트  -->
+    <div class="tab-item" data-tab="repost">
+        <div class="tab-icon repost"></div>
+    </div>
+</div>
+
             
             <!-- 탭 컨텐츠 컨테이너 -->
             <div class="tabs-container" id="tabs-container">
                 <div class="tab-content active" data-content="grid">
                     ${renderGrid(posts)}
                 </div>
-                <div class="tab-content" data-content="reels">
-                    ${renderReelsGrid(getReels())}
-                </div>
+
                 <div class="tab-content" data-content="tagged">
                     ${renderEmptyTag()}
                 </div>
+                <div class="tab-content" data-content="story">
+                    ${renderEmptyTag()}
+                </div>
+                <div class="tab-content" data-content="repost">
+                    ${renderGrid([...getPhotos(), ...getReels()])}
+                </div>                
             </div>
         `;
         
@@ -143,13 +156,18 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // 탭 클릭 이벤트
     function initTabs() {
-        const tabs = document.querySelectorAll('.tab-item');
-        const contents = document.querySelectorAll('.tab-content');
-        
+        const tabs = document.querySelectorAll(".tab-item");
+        const contents = document.querySelectorAll(".tab-content");
+
         tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const tabName = tab.dataset.tab;
-                switchTab(tabName);
+            tab.addEventListener("click", () => {
+                tabs.forEach(t => t.classList.remove("active"));
+                contents.forEach(c => c.classList.remove("active"));
+
+            tab.classList.add("active");
+            document
+                .querySelector(`.tab-content[data-content="${tab.dataset.tab}"]`)
+                .classList.add("active");
             });
         });
     }
@@ -195,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         if (Math.abs(diff) < swipeThreshold) return;
         
-        const tabs = ['grid', 'reels', 'tagged'];
+        const tabs = ['grid', 'tagged', 'story', 'repost'];
         const currentIndex = tabs.indexOf(currentTab);
         
         if (diff > 0 && currentIndex < tabs.length - 1) {
@@ -266,9 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <!-- 액션 버튼 -->
                 <div class="post-actions">
                     <div class="action-icon icon-heart"></div>
-                    <div class="action-count"></div>
                     <div class="action-icon icon-chat"></div>
-                    <div class="action-count"></div>
                     <div class="action-icon icon-loop"></div>
                     <div class="action-icon icon-send"></div>
                     <div class="action-icon action-right icon-bookmark"></div>
