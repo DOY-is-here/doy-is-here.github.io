@@ -1,6 +1,6 @@
 /* 상단 고정바 */
 .header {
-    background-color: #C9D0EA;;
+    background-color: #C9D0EA;
     top: 0;
     z-index: 999;
     position: sticky;
@@ -48,6 +48,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
 }
 
 .header-title {
@@ -81,6 +84,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
 
 .days-together {
@@ -103,7 +108,10 @@
     background-repeat: no-repeat;
     background-position: center;
     top: 50%;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
 }
 
 .search-icon {

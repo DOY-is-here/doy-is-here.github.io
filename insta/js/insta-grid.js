@@ -16,7 +16,7 @@ export function renderGrid(postsArray) {
                 
                 if (isVideoFile) {
                     return `
-                        <div class="grid-item grid-item-video" onclick="showPost('${post.id}')">
+                        <div class="grid-item grid-item-video" data-post-id="${post.id}" data-image-index="0">
                             <video src="${firstMedia}" preload="metadata" muted playsinline class="grid-video"></video>
                             ${post.images.length > 1 ? '<div class="multi-icon"></div>' : ''}
                             <div class="video-icon"></div>
@@ -24,7 +24,7 @@ export function renderGrid(postsArray) {
                     `;
                 } else {
                     return `
-                        <div class="grid-item" onclick="showPost('${post.id}')" style="background-image: url('${firstMedia}')">
+                        <div class="grid-item" data-post-id="${post.id}" data-image-index="0" style="background-image: url('${firstMedia}')">
                             ${post.images.length > 1 ? '<div class="multi-icon"></div>' : ''}
                             ${post.type === 'reel' ? '<div class="reel-icon"></div>' : ''}
                         </div>
@@ -50,7 +50,7 @@ export function renderTaggedGrid(getTaggedPosts) {
                 
                 if (isVideoFile) {
                     return `
-                        <div class="grid-item grid-item-video" onclick="showPost('${post.id}')">
+                        <div class="grid-item grid-item-video" data-post-id="${post.id}" data-image-index="0">
                             <video src="${firstMedia}" preload="metadata" muted playsinline class="grid-video"></video>
                             ${post.images.length > 1 ? '<div class="multi-icon"></div>' : ''}
                             <div class="video-icon"></div>
@@ -58,7 +58,7 @@ export function renderTaggedGrid(getTaggedPosts) {
                     `;
                 } else {
                     return `
-                        <div class="grid-item" onclick="showPost('${post.id}')" style="background-image: url('${firstMedia}')">
+                        <div class="grid-item" data-post-id="${post.id}" data-image-index="0" style="background-image: url('${firstMedia}')">
                             ${post.images.length > 1 ? '<div class="multi-icon"></div>' : ''}
                             ${isVideo(firstMedia) ? '<div class="video-icon"></div>' : ''}
                         </div>
@@ -128,25 +128,33 @@ export function renderRepostGrid(posts, getTaggedPosts) {
         }
     }
     
+    // 모든 이미지를 개별적으로 펼침
+    const allImages = [];
+    uniquePosts.forEach(post => {
+        post.images.forEach((imageUrl, index) => {
+            allImages.push({
+                url: imageUrl,
+                postId: post.id,
+                imageIndex: index,
+                isVideo: isVideo(imageUrl),
+                post: post
+            });
+        });
+    });
+    
     return `
         <div class="posts-grid grid-34">
-            ${uniquePosts.map(post => {
-                const firstMedia = post.images[0];
-                const isVideoFile = isVideo(firstMedia);
-                
-                if (isVideoFile) {
+            ${allImages.map(item => {
+                if (item.isVideo) {
                     return `
-                        <div class="grid-item grid-item-video" onclick="showPost('${post.id}')">
-                            <video src="${firstMedia}" preload="metadata" muted playsinline class="grid-video"></video>
-                            ${post.images.length > 1 ? '<div class="multi-icon"></div>' : ''}
+                        <div class="grid-item grid-item-video" data-post-id="${item.postId}" data-image-index="${item.imageIndex}">
+                            <video src="${item.url}" preload="metadata" muted playsinline class="grid-video"></video>
                             <div class="video-icon"></div>
                         </div>
                     `;
                 } else {
                     return `
-                        <div class="grid-item" onclick="showPost('${post.id}')" style="background-image: url('${firstMedia}')">
-                            ${post.images.length > 1 ? '<div class="multi-icon"></div>' : ''}
-                            ${post.type === 'reel' ? '<div class="reel-icon"></div>' : ''}
+                        <div class="grid-item" data-post-id="${item.postId}" data-image-index="${item.imageIndex}" style="background-image: url('${item.url}')">
                         </div>
                     `;
                 }

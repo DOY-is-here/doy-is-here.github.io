@@ -255,3 +255,12 @@
 .story-highlight-video::-webkit-media-controls {
     display: none !important;
 }
+
+/* 모바일 터치 개선 */
+.story-nav-left,
+.story-nav-right,
+.story-close,
+.story-grid-item {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}

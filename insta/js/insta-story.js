@@ -44,7 +44,7 @@ export function renderStoryViewer() {
                 <div class="story-avatar"></div>
                 <div class="story-username">${allMediaItems[currentMediaIndex].username}</div>
                 <div class="story-time">${allMediaItems[currentMediaIndex].displayDate}</div>
-                <div class="story-close" onclick="showProfile('story')">✕</div>
+                <div class="story-close" onclick="showProfile('story', true)">✕</div>
             </div>
         </div>
         
@@ -139,7 +139,7 @@ export function nextStory() {
         currentMediaIndex++;
         updateStory();
     } else {
-        window.showProfile('story');
+        window.showProfile('story', true);
     }
 }
 

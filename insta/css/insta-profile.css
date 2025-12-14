@@ -216,16 +216,21 @@
     background: #FFFFFF; 
 }
 
-
 /* 탭 컨텐츠 컨테이너 */
 
+.tabs-container {
+    position: relative;
+}
+
 .tab-content {
-    display: none; /* 🔥 기본적으로 숨김 */
+    display: none; /* 비활성 탭 완전히 숨김 */
 }
 
 .tab-content.active {
-    display: block; /* 🔥 활성화된 탭만 보이기 */
+    display: block; /* 활성 탭만 표시 */
 }
+
+
 
 /* 게시물 그리드 - 3:4 비율 */
 .posts-grid.grid-34 {
@@ -305,4 +310,25 @@
 
 .grid-video::-webkit-media-controls-enclosure {
     display: none !important;
+}
+
+/* 그리드 비디오와 아이콘은 클릭 이벤트 차단하지 않음 */
+.posts-grid .grid-video {
+    pointer-events: none;
+}
+
+.posts-grid .multi-icon,
+.posts-grid .video-icon,
+.posts-grid .reel-icon {
+    pointer-events: none;
+}
+
+/* 모바일 터치 개선 */
+.profile-btn,
+.tab-item,
+.grid-item,
+button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
 }

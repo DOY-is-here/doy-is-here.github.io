@@ -1,26 +1,26 @@
 // 메인 앱 파일
-import { posts, getPostCount, getTaggedPosts, getStories, getPostById } from './posts.js';
+import { posts, getPostCount, getTaggedPosts, getStories, getPostById, getPostsByTab } from './posts.js';
 import { renderGrid, renderTaggedGrid, renderStoryGrid, renderRepostGrid, initGridVideoThumbnails, initStoryGridVideos } from './insta-grid.js';
 import { showStoryGroup, renderStoryViewer, initStoryViewer, nextStory, previousStory } from './insta-story.js';
-import { renderPostDetail, initPostSlider, initInfiniteScroll } from './insta-post.js';
+import { renderPostDetail, initPostSlider } from './insta-post.js';
 
 let currentTab = 'grid'; 
 let touchStartX = 0;
 let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
 let root;
-let savedScrollPosition = 0; // 스크롤 위치 저장
+let savedScrollPosition = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
     root = document.getElementById("insta-root");
-    showProfile(); // 초기 로드
+    showProfile();
 });
 
-// showProfile을 완전한 전역 함수로
 window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
-    currentTab = initialTab; // 전달받은 탭으로 설정
+    currentTab = initialTab;
     
     root.innerHTML = `
-        <!-- 헤더 -->
         <div class="insta-header">
             <div class="header-back"></div>
             <div class="header-title">doy.is.here</div>
@@ -30,7 +30,6 @@ window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
             </div>
         </div>
         
-        <!-- 프로필 헤더 -->
         <div class="profile-header">
             <div class="profile-avatar">
                 <div class="profile-avatar-inner"></div>
@@ -41,7 +40,7 @@ window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
                     <div class="stat-label">게시물</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">8.8만</div>
+                    <div class="stat-number">9.16만</div>
                     <div class="stat-label">팔로워</div>
                 </div>
                 <div class="stat-item">
@@ -51,7 +50,6 @@ window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
             </div>
         </div>
         
-        <!-- 프로필 정보 -->
         <div class="profile-info">
             <div class="profile-username">@nomad.is.here</div>
             <div class="profile-followers">
@@ -59,10 +57,10 @@ window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
                     <div class="follower-avatar"></div>
                     <div class="follower-avatar"></div>
                 </div>
+
             </div>
         </div>
         
-        <!-- 프로필 버튼 -->
         <div class="profile-actions">
             <button class="profile-btn">
                 팔로잉
@@ -76,7 +74,6 @@ window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
             </button>
         </div>
 
-        <!-- 탭 메뉴 -->
         <div class="profile-tabs" id="profile-tabs">
             <div class="tab-item ${currentTab === 'grid' ? 'active' : ''}" data-tab="grid">
                 <div class="tab-icon grid"></div>
@@ -92,7 +89,6 @@ window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
             </div>
         </div>
         
-        <!-- 탭 컨텐츠 컨테이너 -->
         <div class="tabs-container" id="tabs-container">
             <div class="tab-content ${currentTab === 'grid' ? 'active' : ''}" data-content="grid">
                 ${renderGrid(posts)}
@@ -112,14 +108,10 @@ window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
     initTabs();
     initSwipe();
     
-    // 스크롤 위치 복원
     if (restoreScroll) {
-        setTimeout(() => {
-            window.scrollTo(0, savedScrollPosition);
-        }, 0);
+        setTimeout(() => window.scrollTo(0, savedScrollPosition), 0);
     }
     
-    // 그리드 비디오 썸네일 초기화 (DOM 렌더링 후)
     requestAnimationFrame(() => {
         setTimeout(() => {
             initGridVideoThumbnails();
@@ -128,12 +120,6 @@ window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
     });
 };
 
-// 전역 함수로 선언
-function showProfile(initialTab = 'grid') {
-    window.showProfile(initialTab);
-}
-
-// 탭 클릭 이벤트
 function initTabs() {
     const tabs = document.querySelectorAll(".tab-item");
     const contents = document.querySelectorAll(".tab-content");
@@ -142,115 +128,186 @@ function initTabs() {
         tab.addEventListener("click", () => {
             tabs.forEach(t => t.classList.remove("active"));
             contents.forEach(c => c.classList.remove("active"));
-
             tab.classList.add("active");
-            currentTab = tab.dataset.tab; // 현재 탭 업데이트
-            document
-                .querySelector(`.tab-content[data-content="${tab.dataset.tab}"]`)
-                .classList.add("active");
-            
-            // 탭 전환 후 비디오 썸네일 초기화
+            currentTab = tab.dataset.tab;
+            document.querySelector(`.tab-content[data-content="${tab.dataset.tab}"]`).classList.add("active");
             setTimeout(() => {
                 initGridVideoThumbnails();
                 initStoryGridVideos();
             }, 100);
         });
     });
+    
+    const tabsContainer = document.getElementById('tabs-container');
+    if (tabsContainer) {
+        tabsContainer.addEventListener('click', function(e) {
+            const gridItem = e.target.closest('.grid-item');
+            if (gridItem && gridItem.dataset.postId) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.showPost(gridItem.dataset.postId, parseInt(gridItem.dataset.imageIndex) || 0);
+            }
+        });
+    }
 }
 
-// 탭 전환
 function switchTab(tabName) {
     currentTab = tabName;
-    
-    // 탭 버튼 활성화
     document.querySelectorAll('.tab-item').forEach(tab => {
-        tab.classList.remove('active');
-        if (tab.dataset.tab === tabName) {
-            tab.classList.add('active');
-        }
+        tab.classList.toggle('active', tab.dataset.tab === tabName);
     });
-    
-    // 컨텐츠 표시
     document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.remove('active');
-        if (content.dataset.content === tabName) {
-            content.classList.add('active');
-        }
+        content.classList.toggle('active', content.dataset.content === tabName);
     });
-    
-    // 탭 전환 후 비디오 썸네일 초기화
     setTimeout(() => {
         initGridVideoThumbnails();
         initStoryGridVideos();
     }, 100);
 }
 
-// 스와이프 기능
 function initSwipe() {
     const container = document.getElementById('tabs-container');
-    
     container.addEventListener('touchstart', (e) => {
         touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
     });
-    
     container.addEventListener('touchend', (e) => {
         touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
         handleSwipe();
     });
 }
 
 function handleSwipe() {
     const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
-    
-    if (Math.abs(diff) < swipeThreshold) return;
+    const diffX = touchStartX - touchEndX;
+    const diffY = touchStartY - touchEndY;
+    if (Math.abs(diffX) < swipeThreshold || Math.abs(diffY) > Math.abs(diffX)) return;
     
     const tabs = ['grid', 'tagged', 'story', 'repost'];
     const currentIndex = tabs.indexOf(currentTab);
-    
-    if (diff > 0 && currentIndex < tabs.length - 1) {
+    if (diffX > 0 && currentIndex < tabs.length - 1) {
         switchTab(tabs[currentIndex + 1]);
-    } else if (diff < 0 && currentIndex > 0) {
+    } else if (diffX < 0 && currentIndex > 0) {
         switchTab(tabs[currentIndex - 1]);
     }
 }
 
-// 스토리 그룹 보기
 window.showStoryGroup = function(date) {
     const stories = getStories();
-    
-    root.innerHTML = `
-        <div class="story-viewer">
-            ${showStoryGroup(date, stories)}
-        </div>
-    `;
-    
+    savedScrollPosition = window.scrollY || window.pageYOffset;
+    root.innerHTML = `<div class="story-viewer">${showStoryGroup(date, stories)}</div>`;
     initStoryViewer();
 };
 
-// 스토리 네비게이션 (전역 함수)
-window.nextStory = function() {
-    nextStory();
-};
+window.nextStory = nextStory;
+window.previousStory = previousStory;
 
-window.previousStory = function() {
-    previousStory();
-};
-
-// 포스트 상세 페이지
-window.showPost = function(postId) {
-    const post = getPostById(postId);
-    if (!post) return;
+window.showPost = function(postId, initialSlide = 0) {
+    const savedTab = currentTab;
+    savedScrollPosition = window.scrollY || window.pageYOffset;
     
-    const savedTab = currentTab; // 현재 탭 저장
-    savedScrollPosition = window.scrollY || window.pageYOffset; // 스크롤 위치 저장
+    let tabPosts = getPostsByTab(savedTab);
+    
+    // 리포스트 탭: photo + group 합쳐서 정렬
+    if (savedTab === 'repost') {
+        const gridPosts = [...posts];
+        const taggedPosts = getTaggedPosts();
+        tabPosts = [...taggedPosts, ...gridPosts];
+        
+        tabPosts.sort((a, b) => {
+            const dateCompare = new Date(b.date) - new Date(a.date);
+            if (dateCompare !== 0) return dateCompare;
+            if (a.type === 'group' && b.type !== 'group') return -1;
+            if (a.type !== 'group' && b.type === 'group') return 1;
+            return 0;
+        });
+        
+        const uniquePosts = [];
+        const seenIds = new Set();
+        for (const p of tabPosts) {
+            if (!seenIds.has(p.id)) {
+                seenIds.add(p.id);
+                uniquePosts.push(p);
+            }
+        }
+        tabPosts = uniquePosts;
+    }
+    
+    const post = tabPosts.find(p => p.id === postId);
+    if (!post) {
+        console.error('게시물을 찾을 수 없습니다:', postId);
+        return;
+    }
+    
+    const currentIndex = tabPosts.findIndex(p => p.id === postId);
+    const startIndex = Math.max(0, currentIndex - 3);
+    const endIndex = Math.min(tabPosts.length, currentIndex + 3);
+    
+    let initialHTML = '';
+    for (let i = startIndex; i < endIndex; i++) {
+        initialHTML += renderPostDetail(tabPosts[i], savedTab);
+    }
     
     root.innerHTML = `
-        <div class="post-detail-wrapper">
-            ${renderPostDetail(post, savedTab)}
+        <div class="post-topbar-fixed">
+            <div class="left-btn header-back" onclick="showProfile('${savedTab}', true)"></div>
+            <div class="post-topbar-title">게시물</div>
+            <div class="post-topbar-subtitle">${post.username}</div>
+            <div class="right-btn"></div>
         </div>
+        <div class="post-detail-wrapper">${initialHTML}</div>
     `;
     
-    initPostSlider(post);
-    initInfiniteScroll(postId, posts, renderPostDetail, initPostSlider);
+    for (let i = startIndex; i < endIndex; i++) {
+        initPostSlider(tabPosts[i], i === currentIndex ? initialSlide : 0);
+    }
+    
+    setTimeout(() => {
+        const clickedPost = document.querySelector(`[data-post-id="${postId}"]`);
+        if (clickedPost) clickedPost.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }, 0);
+    
+    initBidirectionalScroll(currentIndex, tabPosts, savedTab);
 };
+
+function initBidirectionalScroll(startIndex, posts, savedTab) {
+    const wrapper = document.querySelector('.post-detail-wrapper');
+    if (!wrapper) return;
+    
+    let isLoading = false;
+    let topIndex = Math.max(0, startIndex - 3);
+    let bottomIndex = Math.min(posts.length, startIndex + 3);
+    
+    wrapper.addEventListener('scroll', () => {
+        const scrollTop = wrapper.scrollTop;
+        const scrollHeight = wrapper.scrollHeight;
+        const clientHeight = wrapper.clientHeight;
+        
+        if (scrollTop < 200 && !isLoading && topIndex > 0) {
+            isLoading = true;
+            topIndex--;
+            const prevPost = posts[topIndex];
+            const oldScrollHeight = wrapper.scrollHeight;
+            
+            wrapper.insertAdjacentHTML('afterbegin', renderPostDetail(prevPost, savedTab));
+            initPostSlider(prevPost);
+            
+            setTimeout(() => {
+                wrapper.scrollTop = scrollTop + (wrapper.scrollHeight - oldScrollHeight);
+                isLoading = false;
+            }, 50);
+        }
+        
+        if (scrollTop + clientHeight >= scrollHeight - 200 && !isLoading && bottomIndex < posts.length) {
+            isLoading = true;
+            const nextPost = posts[bottomIndex];
+            bottomIndex++;
+            
+            wrapper.insertAdjacentHTML('beforeend', renderPostDetail(nextPost, savedTab));
+            initPostSlider(nextPost);
+            
+            setTimeout(() => { isLoading = false; }, 500);
+        }
+    });
+}

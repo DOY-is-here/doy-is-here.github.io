@@ -1,4 +1,3 @@
-
 /* 미디어 크기 */
 .ratio-1-1 {aspect-ratio: 1/1; width: 210px;}
 .ratio-4-3 {aspect-ratio: 4/3; width: 210px;}
@@ -11,6 +10,8 @@
     margin-left: 0px;
     border-radius: 15px;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
 
 .message-image img {
@@ -26,6 +27,8 @@
     border-radius: 15px;
     overflow: hidden;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
 
 .video-thumbnail {

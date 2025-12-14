@@ -1,20 +1,15 @@
 /* 태그탭 포스트 전용 스타일 */
 
-/* 포스트 상세 전체 영역 */
 .post-detail.from-tagged {
     background: #FFFFFF;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
 }
-
-
-/* 포스트 헤더 (프로필 아이콘 등) */
 
 .post-detail.from-tagged .post-header {
     display: flex;
     align-items: center;
     padding: 12px 14px;
     gap: 10px;
-    justify-content: center;
     border-bottom: 1px solid #EFEFEF;
 }
 
@@ -47,6 +42,7 @@
 .coauthor-avatar:first-child {
     z-index: 2;
 }
+
 .coauthor-avatar.overlap {
     left: 9px;
     top: -10px;
@@ -73,7 +69,6 @@
     margin-top: 2px;
 }
 
-
 .post-detail.from-tagged .post-date {
     font-size: 12px;
     color: #0C0F14;
@@ -87,14 +82,10 @@
     margin-left: auto;
 }
 
-
-/* 이미지 슬라이더 */
-
 .post-detail.from-tagged .post-slider {
     position: relative;
     background: #000000;
     width: 100%;
-    max-width: 394px;
 }
 
 .post-detail.from-tagged .slider-container {
@@ -122,7 +113,6 @@
     background: #FFFFFF;
 }
 
-/* 이미지 태그 스타일 */
 .post-detail.from-tagged .slider-item img {
     width: 100%;
     height: auto;
@@ -161,9 +151,6 @@
     background: #5465F6;
 }
 
-
-/* 포스트 액션 (좋아요/댓글/보내기/저장) */
-
 .post-detail.from-tagged .post-actions {
     display: flex;
     align-items: center;
@@ -174,10 +161,9 @@
 .post-detail.from-tagged .action-icon {
     font-size: 24px;
     cursor: pointer;
-    margin-top: 10px; /* 기본값 (dot 없을 때) */
+    margin-top: 10px;
 }
 
-/* 슬라이더에 dots가 있을 때만 추가 간격 */
 .post-detail.from-tagged .post-slider:has(.slider-dots) + .post-actions .action-icon {
     margin-top: 25px;
 }
@@ -185,9 +171,6 @@
 .post-detail.from-tagged .action-right {
     margin-left: auto;
 }
-
-
-/* 포스트 캡션 */
 
 .post-detail.from-tagged .post-caption {
     padding: 4px 14px;
@@ -200,54 +183,13 @@
     margin-right: 2px;
 }
 
-
-/* 아이콘들 */
-.post-detail.from-tagged .icon-heart {
-    width: 24px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.7903 3.98372C18.1043 4.05569 19.3363 4.63923 20.2178 5.60718C21.0994 6.57513 21.559 7.84903 21.4966 9.15127C21.4966 12.1936 18.8456 14.0623 16.3015 16.3034C13.7904 18.5247 12.4378 19.7389 12 20.0192C11.5232 19.7131 9.85776 18.2138 7.69852 16.3034C5.14343 14.0534 2.50336 12.1668 2.50336 9.15127C2.44095 7.84903 2.90061 6.57513 3.78217 5.60718C4.66373 4.63923 5.89573 4.05569 7.2097 3.98372C7.93758 3.96187 8.65874 4.1275 9.30267 4.46443C9.94659 4.80136 10.4913 5.29805 10.8834 5.90596C11.7231 7.06959 11.863 7.65191 12.003 7.65191C12.1429 7.65191 12.2809 7.06959 13.1126 5.90299C13.5025 5.29227 14.0474 4.79361 14.6927 4.45682C15.3381 4.12003 16.0614 3.9569 16.7903 3.98372ZM16.7903 2.00306C15.8826 1.97427 14.9799 2.14872 14.1497 2.51343C13.3194 2.87814 12.5829 3.4237 11.995 4.1095C11.4076 3.4257 10.6726 2.8814 9.84431 2.5168C9.01604 2.1522 8.11566 1.97663 7.2097 2.00306C5.36522 2.07452 3.62435 2.86662 2.36775 4.20615C1.11115 5.54568 0.441087 7.32365 0.50407 9.15127C0.50407 12.7264 3.05317 14.9219 5.51729 17.0442C5.80019 17.2878 6.08609 17.5334 6.36999 17.784L7.39663 18.6931C8.51627 19.7486 9.69008 20.7462 10.9134 21.6819C11.2371 21.8895 11.6144 22 12 22C12.3856 22 12.7629 21.8895 13.0866 21.6819C14.3489 20.7176 15.5588 19.6879 16.7113 18.597L17.633 17.781C17.9259 17.5235 18.2228 17.267 18.5177 17.0145C20.8509 15.0091 23.4959 12.7363 23.4959 9.15127C23.5589 7.32365 22.8888 5.54568 21.6322 4.20615C20.3757 2.86662 18.6348 2.07452 16.7903 2.00306Z' fill='%230A1014'/%3E%3C/svg%3E");
-}
-
-.post-detail.from-tagged .icon-chat {
-    width: 24px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.0925 16.7043C21.2293 14.7272 21.6114 12.4016 21.1673 10.1619C20.7232 7.92229 19.4833 5.92179 17.6793 4.53416C15.8753 3.14654 13.6306 2.46672 11.3644 2.62168C9.09828 2.77665 6.96576 3.75582 5.36524 5.37626C3.76472 6.9967 2.80568 9.14757 2.66728 11.4271C2.52888 13.7066 3.22059 15.9587 4.61319 17.7629C6.00578 19.567 8.004 20.7997 10.2346 21.2307C12.4651 21.6617 14.7754 21.2614 16.7339 20.1047L21.3499 21.4L20.0925 16.7043Z' stroke='%230A1014' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E");
-}
-
-.post-detail.from-tagged .icon-loop {
-    width: 24px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.3324 1.59781L16.0877 5.1478M16.0877 5.1478L12.3324 8.69778M16.0877 5.1478L8.19239 5.1377C7.13153 5.1377 6.11411 5.51915 5.36397 6.2693C4.61382 7.01944 4.15236 8.03686 4.15236 9.09772L4.15234 13.6122M11.6678 22.4022L7.91241 18.8522M7.91241 18.8522L11.6678 15.3022M7.91241 18.8522L15.8077 18.8623C16.8686 18.8623 17.886 18.4808 18.6362 17.7307C19.3863 16.9806 19.8478 15.9631 19.8478 14.9023L19.8478 10.3878' stroke='%230A1014' stroke-width='1.97' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-}
-
-.post-detail.from-tagged .icon-send {
-    width: 24px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.8999 3.5L9.24573 10.4465M21.8999 3.5L11.7009 20.5L9.24573 10.4465M21.8999 3.5L2.09985 3.50098L9.24573 10.4465' stroke='%230A1014' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E");
-}
-
-.post-detail.from-tagged .icon-bookmark {
-    width: 24px;
-    height: 24px;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.8 20.8L12 13.408L4.19995 20.8V3.20001H19.8V20.8Z' stroke='%230A1014' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* 비디오 스타일 */
 .post-detail.from-tagged .post-video {
     background: #FFFFFF;
+}
+
+/* 모바일 터치 개선 */
+.post-detail.from-tagged .action-icon,
+.post-detail.from-tagged .post-more {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
