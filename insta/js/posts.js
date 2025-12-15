@@ -2384,6 +2384,19 @@ export const storyPosts = [
         "type": "story",
         "rawDate": "240423",
         "postNum": null
+    },
+    {
+        "id": "story-240420",
+        "date": "2024-04-20",
+        "displayDate": "2024년 4월 20일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240420.mp4"
+        ],
+        "caption": "2024년 4월 20일 게시물",
+        "type": "story",
+        "rawDate": "240420",
+        "postNum": null
     }
 ];
 
@@ -4626,23 +4639,3 @@ export function getPrevPost(currentId, tab = 'grid') {
     if (currentIndex <= 0) return null;
     return posts[currentIndex - 1];
 }
-
-// 추가 호환성 함수들
-export function getPhotos() {
-    return photoPosts;
-}
-
-export function getReels() {
-    return []; // 릴스가 없으면 빈 배열 반환
-}
-
-export function getTaggedPosts() {
-    return groupPosts;
-}
-
-export function getStories() {
-    return storyPosts;
-}
-
-// posts 변수 (기존 코드와의 호환성)
-export const posts = photoPosts;
