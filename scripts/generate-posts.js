@@ -11,6 +11,49 @@ const FOLDERS = {
 const OUTPUT_FILE = 'insta/js/posts.js';
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main';
 
+// 메타데이터 로드 함수
+function loadMetadata(type) {
+    try {
+        const metadataPath = path.join(__dirname, '..', 'metadata', `${type}-metadata.json`);
+        if (fs.existsSync(metadataPath)) {
+            return JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
+        }
+    } catch (error) {
+        console.warn(`⚠️  Warning: Could not load ${type}-metadata.json:`, error.message);
+    }
+    return {};
+}
+
+// 메타데이터 적용 함수
+function applyMetadata(post, metadata) {
+    const rawDate = post.rawDate;
+    const postNum = post.postNum;
+    
+    let meta = null;
+    
+    // postNum이 있는 경우 (예: 240111-2)
+    if (postNum !== null && metadata[rawDate] && metadata[rawDate][postNum]) {
+        meta = metadata[rawDate][postNum];
+    }
+    // postNum이 없고 메타데이터가 객체이지만 caption이 없는 경우 (다중 postNum 구조)
+    else if (metadata[rawDate] && typeof metadata[rawDate] === 'object' && !metadata[rawDate].caption) {
+        return post;
+    }
+    // postNum이 없고 메타데이터가 단일 구조인 경우
+    else if (metadata[rawDate]) {
+        meta = metadata[rawDate];
+    }
+    
+    // 메타데이터 적용
+    if (meta) {
+        if (meta.caption) post.caption = meta.caption;
+        if (meta.username) post.username = meta.username;
+        if (meta.displayDate) post.displayDate = meta.displayDate;
+    }
+    
+    return post;
+}
+
 // 이미지 파일 읽기
 function getImageFiles(dir) {
     if (!fs.existsSync(dir)) {
@@ -19,7 +62,7 @@ function getImageFiles(dir) {
     }
     
     const files = fs.readdirSync(dir);
-    return files.filter(file => /\.(jpg|jpeg|png|gif|mp4)$/i.test(file));
+    return files.filter(file => /\.(jpg|jpeg|png|gif|mp4|webp)$/i.test(file));
 }
 
 // 파일명에서 날짜, 게시물 번호, 이미지 순서 추출
@@ -59,7 +102,7 @@ function formatISODate(dateStr) {
 }
 
 // 이미지 파일들을 게시물로 그룹화
-function groupImagesByPost(imageFiles, folderPath, type) {
+function groupImagesByPost(imageFiles, folderPath, type, metadata) {
     const parsed = imageFiles
         .map(parseFileName)
         .filter(p => p !== null);
@@ -102,17 +145,23 @@ function groupImagesByPost(imageFiles, folderPath, type) {
         // 이미지 URL 배열 생성
         const imageUrls = images.map(img => `${GITHUB_RAW_BASE}/${folderPath}/${encodeURIComponent(img.fileName)}`);
         
-        posts.push({
+        // 기본 게시물 생성
+        let post = {
             id: `${type}-${postKey}`,  // "photo-240202-1", "group-240202", "story-240202"
             date: formatISODate(group.date),
             displayDate: formatDisplayDate(group.date),
             username: "doy.is.here",
             images: imageUrls,
-            caption: `${formatDisplayDate(group.date)} 게시물`,
+            caption: `${formatDisplayDate(group.date)} 게시물`,  // 기본값
             type: type,
             rawDate: group.date,  // 정렬용
             postNum: group.postNum
-        });
+        };
+        
+        // 메타데이터 적용 (caption, username, displayDate 덮어쓰기)
+        post = applyMetadata(post, metadata);
+        
+        posts.push(post);
     });
     
     return posts;
@@ -263,6 +312,16 @@ export const posts = photoPosts;
 function main() {
     console.log('🔍 이미지 파일 스캔 중...');
     
+    // 메타데이터 로드
+    console.log('📖 메타데이터 로드 중...');
+    const photoMetadata = loadMetadata('photo');
+    const groupMetadata = loadMetadata('group');
+    const storyMetadata = loadMetadata('story');
+    
+    console.log(`   photo-metadata: ${Object.keys(photoMetadata).length}개 항목`);
+    console.log(`   group-metadata: ${Object.keys(groupMetadata).length}개 항목`);
+    console.log(`   story-metadata: ${Object.keys(storyMetadata).length}개 항목`);
+    
     // 각 폴더에서 이미지 파일 읽기
     const photoFiles = getImageFiles(FOLDERS.photo);
     const groupFiles = getImageFiles(FOLDERS.group);
@@ -274,10 +333,10 @@ function main() {
     
     console.log('📝 게시물 데이터 생성 중...');
     
-    // 각 타입별로 게시물 생성
-    const photoPosts = groupImagesByPost(photoFiles, FOLDERS.photo, 'photo');
-    const groupPosts = groupImagesByPost(groupFiles, FOLDERS.group, 'group');
-    const storyPosts = groupImagesByPost(storyFiles, FOLDERS.story, 'story');
+    // 각 타입별로 게시물 생성 (메타데이터 적용)
+    const photoPosts = groupImagesByPost(photoFiles, FOLDERS.photo, 'photo', photoMetadata);
+    const groupPosts = groupImagesByPost(groupFiles, FOLDERS.group, 'group', groupMetadata);
+    const storyPosts = groupImagesByPost(storyFiles, FOLDERS.story, 'story', storyMetadata);
     
     // 리포스트 데이터 생성
     const repostPosts = createRepostData(photoPosts, groupPosts);
