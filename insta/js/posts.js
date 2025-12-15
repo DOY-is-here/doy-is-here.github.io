@@ -8,45 +8,9 @@ export const photoPosts = [
         "displayDate": "2025년 9월 30일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(1).jpg"
-        ],
-        "caption": "2025년 9월 30일 게시물",
-        "type": "photo",
-        "rawDate": "250930",
-        "postNum": null
-    },
-    {
-        "id": "photo-250930",
-        "date": "2025-09-30",
-        "displayDate": "2025년 9월 30일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(2).jpg"
-        ],
-        "caption": "2025년 9월 30일 게시물",
-        "type": "photo",
-        "rawDate": "250930",
-        "postNum": null
-    },
-    {
-        "id": "photo-250930",
-        "date": "2025-09-30",
-        "displayDate": "2025년 9월 30일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(3).jpg"
-        ],
-        "caption": "2025년 9월 30일 게시물",
-        "type": "photo",
-        "rawDate": "250930",
-        "postNum": null
-    },
-    {
-        "id": "photo-250930",
-        "date": "2025-09-30",
-        "displayDate": "2025년 9월 30일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(4).jpg"
         ],
         "caption": "2025년 9월 30일 게시물",
@@ -60,58 +24,10 @@ export const photoPosts = [
         "displayDate": "2025년 9월 23일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(1).jpg"
-        ],
-        "caption": "2025년 9월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250923",
-        "postNum": null
-    },
-    {
-        "id": "photo-250923",
-        "date": "2025-09-23",
-        "displayDate": "2025년 9월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(2).jpg"
-        ],
-        "caption": "2025년 9월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250923",
-        "postNum": null
-    },
-    {
-        "id": "photo-250923",
-        "date": "2025-09-23",
-        "displayDate": "2025년 9월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(3).jpg"
-        ],
-        "caption": "2025년 9월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250923",
-        "postNum": null
-    },
-    {
-        "id": "photo-250923",
-        "date": "2025-09-23",
-        "displayDate": "2025년 9월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(4).jpg"
-        ],
-        "caption": "2025년 9월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250923",
-        "postNum": null
-    },
-    {
-        "id": "photo-250923",
-        "date": "2025-09-23",
-        "displayDate": "2025년 9월 23일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(5).jpg"
         ],
         "caption": "2025년 9월 23일 게시물",
@@ -125,19 +41,7 @@ export const photoPosts = [
         "displayDate": "2025년 9월 14일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250914%20(1).jpg"
-        ],
-        "caption": "2025년 9월 14일 게시물",
-        "type": "photo",
-        "rawDate": "250914",
-        "postNum": null
-    },
-    {
-        "id": "photo-250914",
-        "date": "2025-09-14",
-        "displayDate": "2025년 9월 14일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250914%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250914%20(2).jpg"
         ],
         "caption": "2025년 9월 14일 게시물",
@@ -151,58 +55,10 @@ export const photoPosts = [
         "displayDate": "2025년 8월 23일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(1).jpg"
-        ],
-        "caption": "2025년 8월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250823",
-        "postNum": null
-    },
-    {
-        "id": "photo-250823",
-        "date": "2025-08-23",
-        "displayDate": "2025년 8월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(2).jpg"
-        ],
-        "caption": "2025년 8월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250823",
-        "postNum": null
-    },
-    {
-        "id": "photo-250823",
-        "date": "2025-08-23",
-        "displayDate": "2025년 8월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(3).jpg"
-        ],
-        "caption": "2025년 8월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250823",
-        "postNum": null
-    },
-    {
-        "id": "photo-250823",
-        "date": "2025-08-23",
-        "displayDate": "2025년 8월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(4).jpg"
-        ],
-        "caption": "2025년 8월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250823",
-        "postNum": null
-    },
-    {
-        "id": "photo-250823",
-        "date": "2025-08-23",
-        "displayDate": "2025년 8월 23일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(5).jpg"
         ],
         "caption": "2025년 8월 23일 게시물",
@@ -216,45 +72,9 @@ export const photoPosts = [
         "displayDate": "2025년 8월 14일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(1).jpg"
-        ],
-        "caption": "2025년 8월 14일 게시물",
-        "type": "photo",
-        "rawDate": "250814",
-        "postNum": null
-    },
-    {
-        "id": "photo-250814",
-        "date": "2025-08-14",
-        "displayDate": "2025년 8월 14일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(2).jpg"
-        ],
-        "caption": "2025년 8월 14일 게시물",
-        "type": "photo",
-        "rawDate": "250814",
-        "postNum": null
-    },
-    {
-        "id": "photo-250814",
-        "date": "2025-08-14",
-        "displayDate": "2025년 8월 14일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(3).jpg"
-        ],
-        "caption": "2025년 8월 14일 게시물",
-        "type": "photo",
-        "rawDate": "250814",
-        "postNum": null
-    },
-    {
-        "id": "photo-250814",
-        "date": "2025-08-14",
-        "displayDate": "2025년 8월 14일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(4).jpg"
         ],
         "caption": "2025년 8월 14일 게시물",
@@ -268,32 +88,8 @@ export const photoPosts = [
         "displayDate": "2025년 8월 7일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(1).jpg"
-        ],
-        "caption": "2025년 8월 7일 게시물",
-        "type": "photo",
-        "rawDate": "250807",
-        "postNum": null
-    },
-    {
-        "id": "photo-250807",
-        "date": "2025-08-07",
-        "displayDate": "2025년 8월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(2).jpg"
-        ],
-        "caption": "2025년 8월 7일 게시물",
-        "type": "photo",
-        "rawDate": "250807",
-        "postNum": null
-    },
-    {
-        "id": "photo-250807",
-        "date": "2025-08-07",
-        "displayDate": "2025년 8월 7일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(3).jpg"
         ],
         "caption": "2025년 8월 7일 게시물",
@@ -307,45 +103,9 @@ export const photoPosts = [
         "displayDate": "2025년 7월 16일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(1).jpg"
-        ],
-        "caption": "2025년 7월 16일 게시물",
-        "type": "photo",
-        "rawDate": "250716",
-        "postNum": null
-    },
-    {
-        "id": "photo-250716",
-        "date": "2025-07-16",
-        "displayDate": "2025년 7월 16일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(2).jpg"
-        ],
-        "caption": "2025년 7월 16일 게시물",
-        "type": "photo",
-        "rawDate": "250716",
-        "postNum": null
-    },
-    {
-        "id": "photo-250716",
-        "date": "2025-07-16",
-        "displayDate": "2025년 7월 16일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(3).jpg"
-        ],
-        "caption": "2025년 7월 16일 게시물",
-        "type": "photo",
-        "rawDate": "250716",
-        "postNum": null
-    },
-    {
-        "id": "photo-250716",
-        "date": "2025-07-16",
-        "displayDate": "2025년 7월 16일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(4).jpg"
         ],
         "caption": "2025년 7월 16일 게시물",
@@ -359,45 +119,9 @@ export const photoPosts = [
         "displayDate": "2025년 7월 4일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(1).jpeg"
-        ],
-        "caption": "2025년 7월 4일 게시물",
-        "type": "photo",
-        "rawDate": "250704",
-        "postNum": null
-    },
-    {
-        "id": "photo-250704",
-        "date": "2025-07-04",
-        "displayDate": "2025년 7월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(2).jpeg"
-        ],
-        "caption": "2025년 7월 4일 게시물",
-        "type": "photo",
-        "rawDate": "250704",
-        "postNum": null
-    },
-    {
-        "id": "photo-250704",
-        "date": "2025-07-04",
-        "displayDate": "2025년 7월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(3).jpeg"
-        ],
-        "caption": "2025년 7월 4일 게시물",
-        "type": "photo",
-        "rawDate": "250704",
-        "postNum": null
-    },
-    {
-        "id": "photo-250704",
-        "date": "2025-07-04",
-        "displayDate": "2025년 7월 4일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(2).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(3).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(4).jpeg"
         ],
         "caption": "2025년 7월 4일 게시물",
@@ -424,19 +148,7 @@ export const photoPosts = [
         "displayDate": "2025년 5월 4일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250504%20(1).jpg"
-        ],
-        "caption": "2025년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "250504",
-        "postNum": null
-    },
-    {
-        "id": "photo-250504",
-        "date": "2025-05-04",
-        "displayDate": "2025년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250504%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250504%20(2).jpg"
         ],
         "caption": "2025년 5월 4일 게시물",
@@ -450,32 +162,8 @@ export const photoPosts = [
         "displayDate": "2025년 4월 22일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(1).jpg"
-        ],
-        "caption": "2025년 4월 22일 게시물",
-        "type": "photo",
-        "rawDate": "250422",
-        "postNum": null
-    },
-    {
-        "id": "photo-250422",
-        "date": "2025-04-22",
-        "displayDate": "2025년 4월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(2).jpg"
-        ],
-        "caption": "2025년 4월 22일 게시물",
-        "type": "photo",
-        "rawDate": "250422",
-        "postNum": null
-    },
-    {
-        "id": "photo-250422",
-        "date": "2025-04-22",
-        "displayDate": "2025년 4월 22일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(3).jpg"
         ],
         "caption": "2025년 4월 22일 게시물",
@@ -489,84 +177,12 @@ export const photoPosts = [
         "displayDate": "2025년 3월 27일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(1).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null
-    },
-    {
-        "id": "photo-250327",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(2).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null
-    },
-    {
-        "id": "photo-250327",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(3).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null
-    },
-    {
-        "id": "photo-250327",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(4).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null
-    },
-    {
-        "id": "photo-250327",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(5).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null
-    },
-    {
-        "id": "photo-250327",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(6).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null
-    },
-    {
-        "id": "photo-250327",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(5).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(6).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(7).jpg"
         ],
         "caption": "2025년 3월 27일 게시물",
@@ -580,58 +196,10 @@ export const photoPosts = [
         "displayDate": "2025년 3월 18일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(1).jpg"
-        ],
-        "caption": "2025년 3월 18일 게시물",
-        "type": "photo",
-        "rawDate": "250318",
-        "postNum": null
-    },
-    {
-        "id": "photo-250318",
-        "date": "2025-03-18",
-        "displayDate": "2025년 3월 18일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(2).jpg"
-        ],
-        "caption": "2025년 3월 18일 게시물",
-        "type": "photo",
-        "rawDate": "250318",
-        "postNum": null
-    },
-    {
-        "id": "photo-250318",
-        "date": "2025-03-18",
-        "displayDate": "2025년 3월 18일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(3).jpg"
-        ],
-        "caption": "2025년 3월 18일 게시물",
-        "type": "photo",
-        "rawDate": "250318",
-        "postNum": null
-    },
-    {
-        "id": "photo-250318",
-        "date": "2025-03-18",
-        "displayDate": "2025년 3월 18일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(4).jpg"
-        ],
-        "caption": "2025년 3월 18일 게시물",
-        "type": "photo",
-        "rawDate": "250318",
-        "postNum": null
-    },
-    {
-        "id": "photo-250318",
-        "date": "2025-03-18",
-        "displayDate": "2025년 3월 18일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(5).jpg"
         ],
         "caption": "2025년 3월 18일 게시물",
@@ -645,32 +213,8 @@ export const photoPosts = [
         "displayDate": "2025년 2월 19일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(1).jpg"
-        ],
-        "caption": "2025년 2월 19일 게시물",
-        "type": "photo",
-        "rawDate": "250219",
-        "postNum": null
-    },
-    {
-        "id": "photo-250219",
-        "date": "2025-02-19",
-        "displayDate": "2025년 2월 19일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(2).jpg"
-        ],
-        "caption": "2025년 2월 19일 게시물",
-        "type": "photo",
-        "rawDate": "250219",
-        "postNum": null
-    },
-    {
-        "id": "photo-250219",
-        "date": "2025-02-19",
-        "displayDate": "2025년 2월 19일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(3).jpg"
         ],
         "caption": "2025년 2월 19일 게시물",
@@ -684,45 +228,9 @@ export const photoPosts = [
         "displayDate": "2025년 2월 10일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(1).jpg"
-        ],
-        "caption": "2025년 2월 10일 게시물",
-        "type": "photo",
-        "rawDate": "250210",
-        "postNum": null
-    },
-    {
-        "id": "photo-250210",
-        "date": "2025-02-10",
-        "displayDate": "2025년 2월 10일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(2).jpg"
-        ],
-        "caption": "2025년 2월 10일 게시물",
-        "type": "photo",
-        "rawDate": "250210",
-        "postNum": null
-    },
-    {
-        "id": "photo-250210",
-        "date": "2025-02-10",
-        "displayDate": "2025년 2월 10일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(3).jpg"
-        ],
-        "caption": "2025년 2월 10일 게시물",
-        "type": "photo",
-        "rawDate": "250210",
-        "postNum": null
-    },
-    {
-        "id": "photo-250210",
-        "date": "2025-02-10",
-        "displayDate": "2025년 2월 10일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(4).jpg"
         ],
         "caption": "2025년 2월 10일 게시물",
@@ -736,32 +244,8 @@ export const photoPosts = [
         "displayDate": "2025년 2월 9일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(1).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "photo",
-        "rawDate": "250209",
-        "postNum": null
-    },
-    {
-        "id": "photo-250209",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(2).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "photo",
-        "rawDate": "250209",
-        "postNum": null
-    },
-    {
-        "id": "photo-250209",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(3).jpg"
         ],
         "caption": "2025년 2월 9일 게시물",
@@ -775,32 +259,8 @@ export const photoPosts = [
         "displayDate": "2024년 12월 26일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241226%20(1).jpg"
-        ],
-        "caption": "2024년 12월 26일 게시물",
-        "type": "photo",
-        "rawDate": "241226",
-        "postNum": null
-    },
-    {
-        "id": "photo-241226",
-        "date": "2024-12-26",
-        "displayDate": "2024년 12월 26일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241226%20(2).jpg"
-        ],
-        "caption": "2024년 12월 26일 게시물",
-        "type": "photo",
-        "rawDate": "241226",
-        "postNum": null
-    },
-    {
-        "id": "photo-241226",
-        "date": "2024-12-26",
-        "displayDate": "2024년 12월 26일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241226%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241226%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241226%20(3).jpg"
         ],
         "caption": "2024년 12월 26일 게시물",
@@ -814,32 +274,8 @@ export const photoPosts = [
         "displayDate": "2024년 12월 23일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241223%20(1).jpg"
-        ],
-        "caption": "2024년 12월 23일 게시물",
-        "type": "photo",
-        "rawDate": "241223",
-        "postNum": null
-    },
-    {
-        "id": "photo-241223",
-        "date": "2024-12-23",
-        "displayDate": "2024년 12월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241223%20(2).jpg"
-        ],
-        "caption": "2024년 12월 23일 게시물",
-        "type": "photo",
-        "rawDate": "241223",
-        "postNum": null
-    },
-    {
-        "id": "photo-241223",
-        "date": "2024-12-23",
-        "displayDate": "2024년 12월 23일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241223%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241223%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241223%20(3).jpg"
         ],
         "caption": "2024년 12월 23일 게시물",
@@ -853,45 +289,9 @@ export const photoPosts = [
         "displayDate": "2024년 12월 16일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(1).jpg"
-        ],
-        "caption": "2024년 12월 16일 게시물",
-        "type": "photo",
-        "rawDate": "241216",
-        "postNum": null
-    },
-    {
-        "id": "photo-241216",
-        "date": "2024-12-16",
-        "displayDate": "2024년 12월 16일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(2).jpg"
-        ],
-        "caption": "2024년 12월 16일 게시물",
-        "type": "photo",
-        "rawDate": "241216",
-        "postNum": null
-    },
-    {
-        "id": "photo-241216",
-        "date": "2024-12-16",
-        "displayDate": "2024년 12월 16일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(3).jpg"
-        ],
-        "caption": "2024년 12월 16일 게시물",
-        "type": "photo",
-        "rawDate": "241216",
-        "postNum": null
-    },
-    {
-        "id": "photo-241216",
-        "date": "2024-12-16",
-        "displayDate": "2024년 12월 16일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(4).jpg"
         ],
         "caption": "2024년 12월 16일 게시물",
@@ -905,45 +305,9 @@ export const photoPosts = [
         "displayDate": "2024년 12월 5일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(1).jpg"
-        ],
-        "caption": "2024년 12월 5일 게시물",
-        "type": "photo",
-        "rawDate": "241205",
-        "postNum": null
-    },
-    {
-        "id": "photo-241205",
-        "date": "2024-12-05",
-        "displayDate": "2024년 12월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(2).jpg"
-        ],
-        "caption": "2024년 12월 5일 게시물",
-        "type": "photo",
-        "rawDate": "241205",
-        "postNum": null
-    },
-    {
-        "id": "photo-241205",
-        "date": "2024-12-05",
-        "displayDate": "2024년 12월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(3).jpg"
-        ],
-        "caption": "2024년 12월 5일 게시물",
-        "type": "photo",
-        "rawDate": "241205",
-        "postNum": null
-    },
-    {
-        "id": "photo-241205",
-        "date": "2024-12-05",
-        "displayDate": "2024년 12월 5일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(4).jpg"
         ],
         "caption": "2024년 12월 5일 게시물",
@@ -957,19 +321,7 @@ export const photoPosts = [
         "displayDate": "2024년 11월 25일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241125%20(1).jpg"
-        ],
-        "caption": "2024년 11월 25일 게시물",
-        "type": "photo",
-        "rawDate": "241125",
-        "postNum": null
-    },
-    {
-        "id": "photo-241125",
-        "date": "2024-11-25",
-        "displayDate": "2024년 11월 25일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241125%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241125%20(2).jpg"
         ],
         "caption": "2024년 11월 25일 게시물",
@@ -983,32 +335,8 @@ export const photoPosts = [
         "displayDate": "2024년 11월 17일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(1).jpg"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "photo",
-        "rawDate": "241117",
-        "postNum": null
-    },
-    {
-        "id": "photo-241117",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(2).jpg"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "photo",
-        "rawDate": "241117",
-        "postNum": null
-    },
-    {
-        "id": "photo-241117",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(3).jpg"
         ],
         "caption": "2024년 11월 17일 게시물",
@@ -1022,45 +350,9 @@ export const photoPosts = [
         "displayDate": "2024년 11월 12일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(1).jpg"
-        ],
-        "caption": "2024년 11월 12일 게시물",
-        "type": "photo",
-        "rawDate": "241112",
-        "postNum": null
-    },
-    {
-        "id": "photo-241112",
-        "date": "2024-11-12",
-        "displayDate": "2024년 11월 12일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(2).jpg"
-        ],
-        "caption": "2024년 11월 12일 게시물",
-        "type": "photo",
-        "rawDate": "241112",
-        "postNum": null
-    },
-    {
-        "id": "photo-241112",
-        "date": "2024-11-12",
-        "displayDate": "2024년 11월 12일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(3).jpg"
-        ],
-        "caption": "2024년 11월 12일 게시물",
-        "type": "photo",
-        "rawDate": "241112",
-        "postNum": null
-    },
-    {
-        "id": "photo-241112",
-        "date": "2024-11-12",
-        "displayDate": "2024년 11월 12일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(4).jpg"
         ],
         "caption": "2024년 11월 12일 게시물",
@@ -1074,45 +366,9 @@ export const photoPosts = [
         "displayDate": "2024년 11월 9일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(1).jpg"
-        ],
-        "caption": "2024년 11월 9일 게시물",
-        "type": "photo",
-        "rawDate": "241109",
-        "postNum": null
-    },
-    {
-        "id": "photo-241109",
-        "date": "2024-11-09",
-        "displayDate": "2024년 11월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(2).jpg"
-        ],
-        "caption": "2024년 11월 9일 게시물",
-        "type": "photo",
-        "rawDate": "241109",
-        "postNum": null
-    },
-    {
-        "id": "photo-241109",
-        "date": "2024-11-09",
-        "displayDate": "2024년 11월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(3).jpg"
-        ],
-        "caption": "2024년 11월 9일 게시물",
-        "type": "photo",
-        "rawDate": "241109",
-        "postNum": null
-    },
-    {
-        "id": "photo-241109",
-        "date": "2024-11-09",
-        "displayDate": "2024년 11월 9일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(4).jpg"
         ],
         "caption": "2024년 11월 9일 게시물",
@@ -1126,19 +382,7 @@ export const photoPosts = [
         "displayDate": "2024년 11월 7일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241107%20(1).jpg"
-        ],
-        "caption": "2024년 11월 7일 게시물",
-        "type": "photo",
-        "rawDate": "241107",
-        "postNum": null
-    },
-    {
-        "id": "photo-241107",
-        "date": "2024-11-07",
-        "displayDate": "2024년 11월 7일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241107%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241107%20(2).jpg"
         ],
         "caption": "2024년 11월 7일 게시물",
@@ -1152,19 +396,7 @@ export const photoPosts = [
         "displayDate": "2024년 11월 1일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241101%20(1).jpg"
-        ],
-        "caption": "2024년 11월 1일 게시물",
-        "type": "photo",
-        "rawDate": "241101",
-        "postNum": null
-    },
-    {
-        "id": "photo-241101",
-        "date": "2024-11-01",
-        "displayDate": "2024년 11월 1일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241101%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241101%20(2).jpg"
         ],
         "caption": "2024년 11월 1일 게시물",
@@ -1178,19 +410,7 @@ export const photoPosts = [
         "displayDate": "2024년 10월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241028%20(1).jpg"
-        ],
-        "caption": "2024년 10월 28일 게시물",
-        "type": "photo",
-        "rawDate": "241028",
-        "postNum": null
-    },
-    {
-        "id": "photo-241028",
-        "date": "2024-10-28",
-        "displayDate": "2024년 10월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241028%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241028%20(2).jpg"
         ],
         "caption": "2024년 10월 28일 게시물",
@@ -1204,32 +424,8 @@ export const photoPosts = [
         "displayDate": "2024년 10월 25일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(1).jpg"
-        ],
-        "caption": "2024년 10월 25일 게시물",
-        "type": "photo",
-        "rawDate": "241025",
-        "postNum": null
-    },
-    {
-        "id": "photo-241025",
-        "date": "2024-10-25",
-        "displayDate": "2024년 10월 25일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(2).jpg"
-        ],
-        "caption": "2024년 10월 25일 게시물",
-        "type": "photo",
-        "rawDate": "241025",
-        "postNum": null
-    },
-    {
-        "id": "photo-241025",
-        "date": "2024-10-25",
-        "displayDate": "2024년 10월 25일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(3).jpg"
         ],
         "caption": "2024년 10월 25일 게시물",
@@ -1243,32 +439,8 @@ export const photoPosts = [
         "displayDate": "2024년 10월 12일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(1).jpg"
-        ],
-        "caption": "2024년 10월 12일 게시물",
-        "type": "photo",
-        "rawDate": "241012",
-        "postNum": null
-    },
-    {
-        "id": "photo-241012",
-        "date": "2024-10-12",
-        "displayDate": "2024년 10월 12일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(2).jpg"
-        ],
-        "caption": "2024년 10월 12일 게시물",
-        "type": "photo",
-        "rawDate": "241012",
-        "postNum": null
-    },
-    {
-        "id": "photo-241012",
-        "date": "2024-10-12",
-        "displayDate": "2024년 10월 12일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(3).jpg"
         ],
         "caption": "2024년 10월 12일 게시물",
@@ -1282,45 +454,9 @@ export const photoPosts = [
         "displayDate": "2024년 7월 7일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(1).jpg"
-        ],
-        "caption": "2024년 7월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240707",
-        "postNum": null
-    },
-    {
-        "id": "photo-240707",
-        "date": "2024-07-07",
-        "displayDate": "2024년 7월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(2).jpg"
-        ],
-        "caption": "2024년 7월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240707",
-        "postNum": null
-    },
-    {
-        "id": "photo-240707",
-        "date": "2024-07-07",
-        "displayDate": "2024년 7월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(3).jpg"
-        ],
-        "caption": "2024년 7월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240707",
-        "postNum": null
-    },
-    {
-        "id": "photo-240707",
-        "date": "2024-07-07",
-        "displayDate": "2024년 7월 7일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(4).jpg"
         ],
         "caption": "2024년 7월 7일 게시물",
@@ -1334,84 +470,12 @@ export const photoPosts = [
         "displayDate": "2024년 6월 21일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(1).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null
-    },
-    {
-        "id": "photo-240621",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(2).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null
-    },
-    {
-        "id": "photo-240621",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(3).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null
-    },
-    {
-        "id": "photo-240621",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(4).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null
-    },
-    {
-        "id": "photo-240621",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(5).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null
-    },
-    {
-        "id": "photo-240621",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(6).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null
-    },
-    {
-        "id": "photo-240621",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(5).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(6).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(7).jpg"
         ],
         "caption": "2024년 6월 21일 게시물",
@@ -1425,71 +489,11 @@ export const photoPosts = [
         "displayDate": "2024년 5월 22일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(1).jpg"
-        ],
-        "caption": "2024년 5월 22일 게시물",
-        "type": "photo",
-        "rawDate": "240522",
-        "postNum": null
-    },
-    {
-        "id": "photo-240522",
-        "date": "2024-05-22",
-        "displayDate": "2024년 5월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(2).jpg"
-        ],
-        "caption": "2024년 5월 22일 게시물",
-        "type": "photo",
-        "rawDate": "240522",
-        "postNum": null
-    },
-    {
-        "id": "photo-240522",
-        "date": "2024-05-22",
-        "displayDate": "2024년 5월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(3).jpg"
-        ],
-        "caption": "2024년 5월 22일 게시물",
-        "type": "photo",
-        "rawDate": "240522",
-        "postNum": null
-    },
-    {
-        "id": "photo-240522",
-        "date": "2024-05-22",
-        "displayDate": "2024년 5월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(4).jpg"
-        ],
-        "caption": "2024년 5월 22일 게시물",
-        "type": "photo",
-        "rawDate": "240522",
-        "postNum": null
-    },
-    {
-        "id": "photo-240522",
-        "date": "2024-05-22",
-        "displayDate": "2024년 5월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(5).jpg"
-        ],
-        "caption": "2024년 5월 22일 게시물",
-        "type": "photo",
-        "rawDate": "240522",
-        "postNum": null
-    },
-    {
-        "id": "photo-240522",
-        "date": "2024-05-22",
-        "displayDate": "2024년 5월 22일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(6).jpg"
         ],
         "caption": "2024년 5월 22일 게시물",
@@ -1503,71 +507,11 @@ export const photoPosts = [
         "displayDate": "2024년 5월 7일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(1).jpg"
-        ],
-        "caption": "2024년 5월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240507",
-        "postNum": null
-    },
-    {
-        "id": "photo-240507",
-        "date": "2024-05-07",
-        "displayDate": "2024년 5월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(2).jpg"
-        ],
-        "caption": "2024년 5월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240507",
-        "postNum": null
-    },
-    {
-        "id": "photo-240507",
-        "date": "2024-05-07",
-        "displayDate": "2024년 5월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(3).jpg"
-        ],
-        "caption": "2024년 5월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240507",
-        "postNum": null
-    },
-    {
-        "id": "photo-240507",
-        "date": "2024-05-07",
-        "displayDate": "2024년 5월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(4).jpg"
-        ],
-        "caption": "2024년 5월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240507",
-        "postNum": null
-    },
-    {
-        "id": "photo-240507",
-        "date": "2024-05-07",
-        "displayDate": "2024년 5월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(5).jpg"
-        ],
-        "caption": "2024년 5월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240507",
-        "postNum": null
-    },
-    {
-        "id": "photo-240507",
-        "date": "2024-05-07",
-        "displayDate": "2024년 5월 7일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(6).jpg"
         ],
         "caption": "2024년 5월 7일 게시물",
@@ -1581,71 +525,11 @@ export const photoPosts = [
         "displayDate": "2024년 5월 4일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(1).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "240504",
-        "postNum": null
-    },
-    {
-        "id": "photo-240504",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(2).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "240504",
-        "postNum": null
-    },
-    {
-        "id": "photo-240504",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(3).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "240504",
-        "postNum": null
-    },
-    {
-        "id": "photo-240504",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(4).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "240504",
-        "postNum": null
-    },
-    {
-        "id": "photo-240504",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(5).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "240504",
-        "postNum": null
-    },
-    {
-        "id": "photo-240504",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(6).jpg"
         ],
         "caption": "2024년 5월 4일 게시물",
@@ -1698,58 +582,10 @@ export const photoPosts = [
         "displayDate": "2024년 1월 11일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(1).jpg"
-        ],
-        "caption": "2024년 1월 11일 게시물",
-        "type": "photo",
-        "rawDate": "240111",
-        "postNum": null
-    },
-    {
-        "id": "photo-240111",
-        "date": "2024-01-11",
-        "displayDate": "2024년 1월 11일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(2).jpg"
-        ],
-        "caption": "2024년 1월 11일 게시물",
-        "type": "photo",
-        "rawDate": "240111",
-        "postNum": null
-    },
-    {
-        "id": "photo-240111",
-        "date": "2024-01-11",
-        "displayDate": "2024년 1월 11일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(3).jpg"
-        ],
-        "caption": "2024년 1월 11일 게시물",
-        "type": "photo",
-        "rawDate": "240111",
-        "postNum": null
-    },
-    {
-        "id": "photo-240111",
-        "date": "2024-01-11",
-        "displayDate": "2024년 1월 11일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(4).jpg"
-        ],
-        "caption": "2024년 1월 11일 게시물",
-        "type": "photo",
-        "rawDate": "240111",
-        "postNum": null
-    },
-    {
-        "id": "photo-240111",
-        "date": "2024-01-11",
-        "displayDate": "2024년 1월 11일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(5).jpg"
         ],
         "caption": "2024년 1월 11일 게시물",
@@ -1762,82 +598,34 @@ export const photoPosts = [
 // 태그 탭 (insta-group)
 export const groupPosts = [
     {
-        "id": "group-251124-1",
-        "date": "2025-11-24",
-        "displayDate": "2025년 11월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(1).jpg"
-        ],
-        "caption": "2025년 11월 24일 게시물",
-        "type": "group",
-        "rawDate": "251124",
-        "postNum": 1
-    },
-    {
-        "id": "group-251124-1",
-        "date": "2025-11-24",
-        "displayDate": "2025년 11월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(2).jpg"
-        ],
-        "caption": "2025년 11월 24일 게시물",
-        "type": "group",
-        "rawDate": "251124",
-        "postNum": 1
-    },
-    {
-        "id": "group-251124-1",
-        "date": "2025-11-24",
-        "displayDate": "2025년 11월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(3).jpg"
-        ],
-        "caption": "2025년 11월 24일 게시물",
-        "type": "group",
-        "rawDate": "251124",
-        "postNum": 1
-    },
-    {
         "id": "group-251124-2",
         "date": "2025-11-24",
         "displayDate": "2025년 11월 24일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(1).jpg"
-        ],
-        "caption": "2025년 11월 24일 게시물",
-        "type": "group",
-        "rawDate": "251124",
-        "postNum": 2
-    },
-    {
-        "id": "group-251124-2",
-        "date": "2025-11-24",
-        "displayDate": "2025년 11월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(2).jpg"
-        ],
-        "caption": "2025년 11월 24일 게시물",
-        "type": "group",
-        "rawDate": "251124",
-        "postNum": 2
-    },
-    {
-        "id": "group-251124-2",
-        "date": "2025-11-24",
-        "displayDate": "2025년 11월 24일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(3).jpg"
         ],
         "caption": "2025년 11월 24일 게시물",
         "type": "group",
         "rawDate": "251124",
         "postNum": 2
+    },
+    {
+        "id": "group-251124-1",
+        "date": "2025-11-24",
+        "displayDate": "2025년 11월 24일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(3).jpg"
+        ],
+        "caption": "2025년 11월 24일 게시물",
+        "type": "group",
+        "rawDate": "251124",
+        "postNum": 1
     },
     {
         "id": "group-251028",
@@ -1858,19 +646,7 @@ export const groupPosts = [
         "displayDate": "2025년 10월 24일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251024%20(1).jpg"
-        ],
-        "caption": "2025년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "251024",
-        "postNum": null
-    },
-    {
-        "id": "group-251024",
-        "date": "2025-10-24",
-        "displayDate": "2025년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251024%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251024%20(2).jpg"
         ],
         "caption": "2025년 10월 24일 게시물",
@@ -1897,45 +673,9 @@ export const groupPosts = [
         "displayDate": "2025년 10월 10일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(1).jpg"
-        ],
-        "caption": "2025년 10월 10일 게시물",
-        "type": "group",
-        "rawDate": "251010",
-        "postNum": null
-    },
-    {
-        "id": "group-251010",
-        "date": "2025-10-10",
-        "displayDate": "2025년 10월 10일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(2).jpg"
-        ],
-        "caption": "2025년 10월 10일 게시물",
-        "type": "group",
-        "rawDate": "251010",
-        "postNum": null
-    },
-    {
-        "id": "group-251010",
-        "date": "2025-10-10",
-        "displayDate": "2025년 10월 10일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(3).jpg"
-        ],
-        "caption": "2025년 10월 10일 게시물",
-        "type": "group",
-        "rawDate": "251010",
-        "postNum": null
-    },
-    {
-        "id": "group-251010",
-        "date": "2025-10-10",
-        "displayDate": "2025년 10월 10일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(4).jpg"
         ],
         "caption": "2025년 10월 10일 게시물",
@@ -1962,19 +702,7 @@ export const groupPosts = [
         "displayDate": "2025년 9월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250928%20(1).jpeg"
-        ],
-        "caption": "2025년 9월 28일 게시물",
-        "type": "group",
-        "rawDate": "250928",
-        "postNum": null
-    },
-    {
-        "id": "group-250928",
-        "date": "2025-09-28",
-        "displayDate": "2025년 9월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250928%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250928%20(2).jpeg"
         ],
         "caption": "2025년 9월 28일 게시물",
@@ -1988,58 +716,10 @@ export const groupPosts = [
         "displayDate": "2025년 7월 20일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(1).jpg"
-        ],
-        "caption": "2025년 7월 20일 게시물",
-        "type": "group",
-        "rawDate": "250720",
-        "postNum": null
-    },
-    {
-        "id": "group-250720",
-        "date": "2025-07-20",
-        "displayDate": "2025년 7월 20일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(2).mp4"
-        ],
-        "caption": "2025년 7월 20일 게시물",
-        "type": "group",
-        "rawDate": "250720",
-        "postNum": null
-    },
-    {
-        "id": "group-250720",
-        "date": "2025-07-20",
-        "displayDate": "2025년 7월 20일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(3).mp4"
-        ],
-        "caption": "2025년 7월 20일 게시물",
-        "type": "group",
-        "rawDate": "250720",
-        "postNum": null
-    },
-    {
-        "id": "group-250720",
-        "date": "2025-07-20",
-        "displayDate": "2025년 7월 20일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(4).mp4"
-        ],
-        "caption": "2025년 7월 20일 게시물",
-        "type": "group",
-        "rawDate": "250720",
-        "postNum": null
-    },
-    {
-        "id": "group-250720",
-        "date": "2025-07-20",
-        "displayDate": "2025년 7월 20일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(2).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(3).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(4).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(5).mp4"
         ],
         "caption": "2025년 7월 20일 게시물",
@@ -2131,19 +811,7 @@ export const groupPosts = [
         "displayDate": "2025년 3월 11일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250311%20(1).jpg"
-        ],
-        "caption": "2025년 3월 11일 게시물",
-        "type": "group",
-        "rawDate": "250311",
-        "postNum": null
-    },
-    {
-        "id": "group-250311",
-        "date": "2025-03-11",
-        "displayDate": "2025년 3월 11일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250311%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250311%20(2).jpg"
         ],
         "caption": "2025년 3월 11일 게시물",
@@ -2183,33 +851,9 @@ export const groupPosts = [
         "displayDate": "2025년 2월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228%20(1).jpg"
-        ],
-        "caption": "2025년 2월 28일 게시물",
-        "type": "group",
-        "rawDate": "250228",
-        "postNum": null
-    },
-    {
-        "id": "group-250228",
-        "date": "2025-02-28",
-        "displayDate": "2025년 2월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228.jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228%20(2).jpg"
-        ],
-        "caption": "2025년 2월 28일 게시물",
-        "type": "group",
-        "rawDate": "250228",
-        "postNum": null
-    },
-    {
-        "id": "group-250228",
-        "date": "2025-02-28",
-        "displayDate": "2025년 2월 28일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228.jpeg"
         ],
         "caption": "2025년 2월 28일 게시물",
         "type": "group",
@@ -2235,103 +879,17 @@ export const groupPosts = [
         "displayDate": "2025년 2월 9일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(1).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "group",
-        "rawDate": "250209",
-        "postNum": null
-    },
-    {
-        "id": "group-250209",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(2).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "group",
-        "rawDate": "250209",
-        "postNum": null
-    },
-    {
-        "id": "group-250209",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(3).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "group",
-        "rawDate": "250209",
-        "postNum": null
-    },
-    {
-        "id": "group-250209",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(4).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "group",
-        "rawDate": "250209",
-        "postNum": null
-    },
-    {
-        "id": "group-250209",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(5).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "group",
-        "rawDate": "250209",
-        "postNum": null
-    },
-    {
-        "id": "group-250209",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(6).jpg"
         ],
         "caption": "2025년 2월 9일 게시물",
         "type": "group",
         "rawDate": "250209",
         "postNum": null
-    },
-    {
-        "id": "group-250208-1",
-        "date": "2025-02-08",
-        "displayDate": "2025년 2월 8일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250208-1%20(1).jpeg"
-        ],
-        "caption": "2025년 2월 8일 게시물",
-        "type": "group",
-        "rawDate": "250208",
-        "postNum": 1
-    },
-    {
-        "id": "group-250208-1",
-        "date": "2025-02-08",
-        "displayDate": "2025년 2월 8일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250208-1%20(2).jpeg"
-        ],
-        "caption": "2025년 2월 8일 게시물",
-        "type": "group",
-        "rawDate": "250208",
-        "postNum": 1
     },
     {
         "id": "group-250208-2",
@@ -2347,17 +905,18 @@ export const groupPosts = [
         "postNum": 2
     },
     {
-        "id": "group-250207",
-        "date": "2025-02-07",
-        "displayDate": "2025년 2월 7일",
+        "id": "group-250208-1",
+        "date": "2025-02-08",
+        "displayDate": "2025년 2월 8일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250207%20(1).jpg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250208-1%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250208-1%20(2).jpeg"
         ],
-        "caption": "2025년 2월 7일 게시물",
+        "caption": "2025년 2월 8일 게시물",
         "type": "group",
-        "rawDate": "250207",
-        "postNum": null
+        "rawDate": "250208",
+        "postNum": 1
     },
     {
         "id": "group-250207",
@@ -2365,6 +924,7 @@ export const groupPosts = [
         "displayDate": "2025년 2월 7일",
         "username": "doy.is.here",
         "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250207%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250207%20(2).jpg"
         ],
         "caption": "2025년 2월 7일 게시물",
@@ -2378,32 +938,8 @@ export const groupPosts = [
         "displayDate": "2025년 2월 1일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(1).jpg"
-        ],
-        "caption": "2025년 2월 1일 게시물",
-        "type": "group",
-        "rawDate": "250201",
-        "postNum": null
-    },
-    {
-        "id": "group-250201",
-        "date": "2025-02-01",
-        "displayDate": "2025년 2월 1일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(2).jpg"
-        ],
-        "caption": "2025년 2월 1일 게시물",
-        "type": "group",
-        "rawDate": "250201",
-        "postNum": null
-    },
-    {
-        "id": "group-250201",
-        "date": "2025-02-01",
-        "displayDate": "2025년 2월 1일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(3).jpg"
         ],
         "caption": "2025년 2월 1일 게시물",
@@ -2417,19 +953,7 @@ export const groupPosts = [
         "displayDate": "2025년 1월 31일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250131%20(1).jpg"
-        ],
-        "caption": "2025년 1월 31일 게시물",
-        "type": "group",
-        "rawDate": "250131",
-        "postNum": null
-    },
-    {
-        "id": "group-250131",
-        "date": "2025-01-31",
-        "displayDate": "2025년 1월 31일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250131%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250131%20(2).jpg"
         ],
         "caption": "2025년 1월 31일 게시물",
@@ -2443,19 +967,7 @@ export const groupPosts = [
         "displayDate": "2025년 1월 22일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(1).jpeg"
-        ],
-        "caption": "2025년 1월 22일 게시물",
-        "type": "group",
-        "rawDate": "250122",
-        "postNum": null
-    },
-    {
-        "id": "group-250122",
-        "date": "2025-01-22",
-        "displayDate": "2025년 1월 22일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(2).jpeg"
         ],
         "caption": "2025년 1월 22일 게시물",
@@ -2469,19 +981,7 @@ export const groupPosts = [
         "displayDate": "2025년 1월 9일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250109%20(1).jpg"
-        ],
-        "caption": "2025년 1월 9일 게시물",
-        "type": "group",
-        "rawDate": "250109",
-        "postNum": null
-    },
-    {
-        "id": "group-250109",
-        "date": "2025-01-09",
-        "displayDate": "2025년 1월 9일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250109%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250109%20(2).jpg"
         ],
         "caption": "2025년 1월 9일 게시물",
@@ -2508,32 +1008,8 @@ export const groupPosts = [
         "displayDate": "2024년 12월 24일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(1).jpg"
-        ],
-        "caption": "2024년 12월 24일 게시물",
-        "type": "group",
-        "rawDate": "241224",
-        "postNum": null
-    },
-    {
-        "id": "group-241224",
-        "date": "2024-12-24",
-        "displayDate": "2024년 12월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(2).jpg"
-        ],
-        "caption": "2024년 12월 24일 게시물",
-        "type": "group",
-        "rawDate": "241224",
-        "postNum": null
-    },
-    {
-        "id": "group-241224",
-        "date": "2024-12-24",
-        "displayDate": "2024년 12월 24일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(3).jpg"
         ],
         "caption": "2024년 12월 24일 게시물",
@@ -2547,19 +1023,7 @@ export const groupPosts = [
         "displayDate": "2024년 12월 23일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241223%20(1).jpg"
-        ],
-        "caption": "2024년 12월 23일 게시물",
-        "type": "group",
-        "rawDate": "241223",
-        "postNum": null
-    },
-    {
-        "id": "group-241223",
-        "date": "2024-12-23",
-        "displayDate": "2024년 12월 23일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241223%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241223%20(2).jpg"
         ],
         "caption": "2024년 12월 23일 게시물",
@@ -2620,17 +1084,19 @@ export const groupPosts = [
         "postNum": null
     },
     {
-        "id": "group-241117-1",
+        "id": "group-241117-2",
         "date": "2024-11-17",
         "displayDate": "2024년 11월 17일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-1%20(1).jpg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-2%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-2%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-2%20(3).jpg"
         ],
         "caption": "2024년 11월 17일 게시물",
         "type": "group",
         "rawDate": "241117",
-        "postNum": 1
+        "postNum": 2
     },
     {
         "id": "group-241117-1",
@@ -2638,6 +1104,7 @@ export const groupPosts = [
         "displayDate": "2024년 11월 17일",
         "username": "doy.is.here",
         "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-1%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-1%20(2).jpg"
         ],
         "caption": "2024년 11월 17일 게시물",
@@ -2646,42 +1113,17 @@ export const groupPosts = [
         "postNum": 1
     },
     {
-        "id": "group-241117-2",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
+        "id": "group-241109-2",
+        "date": "2024-11-09",
+        "displayDate": "2024년 11월 9일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-2%20(1).jpg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241109-2%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241109-2%20(2).jpg"
         ],
-        "caption": "2024년 11월 17일 게시물",
+        "caption": "2024년 11월 9일 게시물",
         "type": "group",
-        "rawDate": "241117",
-        "postNum": 2
-    },
-    {
-        "id": "group-241117-2",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-2%20(2).jpg"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "group",
-        "rawDate": "241117",
-        "postNum": 2
-    },
-    {
-        "id": "group-241117-2",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-2%20(3).jpg"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "group",
-        "rawDate": "241117",
+        "rawDate": "241109",
         "postNum": 2
     },
     {
@@ -2696,32 +1138,6 @@ export const groupPosts = [
         "type": "group",
         "rawDate": "241109",
         "postNum": 1
-    },
-    {
-        "id": "group-241109-2",
-        "date": "2024-11-09",
-        "displayDate": "2024년 11월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241109-2%20(1).jpg"
-        ],
-        "caption": "2024년 11월 9일 게시물",
-        "type": "group",
-        "rawDate": "241109",
-        "postNum": 2
-    },
-    {
-        "id": "group-241109-2",
-        "date": "2024-11-09",
-        "displayDate": "2024년 11월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241109-2%20(2).jpg"
-        ],
-        "caption": "2024년 11월 9일 게시물",
-        "type": "group",
-        "rawDate": "241109",
-        "postNum": 2
     },
     {
         "id": "group-241106",
@@ -2768,77 +1184,32 @@ export const groupPosts = [
         "displayDate": "2024년 10월 24일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(1).jpg"
-        ],
-        "caption": "2024년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "241024",
-        "postNum": null
-    },
-    {
-        "id": "group-241024",
-        "date": "2024-10-24",
-        "displayDate": "2024년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(2).jpg"
-        ],
-        "caption": "2024년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "241024",
-        "postNum": null
-    },
-    {
-        "id": "group-241024",
-        "date": "2024-10-24",
-        "displayDate": "2024년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(3).jpg"
-        ],
-        "caption": "2024년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "241024",
-        "postNum": null
-    },
-    {
-        "id": "group-241024",
-        "date": "2024-10-24",
-        "displayDate": "2024년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(4).jpg"
-        ],
-        "caption": "2024년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "241024",
-        "postNum": null
-    },
-    {
-        "id": "group-241024",
-        "date": "2024-10-24",
-        "displayDate": "2024년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(5).jpg"
-        ],
-        "caption": "2024년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "241024",
-        "postNum": null
-    },
-    {
-        "id": "group-241024",
-        "date": "2024-10-24",
-        "displayDate": "2024년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(6).mp4"
         ],
         "caption": "2024년 10월 24일 게시물",
         "type": "group",
         "rawDate": "241024",
         "postNum": null
+    },
+    {
+        "id": "group-241019-2",
+        "date": "2024-10-19",
+        "displayDate": "2024년 10월 19일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(3).jpg"
+        ],
+        "caption": "2024년 10월 19일 게시물",
+        "type": "group",
+        "rawDate": "241019",
+        "postNum": 2
     },
     {
         "id": "group-241019-1",
@@ -2852,45 +1223,6 @@ export const groupPosts = [
         "type": "group",
         "rawDate": "241019",
         "postNum": 1
-    },
-    {
-        "id": "group-241019-2",
-        "date": "2024-10-19",
-        "displayDate": "2024년 10월 19일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(1).jpg"
-        ],
-        "caption": "2024년 10월 19일 게시물",
-        "type": "group",
-        "rawDate": "241019",
-        "postNum": 2
-    },
-    {
-        "id": "group-241019-2",
-        "date": "2024-10-19",
-        "displayDate": "2024년 10월 19일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(2).jpg"
-        ],
-        "caption": "2024년 10월 19일 게시물",
-        "type": "group",
-        "rawDate": "241019",
-        "postNum": 2
-    },
-    {
-        "id": "group-241019-2",
-        "date": "2024-10-19",
-        "displayDate": "2024년 10월 19일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(3).jpg"
-        ],
-        "caption": "2024년 10월 19일 게시물",
-        "type": "group",
-        "rawDate": "241019",
-        "postNum": 2
     },
     {
         "id": "group-241018",
@@ -2924,33 +1256,9 @@ export const groupPosts = [
         "displayDate": "2024년 10월 13일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241013%20(1).jpg"
-        ],
-        "caption": "2024년 10월 13일 게시물",
-        "type": "group",
-        "rawDate": "241013",
-        "postNum": null
-    },
-    {
-        "id": "group-241013",
-        "date": "2024-10-13",
-        "displayDate": "2024년 10월 13일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241013.jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241013%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241013%20(2).jpg"
-        ],
-        "caption": "2024년 10월 13일 게시물",
-        "type": "group",
-        "rawDate": "241013",
-        "postNum": null
-    },
-    {
-        "id": "group-241013",
-        "date": "2024-10-13",
-        "displayDate": "2024년 10월 13일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241013.jpg"
         ],
         "caption": "2024년 10월 13일 게시물",
         "type": "group",
@@ -2976,64 +1284,15 @@ export const groupPosts = [
         "displayDate": "2024년 10월 11일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(1).jpg"
-        ],
-        "caption": "2024년 10월 11일 게시물",
-        "type": "group",
-        "rawDate": "241011",
-        "postNum": null
-    },
-    {
-        "id": "group-241011",
-        "date": "2024-10-11",
-        "displayDate": "2024년 10월 11일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(2).jpg"
-        ],
-        "caption": "2024년 10월 11일 게시물",
-        "type": "group",
-        "rawDate": "241011",
-        "postNum": null
-    },
-    {
-        "id": "group-241011",
-        "date": "2024-10-11",
-        "displayDate": "2024년 10월 11일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(3).jpg"
-        ],
-        "caption": "2024년 10월 11일 게시물",
-        "type": "group",
-        "rawDate": "241011",
-        "postNum": null
-    },
-    {
-        "id": "group-241011",
-        "date": "2024-10-11",
-        "displayDate": "2024년 10월 11일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(4).jpg"
         ],
         "caption": "2024년 10월 11일 게시물",
         "type": "group",
         "rawDate": "241011",
         "postNum": null
-    },
-    {
-        "id": "group-241009-1",
-        "date": "2024-10-09",
-        "displayDate": "2024년 10월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241009-1.jpg"
-        ],
-        "caption": "2024년 10월 9일 게시물",
-        "type": "group",
-        "rawDate": "241009",
-        "postNum": 1
     },
     {
         "id": "group-241009-2",
@@ -3047,6 +1306,19 @@ export const groupPosts = [
         "type": "group",
         "rawDate": "241009",
         "postNum": 2
+    },
+    {
+        "id": "group-241009-1",
+        "date": "2024-10-09",
+        "displayDate": "2024년 10월 9일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241009-1.jpg"
+        ],
+        "caption": "2024년 10월 9일 게시물",
+        "type": "group",
+        "rawDate": "241009",
+        "postNum": 1
     },
     {
         "id": "group-241004",
@@ -3067,19 +1339,7 @@ export const groupPosts = [
         "displayDate": "2024년 9월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240928%20(1).jpeg"
-        ],
-        "caption": "2024년 9월 28일 게시물",
-        "type": "group",
-        "rawDate": "240928",
-        "postNum": null
-    },
-    {
-        "id": "group-240928",
-        "date": "2024-09-28",
-        "displayDate": "2024년 9월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240928%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240928%20(2).jpeg"
         ],
         "caption": "2024년 9월 28일 게시물",
@@ -3093,19 +1353,7 @@ export const groupPosts = [
         "displayDate": "2024년 9월 27일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240927%20(1).jpeg"
-        ],
-        "caption": "2024년 9월 27일 게시물",
-        "type": "group",
-        "rawDate": "240927",
-        "postNum": null
-    },
-    {
-        "id": "group-240927",
-        "date": "2024-09-27",
-        "displayDate": "2024년 9월 27일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240927%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240927%20(2).jpeg"
         ],
         "caption": "2024년 9월 27일 게시물",
@@ -3210,32 +1458,8 @@ export const groupPosts = [
         "displayDate": "2024년 6월 20일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240620%20(1).jpg"
-        ],
-        "caption": "2024년 6월 20일 게시물",
-        "type": "group",
-        "rawDate": "240620",
-        "postNum": null
-    },
-    {
-        "id": "group-240620",
-        "date": "2024-06-20",
-        "displayDate": "2024년 6월 20일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240620%20(2).jpg"
-        ],
-        "caption": "2024년 6월 20일 게시물",
-        "type": "group",
-        "rawDate": "240620",
-        "postNum": null
-    },
-    {
-        "id": "group-240620",
-        "date": "2024-06-20",
-        "displayDate": "2024년 6월 20일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240620%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240620%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240620%20(3).jpg"
         ],
         "caption": "2024년 6월 20일 게시물",
@@ -3249,19 +1473,7 @@ export const groupPosts = [
         "displayDate": "2024년 6월 17일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240617%20(1).jpeg"
-        ],
-        "caption": "2024년 6월 17일 게시물",
-        "type": "group",
-        "rawDate": "240617",
-        "postNum": null
-    },
-    {
-        "id": "group-240617",
-        "date": "2024-06-17",
-        "displayDate": "2024년 6월 17일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240617%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240617%20(2).jpeg"
         ],
         "caption": "2024년 6월 17일 게시물",
@@ -3288,19 +1500,7 @@ export const groupPosts = [
         "displayDate": "2024년 5월 16일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240516%20(1).jpeg"
-        ],
-        "caption": "2024년 5월 16일 게시물",
-        "type": "group",
-        "rawDate": "240516",
-        "postNum": null
-    },
-    {
-        "id": "group-240516",
-        "date": "2024-05-16",
-        "displayDate": "2024년 5월 16일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240516%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240516%20(2).jpeg"
         ],
         "caption": "2024년 5월 16일 게시물",
@@ -3314,45 +1514,9 @@ export const groupPosts = [
         "displayDate": "2024년 5월 4일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(1).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "group",
-        "rawDate": "240504",
-        "postNum": null
-    },
-    {
-        "id": "group-240504",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(2).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "group",
-        "rawDate": "240504",
-        "postNum": null
-    },
-    {
-        "id": "group-240504",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(3).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "group",
-        "rawDate": "240504",
-        "postNum": null
-    },
-    {
-        "id": "group-240504",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(4).jpg"
         ],
         "caption": "2024년 5월 4일 게시물",
@@ -3366,71 +1530,11 @@ export const groupPosts = [
         "displayDate": "2024년 4월 29일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(1).jpg"
-        ],
-        "caption": "2024년 4월 29일 게시물",
-        "type": "group",
-        "rawDate": "240429",
-        "postNum": null
-    },
-    {
-        "id": "group-240429",
-        "date": "2024-04-29",
-        "displayDate": "2024년 4월 29일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(2).jpg"
-        ],
-        "caption": "2024년 4월 29일 게시물",
-        "type": "group",
-        "rawDate": "240429",
-        "postNum": null
-    },
-    {
-        "id": "group-240429",
-        "date": "2024-04-29",
-        "displayDate": "2024년 4월 29일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(3).jpg"
-        ],
-        "caption": "2024년 4월 29일 게시물",
-        "type": "group",
-        "rawDate": "240429",
-        "postNum": null
-    },
-    {
-        "id": "group-240429",
-        "date": "2024-04-29",
-        "displayDate": "2024년 4월 29일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(4).jpg"
-        ],
-        "caption": "2024년 4월 29일 게시물",
-        "type": "group",
-        "rawDate": "240429",
-        "postNum": null
-    },
-    {
-        "id": "group-240429",
-        "date": "2024-04-29",
-        "displayDate": "2024년 4월 29일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(5).jpg"
-        ],
-        "caption": "2024년 4월 29일 게시물",
-        "type": "group",
-        "rawDate": "240429",
-        "postNum": null
-    },
-    {
-        "id": "group-240429",
-        "date": "2024-04-29",
-        "displayDate": "2024년 4월 29일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(6).jpg"
         ],
         "caption": "2024년 4월 29일 게시물",
@@ -3444,19 +1548,7 @@ export const groupPosts = [
         "displayDate": "2024년 3월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240328%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 28일 게시물",
-        "type": "group",
-        "rawDate": "240328",
-        "postNum": null
-    },
-    {
-        "id": "group-240328",
-        "date": "2024-03-28",
-        "displayDate": "2024년 3월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240328%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240328%20(2).jpeg"
         ],
         "caption": "2024년 3월 28일 게시물",
@@ -3470,19 +1562,7 @@ export const groupPosts = [
         "displayDate": "2024년 3월 21일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240321%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 21일 게시물",
-        "type": "group",
-        "rawDate": "240321",
-        "postNum": null
-    },
-    {
-        "id": "group-240321",
-        "date": "2024-03-21",
-        "displayDate": "2024년 3월 21일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240321%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240321%20(2).jpeg"
         ],
         "caption": "2024년 3월 21일 게시물",
@@ -3496,19 +1576,7 @@ export const groupPosts = [
         "displayDate": "2024년 3월 19일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240319%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 19일 게시물",
-        "type": "group",
-        "rawDate": "240319",
-        "postNum": null
-    },
-    {
-        "id": "group-240319",
-        "date": "2024-03-19",
-        "displayDate": "2024년 3월 19일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240319%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240319%20(2).jpeg"
         ],
         "caption": "2024년 3월 19일 게시물",
@@ -3522,19 +1590,7 @@ export const groupPosts = [
         "displayDate": "2024년 3월 17일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240317%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 17일 게시물",
-        "type": "group",
-        "rawDate": "240317",
-        "postNum": null
-    },
-    {
-        "id": "group-240317",
-        "date": "2024-03-17",
-        "displayDate": "2024년 3월 17일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240317%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240317%20(2).jpeg"
         ],
         "caption": "2024년 3월 17일 게시물",
@@ -3561,19 +1617,7 @@ export const groupPosts = [
         "displayDate": "2024년 3월 15일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240315%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 15일 게시물",
-        "type": "group",
-        "rawDate": "240315",
-        "postNum": null
-    },
-    {
-        "id": "group-240315",
-        "date": "2024-03-15",
-        "displayDate": "2024년 3월 15일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240315%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240315%20(2).jpeg"
         ],
         "caption": "2024년 3월 15일 게시물",
@@ -3587,19 +1631,7 @@ export const groupPosts = [
         "displayDate": "2024년 3월 14일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240314%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 14일 게시물",
-        "type": "group",
-        "rawDate": "240314",
-        "postNum": null
-    },
-    {
-        "id": "group-240314",
-        "date": "2024-03-14",
-        "displayDate": "2024년 3월 14일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240314%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240314%20(2).jpeg"
         ],
         "caption": "2024년 3월 14일 게시물",
@@ -3608,50 +1640,12 @@ export const groupPosts = [
         "postNum": null
     },
     {
-        "id": "group-240312-1",
-        "date": "2024-03-12",
-        "displayDate": "2024년 3월 12일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-1%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 12일 게시물",
-        "type": "group",
-        "rawDate": "240312",
-        "postNum": 1
-    },
-    {
-        "id": "group-240312-1",
-        "date": "2024-03-12",
-        "displayDate": "2024년 3월 12일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-1%20(2).jpeg"
-        ],
-        "caption": "2024년 3월 12일 게시물",
-        "type": "group",
-        "rawDate": "240312",
-        "postNum": 1
-    },
-    {
         "id": "group-240312-2",
         "date": "2024-03-12",
         "displayDate": "2024년 3월 12일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-2%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 12일 게시물",
-        "type": "group",
-        "rawDate": "240312",
-        "postNum": 2
-    },
-    {
-        "id": "group-240312-2",
-        "date": "2024-03-12",
-        "displayDate": "2024년 3월 12일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-2%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-2%20(2).jpeg"
         ],
         "caption": "2024년 3월 12일 게시물",
@@ -3660,17 +1654,18 @@ export const groupPosts = [
         "postNum": 2
     },
     {
-        "id": "group-240311",
-        "date": "2024-03-11",
-        "displayDate": "2024년 3월 11일",
+        "id": "group-240312-1",
+        "date": "2024-03-12",
+        "displayDate": "2024년 3월 12일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240311%20(1).jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-1%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-1%20(2).jpeg"
         ],
-        "caption": "2024년 3월 11일 게시물",
+        "caption": "2024년 3월 12일 게시물",
         "type": "group",
-        "rawDate": "240311",
-        "postNum": null
+        "rawDate": "240312",
+        "postNum": 1
     },
     {
         "id": "group-240311",
@@ -3678,12 +1673,27 @@ export const groupPosts = [
         "displayDate": "2024년 3월 11일",
         "username": "doy.is.here",
         "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240311%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240311%20(2).jpeg"
         ],
         "caption": "2024년 3월 11일 게시물",
         "type": "group",
         "rawDate": "240311",
         "postNum": null
+    },
+    {
+        "id": "group-240309-2",
+        "date": "2024-03-09",
+        "displayDate": "2024년 3월 9일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240309-2%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240309-2%20(2).jpeg"
+        ],
+        "caption": "2024년 3월 9일 게시물",
+        "type": "group",
+        "rawDate": "240309",
+        "postNum": 2
     },
     {
         "id": "group-240309-1",
@@ -3699,50 +1709,12 @@ export const groupPosts = [
         "postNum": 1
     },
     {
-        "id": "group-240309-2",
-        "date": "2024-03-09",
-        "displayDate": "2024년 3월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240309-2%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 9일 게시물",
-        "type": "group",
-        "rawDate": "240309",
-        "postNum": 2
-    },
-    {
-        "id": "group-240309-2",
-        "date": "2024-03-09",
-        "displayDate": "2024년 3월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240309-2%20(2).jpeg"
-        ],
-        "caption": "2024년 3월 9일 게시물",
-        "type": "group",
-        "rawDate": "240309",
-        "postNum": 2
-    },
-    {
         "id": "group-240308",
         "date": "2024-03-08",
         "displayDate": "2024년 3월 8일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240308%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 8일 게시물",
-        "type": "group",
-        "rawDate": "240308",
-        "postNum": null
-    },
-    {
-        "id": "group-240308",
-        "date": "2024-03-08",
-        "displayDate": "2024년 3월 8일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240308%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240308%20(2).jpeg"
         ],
         "caption": "2024년 3월 8일 게시물",
@@ -3756,19 +1728,7 @@ export const groupPosts = [
         "displayDate": "2024년 3월 7일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240307%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 7일 게시물",
-        "type": "group",
-        "rawDate": "240307",
-        "postNum": null
-    },
-    {
-        "id": "group-240307",
-        "date": "2024-03-07",
-        "displayDate": "2024년 3월 7일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240307%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240307%20(2).jpeg"
         ],
         "caption": "2024년 3월 7일 게시물",
@@ -3777,63 +1737,12 @@ export const groupPosts = [
         "postNum": null
     },
     {
-        "id": "group-240305-1",
-        "date": "2024-03-05",
-        "displayDate": "2024년 3월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 5일 게시물",
-        "type": "group",
-        "rawDate": "240305",
-        "postNum": 1
-    },
-    {
-        "id": "group-240305-1",
-        "date": "2024-03-05",
-        "displayDate": "2024년 3월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(2).jpeg"
-        ],
-        "caption": "2024년 3월 5일 게시물",
-        "type": "group",
-        "rawDate": "240305",
-        "postNum": 1
-    },
-    {
-        "id": "group-240305-1",
-        "date": "2024-03-05",
-        "displayDate": "2024년 3월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(3).jpeg"
-        ],
-        "caption": "2024년 3월 5일 게시물",
-        "type": "group",
-        "rawDate": "240305",
-        "postNum": 1
-    },
-    {
         "id": "group-240305-2",
         "date": "2024-03-05",
         "displayDate": "2024년 3월 5일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-2%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 5일 게시물",
-        "type": "group",
-        "rawDate": "240305",
-        "postNum": 2
-    },
-    {
-        "id": "group-240305-2",
-        "date": "2024-03-05",
-        "displayDate": "2024년 3월 5일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-2%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-2%20(2).jpeg"
         ],
         "caption": "2024년 3월 5일 게시물",
@@ -3842,17 +1751,19 @@ export const groupPosts = [
         "postNum": 2
     },
     {
-        "id": "group-240303",
-        "date": "2024-03-03",
-        "displayDate": "2024년 3월 3일",
+        "id": "group-240305-1",
+        "date": "2024-03-05",
+        "displayDate": "2024년 3월 5일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240303%20(1).jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(2).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(3).jpeg"
         ],
-        "caption": "2024년 3월 3일 게시물",
+        "caption": "2024년 3월 5일 게시물",
         "type": "group",
-        "rawDate": "240303",
-        "postNum": null
+        "rawDate": "240305",
+        "postNum": 1
     },
     {
         "id": "group-240303",
@@ -3860,6 +1771,7 @@ export const groupPosts = [
         "displayDate": "2024년 3월 3일",
         "username": "doy.is.here",
         "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240303%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240303%20(2).jpeg"
         ],
         "caption": "2024년 3월 3일 게시물",
@@ -3868,56 +1780,32 @@ export const groupPosts = [
         "postNum": null
     },
     {
-        "id": "group-240302-1",
-        "date": "2024-03-02",
-        "displayDate": "2024년 3월 2일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-1%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 2일 게시물",
-        "type": "group",
-        "rawDate": "240302",
-        "postNum": 1
-    },
-    {
-        "id": "group-240302-1",
-        "date": "2024-03-02",
-        "displayDate": "2024년 3월 2일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-1%20(2).jpeg"
-        ],
-        "caption": "2024년 3월 2일 게시물",
-        "type": "group",
-        "rawDate": "240302",
-        "postNum": 1
-    },
-    {
         "id": "group-240302-2",
         "date": "2024-03-02",
         "displayDate": "2024년 3월 2일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-2%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 2일 게시물",
-        "type": "group",
-        "rawDate": "240302",
-        "postNum": 2
-    },
-    {
-        "id": "group-240302-2",
-        "date": "2024-03-02",
-        "displayDate": "2024년 3월 2일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-2%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-2%20(2).jpeg"
         ],
         "caption": "2024년 3월 2일 게시물",
         "type": "group",
         "rawDate": "240302",
         "postNum": 2
+    },
+    {
+        "id": "group-240302-1",
+        "date": "2024-03-02",
+        "displayDate": "2024년 3월 2일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-1%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-1%20(2).jpeg"
+        ],
+        "caption": "2024년 3월 2일 게시물",
+        "type": "group",
+        "rawDate": "240302",
+        "postNum": 1
     },
     {
         "id": "group-240301",
@@ -3938,32 +1826,8 @@ export const groupPosts = [
         "displayDate": "2024년 2월 29일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240229%20(1).jpeg"
-        ],
-        "caption": "2024년 2월 29일 게시물",
-        "type": "group",
-        "rawDate": "240229",
-        "postNum": null
-    },
-    {
-        "id": "group-240229",
-        "date": "2024-02-29",
-        "displayDate": "2024년 2월 29일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240229%20(2).jpeg"
-        ],
-        "caption": "2024년 2월 29일 게시물",
-        "type": "group",
-        "rawDate": "240229",
-        "postNum": null
-    },
-    {
-        "id": "group-240229",
-        "date": "2024-02-29",
-        "displayDate": "2024년 2월 29일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240229%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240229%20(2).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240229%20(3).jpeg"
         ],
         "caption": "2024년 2월 29일 게시물",
@@ -3977,19 +1841,7 @@ export const groupPosts = [
         "displayDate": "2024년 2월 13일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240213%20(1).jpeg"
-        ],
-        "caption": "2024년 2월 13일 게시물",
-        "type": "group",
-        "rawDate": "240213",
-        "postNum": null
-    },
-    {
-        "id": "group-240213",
-        "date": "2024-02-13",
-        "displayDate": "2024년 2월 13일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240213%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240213%20(2).jpeg"
         ],
         "caption": "2024년 2월 13일 게시물",
@@ -4003,19 +1855,7 @@ export const groupPosts = [
         "displayDate": "2024년 2월 12일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240212%20(1).jpeg"
-        ],
-        "caption": "2024년 2월 12일 게시물",
-        "type": "group",
-        "rawDate": "240212",
-        "postNum": null
-    },
-    {
-        "id": "group-240212",
-        "date": "2024-02-12",
-        "displayDate": "2024년 2월 12일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240212%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240212%20(2).jpeg"
         ],
         "caption": "2024년 2월 12일 게시물",
@@ -4029,19 +1869,7 @@ export const groupPosts = [
         "displayDate": "2024년 2월 10일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240210%20(1).jpeg"
-        ],
-        "caption": "2024년 2월 10일 게시물",
-        "type": "group",
-        "rawDate": "240210",
-        "postNum": null
-    },
-    {
-        "id": "group-240210",
-        "date": "2024-02-10",
-        "displayDate": "2024년 2월 10일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240210%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240210%20(2).jpeg"
         ],
         "caption": "2024년 2월 10일 게시물",
@@ -4063,17 +1891,17 @@ export const groupPosts = [
         "postNum": null
     },
     {
-        "id": "group-240206-1",
+        "id": "group-240206-3",
         "date": "2024-02-06",
         "displayDate": "2024년 2월 6일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240206-1.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240206-3.jpeg"
         ],
         "caption": "2024년 2월 6일 게시물",
         "type": "group",
         "rawDate": "240206",
-        "postNum": 1
+        "postNum": 3
     },
     {
         "id": "group-240206-2",
@@ -4089,43 +1917,17 @@ export const groupPosts = [
         "postNum": 2
     },
     {
-        "id": "group-240206-3",
+        "id": "group-240206-1",
         "date": "2024-02-06",
         "displayDate": "2024년 2월 6일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240206-3.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240206-1.jpeg"
         ],
         "caption": "2024년 2월 6일 게시물",
         "type": "group",
         "rawDate": "240206",
-        "postNum": 3
-    },
-    {
-        "id": "group-240205-1",
-        "date": "2024-02-05",
-        "displayDate": "2024년 2월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240205-1.jpeg"
-        ],
-        "caption": "2024년 2월 5일 게시물",
-        "type": "group",
-        "rawDate": "240205",
         "postNum": 1
-    },
-    {
-        "id": "group-240205-2",
-        "date": "2024-02-05",
-        "displayDate": "2024년 2월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240205-2.jpeg"
-        ],
-        "caption": "2024년 2월 5일 게시물",
-        "type": "group",
-        "rawDate": "240205",
-        "postNum": 2
     },
     {
         "id": "group-240205-3",
@@ -4141,17 +1943,30 @@ export const groupPosts = [
         "postNum": 3
     },
     {
-        "id": "group-240119",
-        "date": "2024-01-19",
-        "displayDate": "2024년 1월 19일",
+        "id": "group-240205-2",
+        "date": "2024-02-05",
+        "displayDate": "2024년 2월 5일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240119%20(1).jpg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240205-2.jpeg"
         ],
-        "caption": "2024년 1월 19일 게시물",
+        "caption": "2024년 2월 5일 게시물",
         "type": "group",
-        "rawDate": "240119",
-        "postNum": null
+        "rawDate": "240205",
+        "postNum": 2
+    },
+    {
+        "id": "group-240205-1",
+        "date": "2024-02-05",
+        "displayDate": "2024년 2월 5일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240205-1.jpeg"
+        ],
+        "caption": "2024년 2월 5일 게시물",
+        "type": "group",
+        "rawDate": "240205",
+        "postNum": 1
     },
     {
         "id": "group-240119",
@@ -4159,6 +1974,7 @@ export const groupPosts = [
         "displayDate": "2024년 1월 19일",
         "username": "doy.is.here",
         "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240119%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240119%20(2).jpg"
         ],
         "caption": "2024년 1월 19일 게시물",
@@ -4198,45 +2014,9 @@ export const groupPosts = [
         "displayDate": "2024년 1월 1일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(1).jpeg"
-        ],
-        "caption": "2024년 1월 1일 게시물",
-        "type": "group",
-        "rawDate": "240101",
-        "postNum": null
-    },
-    {
-        "id": "group-240101",
-        "date": "2024-01-01",
-        "displayDate": "2024년 1월 1일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(2).jpeg"
-        ],
-        "caption": "2024년 1월 1일 게시물",
-        "type": "group",
-        "rawDate": "240101",
-        "postNum": null
-    },
-    {
-        "id": "group-240101",
-        "date": "2024-01-01",
-        "displayDate": "2024년 1월 1일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(3).jpeg"
-        ],
-        "caption": "2024년 1월 1일 게시물",
-        "type": "group",
-        "rawDate": "240101",
-        "postNum": null
-    },
-    {
-        "id": "group-240101",
-        "date": "2024-01-01",
-        "displayDate": "2024년 1월 1일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(2).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(3).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(4).jpeg"
         ],
         "caption": "2024년 1월 1일 게시물",
@@ -4250,32 +2030,8 @@ export const groupPosts = [
         "displayDate": "2023년 12월 30일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231230%20(1).jpeg"
-        ],
-        "caption": "2023년 12월 30일 게시물",
-        "type": "group",
-        "rawDate": "231230",
-        "postNum": null
-    },
-    {
-        "id": "group-231230",
-        "date": "2023-12-30",
-        "displayDate": "2023년 12월 30일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231230%20(2).jpeg"
-        ],
-        "caption": "2023년 12월 30일 게시물",
-        "type": "group",
-        "rawDate": "231230",
-        "postNum": null
-    },
-    {
-        "id": "group-231230",
-        "date": "2023-12-30",
-        "displayDate": "2023년 12월 30일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231230%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231230%20(2).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231230%20(3).jpeg"
         ],
         "caption": "2023년 12월 30일 게시물",
@@ -4289,32 +2045,8 @@ export const groupPosts = [
         "displayDate": "2023년 12월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231228%20(1).jpeg"
-        ],
-        "caption": "2023년 12월 28일 게시물",
-        "type": "group",
-        "rawDate": "231228",
-        "postNum": null
-    },
-    {
-        "id": "group-231228",
-        "date": "2023-12-28",
-        "displayDate": "2023년 12월 28일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231228%20(2).jpeg"
-        ],
-        "caption": "2023년 12월 28일 게시물",
-        "type": "group",
-        "rawDate": "231228",
-        "postNum": null
-    },
-    {
-        "id": "group-231228",
-        "date": "2023-12-28",
-        "displayDate": "2023년 12월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231228%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231228%20(2).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231228%20(3).jpeg"
         ],
         "caption": "2023년 12월 28일 게시물",
@@ -4328,45 +2060,9 @@ export const groupPosts = [
         "displayDate": "2023년 12월 22일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(1).jpeg"
-        ],
-        "caption": "2023년 12월 22일 게시물",
-        "type": "group",
-        "rawDate": "231222",
-        "postNum": null
-    },
-    {
-        "id": "group-231222",
-        "date": "2023-12-22",
-        "displayDate": "2023년 12월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(2).jpeg"
-        ],
-        "caption": "2023년 12월 22일 게시물",
-        "type": "group",
-        "rawDate": "231222",
-        "postNum": null
-    },
-    {
-        "id": "group-231222",
-        "date": "2023-12-22",
-        "displayDate": "2023년 12월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(3).jpeg"
-        ],
-        "caption": "2023년 12월 22일 게시물",
-        "type": "group",
-        "rawDate": "231222",
-        "postNum": null
-    },
-    {
-        "id": "group-231222",
-        "date": "2023-12-22",
-        "displayDate": "2023년 12월 22일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(2).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(3).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(4).jpeg"
         ],
         "caption": "2023년 12월 22일 게시물",
@@ -4384,58 +2080,10 @@ export const storyPosts = [
         "displayDate": "2025년 5월 3일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250503%20(1).mp4"
-        ],
-        "caption": "2025년 5월 3일 게시물",
-        "type": "story",
-        "rawDate": "250503",
-        "postNum": null
-    },
-    {
-        "id": "story-250503",
-        "date": "2025-05-03",
-        "displayDate": "2025년 5월 3일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250503%20(2).mp4"
-        ],
-        "caption": "2025년 5월 3일 게시물",
-        "type": "story",
-        "rawDate": "250503",
-        "postNum": null
-    },
-    {
-        "id": "story-250503",
-        "date": "2025-05-03",
-        "displayDate": "2025년 5월 3일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250503%20(3).mp4"
-        ],
-        "caption": "2025년 5월 3일 게시물",
-        "type": "story",
-        "rawDate": "250503",
-        "postNum": null
-    },
-    {
-        "id": "story-250503",
-        "date": "2025-05-03",
-        "displayDate": "2025년 5월 3일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250503%20(4).mp4"
-        ],
-        "caption": "2025년 5월 3일 게시물",
-        "type": "story",
-        "rawDate": "250503",
-        "postNum": null
-    },
-    {
-        "id": "story-250503",
-        "date": "2025-05-03",
-        "displayDate": "2025년 5월 3일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250503%20(1).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250503%20(2).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250503%20(3).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250503%20(4).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250503%20(5).mp4"
         ],
         "caption": "2025년 5월 3일 게시물",
@@ -4470,32 +2118,6 @@ export const storyPosts = [
         "postNum": null
     },
     {
-        "id": "story-250310-1",
-        "date": "2025-03-10",
-        "displayDate": "2025년 3월 10일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250310-1%20(1).mp4"
-        ],
-        "caption": "2025년 3월 10일 게시물",
-        "type": "story",
-        "rawDate": "250310",
-        "postNum": 1
-    },
-    {
-        "id": "story-250310-1",
-        "date": "2025-03-10",
-        "displayDate": "2025년 3월 10일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250310-1%20(2).mp4"
-        ],
-        "caption": "2025년 3월 10일 게시물",
-        "type": "story",
-        "rawDate": "250310",
-        "postNum": 1
-    },
-    {
         "id": "story-250310-2",
         "date": "2025-03-10",
         "displayDate": "2025년 3월 10일",
@@ -4509,17 +2131,18 @@ export const storyPosts = [
         "postNum": 2
     },
     {
-        "id": "story-250308",
-        "date": "2025-03-08",
-        "displayDate": "2025년 3월 8일",
+        "id": "story-250310-1",
+        "date": "2025-03-10",
+        "displayDate": "2025년 3월 10일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250308%20(1).mp4"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250310-1%20(1).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250310-1%20(2).mp4"
         ],
-        "caption": "2025년 3월 8일 게시물",
+        "caption": "2025년 3월 10일 게시물",
         "type": "story",
-        "rawDate": "250308",
-        "postNum": null
+        "rawDate": "250310",
+        "postNum": 1
     },
     {
         "id": "story-250308",
@@ -4527,6 +2150,7 @@ export const storyPosts = [
         "displayDate": "2025년 3월 8일",
         "username": "doy.is.here",
         "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250308%20(1).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250308%20(2).mp4"
         ],
         "caption": "2025년 3월 8일 게시물",
@@ -4540,32 +2164,8 @@ export const storyPosts = [
         "displayDate": "2025년 3월 7일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250307%20(1).jpg"
-        ],
-        "caption": "2025년 3월 7일 게시물",
-        "type": "story",
-        "rawDate": "250307",
-        "postNum": null
-    },
-    {
-        "id": "story-250307",
-        "date": "2025-03-07",
-        "displayDate": "2025년 3월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250307%20(2).jpg"
-        ],
-        "caption": "2025년 3월 7일 게시물",
-        "type": "story",
-        "rawDate": "250307",
-        "postNum": null
-    },
-    {
-        "id": "story-250307",
-        "date": "2025-03-07",
-        "displayDate": "2025년 3월 7일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250307%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250307%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250307%20(3).jpg"
         ],
         "caption": "2025년 3월 7일 게시물",
@@ -4618,150 +2218,18 @@ export const storyPosts = [
         "displayDate": "2025년 2월 15일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(1).mp4"
-        ],
-        "caption": "2025년 2월 15일 게시물",
-        "type": "story",
-        "rawDate": "250215",
-        "postNum": null
-    },
-    {
-        "id": "story-250215",
-        "date": "2025-02-15",
-        "displayDate": "2025년 2월 15일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(10).mp4"
-        ],
-        "caption": "2025년 2월 15일 게시물",
-        "type": "story",
-        "rawDate": "250215",
-        "postNum": null
-    },
-    {
-        "id": "story-250215",
-        "date": "2025-02-15",
-        "displayDate": "2025년 2월 15일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(11).mp4"
-        ],
-        "caption": "2025년 2월 15일 게시물",
-        "type": "story",
-        "rawDate": "250215",
-        "postNum": null
-    },
-    {
-        "id": "story-250215",
-        "date": "2025-02-15",
-        "displayDate": "2025년 2월 15일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(1).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(2).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(3).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(4).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(5).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(6).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(7).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(8).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(9).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(10).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(11).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(12).mp4"
-        ],
-        "caption": "2025년 2월 15일 게시물",
-        "type": "story",
-        "rawDate": "250215",
-        "postNum": null
-    },
-    {
-        "id": "story-250215",
-        "date": "2025-02-15",
-        "displayDate": "2025년 2월 15일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(2).mp4"
-        ],
-        "caption": "2025년 2월 15일 게시물",
-        "type": "story",
-        "rawDate": "250215",
-        "postNum": null
-    },
-    {
-        "id": "story-250215",
-        "date": "2025-02-15",
-        "displayDate": "2025년 2월 15일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(3).mp4"
-        ],
-        "caption": "2025년 2월 15일 게시물",
-        "type": "story",
-        "rawDate": "250215",
-        "postNum": null
-    },
-    {
-        "id": "story-250215",
-        "date": "2025-02-15",
-        "displayDate": "2025년 2월 15일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(4).mp4"
-        ],
-        "caption": "2025년 2월 15일 게시물",
-        "type": "story",
-        "rawDate": "250215",
-        "postNum": null
-    },
-    {
-        "id": "story-250215",
-        "date": "2025-02-15",
-        "displayDate": "2025년 2월 15일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(5).mp4"
-        ],
-        "caption": "2025년 2월 15일 게시물",
-        "type": "story",
-        "rawDate": "250215",
-        "postNum": null
-    },
-    {
-        "id": "story-250215",
-        "date": "2025-02-15",
-        "displayDate": "2025년 2월 15일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(6).mp4"
-        ],
-        "caption": "2025년 2월 15일 게시물",
-        "type": "story",
-        "rawDate": "250215",
-        "postNum": null
-    },
-    {
-        "id": "story-250215",
-        "date": "2025-02-15",
-        "displayDate": "2025년 2월 15일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(7).mp4"
-        ],
-        "caption": "2025년 2월 15일 게시물",
-        "type": "story",
-        "rawDate": "250215",
-        "postNum": null
-    },
-    {
-        "id": "story-250215",
-        "date": "2025-02-15",
-        "displayDate": "2025년 2월 15일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(8).mp4"
-        ],
-        "caption": "2025년 2월 15일 게시물",
-        "type": "story",
-        "rawDate": "250215",
-        "postNum": null
-    },
-    {
-        "id": "story-250215",
-        "date": "2025-02-15",
-        "displayDate": "2025년 2월 15일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(9).mp4"
         ],
         "caption": "2025년 2월 15일 게시물",
         "type": "story",
@@ -4800,84 +2268,12 @@ export const storyPosts = [
         "displayDate": "2024년 12월 24일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(1).mp4"
-        ],
-        "caption": "2024년 12월 24일 게시물",
-        "type": "story",
-        "rawDate": "241224",
-        "postNum": null
-    },
-    {
-        "id": "story-241224",
-        "date": "2024-12-24",
-        "displayDate": "2024년 12월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(2).mp4"
-        ],
-        "caption": "2024년 12월 24일 게시물",
-        "type": "story",
-        "rawDate": "241224",
-        "postNum": null
-    },
-    {
-        "id": "story-241224",
-        "date": "2024-12-24",
-        "displayDate": "2024년 12월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(3).mp4"
-        ],
-        "caption": "2024년 12월 24일 게시물",
-        "type": "story",
-        "rawDate": "241224",
-        "postNum": null
-    },
-    {
-        "id": "story-241224",
-        "date": "2024-12-24",
-        "displayDate": "2024년 12월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(4).mp4"
-        ],
-        "caption": "2024년 12월 24일 게시물",
-        "type": "story",
-        "rawDate": "241224",
-        "postNum": null
-    },
-    {
-        "id": "story-241224",
-        "date": "2024-12-24",
-        "displayDate": "2024년 12월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(5).mp4"
-        ],
-        "caption": "2024년 12월 24일 게시물",
-        "type": "story",
-        "rawDate": "241224",
-        "postNum": null
-    },
-    {
-        "id": "story-241224",
-        "date": "2024-12-24",
-        "displayDate": "2024년 12월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(6).mp4"
-        ],
-        "caption": "2024년 12월 24일 게시물",
-        "type": "story",
-        "rawDate": "241224",
-        "postNum": null
-    },
-    {
-        "id": "story-241224",
-        "date": "2024-12-24",
-        "displayDate": "2024년 12월 24일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(1).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(2).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(3).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(4).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(5).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(6).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(7).mp4"
         ],
         "caption": "2024년 12월 24일 게시물",
@@ -4891,32 +2287,8 @@ export const storyPosts = [
         "displayDate": "2024년 12월 20일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241220%20(1).mp4"
-        ],
-        "caption": "2024년 12월 20일 게시물",
-        "type": "story",
-        "rawDate": "241220",
-        "postNum": null
-    },
-    {
-        "id": "story-241220",
-        "date": "2024-12-20",
-        "displayDate": "2024년 12월 20일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241220%20(2).mp4"
-        ],
-        "caption": "2024년 12월 20일 게시물",
-        "type": "story",
-        "rawDate": "241220",
-        "postNum": null
-    },
-    {
-        "id": "story-241220",
-        "date": "2024-12-20",
-        "displayDate": "2024년 12월 20일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241220%20(1).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241220%20(2).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241220%20(3).mp4"
         ],
         "caption": "2024년 12월 20일 게시물",
@@ -4930,45 +2302,9 @@ export const storyPosts = [
         "displayDate": "2024년 11월 17일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241117%20(1).mp4"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "story",
-        "rawDate": "241117",
-        "postNum": null
-    },
-    {
-        "id": "story-241117",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241117%20(2).mp4"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "story",
-        "rawDate": "241117",
-        "postNum": null
-    },
-    {
-        "id": "story-241117",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241117%20(3).mp4"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "story",
-        "rawDate": "241117",
-        "postNum": null
-    },
-    {
-        "id": "story-241117",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241117%20(1).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241117%20(2).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241117%20(3).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241117%20(4).mp4"
         ],
         "caption": "2024년 11월 17일 게시물",
@@ -4982,45 +2318,9 @@ export const storyPosts = [
         "displayDate": "2024년 10월 13일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241013%20(1).mp4"
-        ],
-        "caption": "2024년 10월 13일 게시물",
-        "type": "story",
-        "rawDate": "241013",
-        "postNum": null
-    },
-    {
-        "id": "story-241013",
-        "date": "2024-10-13",
-        "displayDate": "2024년 10월 13일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241013%20(2).mp4"
-        ],
-        "caption": "2024년 10월 13일 게시물",
-        "type": "story",
-        "rawDate": "241013",
-        "postNum": null
-    },
-    {
-        "id": "story-241013",
-        "date": "2024-10-13",
-        "displayDate": "2024년 10월 13일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241013%20(3).mp4"
-        ],
-        "caption": "2024년 10월 13일 게시물",
-        "type": "story",
-        "rawDate": "241013",
-        "postNum": null
-    },
-    {
-        "id": "story-241013",
-        "date": "2024-10-13",
-        "displayDate": "2024년 10월 13일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241013%20(1).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241013%20(2).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241013%20(3).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241013%20(4).mp4"
         ],
         "caption": "2024년 10월 13일 게시물",
@@ -5073,71 +2373,11 @@ export const storyPosts = [
         "displayDate": "2024년 4월 25일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(1).mp4"
-        ],
-        "caption": "2024년 4월 25일 게시물",
-        "type": "story",
-        "rawDate": "240425",
-        "postNum": null
-    },
-    {
-        "id": "story-240425",
-        "date": "2024-04-25",
-        "displayDate": "2024년 4월 25일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(2).jpg"
-        ],
-        "caption": "2024년 4월 25일 게시물",
-        "type": "story",
-        "rawDate": "240425",
-        "postNum": null
-    },
-    {
-        "id": "story-240425",
-        "date": "2024-04-25",
-        "displayDate": "2024년 4월 25일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(3).jpg"
-        ],
-        "caption": "2024년 4월 25일 게시물",
-        "type": "story",
-        "rawDate": "240425",
-        "postNum": null
-    },
-    {
-        "id": "story-240425",
-        "date": "2024-04-25",
-        "displayDate": "2024년 4월 25일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(4).mp4"
-        ],
-        "caption": "2024년 4월 25일 게시물",
-        "type": "story",
-        "rawDate": "240425",
-        "postNum": null
-    },
-    {
-        "id": "story-240425",
-        "date": "2024-04-25",
-        "displayDate": "2024년 4월 25일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(5).jpg"
-        ],
-        "caption": "2024년 4월 25일 게시물",
-        "type": "story",
-        "rawDate": "240425",
-        "postNum": null
-    },
-    {
-        "id": "story-240425",
-        "date": "2024-04-25",
-        "displayDate": "2024년 4월 25일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(1).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(4).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(6).mp4"
         ],
         "caption": "2024년 4월 25일 게시물",
@@ -5151,19 +2391,7 @@ export const storyPosts = [
         "displayDate": "2024년 4월 23일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240423%20(1).jpg"
-        ],
-        "caption": "2024년 4월 23일 게시물",
-        "type": "story",
-        "rawDate": "240423",
-        "postNum": null
-    },
-    {
-        "id": "story-240423",
-        "date": "2024-04-23",
-        "displayDate": "2024년 4월 23일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240423%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240423%20(2).mp4"
         ],
         "caption": "2024년 4월 23일 게시물",
@@ -5186,7 +2414,7 @@ export const storyPosts = [
     }
 ];
 
-// 리포스트 탭 (photo + group 모든 이미지 개별 표시)
+// 리포스트 탭 (photo + group 합침, 같은 날짜면 group 우선)
 export const repostPosts = [
     {
         "id": "repost-0",
@@ -5194,14 +2422,15 @@ export const repostPosts = [
         "displayDate": "2025년 11월 24일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(3).jpg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(3).jpg"
         ],
         "caption": "2025년 11월 24일 게시물",
         "type": "group",
         "rawDate": "251124",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-251124-1"
+        "postNum": 2,
+        "originalId": "group-251124-2"
     },
     {
         "id": "repost-1",
@@ -5209,77 +2438,18 @@ export const repostPosts = [
         "displayDate": "2025년 11월 24일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(2).jpg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(3).jpg"
         ],
         "caption": "2025년 11월 24일 게시물",
         "type": "group",
         "rawDate": "251124",
         "postNum": 1,
-        "imageIndex": 0,
         "originalId": "group-251124-1"
     },
     {
         "id": "repost-2",
-        "date": "2025-11-24",
-        "displayDate": "2025년 11월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(1).jpg"
-        ],
-        "caption": "2025년 11월 24일 게시물",
-        "type": "group",
-        "rawDate": "251124",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-251124-1"
-    },
-    {
-        "id": "repost-3",
-        "date": "2025-11-24",
-        "displayDate": "2025년 11월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(3).jpg"
-        ],
-        "caption": "2025년 11월 24일 게시물",
-        "type": "group",
-        "rawDate": "251124",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-251124-2"
-    },
-    {
-        "id": "repost-4",
-        "date": "2025-11-24",
-        "displayDate": "2025년 11월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(2).jpg"
-        ],
-        "caption": "2025년 11월 24일 게시물",
-        "type": "group",
-        "rawDate": "251124",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-251124-2"
-    },
-    {
-        "id": "repost-5",
-        "date": "2025-11-24",
-        "displayDate": "2025년 11월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(1).jpg"
-        ],
-        "caption": "2025년 11월 24일 게시물",
-        "type": "group",
-        "rawDate": "251124",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-251124-2"
-    },
-    {
-        "id": "repost-6",
         "date": "2025-10-28",
         "displayDate": "2025년 10월 28일",
         "username": "doy.is.here",
@@ -5290,41 +2460,25 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "251028",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-251028"
     },
     {
-        "id": "repost-7",
+        "id": "repost-3",
         "date": "2025-10-24",
         "displayDate": "2025년 10월 24일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251024%20(1).jpg"
-        ],
-        "caption": "2025년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "251024",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-251024"
-    },
-    {
-        "id": "repost-8",
-        "date": "2025-10-24",
-        "displayDate": "2025년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251024%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251024%20(2).jpg"
         ],
         "caption": "2025년 10월 24일 게시물",
         "type": "group",
         "rawDate": "251024",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-251024"
     },
     {
-        "id": "repost-9",
+        "id": "repost-4",
         "date": "2025-10-17",
         "displayDate": "2025년 10월 17일",
         "username": "doy.is.here",
@@ -5335,71 +2489,27 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "251017",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-251017"
     },
     {
-        "id": "repost-10",
+        "id": "repost-5",
         "date": "2025-10-10",
         "displayDate": "2025년 10월 10일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(1).jpg"
-        ],
-        "caption": "2025년 10월 10일 게시물",
-        "type": "group",
-        "rawDate": "251010",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-251010"
-    },
-    {
-        "id": "repost-11",
-        "date": "2025-10-10",
-        "displayDate": "2025년 10월 10일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(2).jpg"
-        ],
-        "caption": "2025년 10월 10일 게시물",
-        "type": "group",
-        "rawDate": "251010",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-251010"
-    },
-    {
-        "id": "repost-12",
-        "date": "2025-10-10",
-        "displayDate": "2025년 10월 10일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(3).jpg"
-        ],
-        "caption": "2025년 10월 10일 게시물",
-        "type": "group",
-        "rawDate": "251010",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-251010"
-    },
-    {
-        "id": "repost-13",
-        "date": "2025-10-10",
-        "displayDate": "2025년 10월 10일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(4).jpg"
         ],
         "caption": "2025년 10월 10일 게시물",
         "type": "group",
         "rawDate": "251010",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-251010"
     },
     {
-        "id": "repost-14",
+        "id": "repost-6",
         "date": "2025-10-05",
         "displayDate": "2025년 10월 5일",
         "username": "doy.is.here",
@@ -5410,581 +2520,178 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "251005",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-251005"
     },
     {
-        "id": "repost-15",
+        "id": "repost-7",
         "date": "2025-09-30",
         "displayDate": "2025년 9월 30일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(1).jpg"
-        ],
-        "caption": "2025년 9월 30일 게시물",
-        "type": "photo",
-        "rawDate": "250930",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250930"
-    },
-    {
-        "id": "repost-16",
-        "date": "2025-09-30",
-        "displayDate": "2025년 9월 30일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(2).jpg"
-        ],
-        "caption": "2025년 9월 30일 게시물",
-        "type": "photo",
-        "rawDate": "250930",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250930"
-    },
-    {
-        "id": "repost-17",
-        "date": "2025-09-30",
-        "displayDate": "2025년 9월 30일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(3).jpg"
-        ],
-        "caption": "2025년 9월 30일 게시물",
-        "type": "photo",
-        "rawDate": "250930",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250930"
-    },
-    {
-        "id": "repost-18",
-        "date": "2025-09-30",
-        "displayDate": "2025년 9월 30일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(4).jpg"
         ],
         "caption": "2025년 9월 30일 게시물",
         "type": "photo",
         "rawDate": "250930",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250930"
     },
     {
-        "id": "repost-19",
+        "id": "repost-8",
         "date": "2025-09-28",
         "displayDate": "2025년 9월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250928%20(1).jpeg"
-        ],
-        "caption": "2025년 9월 28일 게시물",
-        "type": "group",
-        "rawDate": "250928",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250928"
-    },
-    {
-        "id": "repost-20",
-        "date": "2025-09-28",
-        "displayDate": "2025년 9월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250928%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250928%20(2).jpeg"
         ],
         "caption": "2025년 9월 28일 게시물",
         "type": "group",
         "rawDate": "250928",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250928"
     },
     {
-        "id": "repost-21",
+        "id": "repost-9",
         "date": "2025-09-23",
         "displayDate": "2025년 9월 23일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(1).jpg"
-        ],
-        "caption": "2025년 9월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250923",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250923"
-    },
-    {
-        "id": "repost-22",
-        "date": "2025-09-23",
-        "displayDate": "2025년 9월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(2).jpg"
-        ],
-        "caption": "2025년 9월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250923",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250923"
-    },
-    {
-        "id": "repost-23",
-        "date": "2025-09-23",
-        "displayDate": "2025년 9월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(3).jpg"
-        ],
-        "caption": "2025년 9월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250923",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250923"
-    },
-    {
-        "id": "repost-24",
-        "date": "2025-09-23",
-        "displayDate": "2025년 9월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(4).jpg"
-        ],
-        "caption": "2025년 9월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250923",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250923"
-    },
-    {
-        "id": "repost-25",
-        "date": "2025-09-23",
-        "displayDate": "2025년 9월 23일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(5).jpg"
         ],
         "caption": "2025년 9월 23일 게시물",
         "type": "photo",
         "rawDate": "250923",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250923"
     },
     {
-        "id": "repost-26",
+        "id": "repost-10",
         "date": "2025-09-14",
         "displayDate": "2025년 9월 14일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250914%20(1).jpg"
-        ],
-        "caption": "2025년 9월 14일 게시물",
-        "type": "photo",
-        "rawDate": "250914",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250914"
-    },
-    {
-        "id": "repost-27",
-        "date": "2025-09-14",
-        "displayDate": "2025년 9월 14일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250914%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250914%20(2).jpg"
         ],
         "caption": "2025년 9월 14일 게시물",
         "type": "photo",
         "rawDate": "250914",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250914"
     },
     {
-        "id": "repost-28",
+        "id": "repost-11",
         "date": "2025-08-23",
         "displayDate": "2025년 8월 23일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(1).jpg"
-        ],
-        "caption": "2025년 8월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250823",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250823"
-    },
-    {
-        "id": "repost-29",
-        "date": "2025-08-23",
-        "displayDate": "2025년 8월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(2).jpg"
-        ],
-        "caption": "2025년 8월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250823",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250823"
-    },
-    {
-        "id": "repost-30",
-        "date": "2025-08-23",
-        "displayDate": "2025년 8월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(3).jpg"
-        ],
-        "caption": "2025년 8월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250823",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250823"
-    },
-    {
-        "id": "repost-31",
-        "date": "2025-08-23",
-        "displayDate": "2025년 8월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(4).jpg"
-        ],
-        "caption": "2025년 8월 23일 게시물",
-        "type": "photo",
-        "rawDate": "250823",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250823"
-    },
-    {
-        "id": "repost-32",
-        "date": "2025-08-23",
-        "displayDate": "2025년 8월 23일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(5).jpg"
         ],
         "caption": "2025년 8월 23일 게시물",
         "type": "photo",
         "rawDate": "250823",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250823"
     },
     {
-        "id": "repost-33",
+        "id": "repost-12",
         "date": "2025-08-14",
         "displayDate": "2025년 8월 14일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(1).jpg"
-        ],
-        "caption": "2025년 8월 14일 게시물",
-        "type": "photo",
-        "rawDate": "250814",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250814"
-    },
-    {
-        "id": "repost-34",
-        "date": "2025-08-14",
-        "displayDate": "2025년 8월 14일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(2).jpg"
-        ],
-        "caption": "2025년 8월 14일 게시물",
-        "type": "photo",
-        "rawDate": "250814",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250814"
-    },
-    {
-        "id": "repost-35",
-        "date": "2025-08-14",
-        "displayDate": "2025년 8월 14일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(3).jpg"
-        ],
-        "caption": "2025년 8월 14일 게시물",
-        "type": "photo",
-        "rawDate": "250814",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250814"
-    },
-    {
-        "id": "repost-36",
-        "date": "2025-08-14",
-        "displayDate": "2025년 8월 14일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(4).jpg"
         ],
         "caption": "2025년 8월 14일 게시물",
         "type": "photo",
         "rawDate": "250814",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250814"
     },
     {
-        "id": "repost-37",
+        "id": "repost-13",
         "date": "2025-08-07",
         "displayDate": "2025년 8월 7일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(1).jpg"
-        ],
-        "caption": "2025년 8월 7일 게시물",
-        "type": "photo",
-        "rawDate": "250807",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250807"
-    },
-    {
-        "id": "repost-38",
-        "date": "2025-08-07",
-        "displayDate": "2025년 8월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(2).jpg"
-        ],
-        "caption": "2025년 8월 7일 게시물",
-        "type": "photo",
-        "rawDate": "250807",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250807"
-    },
-    {
-        "id": "repost-39",
-        "date": "2025-08-07",
-        "displayDate": "2025년 8월 7일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(3).jpg"
         ],
         "caption": "2025년 8월 7일 게시물",
         "type": "photo",
         "rawDate": "250807",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250807"
     },
     {
-        "id": "repost-40",
+        "id": "repost-14",
         "date": "2025-07-20",
         "displayDate": "2025년 7월 20일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(1).jpg"
-        ],
-        "caption": "2025년 7월 20일 게시물",
-        "type": "group",
-        "rawDate": "250720",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250720"
-    },
-    {
-        "id": "repost-41",
-        "date": "2025-07-20",
-        "displayDate": "2025년 7월 20일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(2).mp4"
-        ],
-        "caption": "2025년 7월 20일 게시물",
-        "type": "group",
-        "rawDate": "250720",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250720"
-    },
-    {
-        "id": "repost-42",
-        "date": "2025-07-20",
-        "displayDate": "2025년 7월 20일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(3).mp4"
-        ],
-        "caption": "2025년 7월 20일 게시물",
-        "type": "group",
-        "rawDate": "250720",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250720"
-    },
-    {
-        "id": "repost-43",
-        "date": "2025-07-20",
-        "displayDate": "2025년 7월 20일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(4).mp4"
-        ],
-        "caption": "2025년 7월 20일 게시물",
-        "type": "group",
-        "rawDate": "250720",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250720"
-    },
-    {
-        "id": "repost-44",
-        "date": "2025-07-20",
-        "displayDate": "2025년 7월 20일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(2).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(3).mp4",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(4).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(5).mp4"
         ],
         "caption": "2025년 7월 20일 게시물",
         "type": "group",
         "rawDate": "250720",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250720"
     },
     {
-        "id": "repost-45",
+        "id": "repost-15",
         "date": "2025-07-16",
         "displayDate": "2025년 7월 16일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(1).jpg"
-        ],
-        "caption": "2025년 7월 16일 게시물",
-        "type": "photo",
-        "rawDate": "250716",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250716"
-    },
-    {
-        "id": "repost-46",
-        "date": "2025-07-16",
-        "displayDate": "2025년 7월 16일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(2).jpg"
-        ],
-        "caption": "2025년 7월 16일 게시물",
-        "type": "photo",
-        "rawDate": "250716",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250716"
-    },
-    {
-        "id": "repost-47",
-        "date": "2025-07-16",
-        "displayDate": "2025년 7월 16일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(3).jpg"
-        ],
-        "caption": "2025년 7월 16일 게시물",
-        "type": "photo",
-        "rawDate": "250716",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250716"
-    },
-    {
-        "id": "repost-48",
-        "date": "2025-07-16",
-        "displayDate": "2025년 7월 16일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(4).jpg"
         ],
         "caption": "2025년 7월 16일 게시물",
         "type": "photo",
         "rawDate": "250716",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250716"
     },
     {
-        "id": "repost-49",
+        "id": "repost-16",
         "date": "2025-07-04",
         "displayDate": "2025년 7월 4일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(1).jpeg"
-        ],
-        "caption": "2025년 7월 4일 게시물",
-        "type": "photo",
-        "rawDate": "250704",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250704"
-    },
-    {
-        "id": "repost-50",
-        "date": "2025-07-04",
-        "displayDate": "2025년 7월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(2).jpeg"
-        ],
-        "caption": "2025년 7월 4일 게시물",
-        "type": "photo",
-        "rawDate": "250704",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250704"
-    },
-    {
-        "id": "repost-51",
-        "date": "2025-07-04",
-        "displayDate": "2025년 7월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(3).jpeg"
-        ],
-        "caption": "2025년 7월 4일 게시물",
-        "type": "photo",
-        "rawDate": "250704",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250704"
-    },
-    {
-        "id": "repost-52",
-        "date": "2025-07-04",
-        "displayDate": "2025년 7월 4일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(2).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(3).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(4).jpeg"
         ],
         "caption": "2025년 7월 4일 게시물",
         "type": "photo",
         "rawDate": "250704",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250704"
     },
     {
-        "id": "repost-53",
+        "id": "repost-17",
         "date": "2025-06-13",
         "displayDate": "2025년 6월 13일",
         "username": "doy.is.here",
@@ -5995,11 +2702,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "250613",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250613"
     },
     {
-        "id": "repost-54",
+        "id": "repost-18",
         "date": "2025-06-12",
         "displayDate": "2025년 6월 12일",
         "username": "doy.is.here",
@@ -6010,11 +2716,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "250612",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250612"
     },
     {
-        "id": "repost-55",
+        "id": "repost-19",
         "date": "2025-06-10",
         "displayDate": "2025년 6월 10일",
         "username": "doy.is.here",
@@ -6025,41 +2730,25 @@ export const repostPosts = [
         "type": "photo",
         "rawDate": "250610",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250610"
     },
     {
-        "id": "repost-56",
+        "id": "repost-20",
         "date": "2025-05-04",
         "displayDate": "2025년 5월 4일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250504%20(1).jpg"
-        ],
-        "caption": "2025년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "250504",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250504"
-    },
-    {
-        "id": "repost-57",
-        "date": "2025-05-04",
-        "displayDate": "2025년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250504%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250504%20(2).jpg"
         ],
         "caption": "2025년 5월 4일 게시물",
         "type": "photo",
         "rawDate": "250504",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250504"
     },
     {
-        "id": "repost-58",
+        "id": "repost-21",
         "date": "2025-05-03",
         "displayDate": "2025년 5월 3일",
         "username": "doy.is.here",
@@ -6070,236 +2759,64 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "250503",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250503"
     },
     {
-        "id": "repost-59",
+        "id": "repost-22",
         "date": "2025-04-22",
         "displayDate": "2025년 4월 22일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(1).jpg"
-        ],
-        "caption": "2025년 4월 22일 게시물",
-        "type": "photo",
-        "rawDate": "250422",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250422"
-    },
-    {
-        "id": "repost-60",
-        "date": "2025-04-22",
-        "displayDate": "2025년 4월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(2).jpg"
-        ],
-        "caption": "2025년 4월 22일 게시물",
-        "type": "photo",
-        "rawDate": "250422",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250422"
-    },
-    {
-        "id": "repost-61",
-        "date": "2025-04-22",
-        "displayDate": "2025년 4월 22일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(3).jpg"
         ],
         "caption": "2025년 4월 22일 게시물",
         "type": "photo",
         "rawDate": "250422",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250422"
     },
     {
-        "id": "repost-62",
+        "id": "repost-23",
         "date": "2025-03-27",
         "displayDate": "2025년 3월 27일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(1).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250327"
-    },
-    {
-        "id": "repost-63",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(2).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250327"
-    },
-    {
-        "id": "repost-64",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(3).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250327"
-    },
-    {
-        "id": "repost-65",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(4).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250327"
-    },
-    {
-        "id": "repost-66",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(5).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250327"
-    },
-    {
-        "id": "repost-67",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(6).jpg"
-        ],
-        "caption": "2025년 3월 27일 게시물",
-        "type": "photo",
-        "rawDate": "250327",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250327"
-    },
-    {
-        "id": "repost-68",
-        "date": "2025-03-27",
-        "displayDate": "2025년 3월 27일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(5).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(6).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(7).jpg"
         ],
         "caption": "2025년 3월 27일 게시물",
         "type": "photo",
         "rawDate": "250327",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250327"
     },
     {
-        "id": "repost-69",
+        "id": "repost-24",
         "date": "2025-03-18",
         "displayDate": "2025년 3월 18일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(1).jpg"
-        ],
-        "caption": "2025년 3월 18일 게시물",
-        "type": "photo",
-        "rawDate": "250318",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250318"
-    },
-    {
-        "id": "repost-70",
-        "date": "2025-03-18",
-        "displayDate": "2025년 3월 18일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(2).jpg"
-        ],
-        "caption": "2025년 3월 18일 게시물",
-        "type": "photo",
-        "rawDate": "250318",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250318"
-    },
-    {
-        "id": "repost-71",
-        "date": "2025-03-18",
-        "displayDate": "2025년 3월 18일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(3).jpg"
-        ],
-        "caption": "2025년 3월 18일 게시물",
-        "type": "photo",
-        "rawDate": "250318",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250318"
-    },
-    {
-        "id": "repost-72",
-        "date": "2025-03-18",
-        "displayDate": "2025년 3월 18일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(4).jpg"
-        ],
-        "caption": "2025년 3월 18일 게시물",
-        "type": "photo",
-        "rawDate": "250318",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250318"
-    },
-    {
-        "id": "repost-73",
-        "date": "2025-03-18",
-        "displayDate": "2025년 3월 18일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(5).jpg"
         ],
         "caption": "2025년 3월 18일 게시물",
         "type": "photo",
         "rawDate": "250318",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250318"
     },
     {
-        "id": "repost-74",
+        "id": "repost-25",
         "date": "2025-03-16",
         "displayDate": "2025년 3월 16일",
         "username": "doy.is.here",
@@ -6310,11 +2827,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "250316",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250316"
     },
     {
-        "id": "repost-75",
+        "id": "repost-26",
         "date": "2025-03-15",
         "displayDate": "2025년 3월 15일",
         "username": "doy.is.here",
@@ -6325,11 +2841,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "250315",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250315"
     },
     {
-        "id": "repost-76",
+        "id": "repost-27",
         "date": "2025-03-14",
         "displayDate": "2025년 3월 14일",
         "username": "doy.is.here",
@@ -6340,41 +2855,25 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "250314",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250314"
     },
     {
-        "id": "repost-77",
+        "id": "repost-28",
         "date": "2025-03-11",
         "displayDate": "2025년 3월 11일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250311%20(1).jpg"
-        ],
-        "caption": "2025년 3월 11일 게시물",
-        "type": "group",
-        "rawDate": "250311",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250311"
-    },
-    {
-        "id": "repost-78",
-        "date": "2025-03-11",
-        "displayDate": "2025년 3월 11일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250311%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250311%20(2).jpg"
         ],
         "caption": "2025년 3월 11일 게시물",
         "type": "group",
         "rawDate": "250311",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250311"
     },
     {
-        "id": "repost-79",
+        "id": "repost-29",
         "date": "2025-03-10",
         "displayDate": "2025년 3월 10일",
         "username": "doy.is.here",
@@ -6385,11 +2884,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "250310",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250310"
     },
     {
-        "id": "repost-80",
+        "id": "repost-30",
         "date": "2025-03-08",
         "displayDate": "2025년 3월 8일",
         "username": "doy.is.here",
@@ -6400,101 +2898,42 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "250308",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250308"
     },
     {
-        "id": "repost-81",
+        "id": "repost-31",
         "date": "2025-02-28",
         "displayDate": "2025년 2월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228%20(1).jpg"
-        ],
-        "caption": "2025년 2월 28일 게시물",
-        "type": "group",
-        "rawDate": "250228",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250228"
-    },
-    {
-        "id": "repost-82",
-        "date": "2025-02-28",
-        "displayDate": "2025년 2월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228.jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228%20(2).jpg"
         ],
         "caption": "2025년 2월 28일 게시물",
         "type": "group",
         "rawDate": "250228",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250228"
     },
     {
-        "id": "repost-83",
-        "date": "2025-02-28",
-        "displayDate": "2025년 2월 28일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228.jpeg"
-        ],
-        "caption": "2025년 2월 28일 게시물",
-        "type": "group",
-        "rawDate": "250228",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250228"
-    },
-    {
-        "id": "repost-84",
+        "id": "repost-32",
         "date": "2025-02-19",
         "displayDate": "2025년 2월 19일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(1).jpg"
-        ],
-        "caption": "2025년 2월 19일 게시물",
-        "type": "photo",
-        "rawDate": "250219",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250219"
-    },
-    {
-        "id": "repost-85",
-        "date": "2025-02-19",
-        "displayDate": "2025년 2월 19일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(2).jpg"
-        ],
-        "caption": "2025년 2월 19일 게시물",
-        "type": "photo",
-        "rawDate": "250219",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250219"
-    },
-    {
-        "id": "repost-86",
-        "date": "2025-02-19",
-        "displayDate": "2025년 2월 19일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(3).jpg"
         ],
         "caption": "2025년 2월 19일 게시물",
         "type": "photo",
         "rawDate": "250219",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250219"
     },
     {
-        "id": "repost-87",
+        "id": "repost-33",
         "date": "2025-02-16",
         "displayDate": "2025년 2월 16일",
         "username": "doy.is.here",
@@ -6505,236 +2944,62 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "250216",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250216"
     },
     {
-        "id": "repost-88",
+        "id": "repost-34",
         "date": "2025-02-10",
         "displayDate": "2025년 2월 10일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(1).jpg"
-        ],
-        "caption": "2025년 2월 10일 게시물",
-        "type": "photo",
-        "rawDate": "250210",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250210"
-    },
-    {
-        "id": "repost-89",
-        "date": "2025-02-10",
-        "displayDate": "2025년 2월 10일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(2).jpg"
-        ],
-        "caption": "2025년 2월 10일 게시물",
-        "type": "photo",
-        "rawDate": "250210",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250210"
-    },
-    {
-        "id": "repost-90",
-        "date": "2025-02-10",
-        "displayDate": "2025년 2월 10일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(3).jpg"
-        ],
-        "caption": "2025년 2월 10일 게시물",
-        "type": "photo",
-        "rawDate": "250210",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250210"
-    },
-    {
-        "id": "repost-91",
-        "date": "2025-02-10",
-        "displayDate": "2025년 2월 10일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(4).jpg"
         ],
         "caption": "2025년 2월 10일 게시물",
         "type": "photo",
         "rawDate": "250210",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250210"
     },
     {
-        "id": "repost-92",
+        "id": "repost-35",
         "date": "2025-02-09",
         "displayDate": "2025년 2월 9일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(1).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "group",
-        "rawDate": "250209",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250209"
-    },
-    {
-        "id": "repost-93",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(2).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "group",
-        "rawDate": "250209",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250209"
-    },
-    {
-        "id": "repost-94",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(3).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "group",
-        "rawDate": "250209",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250209"
-    },
-    {
-        "id": "repost-95",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(4).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "group",
-        "rawDate": "250209",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250209"
-    },
-    {
-        "id": "repost-96",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(5).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "group",
-        "rawDate": "250209",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250209"
-    },
-    {
-        "id": "repost-97",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(6).jpg"
         ],
         "caption": "2025년 2월 9일 게시물",
         "type": "group",
         "rawDate": "250209",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250209"
     },
     {
-        "id": "repost-98",
+        "id": "repost-36",
         "date": "2025-02-09",
         "displayDate": "2025년 2월 9일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(1).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "photo",
-        "rawDate": "250209",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250209"
-    },
-    {
-        "id": "repost-99",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(2).jpg"
-        ],
-        "caption": "2025년 2월 9일 게시물",
-        "type": "photo",
-        "rawDate": "250209",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-250209"
-    },
-    {
-        "id": "repost-100",
-        "date": "2025-02-09",
-        "displayDate": "2025년 2월 9일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(3).jpg"
         ],
         "caption": "2025년 2월 9일 게시물",
         "type": "photo",
         "rawDate": "250209",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-250209"
     },
     {
-        "id": "repost-101",
-        "date": "2025-02-08",
-        "displayDate": "2025년 2월 8일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250208-1%20(2).jpeg"
-        ],
-        "caption": "2025년 2월 8일 게시물",
-        "type": "group",
-        "rawDate": "250208",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-250208-1"
-    },
-    {
-        "id": "repost-102",
-        "date": "2025-02-08",
-        "displayDate": "2025년 2월 8일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250208-1%20(1).jpeg"
-        ],
-        "caption": "2025년 2월 8일 게시물",
-        "type": "group",
-        "rawDate": "250208",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-250208-1"
-    },
-    {
-        "id": "repost-103",
+        "id": "repost-37",
         "date": "2025-02-08",
         "displayDate": "2025년 2월 8일",
         "username": "doy.is.here",
@@ -6745,221 +3010,117 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "250208",
         "postNum": 2,
-        "imageIndex": 0,
         "originalId": "group-250208-2"
     },
     {
-        "id": "repost-104",
-        "date": "2025-02-07",
-        "displayDate": "2025년 2월 7일",
+        "id": "repost-38",
+        "date": "2025-02-08",
+        "displayDate": "2025년 2월 8일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250207%20(1).jpg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250208-1%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250208-1%20(2).jpeg"
         ],
-        "caption": "2025년 2월 7일 게시물",
+        "caption": "2025년 2월 8일 게시물",
         "type": "group",
-        "rawDate": "250207",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250207"
+        "rawDate": "250208",
+        "postNum": 1,
+        "originalId": "group-250208-1"
     },
     {
-        "id": "repost-105",
+        "id": "repost-39",
         "date": "2025-02-07",
         "displayDate": "2025년 2월 7일",
         "username": "doy.is.here",
         "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250207%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250207%20(2).jpg"
         ],
         "caption": "2025년 2월 7일 게시물",
         "type": "group",
         "rawDate": "250207",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250207"
     },
     {
-        "id": "repost-106",
+        "id": "repost-40",
         "date": "2025-02-01",
         "displayDate": "2025년 2월 1일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(1).jpg"
-        ],
-        "caption": "2025년 2월 1일 게시물",
-        "type": "group",
-        "rawDate": "250201",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250201"
-    },
-    {
-        "id": "repost-107",
-        "date": "2025-02-01",
-        "displayDate": "2025년 2월 1일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(2).jpg"
-        ],
-        "caption": "2025년 2월 1일 게시물",
-        "type": "group",
-        "rawDate": "250201",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250201"
-    },
-    {
-        "id": "repost-108",
-        "date": "2025-02-01",
-        "displayDate": "2025년 2월 1일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(3).jpg"
         ],
         "caption": "2025년 2월 1일 게시물",
         "type": "group",
         "rawDate": "250201",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250201"
     },
     {
-        "id": "repost-109",
+        "id": "repost-41",
         "date": "2025-01-31",
         "displayDate": "2025년 1월 31일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250131%20(1).jpg"
-        ],
-        "caption": "2025년 1월 31일 게시물",
-        "type": "group",
-        "rawDate": "250131",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250131"
-    },
-    {
-        "id": "repost-110",
-        "date": "2025-01-31",
-        "displayDate": "2025년 1월 31일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250131%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250131%20(2).jpg"
         ],
         "caption": "2025년 1월 31일 게시물",
         "type": "group",
         "rawDate": "250131",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250131"
     },
     {
-        "id": "repost-111",
+        "id": "repost-42",
         "date": "2025-01-22",
         "displayDate": "2025년 1월 22일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(1).jpeg"
-        ],
-        "caption": "2025년 1월 22일 게시물",
-        "type": "group",
-        "rawDate": "250122",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250122"
-    },
-    {
-        "id": "repost-112",
-        "date": "2025-01-22",
-        "displayDate": "2025년 1월 22일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(2).jpeg"
         ],
         "caption": "2025년 1월 22일 게시물",
         "type": "group",
         "rawDate": "250122",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250122"
     },
     {
-        "id": "repost-113",
+        "id": "repost-43",
         "date": "2025-01-09",
         "displayDate": "2025년 1월 9일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250109%20(1).jpg"
-        ],
-        "caption": "2025년 1월 9일 게시물",
-        "type": "group",
-        "rawDate": "250109",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-250109"
-    },
-    {
-        "id": "repost-114",
-        "date": "2025-01-09",
-        "displayDate": "2025년 1월 9일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250109%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250109%20(2).jpg"
         ],
         "caption": "2025년 1월 9일 게시물",
         "type": "group",
         "rawDate": "250109",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-250109"
     },
     {
-        "id": "repost-115",
+        "id": "repost-44",
         "date": "2024-12-26",
         "displayDate": "2024년 12월 26일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241226%20(1).jpg"
-        ],
-        "caption": "2024년 12월 26일 게시물",
-        "type": "photo",
-        "rawDate": "241226",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241226"
-    },
-    {
-        "id": "repost-116",
-        "date": "2024-12-26",
-        "displayDate": "2024년 12월 26일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241226%20(2).jpg"
-        ],
-        "caption": "2024년 12월 26일 게시물",
-        "type": "photo",
-        "rawDate": "241226",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241226"
-    },
-    {
-        "id": "repost-117",
-        "date": "2024-12-26",
-        "displayDate": "2024년 12월 26일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241226%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241226%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241226%20(3).jpg"
         ],
         "caption": "2024년 12월 26일 게시물",
         "type": "photo",
         "rawDate": "241226",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241226"
     },
     {
-        "id": "repost-118",
+        "id": "repost-45",
         "date": "2024-12-25",
         "displayDate": "2024년 12월 25일",
         "username": "doy.is.here",
@@ -6970,131 +3131,57 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241225",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241225"
     },
     {
-        "id": "repost-119",
+        "id": "repost-46",
         "date": "2024-12-24",
         "displayDate": "2024년 12월 24일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(1).jpg"
-        ],
-        "caption": "2024년 12월 24일 게시물",
-        "type": "group",
-        "rawDate": "241224",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241224"
-    },
-    {
-        "id": "repost-120",
-        "date": "2024-12-24",
-        "displayDate": "2024년 12월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(2).jpg"
-        ],
-        "caption": "2024년 12월 24일 게시물",
-        "type": "group",
-        "rawDate": "241224",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241224"
-    },
-    {
-        "id": "repost-121",
-        "date": "2024-12-24",
-        "displayDate": "2024년 12월 24일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(3).jpg"
         ],
         "caption": "2024년 12월 24일 게시물",
         "type": "group",
         "rawDate": "241224",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241224"
     },
     {
-        "id": "repost-122",
+        "id": "repost-47",
         "date": "2024-12-23",
         "displayDate": "2024년 12월 23일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241223%20(1).jpg"
-        ],
-        "caption": "2024년 12월 23일 게시물",
-        "type": "group",
-        "rawDate": "241223",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241223"
-    },
-    {
-        "id": "repost-123",
-        "date": "2024-12-23",
-        "displayDate": "2024년 12월 23일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241223%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241223%20(2).jpg"
         ],
         "caption": "2024년 12월 23일 게시물",
         "type": "group",
         "rawDate": "241223",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241223"
     },
     {
-        "id": "repost-124",
+        "id": "repost-48",
         "date": "2024-12-23",
         "displayDate": "2024년 12월 23일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241223%20(1).jpg"
-        ],
-        "caption": "2024년 12월 23일 게시물",
-        "type": "photo",
-        "rawDate": "241223",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241223"
-    },
-    {
-        "id": "repost-125",
-        "date": "2024-12-23",
-        "displayDate": "2024년 12월 23일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241223%20(2).jpg"
-        ],
-        "caption": "2024년 12월 23일 게시물",
-        "type": "photo",
-        "rawDate": "241223",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241223"
-    },
-    {
-        "id": "repost-126",
-        "date": "2024-12-23",
-        "displayDate": "2024년 12월 23일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241223%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241223%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241223%20(3).jpg"
         ],
         "caption": "2024년 12월 23일 게시물",
         "type": "photo",
         "rawDate": "241223",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241223"
     },
     {
-        "id": "repost-127",
+        "id": "repost-49",
         "date": "2024-12-20",
         "displayDate": "2024년 12월 20일",
         "username": "doy.is.here",
@@ -7105,71 +3192,27 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241220",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241220"
     },
     {
-        "id": "repost-128",
+        "id": "repost-50",
         "date": "2024-12-16",
         "displayDate": "2024년 12월 16일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(1).jpg"
-        ],
-        "caption": "2024년 12월 16일 게시물",
-        "type": "photo",
-        "rawDate": "241216",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241216"
-    },
-    {
-        "id": "repost-129",
-        "date": "2024-12-16",
-        "displayDate": "2024년 12월 16일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(2).jpg"
-        ],
-        "caption": "2024년 12월 16일 게시물",
-        "type": "photo",
-        "rawDate": "241216",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241216"
-    },
-    {
-        "id": "repost-130",
-        "date": "2024-12-16",
-        "displayDate": "2024년 12월 16일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(3).jpg"
-        ],
-        "caption": "2024년 12월 16일 게시물",
-        "type": "photo",
-        "rawDate": "241216",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241216"
-    },
-    {
-        "id": "repost-131",
-        "date": "2024-12-16",
-        "displayDate": "2024년 12월 16일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(4).jpg"
         ],
         "caption": "2024년 12월 16일 게시물",
         "type": "photo",
         "rawDate": "241216",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241216"
     },
     {
-        "id": "repost-132",
+        "id": "repost-51",
         "date": "2024-12-14",
         "displayDate": "2024년 12월 14일",
         "username": "doy.is.here",
@@ -7180,11 +3223,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241214",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241214"
     },
     {
-        "id": "repost-133",
+        "id": "repost-52",
         "date": "2024-12-13",
         "displayDate": "2024년 12월 13일",
         "username": "doy.is.here",
@@ -7195,101 +3237,42 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241213",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241213"
     },
     {
-        "id": "repost-134",
+        "id": "repost-53",
         "date": "2024-12-05",
         "displayDate": "2024년 12월 5일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(1).jpg"
-        ],
-        "caption": "2024년 12월 5일 게시물",
-        "type": "photo",
-        "rawDate": "241205",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241205"
-    },
-    {
-        "id": "repost-135",
-        "date": "2024-12-05",
-        "displayDate": "2024년 12월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(2).jpg"
-        ],
-        "caption": "2024년 12월 5일 게시물",
-        "type": "photo",
-        "rawDate": "241205",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241205"
-    },
-    {
-        "id": "repost-136",
-        "date": "2024-12-05",
-        "displayDate": "2024년 12월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(3).jpg"
-        ],
-        "caption": "2024년 12월 5일 게시물",
-        "type": "photo",
-        "rawDate": "241205",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241205"
-    },
-    {
-        "id": "repost-137",
-        "date": "2024-12-05",
-        "displayDate": "2024년 12월 5일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(4).jpg"
         ],
         "caption": "2024년 12월 5일 게시물",
         "type": "photo",
         "rawDate": "241205",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241205"
     },
     {
-        "id": "repost-138",
+        "id": "repost-54",
         "date": "2024-11-25",
         "displayDate": "2024년 11월 25일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241125%20(1).jpg"
-        ],
-        "caption": "2024년 11월 25일 게시물",
-        "type": "photo",
-        "rawDate": "241125",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241125"
-    },
-    {
-        "id": "repost-139",
-        "date": "2024-11-25",
-        "displayDate": "2024년 11월 25일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241125%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241125%20(2).jpg"
         ],
         "caption": "2024년 11월 25일 게시물",
         "type": "photo",
         "rawDate": "241125",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241125"
     },
     {
-        "id": "repost-140",
+        "id": "repost-55",
         "date": "2024-11-23",
         "displayDate": "2024년 11월 23일",
         "username": "doy.is.here",
@@ -7300,191 +3283,89 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241123",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241123"
     },
     {
-        "id": "repost-141",
+        "id": "repost-56",
         "date": "2024-11-17",
         "displayDate": "2024년 11월 17일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-1%20(2).jpg"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "group",
-        "rawDate": "241117",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-241117-1"
-    },
-    {
-        "id": "repost-142",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-1%20(1).jpg"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "group",
-        "rawDate": "241117",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-241117-1"
-    },
-    {
-        "id": "repost-143",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-2%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-2%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-2%20(3).jpg"
         ],
         "caption": "2024년 11월 17일 게시물",
         "type": "group",
         "rawDate": "241117",
         "postNum": 2,
-        "imageIndex": 0,
         "originalId": "group-241117-2"
     },
     {
-        "id": "repost-144",
+        "id": "repost-57",
         "date": "2024-11-17",
         "displayDate": "2024년 11월 17일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-2%20(2).jpg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-1%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-1%20(2).jpg"
         ],
         "caption": "2024년 11월 17일 게시물",
         "type": "group",
         "rawDate": "241117",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-241117-2"
+        "postNum": 1,
+        "originalId": "group-241117-1"
     },
     {
-        "id": "repost-145",
+        "id": "repost-58",
         "date": "2024-11-17",
         "displayDate": "2024년 11월 17일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241117-2%20(1).jpg"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "group",
-        "rawDate": "241117",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-241117-2"
-    },
-    {
-        "id": "repost-146",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(1).jpg"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "photo",
-        "rawDate": "241117",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241117"
-    },
-    {
-        "id": "repost-147",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(2).jpg"
-        ],
-        "caption": "2024년 11월 17일 게시물",
-        "type": "photo",
-        "rawDate": "241117",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241117"
-    },
-    {
-        "id": "repost-148",
-        "date": "2024-11-17",
-        "displayDate": "2024년 11월 17일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(3).jpg"
         ],
         "caption": "2024년 11월 17일 게시물",
         "type": "photo",
         "rawDate": "241117",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241117"
     },
     {
-        "id": "repost-149",
+        "id": "repost-59",
         "date": "2024-11-12",
         "displayDate": "2024년 11월 12일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(1).jpg"
-        ],
-        "caption": "2024년 11월 12일 게시물",
-        "type": "photo",
-        "rawDate": "241112",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241112"
-    },
-    {
-        "id": "repost-150",
-        "date": "2024-11-12",
-        "displayDate": "2024년 11월 12일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(2).jpg"
-        ],
-        "caption": "2024년 11월 12일 게시물",
-        "type": "photo",
-        "rawDate": "241112",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241112"
-    },
-    {
-        "id": "repost-151",
-        "date": "2024-11-12",
-        "displayDate": "2024년 11월 12일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(3).jpg"
-        ],
-        "caption": "2024년 11월 12일 게시물",
-        "type": "photo",
-        "rawDate": "241112",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241112"
-    },
-    {
-        "id": "repost-152",
-        "date": "2024-11-12",
-        "displayDate": "2024년 11월 12일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(4).jpg"
         ],
         "caption": "2024년 11월 12일 게시물",
         "type": "photo",
         "rawDate": "241112",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241112"
     },
     {
-        "id": "repost-153",
+        "id": "repost-60",
+        "date": "2024-11-09",
+        "displayDate": "2024년 11월 9일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241109-2%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241109-2%20(2).jpg"
+        ],
+        "caption": "2024년 11월 9일 게시물",
+        "type": "group",
+        "rawDate": "241109",
+        "postNum": 2,
+        "originalId": "group-241109-2"
+    },
+    {
+        "id": "repost-61",
         "date": "2024-11-09",
         "displayDate": "2024년 11월 9일",
         "username": "doy.is.here",
@@ -7495,131 +3376,42 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241109",
         "postNum": 1,
-        "imageIndex": 0,
         "originalId": "group-241109-1"
     },
     {
-        "id": "repost-154",
+        "id": "repost-62",
         "date": "2024-11-09",
         "displayDate": "2024년 11월 9일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241109-2%20(2).jpg"
-        ],
-        "caption": "2024년 11월 9일 게시물",
-        "type": "group",
-        "rawDate": "241109",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-241109-2"
-    },
-    {
-        "id": "repost-155",
-        "date": "2024-11-09",
-        "displayDate": "2024년 11월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241109-2%20(1).jpg"
-        ],
-        "caption": "2024년 11월 9일 게시물",
-        "type": "group",
-        "rawDate": "241109",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-241109-2"
-    },
-    {
-        "id": "repost-156",
-        "date": "2024-11-09",
-        "displayDate": "2024년 11월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(1).jpg"
-        ],
-        "caption": "2024년 11월 9일 게시물",
-        "type": "photo",
-        "rawDate": "241109",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241109"
-    },
-    {
-        "id": "repost-157",
-        "date": "2024-11-09",
-        "displayDate": "2024년 11월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(2).jpg"
-        ],
-        "caption": "2024년 11월 9일 게시물",
-        "type": "photo",
-        "rawDate": "241109",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241109"
-    },
-    {
-        "id": "repost-158",
-        "date": "2024-11-09",
-        "displayDate": "2024년 11월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(3).jpg"
-        ],
-        "caption": "2024년 11월 9일 게시물",
-        "type": "photo",
-        "rawDate": "241109",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241109"
-    },
-    {
-        "id": "repost-159",
-        "date": "2024-11-09",
-        "displayDate": "2024년 11월 9일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(4).jpg"
         ],
         "caption": "2024년 11월 9일 게시물",
         "type": "photo",
         "rawDate": "241109",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241109"
     },
     {
-        "id": "repost-160",
+        "id": "repost-63",
         "date": "2024-11-07",
         "displayDate": "2024년 11월 7일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241107%20(1).jpg"
-        ],
-        "caption": "2024년 11월 7일 게시물",
-        "type": "photo",
-        "rawDate": "241107",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241107"
-    },
-    {
-        "id": "repost-161",
-        "date": "2024-11-07",
-        "displayDate": "2024년 11월 7일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241107%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241107%20(2).jpg"
         ],
         "caption": "2024년 11월 7일 게시물",
         "type": "photo",
         "rawDate": "241107",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241107"
     },
     {
-        "id": "repost-162",
+        "id": "repost-64",
         "date": "2024-11-06",
         "displayDate": "2024년 11월 6일",
         "username": "doy.is.here",
@@ -7630,11 +3422,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241106",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241106"
     },
     {
-        "id": "repost-163",
+        "id": "repost-65",
         "date": "2024-11-02",
         "displayDate": "2024년 11월 2일",
         "username": "doy.is.here",
@@ -7645,11 +3436,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241102",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241102"
     },
     {
-        "id": "repost-164",
+        "id": "repost-66",
         "date": "2024-11-01",
         "displayDate": "2024년 11월 1일",
         "username": "doy.is.here",
@@ -7660,206 +3450,91 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241101",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241101"
     },
     {
-        "id": "repost-165",
+        "id": "repost-67",
         "date": "2024-11-01",
         "displayDate": "2024년 11월 1일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241101%20(1).jpg"
-        ],
-        "caption": "2024년 11월 1일 게시물",
-        "type": "photo",
-        "rawDate": "241101",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241101"
-    },
-    {
-        "id": "repost-166",
-        "date": "2024-11-01",
-        "displayDate": "2024년 11월 1일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241101%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241101%20(2).jpg"
         ],
         "caption": "2024년 11월 1일 게시물",
         "type": "photo",
         "rawDate": "241101",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241101"
     },
     {
-        "id": "repost-167",
+        "id": "repost-68",
         "date": "2024-10-28",
         "displayDate": "2024년 10월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241028%20(1).jpg"
-        ],
-        "caption": "2024년 10월 28일 게시물",
-        "type": "photo",
-        "rawDate": "241028",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241028"
-    },
-    {
-        "id": "repost-168",
-        "date": "2024-10-28",
-        "displayDate": "2024년 10월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241028%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241028%20(2).jpg"
         ],
         "caption": "2024년 10월 28일 게시물",
         "type": "photo",
         "rawDate": "241028",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241028"
     },
     {
-        "id": "repost-169",
+        "id": "repost-69",
         "date": "2024-10-25",
         "displayDate": "2024년 10월 25일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(1).jpg"
-        ],
-        "caption": "2024년 10월 25일 게시물",
-        "type": "photo",
-        "rawDate": "241025",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241025"
-    },
-    {
-        "id": "repost-170",
-        "date": "2024-10-25",
-        "displayDate": "2024년 10월 25일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(2).jpg"
-        ],
-        "caption": "2024년 10월 25일 게시물",
-        "type": "photo",
-        "rawDate": "241025",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241025"
-    },
-    {
-        "id": "repost-171",
-        "date": "2024-10-25",
-        "displayDate": "2024년 10월 25일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(3).jpg"
         ],
         "caption": "2024년 10월 25일 게시물",
         "type": "photo",
         "rawDate": "241025",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241025"
     },
     {
-        "id": "repost-172",
+        "id": "repost-70",
         "date": "2024-10-24",
         "displayDate": "2024년 10월 24일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(1).jpg"
-        ],
-        "caption": "2024년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "241024",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241024"
-    },
-    {
-        "id": "repost-173",
-        "date": "2024-10-24",
-        "displayDate": "2024년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(2).jpg"
-        ],
-        "caption": "2024년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "241024",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241024"
-    },
-    {
-        "id": "repost-174",
-        "date": "2024-10-24",
-        "displayDate": "2024년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(3).jpg"
-        ],
-        "caption": "2024년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "241024",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241024"
-    },
-    {
-        "id": "repost-175",
-        "date": "2024-10-24",
-        "displayDate": "2024년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(4).jpg"
-        ],
-        "caption": "2024년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "241024",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241024"
-    },
-    {
-        "id": "repost-176",
-        "date": "2024-10-24",
-        "displayDate": "2024년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(5).jpg"
-        ],
-        "caption": "2024년 10월 24일 게시물",
-        "type": "group",
-        "rawDate": "241024",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241024"
-    },
-    {
-        "id": "repost-177",
-        "date": "2024-10-24",
-        "displayDate": "2024년 10월 24일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241024%20(6).mp4"
         ],
         "caption": "2024년 10월 24일 게시물",
         "type": "group",
         "rawDate": "241024",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241024"
     },
     {
-        "id": "repost-178",
+        "id": "repost-71",
+        "date": "2024-10-19",
+        "displayDate": "2024년 10월 19일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(3).jpg"
+        ],
+        "caption": "2024년 10월 19일 게시물",
+        "type": "group",
+        "rawDate": "241019",
+        "postNum": 2,
+        "originalId": "group-241019-2"
+    },
+    {
+        "id": "repost-72",
         "date": "2024-10-19",
         "displayDate": "2024년 10월 19일",
         "username": "doy.is.here",
@@ -7870,56 +3545,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241019",
         "postNum": 1,
-        "imageIndex": 0,
         "originalId": "group-241019-1"
     },
     {
-        "id": "repost-179",
-        "date": "2024-10-19",
-        "displayDate": "2024년 10월 19일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(3).jpg"
-        ],
-        "caption": "2024년 10월 19일 게시물",
-        "type": "group",
-        "rawDate": "241019",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-241019-2"
-    },
-    {
-        "id": "repost-180",
-        "date": "2024-10-19",
-        "displayDate": "2024년 10월 19일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(2).jpg"
-        ],
-        "caption": "2024년 10월 19일 게시물",
-        "type": "group",
-        "rawDate": "241019",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-241019-2"
-    },
-    {
-        "id": "repost-181",
-        "date": "2024-10-19",
-        "displayDate": "2024년 10월 19일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241019-2%20(1).jpg"
-        ],
-        "caption": "2024년 10월 19일 게시물",
-        "type": "group",
-        "rawDate": "241019",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-241019-2"
-    },
-    {
-        "id": "repost-182",
+        "id": "repost-73",
         "date": "2024-10-18",
         "displayDate": "2024년 10월 18일",
         "username": "doy.is.here",
@@ -7930,11 +3559,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241018",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241018"
     },
     {
-        "id": "repost-183",
+        "id": "repost-74",
         "date": "2024-10-17",
         "displayDate": "2024년 10월 17일",
         "username": "doy.is.here",
@@ -7945,56 +3573,26 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241017",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241017"
     },
     {
-        "id": "repost-184",
+        "id": "repost-75",
         "date": "2024-10-13",
         "displayDate": "2024년 10월 13일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241013%20(1).jpg"
-        ],
-        "caption": "2024년 10월 13일 게시물",
-        "type": "group",
-        "rawDate": "241013",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241013"
-    },
-    {
-        "id": "repost-185",
-        "date": "2024-10-13",
-        "displayDate": "2024년 10월 13일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241013.jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241013%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241013%20(2).jpg"
         ],
         "caption": "2024년 10월 13일 게시물",
         "type": "group",
         "rawDate": "241013",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241013"
     },
     {
-        "id": "repost-186",
-        "date": "2024-10-13",
-        "displayDate": "2024년 10월 13일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241013.jpg"
-        ],
-        "caption": "2024년 10월 13일 게시물",
-        "type": "group",
-        "rawDate": "241013",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241013"
-    },
-    {
-        "id": "repost-187",
+        "id": "repost-76",
         "date": "2024-10-12",
         "displayDate": "2024년 10월 12일",
         "username": "doy.is.here",
@@ -8005,131 +3603,43 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241012",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241012"
     },
     {
-        "id": "repost-188",
+        "id": "repost-77",
         "date": "2024-10-12",
         "displayDate": "2024년 10월 12일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(1).jpg"
-        ],
-        "caption": "2024년 10월 12일 게시물",
-        "type": "photo",
-        "rawDate": "241012",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241012"
-    },
-    {
-        "id": "repost-189",
-        "date": "2024-10-12",
-        "displayDate": "2024년 10월 12일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(2).jpg"
-        ],
-        "caption": "2024년 10월 12일 게시물",
-        "type": "photo",
-        "rawDate": "241012",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-241012"
-    },
-    {
-        "id": "repost-190",
-        "date": "2024-10-12",
-        "displayDate": "2024년 10월 12일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(3).jpg"
         ],
         "caption": "2024년 10월 12일 게시물",
         "type": "photo",
         "rawDate": "241012",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-241012"
     },
     {
-        "id": "repost-191",
+        "id": "repost-78",
         "date": "2024-10-11",
         "displayDate": "2024년 10월 11일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(1).jpg"
-        ],
-        "caption": "2024년 10월 11일 게시물",
-        "type": "group",
-        "rawDate": "241011",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241011"
-    },
-    {
-        "id": "repost-192",
-        "date": "2024-10-11",
-        "displayDate": "2024년 10월 11일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(2).jpg"
-        ],
-        "caption": "2024년 10월 11일 게시물",
-        "type": "group",
-        "rawDate": "241011",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241011"
-    },
-    {
-        "id": "repost-193",
-        "date": "2024-10-11",
-        "displayDate": "2024년 10월 11일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(3).jpg"
-        ],
-        "caption": "2024년 10월 11일 게시물",
-        "type": "group",
-        "rawDate": "241011",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-241011"
-    },
-    {
-        "id": "repost-194",
-        "date": "2024-10-11",
-        "displayDate": "2024년 10월 11일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241011%20(4).jpg"
         ],
         "caption": "2024년 10월 11일 게시물",
         "type": "group",
         "rawDate": "241011",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241011"
     },
     {
-        "id": "repost-195",
-        "date": "2024-10-09",
-        "displayDate": "2024년 10월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241009-1.jpg"
-        ],
-        "caption": "2024년 10월 9일 게시물",
-        "type": "group",
-        "rawDate": "241009",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-241009-1"
-    },
-    {
-        "id": "repost-196",
+        "id": "repost-79",
         "date": "2024-10-09",
         "displayDate": "2024년 10월 9일",
         "username": "doy.is.here",
@@ -8140,11 +3650,24 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241009",
         "postNum": 2,
-        "imageIndex": 0,
         "originalId": "group-241009-2"
     },
     {
-        "id": "repost-197",
+        "id": "repost-80",
+        "date": "2024-10-09",
+        "displayDate": "2024년 10월 9일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241009-1.jpg"
+        ],
+        "caption": "2024년 10월 9일 게시물",
+        "type": "group",
+        "rawDate": "241009",
+        "postNum": 1,
+        "originalId": "group-241009-1"
+    },
+    {
+        "id": "repost-81",
         "date": "2024-10-04",
         "displayDate": "2024년 10월 4일",
         "username": "doy.is.here",
@@ -8155,71 +3678,40 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "241004",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-241004"
     },
     {
-        "id": "repost-198",
+        "id": "repost-82",
         "date": "2024-09-28",
         "displayDate": "2024년 9월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240928%20(1).jpeg"
-        ],
-        "caption": "2024년 9월 28일 게시물",
-        "type": "group",
-        "rawDate": "240928",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240928"
-    },
-    {
-        "id": "repost-199",
-        "date": "2024-09-28",
-        "displayDate": "2024년 9월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240928%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240928%20(2).jpeg"
         ],
         "caption": "2024년 9월 28일 게시물",
         "type": "group",
         "rawDate": "240928",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240928"
     },
     {
-        "id": "repost-200",
+        "id": "repost-83",
         "date": "2024-09-27",
         "displayDate": "2024년 9월 27일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240927%20(1).jpeg"
-        ],
-        "caption": "2024년 9월 27일 게시물",
-        "type": "group",
-        "rawDate": "240927",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240927"
-    },
-    {
-        "id": "repost-201",
-        "date": "2024-09-27",
-        "displayDate": "2024년 9월 27일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240927%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240927%20(2).jpeg"
         ],
         "caption": "2024년 9월 27일 게시물",
         "type": "group",
         "rawDate": "240927",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240927"
     },
     {
-        "id": "repost-202",
+        "id": "repost-84",
         "date": "2024-09-20",
         "displayDate": "2024년 9월 20일",
         "username": "doy.is.here",
@@ -8230,11 +3722,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240920",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240920"
     },
     {
-        "id": "repost-203",
+        "id": "repost-85",
         "date": "2024-09-16",
         "displayDate": "2024년 9월 16일",
         "username": "doy.is.here",
@@ -8245,11 +3736,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240916",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240916"
     },
     {
-        "id": "repost-204",
+        "id": "repost-86",
         "date": "2024-09-14",
         "displayDate": "2024년 9월 14일",
         "username": "doy.is.here",
@@ -8260,11 +3750,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240914",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240914"
     },
     {
-        "id": "repost-205",
+        "id": "repost-87",
         "date": "2024-08-23",
         "displayDate": "2024년 8월 23일",
         "username": "doy.is.here",
@@ -8275,11 +3764,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240823",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240823"
     },
     {
-        "id": "repost-206",
+        "id": "repost-88",
         "date": "2024-08-15",
         "displayDate": "2024년 8월 15일",
         "username": "doy.is.here",
@@ -8290,11 +3778,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240815",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240815"
     },
     {
-        "id": "repost-207",
+        "id": "repost-89",
         "date": "2024-08-07",
         "displayDate": "2024년 8월 7일",
         "username": "doy.is.here",
@@ -8305,11 +3792,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240807",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240807"
     },
     {
-        "id": "repost-208",
+        "id": "repost-90",
         "date": "2024-07-30",
         "displayDate": "2024년 7월 30일",
         "username": "doy.is.here",
@@ -8320,251 +3806,78 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240730",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240730"
     },
     {
-        "id": "repost-209",
+        "id": "repost-91",
         "date": "2024-07-07",
         "displayDate": "2024년 7월 7일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(1).jpg"
-        ],
-        "caption": "2024년 7월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240707",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240707"
-    },
-    {
-        "id": "repost-210",
-        "date": "2024-07-07",
-        "displayDate": "2024년 7월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(2).jpg"
-        ],
-        "caption": "2024년 7월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240707",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240707"
-    },
-    {
-        "id": "repost-211",
-        "date": "2024-07-07",
-        "displayDate": "2024년 7월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(3).jpg"
-        ],
-        "caption": "2024년 7월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240707",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240707"
-    },
-    {
-        "id": "repost-212",
-        "date": "2024-07-07",
-        "displayDate": "2024년 7월 7일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(4).jpg"
         ],
         "caption": "2024년 7월 7일 게시물",
         "type": "photo",
         "rawDate": "240707",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-240707"
     },
     {
-        "id": "repost-213",
+        "id": "repost-92",
         "date": "2024-06-21",
         "displayDate": "2024년 6월 21일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(1).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240621"
-    },
-    {
-        "id": "repost-214",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(2).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240621"
-    },
-    {
-        "id": "repost-215",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(3).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240621"
-    },
-    {
-        "id": "repost-216",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(4).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240621"
-    },
-    {
-        "id": "repost-217",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(5).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240621"
-    },
-    {
-        "id": "repost-218",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(6).jpg"
-        ],
-        "caption": "2024년 6월 21일 게시물",
-        "type": "photo",
-        "rawDate": "240621",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240621"
-    },
-    {
-        "id": "repost-219",
-        "date": "2024-06-21",
-        "displayDate": "2024년 6월 21일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(5).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(6).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(7).jpg"
         ],
         "caption": "2024년 6월 21일 게시물",
         "type": "photo",
         "rawDate": "240621",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-240621"
     },
     {
-        "id": "repost-220",
+        "id": "repost-93",
         "date": "2024-06-20",
         "displayDate": "2024년 6월 20일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240620%20(1).jpg"
-        ],
-        "caption": "2024년 6월 20일 게시물",
-        "type": "group",
-        "rawDate": "240620",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240620"
-    },
-    {
-        "id": "repost-221",
-        "date": "2024-06-20",
-        "displayDate": "2024년 6월 20일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240620%20(2).jpg"
-        ],
-        "caption": "2024년 6월 20일 게시물",
-        "type": "group",
-        "rawDate": "240620",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240620"
-    },
-    {
-        "id": "repost-222",
-        "date": "2024-06-20",
-        "displayDate": "2024년 6월 20일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240620%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240620%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240620%20(3).jpg"
         ],
         "caption": "2024년 6월 20일 게시물",
         "type": "group",
         "rawDate": "240620",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240620"
     },
     {
-        "id": "repost-223",
+        "id": "repost-94",
         "date": "2024-06-17",
         "displayDate": "2024년 6월 17일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240617%20(1).jpeg"
-        ],
-        "caption": "2024년 6월 17일 게시물",
-        "type": "group",
-        "rawDate": "240617",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240617"
-    },
-    {
-        "id": "repost-224",
-        "date": "2024-06-17",
-        "displayDate": "2024년 6월 17일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240617%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240617%20(2).jpeg"
         ],
         "caption": "2024년 6월 17일 게시물",
         "type": "group",
         "rawDate": "240617",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240617"
     },
     {
-        "id": "repost-225",
+        "id": "repost-95",
         "date": "2024-06-06",
         "displayDate": "2024년 6월 6일",
         "username": "doy.is.here",
@@ -8575,461 +3888,118 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240606",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240606"
     },
     {
-        "id": "repost-226",
+        "id": "repost-96",
         "date": "2024-05-22",
         "displayDate": "2024년 5월 22일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(1).jpg"
-        ],
-        "caption": "2024년 5월 22일 게시물",
-        "type": "photo",
-        "rawDate": "240522",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240522"
-    },
-    {
-        "id": "repost-227",
-        "date": "2024-05-22",
-        "displayDate": "2024년 5월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(2).jpg"
-        ],
-        "caption": "2024년 5월 22일 게시물",
-        "type": "photo",
-        "rawDate": "240522",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240522"
-    },
-    {
-        "id": "repost-228",
-        "date": "2024-05-22",
-        "displayDate": "2024년 5월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(3).jpg"
-        ],
-        "caption": "2024년 5월 22일 게시물",
-        "type": "photo",
-        "rawDate": "240522",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240522"
-    },
-    {
-        "id": "repost-229",
-        "date": "2024-05-22",
-        "displayDate": "2024년 5월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(4).jpg"
-        ],
-        "caption": "2024년 5월 22일 게시물",
-        "type": "photo",
-        "rawDate": "240522",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240522"
-    },
-    {
-        "id": "repost-230",
-        "date": "2024-05-22",
-        "displayDate": "2024년 5월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(5).jpg"
-        ],
-        "caption": "2024년 5월 22일 게시물",
-        "type": "photo",
-        "rawDate": "240522",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240522"
-    },
-    {
-        "id": "repost-231",
-        "date": "2024-05-22",
-        "displayDate": "2024년 5월 22일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(6).jpg"
         ],
         "caption": "2024년 5월 22일 게시물",
         "type": "photo",
         "rawDate": "240522",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-240522"
     },
     {
-        "id": "repost-232",
+        "id": "repost-97",
         "date": "2024-05-16",
         "displayDate": "2024년 5월 16일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240516%20(1).jpeg"
-        ],
-        "caption": "2024년 5월 16일 게시물",
-        "type": "group",
-        "rawDate": "240516",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240516"
-    },
-    {
-        "id": "repost-233",
-        "date": "2024-05-16",
-        "displayDate": "2024년 5월 16일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240516%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240516%20(2).jpeg"
         ],
         "caption": "2024년 5월 16일 게시물",
         "type": "group",
         "rawDate": "240516",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240516"
     },
     {
-        "id": "repost-234",
+        "id": "repost-98",
         "date": "2024-05-07",
         "displayDate": "2024년 5월 7일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(1).jpg"
-        ],
-        "caption": "2024년 5월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240507",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240507"
-    },
-    {
-        "id": "repost-235",
-        "date": "2024-05-07",
-        "displayDate": "2024년 5월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(2).jpg"
-        ],
-        "caption": "2024년 5월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240507",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240507"
-    },
-    {
-        "id": "repost-236",
-        "date": "2024-05-07",
-        "displayDate": "2024년 5월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(3).jpg"
-        ],
-        "caption": "2024년 5월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240507",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240507"
-    },
-    {
-        "id": "repost-237",
-        "date": "2024-05-07",
-        "displayDate": "2024년 5월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(4).jpg"
-        ],
-        "caption": "2024년 5월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240507",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240507"
-    },
-    {
-        "id": "repost-238",
-        "date": "2024-05-07",
-        "displayDate": "2024년 5월 7일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(5).jpg"
-        ],
-        "caption": "2024년 5월 7일 게시물",
-        "type": "photo",
-        "rawDate": "240507",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240507"
-    },
-    {
-        "id": "repost-239",
-        "date": "2024-05-07",
-        "displayDate": "2024년 5월 7일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(6).jpg"
         ],
         "caption": "2024년 5월 7일 게시물",
         "type": "photo",
         "rawDate": "240507",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-240507"
     },
     {
-        "id": "repost-240",
+        "id": "repost-99",
         "date": "2024-05-04",
         "displayDate": "2024년 5월 4일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(1).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "group",
-        "rawDate": "240504",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240504"
-    },
-    {
-        "id": "repost-241",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(2).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "group",
-        "rawDate": "240504",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240504"
-    },
-    {
-        "id": "repost-242",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(3).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "group",
-        "rawDate": "240504",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240504"
-    },
-    {
-        "id": "repost-243",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240504%20(4).jpg"
         ],
         "caption": "2024년 5월 4일 게시물",
         "type": "group",
         "rawDate": "240504",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240504"
     },
     {
-        "id": "repost-244",
+        "id": "repost-100",
         "date": "2024-05-04",
         "displayDate": "2024년 5월 4일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(1).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "240504",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240504"
-    },
-    {
-        "id": "repost-245",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(2).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "240504",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240504"
-    },
-    {
-        "id": "repost-246",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(3).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "240504",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240504"
-    },
-    {
-        "id": "repost-247",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(4).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "240504",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240504"
-    },
-    {
-        "id": "repost-248",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(5).jpg"
-        ],
-        "caption": "2024년 5월 4일 게시물",
-        "type": "photo",
-        "rawDate": "240504",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240504"
-    },
-    {
-        "id": "repost-249",
-        "date": "2024-05-04",
-        "displayDate": "2024년 5월 4일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(6).jpg"
         ],
         "caption": "2024년 5월 4일 게시물",
         "type": "photo",
         "rawDate": "240504",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-240504"
     },
     {
-        "id": "repost-250",
+        "id": "repost-101",
         "date": "2024-04-29",
         "displayDate": "2024년 4월 29일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(1).jpg"
-        ],
-        "caption": "2024년 4월 29일 게시물",
-        "type": "group",
-        "rawDate": "240429",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240429"
-    },
-    {
-        "id": "repost-251",
-        "date": "2024-04-29",
-        "displayDate": "2024년 4월 29일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(2).jpg"
-        ],
-        "caption": "2024년 4월 29일 게시물",
-        "type": "group",
-        "rawDate": "240429",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240429"
-    },
-    {
-        "id": "repost-252",
-        "date": "2024-04-29",
-        "displayDate": "2024년 4월 29일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(3).jpg"
-        ],
-        "caption": "2024년 4월 29일 게시물",
-        "type": "group",
-        "rawDate": "240429",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240429"
-    },
-    {
-        "id": "repost-253",
-        "date": "2024-04-29",
-        "displayDate": "2024년 4월 29일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(4).jpg"
-        ],
-        "caption": "2024년 4월 29일 게시물",
-        "type": "group",
-        "rawDate": "240429",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240429"
-    },
-    {
-        "id": "repost-254",
-        "date": "2024-04-29",
-        "displayDate": "2024년 4월 29일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(5).jpg"
-        ],
-        "caption": "2024년 4월 29일 게시물",
-        "type": "group",
-        "rawDate": "240429",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240429"
-    },
-    {
-        "id": "repost-255",
-        "date": "2024-04-29",
-        "displayDate": "2024년 4월 29일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(4).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240429%20(6).jpg"
         ],
         "caption": "2024년 4월 29일 게시물",
         "type": "group",
         "rawDate": "240429",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240429"
     },
     {
-        "id": "repost-256",
+        "id": "repost-102",
         "date": "2024-04-17",
         "displayDate": "2024년 4월 17일",
         "username": "doy.is.here",
@@ -9040,11 +4010,10 @@ export const repostPosts = [
         "type": "photo",
         "rawDate": "240417",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-240417"
     },
     {
-        "id": "repost-257",
+        "id": "repost-103",
         "date": "2024-04-12",
         "displayDate": "2024년 4월 12일",
         "username": "doy.is.here",
@@ -9055,131 +4024,70 @@ export const repostPosts = [
         "type": "photo",
         "rawDate": "240412",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-240412"
     },
     {
-        "id": "repost-258",
+        "id": "repost-104",
         "date": "2024-03-28",
         "displayDate": "2024년 3월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240328%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 28일 게시물",
-        "type": "group",
-        "rawDate": "240328",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240328"
-    },
-    {
-        "id": "repost-259",
-        "date": "2024-03-28",
-        "displayDate": "2024년 3월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240328%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240328%20(2).jpeg"
         ],
         "caption": "2024년 3월 28일 게시물",
         "type": "group",
         "rawDate": "240328",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240328"
     },
     {
-        "id": "repost-260",
+        "id": "repost-105",
         "date": "2024-03-21",
         "displayDate": "2024년 3월 21일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240321%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 21일 게시물",
-        "type": "group",
-        "rawDate": "240321",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240321"
-    },
-    {
-        "id": "repost-261",
-        "date": "2024-03-21",
-        "displayDate": "2024년 3월 21일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240321%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240321%20(2).jpeg"
         ],
         "caption": "2024년 3월 21일 게시물",
         "type": "group",
         "rawDate": "240321",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240321"
     },
     {
-        "id": "repost-262",
+        "id": "repost-106",
         "date": "2024-03-19",
         "displayDate": "2024년 3월 19일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240319%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 19일 게시물",
-        "type": "group",
-        "rawDate": "240319",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240319"
-    },
-    {
-        "id": "repost-263",
-        "date": "2024-03-19",
-        "displayDate": "2024년 3월 19일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240319%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240319%20(2).jpeg"
         ],
         "caption": "2024년 3월 19일 게시물",
         "type": "group",
         "rawDate": "240319",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240319"
     },
     {
-        "id": "repost-264",
+        "id": "repost-107",
         "date": "2024-03-17",
         "displayDate": "2024년 3월 17일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240317%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 17일 게시물",
-        "type": "group",
-        "rawDate": "240317",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240317"
-    },
-    {
-        "id": "repost-265",
-        "date": "2024-03-17",
-        "displayDate": "2024년 3월 17일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240317%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240317%20(2).jpeg"
         ],
         "caption": "2024년 3월 17일 게시물",
         "type": "group",
         "rawDate": "240317",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240317"
     },
     {
-        "id": "repost-266",
+        "id": "repost-108",
         "date": "2024-03-16",
         "displayDate": "2024년 3월 16일",
         "username": "doy.is.here",
@@ -9190,161 +4098,100 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240316",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240316"
     },
     {
-        "id": "repost-267",
+        "id": "repost-109",
         "date": "2024-03-15",
         "displayDate": "2024년 3월 15일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240315%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 15일 게시물",
-        "type": "group",
-        "rawDate": "240315",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240315"
-    },
-    {
-        "id": "repost-268",
-        "date": "2024-03-15",
-        "displayDate": "2024년 3월 15일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240315%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240315%20(2).jpeg"
         ],
         "caption": "2024년 3월 15일 게시물",
         "type": "group",
         "rawDate": "240315",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240315"
     },
     {
-        "id": "repost-269",
+        "id": "repost-110",
         "date": "2024-03-14",
         "displayDate": "2024년 3월 14일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240314%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 14일 게시물",
-        "type": "group",
-        "rawDate": "240314",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240314"
-    },
-    {
-        "id": "repost-270",
-        "date": "2024-03-14",
-        "displayDate": "2024년 3월 14일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240314%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240314%20(2).jpeg"
         ],
         "caption": "2024년 3월 14일 게시물",
         "type": "group",
         "rawDate": "240314",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240314"
     },
     {
-        "id": "repost-271",
+        "id": "repost-111",
         "date": "2024-03-12",
         "displayDate": "2024년 3월 12일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-1%20(2).jpeg"
-        ],
-        "caption": "2024년 3월 12일 게시물",
-        "type": "group",
-        "rawDate": "240312",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-240312-1"
-    },
-    {
-        "id": "repost-272",
-        "date": "2024-03-12",
-        "displayDate": "2024년 3월 12일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-1%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 12일 게시물",
-        "type": "group",
-        "rawDate": "240312",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-240312-1"
-    },
-    {
-        "id": "repost-273",
-        "date": "2024-03-12",
-        "displayDate": "2024년 3월 12일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-2%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-2%20(2).jpeg"
         ],
         "caption": "2024년 3월 12일 게시물",
         "type": "group",
         "rawDate": "240312",
         "postNum": 2,
-        "imageIndex": 0,
         "originalId": "group-240312-2"
     },
     {
-        "id": "repost-274",
+        "id": "repost-112",
         "date": "2024-03-12",
         "displayDate": "2024년 3월 12일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-2%20(1).jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-1%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240312-1%20(2).jpeg"
         ],
         "caption": "2024년 3월 12일 게시물",
         "type": "group",
         "rawDate": "240312",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-240312-2"
+        "postNum": 1,
+        "originalId": "group-240312-1"
     },
     {
-        "id": "repost-275",
+        "id": "repost-113",
         "date": "2024-03-11",
         "displayDate": "2024년 3월 11일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240311%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 11일 게시물",
-        "type": "group",
-        "rawDate": "240311",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240311"
-    },
-    {
-        "id": "repost-276",
-        "date": "2024-03-11",
-        "displayDate": "2024년 3월 11일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240311%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240311%20(2).jpeg"
         ],
         "caption": "2024년 3월 11일 게시물",
         "type": "group",
         "rawDate": "240311",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240311"
     },
     {
-        "id": "repost-277",
+        "id": "repost-114",
+        "date": "2024-03-09",
+        "displayDate": "2024년 3월 9일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240309-2%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240309-2%20(2).jpeg"
+        ],
+        "caption": "2024년 3월 9일 게시물",
+        "type": "group",
+        "rawDate": "240309",
+        "postNum": 2,
+        "originalId": "group-240309-2"
+    },
+    {
+        "id": "repost-115",
         "date": "2024-03-09",
         "displayDate": "2024년 3월 9일",
         "username": "doy.is.here",
@@ -9355,266 +4202,116 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240309",
         "postNum": 1,
-        "imageIndex": 0,
         "originalId": "group-240309-1"
     },
     {
-        "id": "repost-278",
-        "date": "2024-03-09",
-        "displayDate": "2024년 3월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240309-2%20(2).jpeg"
-        ],
-        "caption": "2024년 3월 9일 게시물",
-        "type": "group",
-        "rawDate": "240309",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-240309-2"
-    },
-    {
-        "id": "repost-279",
-        "date": "2024-03-09",
-        "displayDate": "2024년 3월 9일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240309-2%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 9일 게시물",
-        "type": "group",
-        "rawDate": "240309",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-240309-2"
-    },
-    {
-        "id": "repost-280",
+        "id": "repost-116",
         "date": "2024-03-08",
         "displayDate": "2024년 3월 8일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240308%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 8일 게시물",
-        "type": "group",
-        "rawDate": "240308",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240308"
-    },
-    {
-        "id": "repost-281",
-        "date": "2024-03-08",
-        "displayDate": "2024년 3월 8일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240308%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240308%20(2).jpeg"
         ],
         "caption": "2024년 3월 8일 게시물",
         "type": "group",
         "rawDate": "240308",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240308"
     },
     {
-        "id": "repost-282",
+        "id": "repost-117",
         "date": "2024-03-07",
         "displayDate": "2024년 3월 7일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240307%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 7일 게시물",
-        "type": "group",
-        "rawDate": "240307",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240307"
-    },
-    {
-        "id": "repost-283",
-        "date": "2024-03-07",
-        "displayDate": "2024년 3월 7일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240307%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240307%20(2).jpeg"
         ],
         "caption": "2024년 3월 7일 게시물",
         "type": "group",
         "rawDate": "240307",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240307"
     },
     {
-        "id": "repost-284",
+        "id": "repost-118",
         "date": "2024-03-05",
         "displayDate": "2024년 3월 5일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(3).jpeg"
-        ],
-        "caption": "2024년 3월 5일 게시물",
-        "type": "group",
-        "rawDate": "240305",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-240305-1"
-    },
-    {
-        "id": "repost-285",
-        "date": "2024-03-05",
-        "displayDate": "2024년 3월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(2).jpeg"
-        ],
-        "caption": "2024년 3월 5일 게시물",
-        "type": "group",
-        "rawDate": "240305",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-240305-1"
-    },
-    {
-        "id": "repost-286",
-        "date": "2024-03-05",
-        "displayDate": "2024년 3월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 5일 게시물",
-        "type": "group",
-        "rawDate": "240305",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-240305-1"
-    },
-    {
-        "id": "repost-287",
-        "date": "2024-03-05",
-        "displayDate": "2024년 3월 5일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-2%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-2%20(2).jpeg"
         ],
         "caption": "2024년 3월 5일 게시물",
         "type": "group",
         "rawDate": "240305",
         "postNum": 2,
-        "imageIndex": 0,
         "originalId": "group-240305-2"
     },
     {
-        "id": "repost-288",
+        "id": "repost-119",
         "date": "2024-03-05",
         "displayDate": "2024년 3월 5일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-2%20(1).jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(2).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240305-1%20(3).jpeg"
         ],
         "caption": "2024년 3월 5일 게시물",
         "type": "group",
         "rawDate": "240305",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-240305-2"
+        "postNum": 1,
+        "originalId": "group-240305-1"
     },
     {
-        "id": "repost-289",
+        "id": "repost-120",
         "date": "2024-03-03",
         "displayDate": "2024년 3월 3일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240303%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 3일 게시물",
-        "type": "group",
-        "rawDate": "240303",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240303"
-    },
-    {
-        "id": "repost-290",
-        "date": "2024-03-03",
-        "displayDate": "2024년 3월 3일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240303%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240303%20(2).jpeg"
         ],
         "caption": "2024년 3월 3일 게시물",
         "type": "group",
         "rawDate": "240303",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240303"
     },
     {
-        "id": "repost-291",
+        "id": "repost-121",
         "date": "2024-03-02",
         "displayDate": "2024년 3월 2일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-1%20(2).jpeg"
-        ],
-        "caption": "2024년 3월 2일 게시물",
-        "type": "group",
-        "rawDate": "240302",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-240302-1"
-    },
-    {
-        "id": "repost-292",
-        "date": "2024-03-02",
-        "displayDate": "2024년 3월 2일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-1%20(1).jpeg"
-        ],
-        "caption": "2024년 3월 2일 게시물",
-        "type": "group",
-        "rawDate": "240302",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-240302-1"
-    },
-    {
-        "id": "repost-293",
-        "date": "2024-03-02",
-        "displayDate": "2024년 3월 2일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-2%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-2%20(2).jpeg"
         ],
         "caption": "2024년 3월 2일 게시물",
         "type": "group",
         "rawDate": "240302",
         "postNum": 2,
-        "imageIndex": 0,
         "originalId": "group-240302-2"
     },
     {
-        "id": "repost-294",
+        "id": "repost-122",
         "date": "2024-03-02",
         "displayDate": "2024년 3월 2일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-2%20(1).jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-1%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240302-1%20(2).jpeg"
         ],
         "caption": "2024년 3월 2일 게시물",
         "type": "group",
         "rawDate": "240302",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-240302-2"
+        "postNum": 1,
+        "originalId": "group-240302-1"
     },
     {
-        "id": "repost-295",
+        "id": "repost-123",
         "date": "2024-03-01",
         "displayDate": "2024년 3월 1일",
         "username": "doy.is.here",
@@ -9625,146 +4322,71 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240301",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240301"
     },
     {
-        "id": "repost-296",
+        "id": "repost-124",
         "date": "2024-02-29",
         "displayDate": "2024년 2월 29일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240229%20(1).jpeg"
-        ],
-        "caption": "2024년 2월 29일 게시물",
-        "type": "group",
-        "rawDate": "240229",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240229"
-    },
-    {
-        "id": "repost-297",
-        "date": "2024-02-29",
-        "displayDate": "2024년 2월 29일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240229%20(2).jpeg"
-        ],
-        "caption": "2024년 2월 29일 게시물",
-        "type": "group",
-        "rawDate": "240229",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240229"
-    },
-    {
-        "id": "repost-298",
-        "date": "2024-02-29",
-        "displayDate": "2024년 2월 29일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240229%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240229%20(2).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240229%20(3).jpeg"
         ],
         "caption": "2024년 2월 29일 게시물",
         "type": "group",
         "rawDate": "240229",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240229"
     },
     {
-        "id": "repost-299",
+        "id": "repost-125",
         "date": "2024-02-13",
         "displayDate": "2024년 2월 13일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240213%20(1).jpeg"
-        ],
-        "caption": "2024년 2월 13일 게시물",
-        "type": "group",
-        "rawDate": "240213",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240213"
-    },
-    {
-        "id": "repost-300",
-        "date": "2024-02-13",
-        "displayDate": "2024년 2월 13일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240213%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240213%20(2).jpeg"
         ],
         "caption": "2024년 2월 13일 게시물",
         "type": "group",
         "rawDate": "240213",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240213"
     },
     {
-        "id": "repost-301",
+        "id": "repost-126",
         "date": "2024-02-12",
         "displayDate": "2024년 2월 12일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240212%20(1).jpeg"
-        ],
-        "caption": "2024년 2월 12일 게시물",
-        "type": "group",
-        "rawDate": "240212",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240212"
-    },
-    {
-        "id": "repost-302",
-        "date": "2024-02-12",
-        "displayDate": "2024년 2월 12일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240212%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240212%20(2).jpeg"
         ],
         "caption": "2024년 2월 12일 게시물",
         "type": "group",
         "rawDate": "240212",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240212"
     },
     {
-        "id": "repost-303",
+        "id": "repost-127",
         "date": "2024-02-10",
         "displayDate": "2024년 2월 10일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240210%20(1).jpeg"
-        ],
-        "caption": "2024년 2월 10일 게시물",
-        "type": "group",
-        "rawDate": "240210",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240210"
-    },
-    {
-        "id": "repost-304",
-        "date": "2024-02-10",
-        "displayDate": "2024년 2월 10일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240210%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240210%20(2).jpeg"
         ],
         "caption": "2024년 2월 10일 게시물",
         "type": "group",
         "rawDate": "240210",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240210"
     },
     {
-        "id": "repost-305",
+        "id": "repost-128",
         "date": "2024-02-08",
         "displayDate": "2024년 2월 8일",
         "username": "doy.is.here",
@@ -9775,41 +4397,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240208",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240208"
     },
     {
-        "id": "repost-306",
-        "date": "2024-02-06",
-        "displayDate": "2024년 2월 6일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240206-1.jpeg"
-        ],
-        "caption": "2024년 2월 6일 게시물",
-        "type": "group",
-        "rawDate": "240206",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-240206-1"
-    },
-    {
-        "id": "repost-307",
-        "date": "2024-02-06",
-        "displayDate": "2024년 2월 6일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240206-2.jpeg"
-        ],
-        "caption": "2024년 2월 6일 게시물",
-        "type": "group",
-        "rawDate": "240206",
-        "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-240206-2"
-    },
-    {
-        "id": "repost-308",
+        "id": "repost-129",
         "date": "2024-02-06",
         "displayDate": "2024년 2월 6일",
         "username": "doy.is.here",
@@ -9820,41 +4411,38 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240206",
         "postNum": 3,
-        "imageIndex": 0,
         "originalId": "group-240206-3"
     },
     {
-        "id": "repost-309",
-        "date": "2024-02-05",
-        "displayDate": "2024년 2월 5일",
+        "id": "repost-130",
+        "date": "2024-02-06",
+        "displayDate": "2024년 2월 6일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240205-1.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240206-2.jpeg"
         ],
-        "caption": "2024년 2월 5일 게시물",
+        "caption": "2024년 2월 6일 게시물",
         "type": "group",
-        "rawDate": "240205",
-        "postNum": 1,
-        "imageIndex": 0,
-        "originalId": "group-240205-1"
-    },
-    {
-        "id": "repost-310",
-        "date": "2024-02-05",
-        "displayDate": "2024년 2월 5일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240205-2.jpeg"
-        ],
-        "caption": "2024년 2월 5일 게시물",
-        "type": "group",
-        "rawDate": "240205",
+        "rawDate": "240206",
         "postNum": 2,
-        "imageIndex": 0,
-        "originalId": "group-240205-2"
+        "originalId": "group-240206-2"
     },
     {
-        "id": "repost-311",
+        "id": "repost-131",
+        "date": "2024-02-06",
+        "displayDate": "2024년 2월 6일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240206-1.jpeg"
+        ],
+        "caption": "2024년 2월 6일 게시물",
+        "type": "group",
+        "rawDate": "240206",
+        "postNum": 1,
+        "originalId": "group-240206-1"
+    },
+    {
+        "id": "repost-132",
         "date": "2024-02-05",
         "displayDate": "2024년 2월 5일",
         "username": "doy.is.here",
@@ -9865,41 +4453,53 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240205",
         "postNum": 3,
-        "imageIndex": 0,
         "originalId": "group-240205-3"
     },
     {
-        "id": "repost-312",
-        "date": "2024-01-19",
-        "displayDate": "2024년 1월 19일",
+        "id": "repost-133",
+        "date": "2024-02-05",
+        "displayDate": "2024년 2월 5일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240119%20(1).jpg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240205-2.jpeg"
         ],
-        "caption": "2024년 1월 19일 게시물",
+        "caption": "2024년 2월 5일 게시물",
         "type": "group",
-        "rawDate": "240119",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240119"
+        "rawDate": "240205",
+        "postNum": 2,
+        "originalId": "group-240205-2"
     },
     {
-        "id": "repost-313",
+        "id": "repost-134",
+        "date": "2024-02-05",
+        "displayDate": "2024년 2월 5일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240205-1.jpeg"
+        ],
+        "caption": "2024년 2월 5일 게시물",
+        "type": "group",
+        "rawDate": "240205",
+        "postNum": 1,
+        "originalId": "group-240205-1"
+    },
+    {
+        "id": "repost-135",
         "date": "2024-01-19",
         "displayDate": "2024년 1월 19일",
         "username": "doy.is.here",
         "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240119%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240119%20(2).jpg"
         ],
         "caption": "2024년 1월 19일 게시물",
         "type": "group",
         "rawDate": "240119",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240119"
     },
     {
-        "id": "repost-314",
+        "id": "repost-136",
         "date": "2024-01-18",
         "displayDate": "2024년 1월 18일",
         "username": "doy.is.here",
@@ -9910,11 +4510,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240118",
         "postNum": 2,
-        "imageIndex": 0,
         "originalId": "group-240118-2"
     },
     {
-        "id": "repost-315",
+        "id": "repost-137",
         "date": "2024-01-18",
         "displayDate": "2024년 1월 18일",
         "username": "doy.is.here",
@@ -9925,11 +4524,10 @@ export const repostPosts = [
         "type": "group",
         "rawDate": "240118",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240118"
     },
     {
-        "id": "repost-316",
+        "id": "repost-138",
         "date": "2024-01-11",
         "displayDate": "2024년 1월 11일",
         "username": "doy.is.here",
@@ -9940,292 +4538,90 @@ export const repostPosts = [
         "type": "photo",
         "rawDate": "240111",
         "postNum": 2,
-        "imageIndex": 0,
         "originalId": "photo-240111-2"
     },
     {
-        "id": "repost-317",
+        "id": "repost-139",
         "date": "2024-01-11",
         "displayDate": "2024년 1월 11일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(1).jpg"
-        ],
-        "caption": "2024년 1월 11일 게시물",
-        "type": "photo",
-        "rawDate": "240111",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240111"
-    },
-    {
-        "id": "repost-318",
-        "date": "2024-01-11",
-        "displayDate": "2024년 1월 11일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(2).jpg"
-        ],
-        "caption": "2024년 1월 11일 게시물",
-        "type": "photo",
-        "rawDate": "240111",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240111"
-    },
-    {
-        "id": "repost-319",
-        "date": "2024-01-11",
-        "displayDate": "2024년 1월 11일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(3).jpg"
-        ],
-        "caption": "2024년 1월 11일 게시물",
-        "type": "photo",
-        "rawDate": "240111",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240111"
-    },
-    {
-        "id": "repost-320",
-        "date": "2024-01-11",
-        "displayDate": "2024년 1월 11일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(4).jpg"
-        ],
-        "caption": "2024년 1월 11일 게시물",
-        "type": "photo",
-        "rawDate": "240111",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "photo-240111"
-    },
-    {
-        "id": "repost-321",
-        "date": "2024-01-11",
-        "displayDate": "2024년 1월 11일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(5).jpg"
         ],
         "caption": "2024년 1월 11일 게시물",
         "type": "photo",
         "rawDate": "240111",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "photo-240111"
     },
     {
-        "id": "repost-322",
+        "id": "repost-140",
         "date": "2024-01-01",
         "displayDate": "2024년 1월 1일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(1).jpeg"
-        ],
-        "caption": "2024년 1월 1일 게시물",
-        "type": "group",
-        "rawDate": "240101",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240101"
-    },
-    {
-        "id": "repost-323",
-        "date": "2024-01-01",
-        "displayDate": "2024년 1월 1일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(2).jpeg"
-        ],
-        "caption": "2024년 1월 1일 게시물",
-        "type": "group",
-        "rawDate": "240101",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240101"
-    },
-    {
-        "id": "repost-324",
-        "date": "2024-01-01",
-        "displayDate": "2024년 1월 1일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(3).jpeg"
-        ],
-        "caption": "2024년 1월 1일 게시물",
-        "type": "group",
-        "rawDate": "240101",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-240101"
-    },
-    {
-        "id": "repost-325",
-        "date": "2024-01-01",
-        "displayDate": "2024년 1월 1일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(2).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(3).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/240101%20(4).jpeg"
         ],
         "caption": "2024년 1월 1일 게시물",
         "type": "group",
         "rawDate": "240101",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-240101"
     },
     {
-        "id": "repost-326",
+        "id": "repost-141",
         "date": "2023-12-30",
         "displayDate": "2023년 12월 30일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231230%20(1).jpeg"
-        ],
-        "caption": "2023년 12월 30일 게시물",
-        "type": "group",
-        "rawDate": "231230",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-231230"
-    },
-    {
-        "id": "repost-327",
-        "date": "2023-12-30",
-        "displayDate": "2023년 12월 30일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231230%20(2).jpeg"
-        ],
-        "caption": "2023년 12월 30일 게시물",
-        "type": "group",
-        "rawDate": "231230",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-231230"
-    },
-    {
-        "id": "repost-328",
-        "date": "2023-12-30",
-        "displayDate": "2023년 12월 30일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231230%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231230%20(2).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231230%20(3).jpeg"
         ],
         "caption": "2023년 12월 30일 게시물",
         "type": "group",
         "rawDate": "231230",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-231230"
     },
     {
-        "id": "repost-329",
+        "id": "repost-142",
         "date": "2023-12-28",
         "displayDate": "2023년 12월 28일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231228%20(1).jpeg"
-        ],
-        "caption": "2023년 12월 28일 게시물",
-        "type": "group",
-        "rawDate": "231228",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-231228"
-    },
-    {
-        "id": "repost-330",
-        "date": "2023-12-28",
-        "displayDate": "2023년 12월 28일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231228%20(2).jpeg"
-        ],
-        "caption": "2023년 12월 28일 게시물",
-        "type": "group",
-        "rawDate": "231228",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-231228"
-    },
-    {
-        "id": "repost-331",
-        "date": "2023-12-28",
-        "displayDate": "2023년 12월 28일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231228%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231228%20(2).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231228%20(3).jpeg"
         ],
         "caption": "2023년 12월 28일 게시물",
         "type": "group",
         "rawDate": "231228",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-231228"
     },
     {
-        "id": "repost-332",
+        "id": "repost-143",
         "date": "2023-12-22",
         "displayDate": "2023년 12월 22일",
         "username": "doy.is.here",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(1).jpeg"
-        ],
-        "caption": "2023년 12월 22일 게시물",
-        "type": "group",
-        "rawDate": "231222",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-231222"
-    },
-    {
-        "id": "repost-333",
-        "date": "2023-12-22",
-        "displayDate": "2023년 12월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(2).jpeg"
-        ],
-        "caption": "2023년 12월 22일 게시물",
-        "type": "group",
-        "rawDate": "231222",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-231222"
-    },
-    {
-        "id": "repost-334",
-        "date": "2023-12-22",
-        "displayDate": "2023년 12월 22일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(3).jpeg"
-        ],
-        "caption": "2023년 12월 22일 게시물",
-        "type": "group",
-        "rawDate": "231222",
-        "postNum": null,
-        "imageIndex": 0,
-        "originalId": "group-231222"
-    },
-    {
-        "id": "repost-335",
-        "date": "2023-12-22",
-        "displayDate": "2023년 12월 22일",
-        "username": "doy.is.here",
-        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(2).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(3).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/231222%20(4).jpeg"
         ],
         "caption": "2023년 12월 22일 게시물",
         "type": "group",
         "rawDate": "231222",
         "postNum": null,
-        "imageIndex": 0,
         "originalId": "group-231222"
     }
 ];
@@ -10271,17 +4667,4 @@ export function getPrevPost(currentId, tab = 'grid') {
     const currentIndex = posts.findIndex(post => post.id === currentId);
     if (currentIndex <= 0) return null;
     return posts[currentIndex - 1];
-}
-
-// 전체 게시물 (모든 탭 합침)
-export const posts = [...photoPosts, ...groupPosts, ...storyPosts, ...repostPosts];
-
-// 태그 탭 게시물만 가져오기
-export function getTaggedPosts() {
-    return groupPosts;
-}
-
-// 스토리 탭 게시물만 가져오기
-export function getStories() {
-    return storyPosts;
 }
