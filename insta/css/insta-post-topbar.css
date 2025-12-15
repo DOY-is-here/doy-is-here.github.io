@@ -73,11 +73,3 @@
     display: none; /* 기존 구조 숨김 */
 }
 
-/* 모바일 터치 개선 */
-.post-topbar .left-btn,
-.post-topbar-fixed .left-btn,
-.post-topbar .right-btn,
-.post-topbar-fixed .right-btn {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-}

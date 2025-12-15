@@ -2,7 +2,7 @@
 
 .post-detail.from-tagged {
     background: #FFFFFF;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 .post-detail.from-tagged .post-header {
@@ -161,7 +161,7 @@
 .post-detail.from-tagged .action-icon {
     font-size: 24px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .post-detail.from-tagged .post-slider:has(.slider-dots) + .post-actions .action-icon {
@@ -185,11 +185,4 @@
 
 .post-detail.from-tagged .post-video {
     background: #FFFFFF;
-}
-
-/* 모바일 터치 개선 */
-.post-detail.from-tagged .action-icon,
-.post-detail.from-tagged .post-more {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
 }

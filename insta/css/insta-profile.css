@@ -85,6 +85,7 @@
     border: none;
     border-radius: 8px;
     font-size: 14px;
+    color: #0B1014;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -323,12 +324,3 @@
     pointer-events: none;
 }
 
-/* 모바일 터치 개선 */
-.profile-btn,
-.tab-item,
-.grid-item,
-button {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    user-select: none;
-}
