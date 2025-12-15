@@ -14,7 +14,7 @@ export function renderPostDetail(post, savedTab = 'grid') {
             </div>
             <div class="coauthor-info">
                 <div class="coauthor-text">
-                    <span class="username">lee_gecko</span>님과 <span class="username">${post.username}</span>님
+                    <span class="username">nomad.is.here</span>님과 <span class="username">${post.username}</span>님
                 </div>
                 <div class="post-date">${post.displayDate}</div>
             </div>

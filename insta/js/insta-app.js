@@ -62,16 +62,16 @@ window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
         </div>
         
         <div class="profile-actions">
-            <button class="profile-btn">
+            <div class="profile-btn">
                 팔로잉
                 <div class="icon-down"></div>
-            </button>
-            <button class="profile-btn">
+            </div>
+            <div class="profile-btn">
                 메시지
-            </button>
-            <button class="profile-btn small">
+            </div>
+            <div class="profile-btn small">
                 <div class="icon-follow"></div>
-            </button>
+            </div>
         </div>
 
         <div class="profile-tabs" id="profile-tabs">
@@ -131,6 +131,10 @@ function initTabs() {
             tab.classList.add("active");
             currentTab = tab.dataset.tab;
             document.querySelector(`.tab-content[data-content="${tab.dataset.tab}"]`).classList.add("active");
+            
+            // 스크롤 맨 위로 초기화
+            window.scrollTo(0, 0);
+            
             setTimeout(() => {
                 initGridVideoThumbnails();
                 initStoryGridVideos();
@@ -153,12 +157,19 @@ function initTabs() {
 
 function switchTab(tabName) {
     currentTab = tabName;
+    
+    // 탭 UI 업데이트
     document.querySelectorAll('.tab-item').forEach(tab => {
         tab.classList.toggle('active', tab.dataset.tab === tabName);
     });
     document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.toggle('active', content.dataset.content === tabName);
     });
+    
+    // 스크롤 맨 위로 초기화
+    window.scrollTo(0, 0);
+    
+    // 비디오 썸네일 초기화
     setTimeout(() => {
         initGridVideoThumbnails();
         initStoryGridVideos();
@@ -271,13 +282,13 @@ window.showPost = function(postId, initialSlide = 0) {
     initBidirectionalScroll(currentIndex, tabPosts, savedTab);
 };
 
-function initBidirectionalScroll(startIndex, posts, savedTab) {
+function initBidirectionalScroll(currentIndex, posts, savedTab) {
     const wrapper = document.querySelector('.post-detail-wrapper');
     if (!wrapper) return;
     
     let isLoading = false;
-    let topIndex = Math.max(0, startIndex - 3);
-    let bottomIndex = Math.min(posts.length, startIndex + 3);
+    let topIndex = Math.max(0, currentIndex - 3);
+    let bottomIndex = Math.min(posts.length, currentIndex + 3);
     
     wrapper.addEventListener('scroll', () => {
         const scrollTop = wrapper.scrollTop;

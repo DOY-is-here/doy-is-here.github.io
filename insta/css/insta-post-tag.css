@@ -32,22 +32,34 @@
     height: 24px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #fff;
+    border: 1px solid #DBDBDB;
     position: absolute;
     left: 0;
     top: 2;
-    background: #eee;
+    box-shadow: 0 0 0 2px #fff;
 }
 
 .coauthor-avatar:first-child {
     z-index: 2;
+    background-image: url("https://doy-is-here.github.io/profile/profile-nomad.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+
 }
 
 .coauthor-avatar.overlap {
     left: 9px;
     top: -10px;
     z-index: 1;
+    background-image: url("https://doy-is-here.github.io/profile/profile.PNG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
 }
+
 
 .coauthor-info {
     flex: 1;

@@ -13,7 +13,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(4).jpg"
         ],
-        "caption": "2025년 9월 30일 게시물",
+        "caption": "GET THAT",
         "type": "photo",
         "rawDate": "250930",
         "postNum": null
@@ -30,7 +30,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250923%20(5).jpg"
         ],
-        "caption": "2025년 9월 23일 게시물",
+        "caption": "😶",
         "type": "photo",
         "rawDate": "250923",
         "postNum": null
@@ -44,7 +44,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250914%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250914%20(2).jpg"
         ],
-        "caption": "2025년 9월 14일 게시물",
+        "caption": "1-2",
         "type": "photo",
         "rawDate": "250914",
         "postNum": null
@@ -61,7 +61,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250823%20(5).jpg"
         ],
-        "caption": "2025년 8월 23일 게시물",
+        "caption": "📸📸📸📸📸",
         "type": "photo",
         "rawDate": "250823",
         "postNum": null
@@ -77,7 +77,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250814%20(4).jpg"
         ],
-        "caption": "2025년 8월 14일 게시물",
+        "caption": "👀",
         "type": "photo",
         "rawDate": "250814",
         "postNum": null
@@ -92,7 +92,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250807%20(3).jpg"
         ],
-        "caption": "2025년 8월 7일 게시물",
+        "caption": "go on?",
         "type": "photo",
         "rawDate": "250807",
         "postNum": null
@@ -108,7 +108,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250716%20(4).jpg"
         ],
-        "caption": "2025년 7월 16일 게시물",
+        "caption": "♾️",
         "type": "photo",
         "rawDate": "250716",
         "postNum": null
@@ -124,7 +124,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(3).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250704%20(4).jpeg"
         ],
-        "caption": "2025년 7월 4일 게시물",
+        "caption": "🎧🎵",
         "type": "photo",
         "rawDate": "250704",
         "postNum": null
@@ -137,7 +137,7 @@ export const photoPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250610.jpg"
         ],
-        "caption": "2025년 6월 10일 게시물",
+        "caption": "👀",
         "type": "photo",
         "rawDate": "250610",
         "postNum": null
@@ -151,7 +151,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250504%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250504%20(2).jpg"
         ],
-        "caption": "2025년 5월 4일 게시물",
+        "caption": "🍃🍃🍃",
         "type": "photo",
         "rawDate": "250504",
         "postNum": null
@@ -166,7 +166,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250422%20(3).jpg"
         ],
-        "caption": "2025년 4월 22일 게시물",
+        "caption": "⚠️",
         "type": "photo",
         "rawDate": "250422",
         "postNum": null
@@ -185,7 +185,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(6).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250327%20(7).jpg"
         ],
-        "caption": "2025년 3월 27일 게시물",
+        "caption": "🔶🔶🔶",
         "type": "photo",
         "rawDate": "250327",
         "postNum": null
@@ -202,7 +202,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250318%20(5).jpg"
         ],
-        "caption": "2025년 3월 18일 게시물",
+        "caption": "✌️✌️",
         "type": "photo",
         "rawDate": "250318",
         "postNum": null
@@ -217,7 +217,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250219%20(3).jpg"
         ],
-        "caption": "2025년 2월 19일 게시물",
+        "caption": "in JAKARTA",
         "type": "photo",
         "rawDate": "250219",
         "postNum": null
@@ -233,7 +233,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250210%20(4).jpg"
         ],
-        "caption": "2025년 2월 10일 게시물",
+        "caption": "Doy was in SFW ",
         "type": "photo",
         "rawDate": "250210",
         "postNum": null
@@ -248,7 +248,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250209%20(3).jpg"
         ],
-        "caption": "2025년 2월 9일 게시물",
+        "caption": "잊지 못할 CARNIVAL",
         "type": "photo",
         "rawDate": "250209",
         "postNum": null
@@ -271,7 +271,7 @@ export const photoPosts = [
     {
         "id": "photo-241223",
         "date": "2024-12-23",
-        "displayDate": "2024년 12월 23일",
+        "displayDate": "🎄🎄",
         "username": "doy.is.here",
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241223%20(1).jpg",
@@ -294,7 +294,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241216%20(4).jpg"
         ],
-        "caption": "2024년 12월 16일 게시물",
+        "caption": "💤💤💤",
         "type": "photo",
         "rawDate": "241216",
         "postNum": null
@@ -310,7 +310,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241205%20(4).jpg"
         ],
-        "caption": "2024년 12월 5일 게시물",
+        "caption": "☀️☀️",
         "type": "photo",
         "rawDate": "241205",
         "postNum": null
@@ -324,7 +324,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241125%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241125%20(2).jpg"
         ],
-        "caption": "2024년 11월 25일 게시물",
+        "caption": "All BLACK ",
         "type": "photo",
         "rawDate": "241125",
         "postNum": null
@@ -339,7 +339,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241117%20(3).jpg"
         ],
-        "caption": "2024년 11월 17일 게시물",
+        "caption": "DOY was here in Jakarta 🇮🇩",
         "type": "photo",
         "rawDate": "241117",
         "postNum": null
@@ -355,7 +355,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241112%20(4).jpg"
         ],
-        "caption": "2024년 11월 12일 게시물",
+        "caption": "🍁🍂",
         "type": "photo",
         "rawDate": "241112",
         "postNum": null
@@ -371,7 +371,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241109%20(4).jpg"
         ],
-        "caption": "2024년 11월 9일 게시물",
+        "caption": "DO_Y_Vibe ",
         "type": "photo",
         "rawDate": "241109",
         "postNum": null
@@ -385,7 +385,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241107%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241107%20(2).jpg"
         ],
-        "caption": "2024년 11월 7일 게시물",
+        "caption": "🏊☀️",
         "type": "photo",
         "rawDate": "241107",
         "postNum": null
@@ -399,7 +399,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241101%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241101%20(2).jpg"
         ],
-        "caption": "2024년 11월 1일 게시물",
+        "caption": "KOREA BRAND EXPO📞",
         "type": "photo",
         "rawDate": "241101",
         "postNum": null
@@ -413,7 +413,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241028%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241028%20(2).jpg"
         ],
-        "caption": "2024년 10월 28일 게시물",
+        "caption": "Doky ",
         "type": "photo",
         "rawDate": "241028",
         "postNum": null
@@ -428,7 +428,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241025%20(3).jpg"
         ],
-        "caption": "2024년 10월 25일 게시물",
+        "caption": "🐶🐶",
         "type": "photo",
         "rawDate": "241025",
         "postNum": null
@@ -443,7 +443,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/241012%20(3).jpg"
         ],
-        "caption": "2024년 10월 12일 게시물",
+        "caption": "📼🎧🎵",
         "type": "photo",
         "rawDate": "241012",
         "postNum": null
@@ -459,7 +459,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240707%20(4).jpg"
         ],
-        "caption": "2024년 7월 7일 게시물",
+        "caption": "주말인데 다들 뭐했어?",
         "type": "photo",
         "rawDate": "240707",
         "postNum": null
@@ -478,7 +478,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(6).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240621%20(7).jpg"
         ],
-        "caption": "2024년 6월 21일 게시물",
+        "caption": "Nos vemos ",
         "type": "photo",
         "rawDate": "240621",
         "postNum": null
@@ -496,7 +496,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240522%20(6).jpg"
         ],
-        "caption": "2024년 5월 22일 게시물",
+        "caption": "☀️",
         "type": "photo",
         "rawDate": "240522",
         "postNum": null
@@ -514,7 +514,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240507%20(6).jpg"
         ],
-        "caption": "2024년 5월 7일 게시물",
+        "caption": "오사카의 밤",
         "type": "photo",
         "rawDate": "240507",
         "postNum": null
@@ -532,7 +532,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240504%20(6).jpg"
         ],
-        "caption": "2024년 5월 4일 게시물",
+        "caption": "Osaka street",
         "type": "photo",
         "rawDate": "240504",
         "postNum": null
@@ -545,7 +545,7 @@ export const photoPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240417.jpg"
         ],
-        "caption": "2024년 4월 17일 게시물",
+        "caption": "Casper",
         "type": "photo",
         "rawDate": "240417",
         "postNum": null
@@ -558,7 +558,7 @@ export const photoPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240412.jpg"
         ],
-        "caption": "2024년 4월 12일 게시물",
+        "caption": "#DOY_was_here 👣",
         "type": "photo",
         "rawDate": "240412",
         "postNum": null
@@ -571,7 +571,7 @@ export const photoPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111-2.jpg"
         ],
-        "caption": "2024년 1월 11일 게시물",
+        "caption": "쉬는 시간",
         "type": "photo",
         "rawDate": "240111",
         "postNum": 2
@@ -588,7 +588,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(5).jpg"
         ],
-        "caption": "2024년 1월 11일 게시물",
+        "caption": "💭",
         "type": "photo",
         "rawDate": "240111",
         "postNum": null
@@ -607,7 +607,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-2%20(3).jpg"
         ],
-        "caption": "2025년 11월 24일 게시물",
+        "caption": "NOMAD : NO PLAN BEHIND PHOTO",
         "type": "group",
         "rawDate": "251124",
         "postNum": 2
@@ -622,7 +622,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251124-1%20(3).jpg"
         ],
-        "caption": "2025년 11월 24일 게시물",
+        "caption": "NOMAD : NO PLAN BEHIND PHOTO",
         "type": "group",
         "rawDate": "251124",
         "postNum": 1
@@ -635,7 +635,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251028.mp4"
         ],
-        "caption": "2025년 10월 28일 게시물",
+        "caption": "NOMAD x NUYH NEWYORK @nuyh.newyork",
         "type": "group",
         "rawDate": "251028",
         "postNum": null
@@ -649,7 +649,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251024%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251024%20(2).jpg"
         ],
-        "caption": "2025년 10월 24일 게시물",
+        "caption": "NUYH NEWYORK 26 S/S Collection 《SHA:DOW | 영影》 | @nuyh.newyork",
         "type": "group",
         "rawDate": "251024",
         "postNum": null
@@ -662,7 +662,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251017.mp4"
         ],
-        "caption": "2025년 10월 17일 게시물",
+        "caption": "NOMAD x Fashion Hankook @fashion_sportshankook",
         "type": "group",
         "rawDate": "251017",
         "postNum": null
@@ -678,7 +678,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(3).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251010%20(4).jpg"
         ],
-        "caption": "2025년 10월 10일 게시물",
+        "caption": "🔥",
         "type": "group",
         "rawDate": "251010",
         "postNum": null
@@ -691,7 +691,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/251005.mp4"
         ],
-        "caption": "2025년 10월 5일 게시물",
+        "caption": "DOY's first solo stage in C.ATworkFesta @c.atworkfesta @_erer.official",
         "type": "group",
         "rawDate": "251005",
         "postNum": null
@@ -705,22 +705,9 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250928%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250928%20(2).jpeg"
         ],
-        "caption": "2025년 9월 28일 게시물",
+        "caption": "2025 C.AT WORK FESTA | ERER @_erer.official",
         "type": "group",
         "rawDate": "250928",
-        "postNum": null
-    },
-    {
-        "id": "group-250916",
-        "date": "2025-09-16",
-        "displayDate": "2025년 9월 16일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250916.jpeg"
-        ],
-        "caption": "2025년 9월 16일 게시물",
-        "type": "group",
-        "rawDate": "250916",
         "postNum": null
     },
     {
@@ -735,7 +722,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(4).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250720%20(5).mp4"
         ],
-        "caption": "2025년 7월 20일 게시물",
+        "caption": "All India K-POP Contest 2025 🇮🇳 दोबारा जल्दी मिलेंगे ❤️‍🔥",
         "type": "group",
         "rawDate": "250720",
         "postNum": null
@@ -748,7 +735,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250613.jpg"
         ],
-        "caption": "2025년 6월 13일 게시물",
+        "caption": "2025 BUSAN ONEASIA FESTIVAL BIG CONCERT SHOWCASE",
         "type": "group",
         "rawDate": "250613",
         "postNum": null
@@ -761,7 +748,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250612.jpeg"
         ],
-        "caption": "2025년 6월 12일 게시물",
+        "caption": "NOMAD X 撕拉片📸",
         "type": "group",
         "rawDate": "250612",
         "postNum": null
@@ -774,7 +761,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250503.jpg"
         ],
-        "caption": "2025년 5월 3일 게시물",
+        "caption": "NOMAD is here #한강 🎵 25) 05-03",
         "type": "group",
         "rawDate": "250503",
         "postNum": null
@@ -787,7 +774,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250316.jpeg"
         ],
-        "caption": "2025년 3월 16일 게시물",
+        "caption": "NOMAD LIVE IN TOKYO | 250316",
         "type": "group",
         "rawDate": "250316",
         "postNum": null
@@ -800,7 +787,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250315.jpeg"
         ],
-        "caption": "2025년 3월 15일 게시물",
+        "caption": "NOMAD LIVE IN TOKYO | 250315",
         "type": "group",
         "rawDate": "250315",
         "postNum": null
@@ -813,22 +800,9 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250314.jpeg"
         ],
-        "caption": "2025년 3월 14일 게시물",
+        "caption": "NOMAD LIVE IN TOKYO | 250314",
         "type": "group",
         "rawDate": "250314",
-        "postNum": null
-    },
-    {
-        "id": "group-250312",
-        "date": "2025-03-12",
-        "displayDate": "2025년 3월 12일",
-        "username": "doy.is.here",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250312.jpg"
-        ],
-        "caption": "2025년 3월 12일 게시물",
-        "type": "group",
-        "rawDate": "250312",
         "postNum": null
     },
     {
@@ -840,9 +814,22 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250311%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250311%20(2).jpg"
         ],
-        "caption": "2025년 3월 11일 게시물",
+        "caption": "NOMAD is here in TOKYO TOWER 🗼",
         "type": "group",
         "rawDate": "250311",
+        "postNum": null
+    },
+        {
+        "id": "group-250314",
+        "date": "2025-03-14",
+        "displayDate": "2025년 3월 10일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250310.jpeg"
+        ],
+        "caption": "NOMAD LIVE IN TOKYO | 250309",
+        "type": "group",
+        "rawDate": "250314",
         "postNum": null
     },
     {
@@ -853,7 +840,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250308.jpg"
         ],
-        "caption": "2025년 3월 8일 게시물",
+        "caption": "NOMAD LIVE IN TOKYO | 250308",
         "type": "group",
         "rawDate": "250308",
         "postNum": null
@@ -868,7 +855,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250228%20(2).jpg"
         ],
-        "caption": "2025년 2월 28일 게시물",
+        "caption": "𝑁𝑂𝑀𝐴𝐷 𝐷𝐸𝐵𝑈𝑇 1𝑠𝑡 𝐴𝑛𝑛𝑖𝑣𝑒𝑟𝑠𝑎𝑟𝑦 🎈",
         "type": "group",
         "rawDate": "250228",
         "postNum": null
@@ -881,7 +868,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250216.jpeg"
         ],
-        "caption": "2025년 2월 16일 게시물",
+        "caption": "NOMAD Nonsan Strawberry Festival in Jakarta",
         "type": "group",
         "rawDate": "250216",
         "postNum": null
@@ -899,7 +886,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250209%20(6).jpg"
         ],
-        "caption": "2025년 2월 9일 게시물",
+        "caption": "2025 F/W SeoulFashionWeek : (Corp.) Gravity , @urbansavvy_official",
         "type": "group",
         "rawDate": "250209",
         "postNum": null
@@ -912,7 +899,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250208-2.jpg"
         ],
-        "caption": "2025년 2월 8일 게시물",
+        "caption": "NOMAD 1ST FAN CONCERT <CARNIVAL> <br><br>영원히 노매드만을 위한 카니발을 만들어줄게🤍",
         "type": "group",
         "rawDate": "250208",
         "postNum": 2
@@ -926,7 +913,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250208-1%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250208-1%20(2).jpeg"
         ],
-        "caption": "2025년 2월 8일 게시물",
+        "caption": "NOMAD 1ST FAN CONCERT <CARNIVAL> 🎆",
         "type": "group",
         "rawDate": "250208",
         "postNum": 1
@@ -940,7 +927,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250207%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250207%20(2).jpg"
         ],
-        "caption": "2025년 2월 7일 게시물",
+        "caption": "2025 F/W SeoulFashionWeek : DAILY MIRROR",
         "type": "group",
         "rawDate": "250207",
         "postNum": null
@@ -955,7 +942,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250201%20(3).jpg"
         ],
-        "caption": "2025년 2월 1일 게시물",
+        "caption": "You are my carnival 🎆",
         "type": "group",
         "rawDate": "250201",
         "postNum": null
@@ -969,9 +956,23 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250131%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250131%20(2).jpg"
         ],
-        "caption": "2025년 1월 31일 게시물",
+        "caption": "분(위기) 좋(은) 카니발 🎇",
         "type": "group",
         "rawDate": "250131",
+        "postNum": null
+    },
+        {
+        "id": "group-250109",
+        "date": "2025-01-09",
+        "displayDate": "2025년 1월 22일",
+        "username": "doy.is.here",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(2).jpg"
+        ],
+        "caption": "NOMAD 1ST FAN CONCERT <CARNIVAL> POSTER<br>#도의 #DOY<br><br>🗓 2025.02.08. SAT 7PM (KST)<br><br>🎆 SHOWKING K-POP CENTER<br>🎫 b.stage+<br><br>➫ https://nomadofficial.kr/community/board/65c1c8d06a758c09850c7003/post/6788df9f01005f140ccec056",
+        "type": "group",
+        "rawDate": "250109",
         "postNum": null
     },
     {
@@ -983,7 +984,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250109%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250109%20(2).jpg"
         ],
-        "caption": "2025년 1월 9일 게시물",
+        "caption": "Team",
         "type": "group",
         "rawDate": "250109",
         "postNum": null
@@ -996,7 +997,7 @@ export const groupPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241225.jpg"
         ],
-        "caption": "2024년 12월 25일 게시물",
+        "caption": "🎄Merry Christmas🎄",
         "type": "group",
         "rawDate": "241225",
         "postNum": null
@@ -1011,7 +1012,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/241224%20(3).jpg"
         ],
-        "caption": "2024년 12월 24일 게시물",
+        "caption": "2024 GLOBAL INFLUENCER EXPO 📞 24) 12-14",
         "type": "group",
         "rawDate": "241224",
         "postNum": null
@@ -4639,3 +4640,23 @@ export function getPrevPost(currentId, tab = 'grid') {
     if (currentIndex <= 0) return null;
     return posts[currentIndex - 1];
 }
+
+// 추가 호환성 함수들
+export function getPhotos() {
+    return photoPosts;
+}
+
+export function getReels() {
+    return []; // 릴스가 없으면 빈 배열 반환
+}
+
+export function getTaggedPosts() {
+    return groupPosts;
+}
+
+export function getStories() {
+    return storyPosts;
+}
+
+// posts 변수 (기존 코드와의 호환성)
+export const posts = photoPosts;
