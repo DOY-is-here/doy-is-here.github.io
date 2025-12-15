@@ -1,210 +1,172 @@
 const fs = require('fs');
 const path = require('path');
 
-// 메타데이터 로드 함수
-function loadMetadata(type) {
-    try {
-        const metadataPath = path.join(__dirname, '..', 'metadata', `${type}-metadata.json`);
-        if (fs.existsSync(metadataPath)) {
-            return JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
-        }
-    } catch (error) {
-        console.warn(`Warning: Could not load ${type}-metadata.json:`, error.message);
+// 설정
+const FOLDERS = {
+    photo: 'insta-photo',    // 그리드용
+    group: 'insta-group',    // 태그용
+    story: 'insta-story'     // 스토리용
+};
+
+const OUTPUT_FILE = 'insta/js/posts.js';
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main';
+
+// 이미지 파일 읽기
+function getImageFiles(dir) {
+    if (!fs.existsSync(dir)) {
+        console.log(`${dir} 폴더가 없습니다.`);
+        return [];
     }
-    return {};
+    
+    const files = fs.readdirSync(dir);
+    return files.filter(file => /\.(jpg|jpeg|png|gif|mp4)$/i.test(file));
 }
 
-// 메타데이터 가져오기
-const photoMetadata = loadMetadata('photo');
-const groupMetadata = loadMetadata('group');
-const storyMetadata = loadMetadata('story');
-
-// 메타데이터 적용 함수
-function applyMetadata(post, metadata) {
-    const rawDate = post.rawDate;
-    const postNum = post.postNum;
+// 파일명에서 날짜, 게시물 번호, 이미지 순서 추출
+function parseFileName(fileName) {
+    // 240202-1.jpg -> { date: "240202", postNum: 1, sequence: null }
+    // 240202-1 (1).jpg -> { date: "240202", postNum: 1, sequence: 1 }
+    // 240202-2.jpg -> { date: "240202", postNum: 2, sequence: null }
+    // 240202.jpg -> { date: "240202", postNum: null, sequence: null }
+    const match = fileName.match(/^(\d{6})(?:-(\d+))?(?:\s*\((\d+)\))?/);
     
-    let meta = null;
-    
-    if (postNum !== null && metadata[rawDate] && metadata[rawDate][postNum]) {
-        meta = metadata[rawDate][postNum];
-    } else if (metadata[rawDate] && typeof metadata[rawDate] === 'object' && !metadata[rawDate].caption) {
-        return post;
-    } else if (metadata[rawDate]) {
-        meta = metadata[rawDate];
-    }
-    
-    if (meta) {
-        if (meta.caption) post.caption = meta.caption;
-        if (meta.username) post.username = meta.username;
-        if (meta.displayDate) post.displayDate = meta.displayDate;
-    }
-    
-    return post;
-}
-
-// 날짜 파싱 함수
-function parseDate(filename) {
-    const match = filename.match(/^(\d{6})(-\d+)?/);
     if (!match) return null;
     
-    const rawDate = match[1];
-    const year = rawDate.startsWith('23') ? '2023' : 
-                 rawDate.startsWith('24') ? '2024' : '2025';
-    const month = rawDate.substring(2, 4);
-    const day = rawDate.substring(4, 6);
-    
     return {
-        rawDate,
-        year,
-        month,
-        day,
-        date: `${year}-${month}-${day}`,
-        postNum: match[2] ? parseInt(match[2].substring(1)) : null
+        date: match[1],
+        postNum: match[2] ? parseInt(match[2]) : null,
+        sequence: match[3] ? parseInt(match[3]) : null,
+        fileName: fileName
     };
 }
 
-// 한글 날짜 변환
-function toKoreanDate(date) {
-    const [year, month, day] = date.split('-');
-    return `${year}년 ${parseInt(month)}월 ${parseInt(day)}일`;
+// 날짜를 표시 형식으로 변환
+function formatDisplayDate(dateStr) {
+    // 250203 -> "2025년 2월 3일"
+    const year = "20" + dateStr.substring(0, 2);
+    const month = parseInt(dateStr.substring(2, 4));
+    const day = parseInt(dateStr.substring(4, 6));
+    return `${year}년 ${month}월 ${day}일`;
 }
 
-// 게시물 생성 함수
-function createPost(folderName, files, type) {
-    const dateInfo = parseDate(folderName);
-    if (!dateInfo) return null;
-    
-    const images = files
-        .filter(f => /\.(jpg|jpeg|png|gif|mp4|webp)$/i.test(f))
-        .sort((a, b) => {
-            const numA = parseInt(a.match(/\((\d+)\)/)?.[1] || '0');
-            const numB = parseInt(b.match(/\((\d+)\)/)?.[1] || '0');
-            return numA - numB;
-        })
-        .map(f => `https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-${type}/${encodeURIComponent(folderName)}/${encodeURIComponent(f)}`);
-    
-    if (images.length === 0) return null;
-    
-    const idSuffix = dateInfo.postNum ? `-${dateInfo.postNum}` : '';
-    
-    let post = {
-        id: `${type}-${dateInfo.rawDate}${idSuffix}`,
-        date: dateInfo.date,
-        displayDate: toKoreanDate(dateInfo.date),
-        username: 'doy.is.here',
-        images: images,
-        caption: `${toKoreanDate(dateInfo.date)} 게시물`,
-        type: type,
-        rawDate: dateInfo.rawDate,
-        postNum: dateInfo.postNum
-    };
-    
-    // 메타데이터 적용
-    const metadata = type === 'photo' ? photoMetadata : 
-                     type === 'group' ? groupMetadata : storyMetadata;
-    post = applyMetadata(post, metadata);
-    
-    return post;
+// 날짜를 ISO 형식으로 변환
+function formatISODate(dateStr) {
+    // 250203 -> "2025-02-03"
+    const year = "20" + dateStr.substring(0, 2);
+    const month = dateStr.substring(2, 4);
+    const day = dateStr.substring(4, 6);
+    return `${year}-${month}-${day}`;
 }
 
-// 폴더 스캔 함수
-function scanFolder(type) {
-    const folderPath = path.join(__dirname, '..', `insta-${type}`);
-    if (!fs.existsSync(folderPath)) return [];
+// 이미지 파일들을 게시물로 그룹화
+function groupImagesByPost(imageFiles, folderPath, type) {
+    const parsed = imageFiles
+        .map(parseFileName)
+        .filter(p => p !== null);
     
-    const items = fs.readdirSync(folderPath);
+    // 날짜 + 게시물 번호로 그룹화
+    const grouped = {};
+    
+    parsed.forEach(item => {
+        // 게시물 키 생성: "240202-1", "240202-2", "240202" (번호 없으면)
+        const postKey = item.postNum !== null 
+            ? `${item.date}-${item.postNum}`
+            : item.date;
+        
+        if (!grouped[postKey]) {
+            grouped[postKey] = {
+                date: item.date,
+                postNum: item.postNum,
+                images: []
+            };
+        }
+        
+        grouped[postKey].images.push(item);
+    });
+    
+    // 각 그룹을 게시물로 변환
     const posts = [];
     
-    for (const item of items) {
-        const itemPath = path.join(folderPath, item);
-        const stat = fs.statSync(itemPath);
+    Object.keys(grouped).forEach(postKey => {
+        const group = grouped[postKey];
+        const images = group.images;
         
-        if (stat.isDirectory()) {
-            const files = fs.readdirSync(itemPath);
-            const post = createPost(item, files, type);
-            if (post) posts.push(post);
-        } else if (stat.isFile() && /\.(jpg|jpeg|png|gif|mp4|webp)$/i.test(item)) {
-            const post = createPost(item.replace(/\.(jpg|jpeg|png|gif|mp4|webp)$/i, ''), [item], type);
-            if (post) {
-                post.images = [`https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-${type}/${encodeURIComponent(item)}`];
-                posts.push(post);
-            }
-        }
-    }
-    
-    return posts.sort((a, b) => {
-        // 날짜 비교 (최신순)
-        const dateCompare = new Date(b.date) - new Date(a.date);
-        if (dateCompare !== 0) return dateCompare;
+        // 이미지를 순서대로 정렬 (sequence가 없는 것이 먼저, 있으면 숫자 순)
+        images.sort((a, b) => {
+            if (a.sequence === null && b.sequence === null) return 0;
+            if (a.sequence === null) return -1;
+            if (b.sequence === null) return 1;
+            return a.sequence - b.sequence;
+        });
         
-        // 같은 날짜면 postNum 비교 (1 < 2 < 3)
-        if (a.postNum !== null && b.postNum !== null) {
-            return a.postNum - b.postNum;
-        }
-        if (a.postNum !== null) return -1;
-        if (b.postNum !== null) return 1;
+        // 이미지 URL 배열 생성
+        const imageUrls = images.map(img => `${GITHUB_RAW_BASE}/${folderPath}/${encodeURIComponent(img.fileName)}`);
         
-        return 0;
+        posts.push({
+            id: `${type}-${postKey}`,  // "photo-240202-1", "group-240202", "story-240202"
+            date: formatISODate(group.date),
+            displayDate: formatDisplayDate(group.date),
+            username: "doy.is.here",
+            images: imageUrls,
+            caption: `${formatDisplayDate(group.date)} 게시물`,
+            type: type,
+            rawDate: group.date,  // 정렬용
+            postNum: group.postNum
+        });
     });
+    
+    return posts;
 }
 
-// 리포스트 탭 생성 (모든 이미지를 개별 게시물로 펼침)
-function createRepostPosts(photoPosts, groupPosts) {
-    const expandedPosts = [];
+// 리포스트용 데이터 생성 (photo + group 합치기, 같은 날짜면 group 우선)
+function createRepostData(photoPosts, groupPosts) {
+    const combined = [...photoPosts, ...groupPosts];
     
-    // groupPosts와 photoPosts를 합침
-    const allPosts = [...groupPosts, ...photoPosts];
-    
-    // 각 게시물의 이미지를 개별 게시물로 펼침
-    for (const post of allPosts) {
-        for (let i = 0; i < post.images.length; i++) {
-            expandedPosts.push({
-                ...post,
-                images: [post.images[i]], // 단일 이미지
-                imageIndex: i, // 원본에서 몇 번째 이미지인지
-                originalId: post.id
-            });
+    // 정렬: 날짜 내림차순, 같은 날짜면 group이 먼저(type 오름차순), 같은 타입이면 postNum 내림차순
+    combined.sort((a, b) => {
+        // 날짜 비교 (내림차순)
+        if (a.rawDate !== b.rawDate) {
+            return b.rawDate.localeCompare(a.rawDate);
         }
-    }
-    
-    // 정렬: 날짜 최신순 → group 우선 → postNum 순서 → 이미지 인덱스 순서
-    expandedPosts.sort((a, b) => {
-        // 1. 날짜 비교 (최신순)
-        const dateCompare = new Date(b.date) - new Date(a.date);
-        if (dateCompare !== 0) return dateCompare;
         
-        // 2. 같은 날짜면 group 우선
-        if (a.type === 'group' && b.type !== 'group') return -1;
-        if (a.type !== 'group' && b.type === 'group') return 1;
-        
-        // 3. 같은 타입이면 postNum 비교 (1 < 2 < 3)
-        if (a.postNum !== null && b.postNum !== null) {
-            const postNumCompare = a.postNum - b.postNum;
-            if (postNumCompare !== 0) return postNumCompare;
+        // 같은 날짜면 group이 먼저 (group < photo)
+        if (a.type !== b.type) {
+            return a.type.localeCompare(b.type);
         }
-        if (a.postNum !== null) return -1;
-        if (b.postNum !== null) return 1;
         
-        // 4. 같은 게시물이면 이미지 인덱스 순서
-        return a.imageIndex - b.imageIndex;
+        // 같은 타입이면 postNum 내림차순
+        const aNum = a.postNum || 0;
+        const bNum = b.postNum || 0;
+        return bNum - aNum;
     });
     
-    // ID 재할당
-    return expandedPosts.map((post, index) => ({
+    // ID를 repost로 변경
+    return combined.map((post, index) => ({
         ...post,
-        id: `repost-${index}`
+        id: `repost-${index}`,
+        originalId: post.id
     }));
 }
 
-// posts.js 생성
-function generatePostsJS() {
-    const photoPosts = scanFolder('photo');
-    const groupPosts = scanFolder('group');
-    const storyPosts = scanFolder('story');
-    const repostPosts = createRepostPosts(photoPosts, groupPosts);
+// posts.js 파일 생성
+function generatePostsJS(photoPosts, groupPosts, storyPosts, repostPosts) {
+    // 각 타입별로 정렬
+    const sortPosts = (posts) => {
+        return posts.sort((a, b) => {
+            if (a.rawDate !== b.rawDate) {
+                return b.rawDate.localeCompare(a.rawDate);
+            }
+            const aNum = a.postNum || 0;
+            const bNum = b.postNum || 0;
+            return bNum - aNum;
+        });
+    };
     
-    const output = `// 게시물 데이터 (자동 생성됨)
+    photoPosts = sortPosts(photoPosts);
+    groupPosts = sortPosts(groupPosts);
+    storyPosts = sortPosts(storyPosts);
+    
+    const content = `// 게시물 데이터 (자동 생성됨)
 
 // 그리드 탭 (insta-photo)
 export const photoPosts = ${JSON.stringify(photoPosts, null, 4)};
@@ -215,7 +177,7 @@ export const groupPosts = ${JSON.stringify(groupPosts, null, 4)};
 // 스토리 탭 (insta-story)
 export const storyPosts = ${JSON.stringify(storyPosts, null, 4)};
 
-// 리포스트 탭 (photo + group 모든 이미지 개별 표시)
+// 리포스트 탭 (photo + group 합침, 같은 날짜면 group 우선)
 export const repostPosts = ${JSON.stringify(repostPosts, null, 4)};
 
 // 탭별 게시물 가져오기
@@ -260,29 +222,49 @@ export function getPrevPost(currentId, tab = 'grid') {
     if (currentIndex <= 0) return null;
     return posts[currentIndex - 1];
 }
-
-// 전체 게시물 (모든 탭 합침)
-export const posts = [...photoPosts, ...groupPosts, ...storyPosts, ...repostPosts];
-
-// 태그 탭 게시물만 가져오기
-export function getTaggedPosts() {
-    return groupPosts;
-}
-
-// 스토리 탭 게시물만 가져오기
-export function getStories() {
-    return storyPosts;
-}
 `;
     
-    const outputPath = path.join(__dirname, '..', 'insta', 'js', 'posts.js');
-    fs.writeFileSync(outputPath, output, 'utf8');
+    // 출력 디렉토리 확인
+    const outputDir = path.dirname(OUTPUT_FILE);
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
     
-    console.log('✅ posts.js 생성 완료!');
-    console.log(`📸 Photo: ${photoPosts.length}개 게시물`);
-    console.log(`👥 Group: ${groupPosts.length}개 게시물`);
-    console.log(`📖 Story: ${storyPosts.length}개 게시물`);
-    console.log(`🔄 Repost: ${repostPosts.length}개 이미지 (개별 표시)`);
+    fs.writeFileSync(OUTPUT_FILE, content, 'utf8');
+    console.log(`✅ ${OUTPUT_FILE} 파일이 생성되었습니다.`);
+    console.log(`📊 그리드: ${photoPosts.length}개`);
+    console.log(`📊 태그: ${groupPosts.length}개`);
+    console.log(`📊 스토리: ${storyPosts.length}개`);
+    console.log(`📊 리포스트: ${repostPosts.length}개`);
 }
 
-generatePostsJS();
+// 메인 실행
+function main() {
+    console.log('🔍 이미지 파일 스캔 중...');
+    
+    // 각 폴더에서 이미지 파일 읽기
+    const photoFiles = getImageFiles(FOLDERS.photo);
+    const groupFiles = getImageFiles(FOLDERS.group);
+    const storyFiles = getImageFiles(FOLDERS.story);
+    
+    console.log(`📸 그리드: ${photoFiles.length}개 파일`);
+    console.log(`📸 태그: ${groupFiles.length}개 파일`);
+    console.log(`📸 스토리: ${storyFiles.length}개 파일`);
+    
+    console.log('📝 게시물 데이터 생성 중...');
+    
+    // 각 타입별로 게시물 생성
+    const photoPosts = groupImagesByPost(photoFiles, FOLDERS.photo, 'photo');
+    const groupPosts = groupImagesByPost(groupFiles, FOLDERS.group, 'group');
+    const storyPosts = groupImagesByPost(storyFiles, FOLDERS.story, 'story');
+    
+    // 리포스트 데이터 생성
+    const repostPosts = createRepostData(photoPosts, groupPosts);
+    
+    console.log('💾 posts.js 파일 생성 중...');
+    generatePostsJS(photoPosts, groupPosts, storyPosts, repostPosts);
+    
+    console.log('✨ 완료!');
+}
+
+main();
