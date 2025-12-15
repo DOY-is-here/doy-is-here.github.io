@@ -120,7 +120,7 @@ function groupImagesByPost(imageFiles, folderPath, type) {
 
 // 리포스트용 데이터 생성 (photo + group 합치기, 같은 날짜면 group 우선)
 function createRepostData(photoPosts, groupPosts) {
-    const combined = [...photoPosts, ...groupPosts];
+    const combined = [...groupPosts, ...photoPosts];
     
     // 정렬: 날짜 내림차순, 같은 날짜면 group이 먼저(type 오름차순), 같은 타입이면 postNum 내림차순
     combined.sort((a, b) => {
@@ -222,6 +222,26 @@ export function getPrevPost(currentId, tab = 'grid') {
     if (currentIndex <= 0) return null;
     return posts[currentIndex - 1];
 }
+
+// 추가 호환성 함수들
+export function getPhotos() {
+    return photoPosts;
+}
+
+export function getReels() {
+    return []; // 릴스가 없으면 빈 배열 반환
+}
+
+export function getTaggedPosts() {
+    return groupPosts;
+}
+
+export function getStories() {
+    return storyPosts;
+}
+
+// posts 변수 (기존 코드와의 호환성)
+export const posts = photoPosts;
 `;
     
     // 출력 디렉토리 확인
@@ -231,7 +251,8 @@ export function getPrevPost(currentId, tab = 'grid') {
     }
     
     fs.writeFileSync(OUTPUT_FILE, content, 'utf8');
-    console.log(`✅ ${OUTPUT_FILE} 파일이 생성되었습니다.`);
+    
+    console.log('✅ posts.js 생성 완료!');
     console.log(`📊 그리드: ${photoPosts.length}개`);
     console.log(`📊 태그: ${groupPosts.length}개`);
     console.log(`📊 스토리: ${storyPosts.length}개`);
