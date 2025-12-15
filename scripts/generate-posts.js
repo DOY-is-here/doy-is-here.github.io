@@ -133,31 +133,67 @@ function scanFolder(type) {
         }
     }
     
-    return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-}
-
-// 리포스트 탭 생성
-function createRepostPosts(photoPosts, groupPosts) {
-    const combined = [...groupPosts, ...photoPosts];
-    
-    combined.sort((a, b) => {
+    return posts.sort((a, b) => {
+        // 날짜 비교 (최신순)
         const dateCompare = new Date(b.date) - new Date(a.date);
         if (dateCompare !== 0) return dateCompare;
         
-        if (a.type === 'group' && b.type !== 'group') return -1;
-        if (a.type !== 'group' && b.type === 'group') return 1;
-        
-        if (a.postNum !== null && b.postNum !== null) return b.postNum - a.postNum;
+        // 같은 날짜면 postNum 비교 (1 < 2 < 3)
+        if (a.postNum !== null && b.postNum !== null) {
+            return a.postNum - b.postNum;
+        }
         if (a.postNum !== null) return -1;
         if (b.postNum !== null) return 1;
         
         return 0;
     });
+}
+
+// 리포스트 탭 생성 (모든 이미지를 개별 게시물로 펼침)
+function createRepostPosts(photoPosts, groupPosts) {
+    const expandedPosts = [];
     
-    return combined.map((post, index) => ({
+    // groupPosts와 photoPosts를 합침
+    const allPosts = [...groupPosts, ...photoPosts];
+    
+    // 각 게시물의 이미지를 개별 게시물로 펼침
+    for (const post of allPosts) {
+        for (let i = 0; i < post.images.length; i++) {
+            expandedPosts.push({
+                ...post,
+                images: [post.images[i]], // 단일 이미지
+                imageIndex: i, // 원본에서 몇 번째 이미지인지
+                originalId: post.id
+            });
+        }
+    }
+    
+    // 정렬: 날짜 최신순 → group 우선 → postNum 순서 → 이미지 인덱스 순서
+    expandedPosts.sort((a, b) => {
+        // 1. 날짜 비교 (최신순)
+        const dateCompare = new Date(b.date) - new Date(a.date);
+        if (dateCompare !== 0) return dateCompare;
+        
+        // 2. 같은 날짜면 group 우선
+        if (a.type === 'group' && b.type !== 'group') return -1;
+        if (a.type !== 'group' && b.type === 'group') return 1;
+        
+        // 3. 같은 타입이면 postNum 비교 (1 < 2 < 3)
+        if (a.postNum !== null && b.postNum !== null) {
+            const postNumCompare = a.postNum - b.postNum;
+            if (postNumCompare !== 0) return postNumCompare;
+        }
+        if (a.postNum !== null) return -1;
+        if (b.postNum !== null) return 1;
+        
+        // 4. 같은 게시물이면 이미지 인덱스 순서
+        return a.imageIndex - b.imageIndex;
+    });
+    
+    // ID 재할당
+    return expandedPosts.map((post, index) => ({
         ...post,
-        id: `repost-${index}`,
-        originalId: post.id
+        id: `repost-${index}`
     }));
 }
 
@@ -179,7 +215,7 @@ export const groupPosts = ${JSON.stringify(groupPosts, null, 4)};
 // 스토리 탭 (insta-story)
 export const storyPosts = ${JSON.stringify(storyPosts, null, 4)};
 
-// 리포스트 탭 (photo + group 합침, 같은 날짜면 group 우선)
+// 리포스트 탭 (photo + group 모든 이미지 개별 표시)
 export const repostPosts = ${JSON.stringify(repostPosts, null, 4)};
 
 // 탭별 게시물 가져오기
@@ -243,10 +279,10 @@ export function getStories() {
     fs.writeFileSync(outputPath, output, 'utf8');
     
     console.log('✅ posts.js 생성 완료!');
-    console.log(`📸 Photo: ${photoPosts.length}개`);
-    console.log(`👥 Group: ${groupPosts.length}개`);
-    console.log(`📖 Story: ${storyPosts.length}개`);
-    console.log(`🔄 Repost: ${repostPosts.length}개`);
+    console.log(`📸 Photo: ${photoPosts.length}개 게시물`);
+    console.log(`👥 Group: ${groupPosts.length}개 게시물`);
+    console.log(`📖 Story: ${storyPosts.length}개 게시물`);
+    console.log(`🔄 Repost: ${repostPosts.length}개 이미지 (개별 표시)`);
 }
 
 generatePostsJS();
