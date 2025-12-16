@@ -1,0 +1,196 @@
+.profile-body {
+    height: 250px;
+    padding: 47px 9px 0 9px;
+    transition: all 0.25s ease;
+}
+
+.profile-name {
+  font-size: 22px;
+  color: #0F1419;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.profile-handle {
+  font-size: 15px;
+  color: #536471;
+  margin-bottom: 15px;
+}
+
+.profile-bio {
+  font-size: 15px;
+  color: #0F1419;
+  margin-bottom: 10px;
+}
+
+.profile-meta {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #536471;
+  margin-bottom: 15px;
+}
+
+.profile-meta b {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0F1419;
+}
+
+
+/* 상단바 */
+.topbar {
+  height: 131px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-bottom: 1px solid #EFF3F4;
+  background-image: url("https://doy-is-here.github.io/profile/header.jpg");
+}
+
+/* 프로필 정보 */
+.avatar {
+    position: absolute;
+    top: 105px;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: #E1E8ED;
+    border: 4px solid #fff;
+    margin-left: -4px;
+    background-image: url("https://doy-is-here.github.io/profile/profile-nomad.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.follow {
+    position: absolute;
+    top: 142px;
+    right: 9px;
+    padding: 9px 33px;
+    border-radius: 999px;
+    background: #0F1419;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    font-size: 12px;
+}
+
+
+/* 탭 */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #C7D4DC;
+}
+
+.tabs span {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 15px;
+  color: #536471;
+  font-weight: 600;
+  position: relative; 
+}
+
+.tabs .active {
+  color: #0F1419;
+}
+
+.tabs .active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 50px;        
+  height: 3px;        
+  background: #1D9BF0;
+  transform: translateX(-50%);
+  border-radius: 999px;
+}
+
+
+
+
+
+/* =========================
+   Tweet
+========================= */
+
+.timeline {
+  padding-bottom: 56px;
+}
+
+.tweet {
+  display: flex;
+  padding: 12px;
+  border-bottom: 1px solid #EFF3F4;
+}
+
+.content {
+  flex: 1;
+}
+
+.meta {
+  font-size: 13px;
+  color: #536471;
+}
+
+.meta b {
+  color: #0F1419;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 4px 0 8px;
+}
+
+/* =========================
+   Media
+========================= */
+
+.media {
+  display: grid;
+  gap: 2px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.media.grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.media > div {
+  background: #ccc;
+  aspect-ratio: 1 / 1;
+}
+
+/* =========================
+   Actions
+========================= */
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #536471;
+}
+
+/* =========================
+   Bottom Nav
+========================= */
+
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  height: 52px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #EFF3F4;
+  background: #fff;
+}
+
