@@ -686,7 +686,7 @@ export const photoPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(5).jpg"
         ],
-        "caption": "2024년 1월 11일 게시물",
+        "caption": "",
         "type": "photo",
         "rawDate": "240111",
         "postNum": null
@@ -2201,7 +2201,7 @@ export const storyPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250503%20(4).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250503%20(5).mp4"
         ],
-        "caption": "2025년 5월 3일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250503",
         "postNum": null
@@ -2214,7 +2214,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250312.mp4"
         ],
-        "caption": "2025년 3월 12일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250312",
         "postNum": null
@@ -2227,7 +2227,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250311.jpg"
         ],
-        "caption": "2025년 3월 11일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250311",
         "postNum": null
@@ -2240,7 +2240,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250310-2.jpg"
         ],
-        "caption": "2025년 3월 10일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250310",
         "postNum": 2
@@ -2254,7 +2254,7 @@ export const storyPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250310-1%20(1).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250310-1%20(2).mp4"
         ],
-        "caption": "2025년 3월 10일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250310",
         "postNum": 1
@@ -2268,7 +2268,7 @@ export const storyPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250308%20(1).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250308%20(2).mp4"
         ],
-        "caption": "2025년 3월 8일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250308",
         "postNum": null
@@ -2283,7 +2283,7 @@ export const storyPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250307%20(2).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250307%20(3).jpg"
         ],
-        "caption": "2025년 3월 7일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250307",
         "postNum": null
@@ -2296,7 +2296,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250306.mp4"
         ],
-        "caption": "2025년 3월 6일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250306",
         "postNum": null
@@ -2309,7 +2309,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250305.mp4"
         ],
-        "caption": "2025년 3월 5일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250305",
         "postNum": null
@@ -2322,7 +2322,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250304.mp4"
         ],
-        "caption": "2025년 3월 4일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250304",
         "postNum": null
@@ -2346,7 +2346,7 @@ export const storyPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(11).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250215%20(12).mp4"
         ],
-        "caption": "2025년 2월 15일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250215",
         "postNum": null
@@ -2359,7 +2359,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250212.mp4"
         ],
-        "caption": "2025년 2월 12일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250212",
         "postNum": null
@@ -2372,7 +2372,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/250209.jpg"
         ],
-        "caption": "2025년 2월 9일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "250209",
         "postNum": null
@@ -2391,7 +2391,7 @@ export const storyPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(6).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241224%20(7).mp4"
         ],
-        "caption": "2024년 12월 24일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "241224",
         "postNum": null
@@ -2406,7 +2406,7 @@ export const storyPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241220%20(2).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241220%20(3).mp4"
         ],
-        "caption": "2024년 12월 20일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "241220",
         "postNum": null
@@ -2422,7 +2422,7 @@ export const storyPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241117%20(3).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241117%20(4).mp4"
         ],
-        "caption": "2024년 11월 17일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "241117",
         "postNum": null
@@ -2438,7 +2438,7 @@ export const storyPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241013%20(3).mp4",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241013%20(4).mp4"
         ],
-        "caption": "2024년 10월 13일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "241013",
         "postNum": null
@@ -2451,7 +2451,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241012.mp4"
         ],
-        "caption": "2024년 10월 12일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "241012",
         "postNum": null
@@ -2464,7 +2464,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/241009.jpg"
         ],
-        "caption": "2024년 10월 9일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "241009",
         "postNum": null
@@ -2477,7 +2477,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240509.mp4"
         ],
-        "caption": "2024년 5월 9일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "240509",
         "postNum": null
@@ -2495,7 +2495,7 @@ export const storyPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(5).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240425%20(6).mp4"
         ],
-        "caption": "2024년 4월 25일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "240425",
         "postNum": null
@@ -2509,7 +2509,7 @@ export const storyPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240423%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240423%20(2).mp4"
         ],
-        "caption": "2024년 4월 23일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "240423",
         "postNum": null
@@ -2522,7 +2522,7 @@ export const storyPosts = [
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-story/240420.mp4"
         ],
-        "caption": "2024년 4월 20일 게시물",
+        "caption": "",
         "type": "story",
         "rawDate": "240420",
         "postNum": null
@@ -4789,7 +4789,7 @@ export const repostPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(4).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/240111%20(5).jpg"
         ],
-        "caption": "2024년 1월 11일 게시물",
+        "caption": "",
         "type": "photo",
         "rawDate": "240111",
         "postNum": null,
