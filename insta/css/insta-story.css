@@ -20,7 +20,7 @@
     left: 0;
     right: 0;
     z-index: 10;
-    padding: 12px 16px;
+    padding: 14px;
 }
 
 /* 스토리 프로그레스 바 */
@@ -60,28 +60,31 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: #E1E8ED;
+    background-image: url("https://doy-is-here.github.io/profile/profile.PNG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
 }
 
 .story-username {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 15px;
     color: #FFFFFF;
-    flex: 1;
+    padding: 3px;
 }
 
 .story-time {
-    font-size: 12px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.7);
 }
 
 .story-close {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 25px;
     color: #FFFFFF;
     cursor: pointer;
     margin-left: auto;
@@ -135,84 +138,6 @@
     right: 0;
 }
 
-/* 스토리 그리드 아이템 */
-.story-grid-item {
-    position: relative;
-}
-
-.story-date {
-    position: absolute;
-    bottom: 8px;
-    left: 8px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 500;
-}
-
-/* 태그 아이콘 */
-.tagged-icon {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 20px;
-    height: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5 2H13.5C12.948 2 12.5 2.448 12.5 3V7C12.5 7.552 12.948 8 13.5 8H17.5C18.052 8 18.5 7.552 18.5 7V3C18.5 2.448 18.052 2 17.5 2Z' fill='white'/%3E%3Cpath d='M21.707 11.293L12.707 2.293C12.52 2.105 12.265 2 12 2H3C2.448 2 2 2.448 2 3V12C2 12.265 2.105 12.52 2.293 12.707L11.293 21.707C11.48 21.895 11.735 22 12 22C12.265 22 12.52 21.895 12.707 21.707L21.707 12.707C21.895 12.52 22 12.265 22 12C22 11.735 21.895 11.48 21.707 11.293ZM12 20.293L4 12.293V4H12.293L20.293 12L12 20.293Z' fill='white'/%3E%3Ccircle cx='7.5' cy='7.5' r='1.5' fill='white'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
-}
-/* 스토리 하이라이트 그리드 */
-.story-highlights {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    padding: 16px;
-}
-
-.story-highlight-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.story-highlight-cover {
-    cursor: pointer;
-}
-
-.story-highlight-ring {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    padding: 3px;
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.story-highlight-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white;
-}
-
-.story-highlight-title {
-    font-size: 12px;
-    color: #262626;
-    text-align: center;
-    font-weight: 400;
-    max-width: 120px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
 /* 스토리 미디어 스타일 */
 .story-media {
     position: absolute;
@@ -232,9 +157,7 @@
 
 .story-img,
 .story-video {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
+    width: 100%;
     height: auto;
     object-fit: contain;
 }

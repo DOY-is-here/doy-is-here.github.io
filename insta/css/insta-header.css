@@ -3,8 +3,9 @@
     position: sticky;
     top: 0;
     background: #FFFFFF;
-    padding: 0 16px;
-    height: 44px;
+    padding-left: 16px;
+    padding-right: 12px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,8 +44,8 @@
 }
 
 .header-icon {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 

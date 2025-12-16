@@ -10,7 +10,7 @@
     max-width: 100vw;
     background: #FFFFFF;
     z-index: 1001;
-    height: 44px;
+    height: 48px;
     display: flex;
     align-items: center;
     padding: 0 16px;
@@ -38,6 +38,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    transform: translateY(-3px);
 }
 
 .post-topbar .right-btn,

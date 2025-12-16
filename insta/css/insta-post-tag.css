@@ -10,7 +10,7 @@
     align-items: center;
     padding: 12px 14px;
     gap: 10px;
-    border-bottom: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EAEDF0;
 }
 
 .post-coauthor {
@@ -18,12 +18,12 @@
     align-items: center;
     gap: 8px;
     padding: 8px 14px;
-    border-bottom: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EAEDF0;
 }
 
 .coauthor-avatars {
     position: relative;
-    width: 38px;
+    width: 33px;
     height: 10px;
 }
 
@@ -32,10 +32,10 @@
     height: 24px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid #DBDBDB;
+    border: 1px solid #D9D9DA;
     position: absolute;
-    left: 0;
-    top: 2;
+    left: -6px;
+    top: -2px;
     box-shadow: 0 0 0 2px #fff;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .coauthor-avatar.overlap {
-    left: 9px;
+    left: 2px;
     top: -10px;
     z-index: 1;
     background-image: url("https://doy-is-here.github.io/profile/profile.PNG");
@@ -134,12 +134,12 @@
 
 .post-detail.from-tagged .slider-counter {
     position: absolute;
-    top: 16px;
-    right: 16px;
-    background: rgba(0, 0, 0, 0.6);
+    top: 14px;
+    right: 13px;
+    background: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 4px 8px;
-    border-radius: 12px;
+    padding: 4.5px 8px;
+    border-radius: 13px;
     font-size: 12px;
 }
 
