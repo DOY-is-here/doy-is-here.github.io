@@ -3,243 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOY Archive</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            width: 100%;
-        }
-
-        header {
-            text-align: center;
-            color: white;
-            margin-bottom: 60px;
-        }
-
-        h1 {
-            font-size: 4em;
-            margin-bottom: 20px;
-            text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
-            letter-spacing: -2px;
-        }
-
-        .subtitle {
-            font-size: 1.4em;
-            opacity: 0.95;
-            margin-bottom: 10px;
-        }
-
-        .period {
-            font-size: 1.1em;
-            opacity: 0.85;
-        }
-
-        /* 카테고리 그리드 */
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .category-card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px 30px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .category-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-        }
-
-        .category-icon {
-            font-size: 4em;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
-        }
-
-        .category-title {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .category-desc {
-            color: #666;
-            font-size: 0.95em;
-            line-height: 1.5;
-        }
-
-        .category-count {
-            margin-top: 15px;
-            padding: 8px 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 0.9em;
-            font-weight: bold;
-        }
-
-        /* 색상 테마 */
-        .category-card:nth-child(1) .category-icon { 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .category-card:nth-child(2) .category-icon { 
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .category-card:nth-child(3) .category-icon { 
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .category-card:nth-child(4) .category-icon { 
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* 푸터 */
-        footer {
-            text-align: center;
-            color: white;
-            opacity: 0.8;
-            font-size: 0.95em;
-            margin-top: 40px;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        /* 반응형 */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.8em;
-            }
-
-            .categories {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 15px;
-            }
-
-            .category-card {
-                padding: 30px 20px;
-            }
-
-            .category-icon {
-                font-size: 3em;
-            }
-
-            .category-title {
-                font-size: 1.2em;
-            }
-
-            .category-desc {
-                font-size: 0.85em;
-            }
-        }
-
-        /* 로딩 애니메이션 */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .category-card {
-            animation: fadeIn 0.6s ease-out forwards;
-        }
-
-        .category-card:nth-child(1) { animation-delay: 0.1s; }
-        .category-card:nth-child(2) { animation-delay: 0.2s; }
-        .category-card:nth-child(3) { animation-delay: 0.3s; }
-        .category-card:nth-child(4) { animation-delay: 0.4s; }
-    </style>
+    <title>Twitter Mobile Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/twitter-base.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🎵 DOY Archive</h1>
-            <p class="subtitle">도영이의 모든 순간들</p>
-            <p class="period">2024.08.02 ~ 2025.11.15</p>
+    <div class="mobile-container">
+        <header class="header">
+            <div class="profile-icon">
+                <img src="https://ui-avatars.com/api/?name=Me&background=random" alt="Profile">
+            </div>
+            <div class="logo">
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+            <div class="settings-icon">
+                <i class="fa-solid fa-gear"></i>
+            </div>
         </header>
 
-        <div class="categories">
-            <a href="pop/pop.html" class="category-card">
-                <div class="category-icon">📱</div>
-                <div class="category-title">POP</div>
-                <div class="category-desc">b.stage에서의<br>모든 대화</div>
-                <div class="category-count">247개 메시지</div>
-            </a>
+        <main id="feed" class="feed">
+            </main>
 
-            <a href="insta/insta.html" class="category-card">
-                <div class="category-icon">📷</div>
-                <div class="category-title">Instagram</div>
-                <div class="category-desc">인스타그램<br>사진 모음</div>
-                <div class="category-count">준비 중</div>
-            </a>
+        <button class="fab" onclick="alert('새 트윗 작성 기능은 준비 중입니다!')">
+            <i class="fa-solid fa-plus"></i>
+        </button>
 
-            <a href="x.html" class="category-card">
-                <div class="category-icon">🐦</div>
-                <div class="category-title">X (Twitter)</div>
-                <div class="category-desc">트위터<br>사진 모음</div>
-                <div class="category-count">준비 중</div>
-            </a>
-
-            <a href="bstage.html" class="category-card">
-                <div class="category-icon">🎬</div>
-                <div class="category-title">b.stage</div>
-                <div class="category-desc">비스테이지<br>영상/사진</div>
-                <div class="category-count">준비 중</div>
-            </a>
-        </div>
-
-        <footer>
-            <p>Made with 💜 for DOY</p>
-        </footer>
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i></a>
+            <a href="#" class="nav-item"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" class="nav-item"><i class="fa-regular fa-bell"></i></a>
+            <a href="#" class="nav-item"><i class="fa-regular fa-envelope"></i></a>
+        </nav>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

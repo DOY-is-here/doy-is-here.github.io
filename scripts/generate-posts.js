@@ -44,11 +44,11 @@ function applyMetadata(post, metadata) {
         meta = metadata[rawDate];
     }
     
-    // 메타데이터 적용
+    // 메타데이터 적용 (undefined가 아니면 적용, 빈 문자열도 적용)
     if (meta) {
-        if (meta.caption) post.caption = meta.caption;
-        if (meta.username) post.username = meta.username;
-        if (meta.displayDate) post.displayDate = meta.displayDate;
+        if (meta.caption !== undefined) post.caption = meta.caption;
+        if (meta.username !== undefined) post.username = meta.username;
+        if (meta.displayDate !== undefined) post.displayDate = meta.displayDate;
     }
     
     return post;
@@ -145,14 +145,14 @@ function groupImagesByPost(imageFiles, folderPath, type, metadata) {
         // 이미지 URL 배열 생성
         const imageUrls = images.map(img => `${GITHUB_RAW_BASE}/${folderPath}/${encodeURIComponent(img.fileName)}`);
         
-        // 기본 게시물 생성
+        // 기본 게시물 생성 (caption은 빈 문자열)
         let post = {
             id: `${type}-${postKey}`,  // "photo-240202-1", "group-240202", "story-240202"
             date: formatISODate(group.date),
             displayDate: formatDisplayDate(group.date),
             username: "doy.is.here",
             images: imageUrls,
-            caption: `${formatDisplayDate(group.date)} 게시물`,  // 기본값
+            caption: "",  // ✅ 기본값은 빈 문자열
             type: type,
             rawDate: group.date,  // 정렬용
             postNum: group.postNum
