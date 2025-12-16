@@ -1082,7 +1082,7 @@ export const groupPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(2).jpeg"
         ],
-        "caption": "NOMAD 1ST FAN CONCERT <CARNIVAL> POSTER<br>#도의 #DOY<br><br>🗓 2025.02.08. SAT 7PM (KST)<br><br>🎆 SHOWKING K-POP CENTER<br>🎫 b.stage+<br><br>➫ https://nomadofficial.kr/community/board/65c1c8d06a758c09850c7003/post/6788df9f01005f140ccec056",
+        "caption": "NOMAD 1ST FAN CONCERT <CARNIVAL> POSTER<br>#도의 #DOY<br><br>🗓 2025.02.08. SAT 7PM (KST)<br><br>🎆 SHOWKING K-POP CENTER<br>🎫 b.stage+",
         "type": "group",
         "rawDate": "250122",
         "postNum": null
@@ -3246,7 +3246,7 @@ export const repostPosts = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-group/250122%20(2).jpeg"
         ],
-        "caption": "NOMAD 1ST FAN CONCERT <CARNIVAL> POSTER<br>#도의 #DOY<br><br>🗓 2025.02.08. SAT 7PM (KST)<br><br>🎆 SHOWKING K-POP CENTER<br>🎫 b.stage+<br><br>➫ https://nomadofficial.kr/community/board/65c1c8d06a758c09850c7003/post/6788df9f01005f140ccec056",
+        "caption": "NOMAD 1ST FAN CONCERT <CARNIVAL> POSTER<br>#도의 #DOY<br><br>🗓 2025.02.08. SAT 7PM (KST)<br><br>🎆 SHOWKING K-POP CENTER<br>🎫 b.stage+",
         "type": "group",
         "rawDate": "250122",
         "postNum": null,
