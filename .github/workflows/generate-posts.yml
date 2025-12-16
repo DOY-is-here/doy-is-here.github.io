@@ -10,23 +10,121 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 전체 히스토리 가져오기
+          lfs: true       # Git LFS 파일도 가져오기
+      
+      - name: Checkout LFS objects
+        run: git lfs checkout
       
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
       
+      # 디버깅: 폴더 구조 확인
+      - name: Check folder structure
+        run: |
+          echo "=== Checking folders ==="
+          echo "Photo folder:"
+          ls -la insta-photo/ | head -10
+          echo "Total photo files: $(ls insta-photo/ | wc -l)"
+          
+          echo ""
+          echo "Group folder:"
+          ls -la insta-group/ | head -10
+          echo "Total group files: $(ls insta-group/ | wc -l)"
+          
+          echo ""
+          echo "Story folder:"
+          ls -la insta-story/ | head -10
+          echo "Total story files: $(ls insta-story/ | wc -l)"
+      
+      # 디버깅: 기존 메타데이터 확인
+      - name: Check existing metadata
+        run: |
+          echo "=== Existing metadata ==="
+          if [ -f metadata/photo-metadata.json ]; then
+            echo "Photo metadata size: $(wc -c < metadata/photo-metadata.json) bytes"
+            echo "Photo metadata entries: $(cat metadata/photo-metadata.json | grep -o '\"[0-9]\{6\}\"' | wc -l)"
+          fi
+          
+          if [ -f metadata/group-metadata.json ]; then
+            echo "Group metadata size: $(wc -c < metadata/group-metadata.json) bytes"
+            echo "Group metadata entries: $(cat metadata/group-metadata.json | grep -o '\"[0-9]\{6\}\"' | wc -l)"
+          fi
+          
+          if [ -f metadata/story-metadata.json ]; then
+            echo "Story metadata size: $(wc -c < metadata/story-metadata.json) bytes"
+            echo "Story metadata entries: $(cat metadata/story-metadata.json | grep -o '\"[0-9]\{6\}\"' | wc -l)"
+          fi
+      
       - name: Update metadata templates
-        run: node scripts/generate-metadata-template.js
+        run: |
+          echo "=== Running generate-metadata-template.js ==="
+          node scripts/generate-metadata-template.js
+      
+      # 디버깅: 업데이트된 메타데이터 확인
+      - name: Check updated metadata
+        run: |
+          echo "=== Updated metadata ==="
+          if [ -f metadata/group-metadata.json ]; then
+            echo "Group metadata size: $(wc -c < metadata/group-metadata.json) bytes"
+            echo "Group metadata entries: $(cat metadata/group-metadata.json | grep -o '\"[0-9]\{6\}\"' | wc -l)"
+            
+            # 크기가 너무 작으면 경고
+            size=$(wc -c < metadata/group-metadata.json)
+            if [ $size -lt 100 ]; then
+              echo "⚠️  WARNING: group-metadata.json is too small ($size bytes)!"
+              echo "This might indicate a problem. Showing content:"
+              cat metadata/group-metadata.json
+            fi
+          fi
       
       - name: Generate posts.js
-        run: node scripts/generate-posts.js
+        run: |
+          echo "=== Running generate-posts.js ==="
+          node scripts/generate-posts.js
       
-      - name: Commit changes
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --name-only
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update posts.js and metadata"
+          
+          echo "=== Staging changes ==="
+          git add metadata/
+          git add insta/js/posts.js
+          
+          echo "=== Staged files ==="
+          git diff --staged --name-only
+          
+          echo "=== Committing ==="
+          git commit -m "Auto-update posts.js and metadata [skip ci]"
+          
+          echo "=== Pushing ==="
           git push
+      
+      - name: Summary
+        if: always()
+        run: |
+          echo "=== Workflow Summary ==="
+          echo "Photo files: $(ls insta-photo/ 2>/dev/null | wc -l)"
+          echo "Group files: $(ls insta-group/ 2>/dev/null | wc -l)"
+          echo "Story files: $(ls insta-story/ 2>/dev/null | wc -l)"
+          
+          if [ -f metadata/group-metadata.json ]; then
+            echo "Group metadata: $(wc -c < metadata/group-metadata.json) bytes"
+          fi
