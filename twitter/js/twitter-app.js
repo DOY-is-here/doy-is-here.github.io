@@ -1,5 +1,7 @@
 import { tweets } from './tweets.js';
 
+// ========== 유틸리티 함수 ==========
+
 // 날짜 포맷팅
 function formatDate(dateStr) {
     const date = new Date(dateStr);
@@ -26,13 +28,28 @@ function formatDate(dateStr) {
     return `${date.getFullYear()}년 ${month}월 ${day}일`;
 }
 
-// 숫자 포맷팅 (1000 → 1K)
+// 상세 날짜 포맷팅
+function formatDetailDate(dateStr) {
+    const date = new Date(dateStr);
+    const hours = date.getHours();
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? '오후' : '오전';
+    const hour12 = hours % 12 || 12;
+    
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    
+    return `${ampm} ${hour12}:${minutes} · ${year}년 ${month}월 ${day}일`;
+}
+
+// 숫자 포맷팅
 function formatNumber(num) {
     if (num >= 1000000) {
-        return (num / 1000000).toFixed(1) + 'M';
+        return (num / 1000000).toFixed(1).replace('.0', '') + 'M';
     }
     if (num >= 1000) {
-        return (num / 1000).toFixed(1) + 'K';
+        return (num / 1000).toFixed(1).replace('.0', '') + 'K';
     }
     return num.toString();
 }
@@ -49,6 +66,8 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
+// ========== 렌더링 함수 ==========
+
 // 미디어 그리드 렌더링
 function renderMedia(images) {
     if (!images || images.length === 0) return '';
@@ -60,17 +79,9 @@ function renderMedia(images) {
         const isVideo = /\.(mp4|webm|mov)$/i.test(img);
         
         if (isVideo) {
-            return `
-                <div class="media-item">
-                    <video src="${img}" controls></video>
-                </div>
-            `;
+            return `<div class="media-item"><video src="${img}" controls playsinline></video></div>`;
         } else {
-            return `
-                <div class="media-item">
-                    <img src="${img}" alt="트윗 이미지" loading="lazy">
-                </div>
-            `;
+            return `<div class="media-item"><img src="${img}" alt="트윗 이미지" loading="lazy"></div>`;
         }
     }).join('');
     
@@ -91,7 +102,6 @@ function renderTweet(tweet) {
     return `
         <article class="tweet" data-tweet-id="${tweet.id}">
             <div class="tweet-avatar">
-                <img src="${tweet.author.avatar}" alt="${tweet.author.name}">
             </div>
             <div class="tweet-content">
                 <div class="tweet-header">
@@ -106,69 +116,214 @@ function renderTweet(tweet) {
                 </div>
                 <div class="tweet-text">${highlightedText}</div>
                 ${renderMedia(tweet.images)}
-                <div class="tweet-actions">
-                    <button class="action-button reply">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"/>
-                        </svg>
-                        ${tweet.replies > 0 ? formatNumber(tweet.replies) : ''}
-                    </button>
-                    <button class="action-button retweet">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"/>
-                        </svg>
-                        ${tweet.retweets > 0 ? formatNumber(tweet.retweets) : ''}
-                    </button>
-                    <button class="action-button like">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"/>
-                        </svg>
-                        ${tweet.likes > 0 ? formatNumber(tweet.likes) : ''}
-                    </button>
-                    <button class="action-button views">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"/>
-                        </svg>
-                        ${tweet.views > 0 ? formatNumber(tweet.views) : ''}
-                    </button>
+            <div class="tweet-actions">
+                <div class="tweet-actions-left">
+                <span class="tweet-icon comment"></span>
+                <span class="tweet-icon retweet"></span>
+                <span class="tweet-icon like"></span>
+                <span class="tweet-icon views"></span>
+                <span class="tweet-icon bookmark"></span>
                 </div>
+                <div class="tweet-actions-right">
+                <span class="tweet-icon share"></span>
+                </div>
+            </div>
             </div>
         </article>
     `;
 }
 
-// 타임라인 렌더링
-function renderTimeline() {
+// 트윗 상세 렌더링
+function renderTweetDetail(tweet) {
+    const escapedText = escapeHtml(tweet.text);
+    const highlightedText = highlightHashtags(escapedText);
+    
+    return `
+        <div class="detail-user">
+            <div class="detail-user-avatar"></div>
+            <div class="detail-user-info">
+            <div class="detail-user-name-row">
+                <span class="detail-user-name">${tweet.author.name}</span>
+                    ${tweet.author.verified ? `
+                        <svg viewBox="0 0 22 22" width="18" height="18" class="verified-badge">
+                            <path fill="currentColor" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/>
+                        </svg> ` : ''}
+                </div>
+                <div class="detail-user-handle">@${tweet.author.username}</div>
+            </div>
+        </div>
+        <div class="detail-text">${highlightedText}</div>
+        ${tweet.images && tweet.images.length > 0 ? `
+            <div class="detail-media">
+                ${tweet.images.map(img => `<img src="${img}" alt="트윗 이미지">`).join('')}
+            </div>
+        ` : ''}
+        <div class="detail-time">${formatDetailDate(tweet.date)}</div>
+        <div class="detail-actions">
+            <div class="detail-actions-left">
+            <span class="detail-icon comment"></span>
+            <span class="detail-icon retweet"></span>
+            <span class="detail-icon like"></span>
+            <span class="detail-icon bookmark"></span>
+            </div>
+            <div class="detail-actions-right">
+            <span class="detail-icon share"></span>
+            </div>
+        </div>
+    `;
+}
+
+// 사진 그리드 렌더링
+function renderPhotoGrid() {
+    const photosOnly = tweets.filter(tweet => tweet.images && tweet.images.length > 0);
+    
+    const html = photosOnly.flatMap(tweet => 
+        tweet.images.map(img => `
+            <div class="photo-grid-item" data-tweet-id="${tweet.id}">
+                <img src="${img}" alt="사진">
+            </div>
+        `)
+    ).join('');
+    
+    return `<div class="photo-grid">${html}</div>`;
+}
+
+// ========== 페이지 전환 ==========
+function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+}
+
+// ========== 타임라인 렌더링 ==========
+function renderTimeline(tab = 'posts') {
     const timeline = document.getElementById('timeline');
     
-    if (!timeline) {
-        console.error('Timeline element not found');
-        return;
-    }
+    if (!timeline) return;
     
-    if (!tweets || tweets.length === 0) {
-        timeline.innerHTML = `
-            <div style="padding: 40px; text-align: center; color: var(--text-secondary);">
-                트윗이 없습니다
-            </div>
-        `;
+    let filteredTweets = [...tweets];
+    
+    // 탭별 필터링
+    if (tab === 'videos') {
+        filteredTweets = tweets.filter(tweet => 
+            tweet.images && tweet.images.some(img => /\.(mp4|webm|mov)$/i.test(img))
+        );
+    } else if (tab === 'photos') {
+        // 사진 탭은 그리드로 표시
+        timeline.innerHTML = renderPhotoGrid();
+        
+        // 사진 클릭 이벤트
+        document.querySelectorAll('.photo-grid-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const tweetId = item.dataset.tweetId;
+                const tweet = tweets.find(t => t.id === tweetId);
+                if (tweet) {
+                    showTweetDetail(tweet);
+                }
+            });
+        });
         return;
+    } else if (tab === 'highlights') {
+        // 하이라이트는 좋아요 많은 순
+        filteredTweets = tweets.filter(tweet => tweet.likes > 50);
     }
     
     // 날짜순 정렬 (최신순)
-    const sortedTweets = [...tweets].sort((a, b) => {
-        return new Date(b.date) - new Date(a.date);
+    filteredTweets.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    timeline.innerHTML = filteredTweets.map(renderTweet).join('');
+    
+    // 트윗 클릭 이벤트
+    document.querySelectorAll('.tweet').forEach(tweetEl => {
+        tweetEl.addEventListener('click', () => {
+            const tweetId = tweetEl.dataset.tweetId;
+            const tweet = tweets.find(t => t.id === tweetId);
+            if (tweet) {
+                showTweetDetail(tweet);
+            }
+        });
     });
-    
-    timeline.innerHTML = sortedTweets.map(renderTweet).join('');
-    
-    console.log(`✅ ${sortedTweets.length}개의 트윗 렌더링 완료`);
 }
 
-// 초기화
-document.addEventListener('DOMContentLoaded', () => {
-    renderTimeline();
+// ========== 트윗 상세 표시 ==========
+function showTweetDetail(tweet) {
+    const detailContent = document.getElementById('tweet-detail-content');
+    detailContent.innerHTML = renderTweetDetail(tweet);
+    showPage('tweet-detail-page');
+}
+
+const backBtn = document.querySelector(
+  "#tweet-detail-page .detail-header-icon.back"
+);
+
+backBtn.addEventListener("click", () => {
+  document.getElementById("tweet-detail-page")
+    .classList.remove("active");
+
+  document.getElementById("profile-page")
+    .classList.add("active");
 });
 
-// Export for potential reuse
+// ========== 초기화 ==========
+document.addEventListener('DOMContentLoaded', () => {
+    // 초기 타임라인 렌더링
+    renderTimeline('posts');
+    
+    // 탭 전환 이벤트
+    document.querySelectorAll('.tabs span').forEach(tab => {
+        tab.addEventListener('click', () => {
+            // 활성 탭 변경
+            document.querySelectorAll('.tabs span').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // 타임라인 렌더링
+            const tabName = tab.dataset.tab;
+            renderTimeline(tabName);
+        });
+    });
+    
+    // 뒤로가기 버튼 (상세 페이지)
+    document.getElementById('detail-back')?.addEventListener('click', () => {
+        showPage('profile-page');
+    });
+    
+    // 트윗 작성 버튼
+    document.getElementById('compose-btn')?.addEventListener('click', () => {
+        showPage('compose-page');
+        document.getElementById('compose-textarea').focus();
+    });
+    
+    // 작성 닫기 버튼
+    document.getElementById('compose-close')?.addEventListener('click', () => {
+        showPage('profile-page');
+        document.getElementById('compose-textarea').value = '';
+    });
+    
+    // 작성 게시 버튼 활성화
+    const textarea = document.getElementById('compose-textarea');
+    const postBtn = document.getElementById('compose-post-btn');
+    
+    if (textarea && postBtn) {
+        textarea.addEventListener('input', () => {
+            if (textarea.value.trim().length > 0) {
+                postBtn.classList.add('active');
+            } else {
+                postBtn.classList.remove('active');
+            }
+        });
+        
+        postBtn.addEventListener('click', () => {
+            if (textarea.value.trim().length > 0) {
+                alert('트윗 게시 기능은 데모입니다!');
+                showPage('profile-page');
+                textarea.value = '';
+                postBtn.classList.remove('active');
+            }
+        });
+    }
+});
+
+// Export
 export { renderTimeline, formatDate, formatNumber };
+

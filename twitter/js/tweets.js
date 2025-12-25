@@ -6,7 +6,40 @@ export const tweets = [
         "author": {
             "name": "NOMAD",
             "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2025-12-05T12:00:00Z",
+        "text": "[#원]\n출지 않게 따뜻하게 입기!\n오늘 하루도 고생했고 미리 꽃잠~🌸🐼\n\n#NOMAD #노매드\n#ONE #원",
+        "images": [],
+        "replies": 10,
+        "retweets": 31,
+        "likes": 92,
+        "views": 2073,
+        "rawDate": "251205",
+        "tweetNum": 2
+    },
+    {
+        "id": "tweet-251205-2",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "verified": true
+        },
+        "date": "2025-12-05T12:00:00Z",
+        "text": "[#원]\n출지 않게 따뜻하게 입기!\n오늘 하루도 고생했고 미리 꽃잠~🌸🐼\n\n#NOMAD #노매드\n#ONE #원",
+        "images": [],
+        "replies": 10,
+        "retweets": 31,
+        "likes": 92,
+        "views": 2073,
+        "rawDate": "251205",
+        "tweetNum": 2
+    },
+    {
+        "id": "tweet-251205-2",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
             "verified": true
         },
         "date": "2025-12-05T12:00:00Z",
@@ -24,7 +57,6 @@ export const tweets = [
         "author": {
             "name": "NOMAD",
             "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
             "verified": true
         },
         "date": "2025-12-05T12:00:00Z",
@@ -42,7 +74,6 @@ export const tweets = [
         "author": {
             "name": "NOMAD",
             "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
             "verified": true
         },
         "date": "2025-11-05T12:00:00Z",
@@ -58,6 +89,7 @@ export const tweets = [
         "rawDate": "251105",
         "tweetNum": null
     }
+    
 ];
 
 // 트윗 개수

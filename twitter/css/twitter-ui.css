@@ -1,196 +1,683 @@
+/* ========== 페이지 전환 ========== */
+.page {
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.page.active {
+  display: block;
+}
+
+/* ========== Topbar (항상 상단 고정) ========== */
+.topbar {
+  position: sticky;
+  top: 0;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  background: transparent;
+  border-bottom: none;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+/* 스크롤시 topbar 스타일 변경 */
+.topbar.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #EFF3F4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.topbar-left, .topbar-right {
+  display: flex;
+  gap: 8px;
+}
+
+.topbar-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* 스크롤 시 topbar-center 표시 */
+.topbar.scrolled .topbar-center {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.topbar-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0F1419;
+  line-height: 20px;
+}
+
+.topbar-subtitle {
+  font-size: 13px;
+  color: #536471;
+  line-height: 16px;
+}
+
+/* Topbar 아이콘 */
+.topbar-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* 스크롤시 아이콘 배경색 변경 */
+.topbar.scrolled .topbar-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.topbar-icon:active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 아이콘 SVG들 - 항상 표시 */
+.topbar-icon.back {
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 16.1001L10 16M10 16L15 21M10 16L15 11' stroke='white' stroke-width='1.55' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.topbar-icon.grok {
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.0656 18.2704L19.7172 14.1753C19.9943 13.9746 20.3903 14.0529 20.5224 14.3647C21.2172 16.0093 20.9068 17.9856 19.5243 19.3426C18.1419 20.6995 16.2183 20.9971 14.4602 20.3193L12.5395 21.1922C15.2943 23.0403 18.6394 22.5833 20.7298 20.5301C22.3879 18.9026 22.9014 16.6842 22.4213 14.6837L22.4256 14.6879C21.7293 11.749 22.5968 10.5744 24.3738 8.17229C24.4158 8.11533 24.4579 8.05838 24.5 8L22.1616 10.2953V10.2882L14.0641 18.2718' fill='white'/%3E%3Cpath d='M12.8993 19.2657C10.9221 17.4118 11.263 14.5427 12.95 12.8882C14.1976 11.6636 16.2415 11.1638 18.0258 11.8986L19.9421 11.03C19.5969 10.7851 19.1544 10.5217 18.6467 10.3366C16.3518 9.40963 13.6043 9.87096 11.7388 11.7006C9.94432 13.462 9.38003 16.1702 10.3491 18.4811C11.0729 20.2083 9.8863 21.4299 8.69097 22.663C8.26738 23.1001 7.84235 23.5373 7.5 24L12.8978 19.2671' fill='white'/%3E%3C/svg%3E");
+}
+
+.topbar-icon.search {
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.9272 8.67529C18.3789 8.6754 21.1772 11.4736 21.1772 14.9253C21.1771 16.3727 20.683 17.7038 19.8569 18.7632L23.3228 22.229L22.2271 23.3247L18.7603 19.8579C17.7015 20.6817 16.3726 21.1752 14.9272 21.1753C11.4757 21.1753 8.67762 18.3768 8.67725 14.9253C8.67725 11.4735 11.4755 8.67529 14.9272 8.67529ZM14.9272 10.2251C12.3315 10.2251 10.2271 12.3296 10.2271 14.9253L10.2329 15.1665C10.3547 17.5697 12.2819 19.4968 14.6851 19.6187L14.9272 19.6255C17.4418 19.6254 19.4947 17.6498 19.6206 15.1665L19.6274 14.9253C19.6274 12.4105 17.652 10.3566 15.1685 10.231L14.9272 10.2251Z' fill='white'/%3E%3C/svg%3E");
+}
+
+.topbar-icon.more {
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='16' r='1.5' fill='white'/%3E%3Ccircle cx='16' cy='16' r='1.5' fill='white'/%3E%3Ccircle cx='21' cy='16' r='1.5' fill='white'/%3E%3C/svg%3E");
+}
+
+/* ========== 프로필 정보 ========== */
 .profile-body {
-    height: 250px;
-    padding: 47px 9px 0 9px;
-    transition: all 0.25s ease;
+  padding: 0;
+  background: #fff;
+}
+
+.profile-header-bg {
+  width: 100%;
+  height: 131px;
+  background-image: url("https://doy-is-here.github.io/profile/header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.avatar {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: #E1E8ED;
+  border: 4px solid #fff;
+  margin-top: -37px;
+  margin-left: 12px;
+  background-image: url("https://doy-is-here.github.io/profile/profile-nomad.jpg");
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.follow {
+  position: absolute;
+  top: 147px;
+  right: 12px;
+  padding: 9px 33px;
+  border-radius: 999px;
+  background: #0F1419;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .profile-name {
   font-size: 22px;
   color: #0F1419;
-  font-weight: bold;
-  padding: 5px 0;
+  font-weight: 800;
+  padding: 12px 12px 0 12px;
+  margin: 0;
+}
+
+.verified {
+  color: #1D9BF0;
+  font-size: 18px;
 }
 
 .profile-handle {
   font-size: 15px;
   color: #536471;
-  margin-bottom: 15px;
+  padding: 0 12px;
+  margin: 0;
 }
 
 .profile-bio {
   font-size: 15px;
   color: #0F1419;
-  margin-bottom: 10px;
+  padding: 12px 12px 0 12px;
+  margin: 0;
 }
 
 .profile-meta {
-  margin-top: 8px;
-  font-size: 13px;
+  font-size: 15px;
   color: #536471;
-  margin-bottom: 15px;
+  padding: 8px 12px 0 12px;
+  margin: 0;
 }
 
-.profile-meta b {
-    font-size: 13px;
-    font-weight: 600;
-    color: #0F1419;
+.profile-stats {
+  padding: 12px 12px 16px 12px;
+  font-size: 15px;
+  color: #536471;
 }
 
-
-/* 상단바 */
-.topbar {
-  height: 131px;
-  display: flex;
-  align-items: center;
-  padding: 0 12px;
-  border-bottom: 1px solid #EFF3F4;
-  background-image: url("https://doy-is-here.github.io/profile/header.jpg");
+.profile-stats b {
+  font-weight: 700;
+  color: #0F1419;
 }
 
-/* 프로필 정보 */
-.avatar {
-    position: absolute;
-    top: 105px;
-    width: 74px;
-    height: 74px;
-    border-radius: 50%;
-    background: #E1E8ED;
-    border: 4px solid #fff;
-    margin-left: -4px;
-    background-image: url("https://doy-is-here.github.io/profile/profile-nomad.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    flex-shrink: 0;
+.following, .followers {
+  margin-right: 16px;
 }
 
-.follow {
-    position: absolute;
-    top: 142px;
-    right: 9px;
-    padding: 9px 33px;
-    border-radius: 999px;
-    background: #0F1419;
-    color: #fff;
-    font-weight: 500;
-    border: none;
-    font-size: 12px;
-}
-
-
-/* 탭 */
+/* ========== 탭 (Sticky) ========== */
 .tabs {
+  position: sticky;
+  top: 53px;
   display: flex;
-  border-bottom: 1px solid #C7D4DC;
+  background: #fff;
+  border-bottom: 1px solid #EFF3F4;
+  z-index: 90;
 }
 
 .tabs span {
   flex: 1;
   text-align: center;
-  padding: 12px 0;
+  padding: 16px 0;
   font-size: 15px;
   color: #536471;
-  font-weight: 600;
-  position: relative; 
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.tabs .active {
+.tabs span:active {
+  background-color: #F7F9F9;
+}
+
+.tabs span.active {
   color: #0F1419;
+  font-weight: 700;
 }
 
-.tabs .active::after {
+.tabs span.active::after {
   content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 50px;        
-  height: 3px;        
+  width: 56px;
+  height: 4px;
   background: #1D9BF0;
   transform: translateX(-50%);
   border-radius: 999px;
 }
 
-
-
-
-
-/* =========================
-   Tweet
-========================= */
-
+/* ========== Timeline ========== */
 .timeline {
-  padding-bottom: 56px;
+  padding-bottom: 60px;
 }
 
 .tweet {
   display: flex;
-  padding: 12px;
+  padding: 12px 16px;
   border-bottom: 1px solid #EFF3F4;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.content {
+.tweet:active {
+  background-color: #F7F9F9;
+}
+
+.tweet-avatar {
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.tweet-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tweet-content {
   flex: 1;
+  min-width: 0;
 }
 
-.meta {
-  font-size: 13px;
-  color: #536471;
+.tweet-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
 }
 
-.meta b {
+.tweet-author {
+  font-weight: 700;
+  font-size: 15px;
   color: #0F1419;
 }
 
-.text {
-  font-size: 15px;
-  line-height: 1.4;
-  margin: 4px 0 8px;
+.verified-badge {
+  color: #1D9BF0;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
-/* =========================
-   Media
-========================= */
+.tweet-username {
+  color: #536471;
+  font-size: 15px;
+}
 
-.media {
-  display: grid;
-  gap: 2px;
+.tweet-date {
+  color: #536471;
+  font-size: 15px;
+}
+
+.tweet-text {
+  font-size: 15px;
+  line-height: 20px;
+  color: #0F1419;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-top: 2px;
+}
+
+.tweet-hashtag {
+  color: #1D9BF0;
+}
+
+/* Media Grid */
+.tweet-media {
+  margin-top: 12px;
   border-radius: 16px;
   overflow: hidden;
+  border: 1px solid #EFF3F4;
 }
 
-.media.grid-2 {
+.media-grid {
+  display: grid;
+  gap: 2px;
+  background-color: #F7F9F9;
+}
+
+.media-grid.count-1 {
+  grid-template-columns: 1fr;
+  max-height: 440px;
+}
+
+.media-grid.count-2 {
   grid-template-columns: 1fr 1fr;
+  max-height: 220px;
 }
 
-.media > div {
-  background: #ccc;
-  aspect-ratio: 1 / 1;
+.media-grid.count-3 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 110px);
 }
 
-/* =========================
-   Actions
-========================= */
+.media-grid.count-3 .media-item:first-child {
+  grid-row: 1 / 3;
+}
 
-.actions {
+.media-grid.count-4 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 110px 110px;
+}
+
+.media-item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #F7F9F9;
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tweet Actions */
+.tweet-actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 8px;
+  margin-top: 12px;
+  color: #536471;
+  max-width: 425px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: #536471;
+  cursor: pointer;
+  padding: 0;
   font-size: 13px;
+  transition: color 0.2s;
+}
+
+.action-button svg {
+  width: 18.75px;
+  height: 18.75px;
+}
+
+.action-button:active {
+  color: #1D9BF0;
+}
+
+/* ========== 사진 그리드 (1:1) ========== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  padding-bottom: 60px;
+}
+
+.photo-grid-item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #F7F9F9;
+  cursor: pointer;
+}
+
+.photo-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========== 트윗 상세 페이지 ========== */
+.detail-header {
+  position: sticky;
+  top: 0;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: #fff;
+  border-bottom: 1px solid #EFF3F4;
+  z-index: 100;
+  gap: 32px;
+}
+
+.tweet-detail {
+  padding: 12px 16px;
+  padding-bottom: 60px;
+}
+
+.detail-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.detail-user img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.detail-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-user-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0F1419;
+}
+
+.detail-user-handle {
+  font-size: 15px;
   color: #536471;
 }
 
-/* =========================
-   Bottom Nav
-========================= */
+.detail-text {
+  font-size: 23px;
+  line-height: 28px;
+  color: #0F1419;
+  margin-bottom: 12px;
+  white-space: pre-wrap;
+}
 
-.bottom-nav {
+.detail-media {
+  margin: 16px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #EFF3F4;
+}
+
+.detail-media img {
+  width: 100%;
+  display: block;
+}
+
+.detail-time {
+  font-size: 15px;
+  color: #536471;
+  padding: 16px 0;
+  border-bottom: 1px solid #EFF3F4;
+}
+
+.detail-stats {
+  display: flex;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #EFF3F4;
+}
+
+.detail-stat {
+  font-size: 15px;
+  color: #536471;
+}
+
+.detail-stat b {
+  font-weight: 700;
+  color: #0F1419;
+}
+
+.detail-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  border-bottom: 1px solid #EFF3F4;
+}
+
+.detail-action-btn {
+  background: none;
+  border: none;
+  color: #536471;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.detail-action-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========== 트윗 작성 페이지 ========== */
+.compose-header {
   position: sticky;
+  top: 0;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: #fff;
+  border-bottom: 1px solid #EFF3F4;
+  z-index: 100;
+}
+
+.compose-close {
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: #0F1419;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.compose-close:active {
+  background-color: #F7F9F9;
+}
+
+.compose-post {
+  background: #1D9BF0;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.compose-post.active {
+  opacity: 1;
+}
+
+.compose-body {
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.compose-user img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+#compose-textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-family: inherit;
+  resize: none;
+  min-height: 200px;
+  color: #0F1419;
+}
+
+#compose-textarea::placeholder {
+  color: #536471;
+}
+
+/* ========== 하단 네비게이션 ========== */
+.bottom-nav {
+  position: fixed;
   bottom: 0;
-  height: 52px;
+  width: 394px;
+  height: 53px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 1px solid #EFF3F4;
   background: #fff;
+  border-top: 1px solid #EFF3F4;
+  z-index: 100;
 }
 
+.nav-btn {
+  background: none;
+  border: none;
+  color: #0F1419;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.nav-btn:active {
+  background-color: #F7F9F9;
+}
+
+.nav-btn.active {
+  color: #0F1419;
+}
+
+.nav-btn svg {
+  fill: currentColor;
+}
+
+.nav-btn.compose-btn {
+  background: #1D9BF0;
+  width: 56px;
+  height: 56px;
+}
+
+.nav-btn.compose-btn svg {
+  fill: #fff;
+}
+
+/* ========== 애니메이션 ========== */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tweet {
+  animation: slideUp 0.3s ease-out;
+}

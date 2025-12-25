@@ -1,0 +1,239 @@
+
+/* ========== Timeline ========== */
+.timeline {
+  padding-bottom: 60px;
+}
+
+.tweet {
+  display: flex;
+  padding: 12px 9px;
+  border-bottom: 1px solid #CFD9DE;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tweet:active {
+  background-color: #F7F9F9;
+}
+
+.tweet-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 12px;
+    background-image: url("https://doy-is-here.github.io/profile/profile-nomad.jpg");
+    border: 4px solid #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.tweet-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
+}
+
+.tweet-author {
+  font-weight: bold;
+  font-size: 15px;
+  color: #0F1419;
+}
+
+.verified-badge {
+  color: #1D9BF0;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.tweet-username {
+  color: #536471;
+  font-size: 15px;
+}
+
+.tweet-date {
+  color: #536471;
+  font-size: 15px;
+}
+
+.tweet-text {
+  font-size: 15px;
+  line-height: 20px;
+  color: #0F1419;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-top: 2px;
+}
+
+.tweet-hashtag {
+  color: #1D9BF0;
+}
+
+
+/* 댓글 아이콘 */
+.tweet-icon.comment {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.52979 7.59137C1.52979 4.22589 4.14181 1.5 7.36385 1.5H10.5458C13.8181 1.5 16.4702 4.27157 16.4702 7.69035C16.4702 9.94416 15.2991 12.0152 13.4122 13.1041L7.54241 16.5V13.6904H7.49358C4.22125 13.7665 1.52979 11.0178 1.52979 7.59137ZM7.36385 3.02284C4.94641 3.02284 2.98739 5.07107 2.98739 7.59137C2.98739 10.1574 5.00618 12.2208 7.46078 12.1675L7.71659 12.1599H9.00002V13.9112L12.7074 11.7716C14.1293 10.9492 15.0126 9.38832 15.0126 7.69035C15.0126 5.10914 13.0128 3.02284 10.5458 3.02284H7.36385Z' fill='%236D6D6D'/%3E%3C/svg%3E");
+}
+
+/* 리트윗 아이콘 */
+.tweet-icon.retweet {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.563 3.11353L6.77591 6.11475L5.7871 7.17315L4.28793 5.77403V11.8997C4.28793 12.6971 4.93748 13.3496 5.7378 13.3496H9.72493V14.7994H5.7378C4.13642 14.7994 2.83807 13.5018 2.83807 11.8997V5.77403L1.33891 7.17315L0.350098 6.11475L3.563 3.11353ZM12.2622 4.65038H8.27507V3.20052H12.2622C13.8636 3.20052 15.1619 4.49815 15.1619 6.10025V12.2259L16.6611 10.8268L17.6499 11.8852L14.437 14.8864L11.2241 11.8852L12.2129 10.8268L13.7121 12.2259V6.10025C13.7121 5.30282 13.0625 4.65038 12.2622 4.65038Z' fill='%236D6D6D'/%3E%3C/svg%3E");
+}
+
+/* 좋아요 아이콘 */
+.tweet-icon.like {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5226 3.87702C11.6062 3.83202 10.5135 4.25951 9.60523 5.49697L9.0015 6.31444L8.39702 5.49697C7.48805 4.25951 6.39458 3.83202 5.47811 3.87702C4.54589 3.92952 3.71641 4.462 3.29568 5.30947C2.88169 6.14945 2.82094 7.39441 3.65492 8.92436C4.46039 10.4018 6.09759 12.1268 9.0015 13.8817C11.9039 12.1268 13.5404 10.4018 14.3458 8.92436C15.1791 7.39441 15.1183 6.14945 14.7036 5.30947C14.2828 4.462 13.4541 3.92952 12.5226 3.87702ZM15.6628 9.64434C14.6496 11.5043 12.6621 13.4842 9.37874 15.3967L9.0015 15.6217L8.62351 15.3967C5.33936 13.4842 3.35192 11.5043 2.33721 9.64434C1.31724 7.7694 1.27974 5.99945 1.95172 4.642C2.61695 3.29954 3.93691 2.45956 5.40236 2.38456C6.64057 2.31707 7.92828 2.80455 9.00075 3.89202C10.0725 2.80455 11.3602 2.31707 12.5976 2.38456C14.0631 2.45956 15.3831 3.29954 16.0483 4.642C16.7203 5.99945 16.6828 7.7694 15.6628 9.64434Z' fill='%236D6D6D'/%3E%3C/svg%3E");
+}
+
+/* 조회수 아이콘 */
+.tweet-icon.views {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.5625 15.75V2.25H8.0625V15.75H6.5625ZM13.5 15.75V6.375H15V15.75H13.5ZM3 15.75L3.003 8.25H4.503L4.5 15.75H3ZM9.936 15.75V10.5H11.436V15.75H9.936Z' fill='%236D6D6D'/%3E%3C/svg%3E");
+}
+
+/* 북마크 아이콘 */
+.tweet-icon.bookmark {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 2.91022C3 1.85578 3.83925 1 4.875 1H13.125C14.1608 1 15 1.85578 15 2.91022V17L9 12.6371L3 17V2.91022ZM4.875 2.52818C4.668 2.52818 4.5 2.69628 4.5 2.91022V14.0353L9 10.7574L13.5 14.0353V2.91022C13.5 2.69628 13.332 2.52818 13.125 2.52818H4.875Z' fill='%23536471'/%3E%3C/svg%3E");
+}
+
+/* 공유 아이콘 */
+.tweet-icon.share {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 2L13.4333 6.3346L12.3367 7.41445L9.77778 4.90494V12.1977H8.22222V4.90494L5.65556 7.41445L4.55889 6.3346L9 2ZM16 11.4373L15.9844 14.1065C15.9844 15.1559 15.1133 16 14.04 16H3.94444C2.86333 16 2 15.1483 2 14.0989V11.4373H3.55556V14.0989C3.55556 14.3118 3.72667 14.4791 3.94444 14.4791H14.04C14.2578 14.4791 14.4289 14.3118 14.4289 14.0989L14.4444 11.4373H16Z' fill='%236D6D6D'/%3E%3C/svg%3E");
+}
+
+/* 공통 스타일 */
+.tweet-icon {
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.tweet-actions {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.tweet-actions-left {
+  display: flex;
+  gap: 45px; /* 왼쪽 아이콘들 간격 */
+  right: 27px;
+}
+
+.tweet-actions-right {
+  display: flex;
+  right: 9px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: #536471;
+  cursor: pointer;
+  padding: 0;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.action-button svg {
+  width: 18.75px;
+  height: 18.75px;
+}
+
+.action-button:active {
+  color: #1D9BF0;
+}
+
+/* Media Grid */
+.tweet-media {
+  margin-top: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #EFF3F4;
+}
+
+.media-grid {
+  display: grid;
+  gap: 2px;
+  background-color: #F7F9F9;
+}
+
+.media-grid.count-1 {
+  grid-template-columns: 1fr;
+  max-height: 440px;
+}
+
+.media-grid.count-2 {
+  grid-template-columns: 1fr 1fr;
+  max-height: 220px;
+}
+
+.media-grid.count-3 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 110px);
+}
+
+.media-grid.count-3 .media-item:first-child {
+  grid-row: 1 / 3;
+}
+
+.media-grid.count-4 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 110px 110px;
+}
+
+.media-item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #F7F9F9;
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+/* ========== 사진 그리드 (1:1) ========== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  padding-bottom: 60px;
+}
+
+.photo-grid-item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #F7F9F9;
+  cursor: pointer;
+}
+
+.photo-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

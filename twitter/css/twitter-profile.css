@@ -1,0 +1,124 @@
+.profile-body {
+    height: 210px;
+    padding: 47px 9px 0 9px;
+    transition: all 0.25s ease;
+}
+
+.profile-name {
+    font-size: 22px;
+    color: #0F1419;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.profile-handle {
+    font-size: 15px;
+    color: #536471;
+    margin-bottom: 12px;
+}
+
+.profile-bio {
+    font-size: 15px;
+    color: #0F1419;
+    margin-bottom: 9px;
+}
+
+.profile-meta {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #536471;
+    margin-bottom: 12px;
+}
+
+.profile-meta b {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0F1419;
+}
+
+.following, .followers {
+    margin-right: 16px;
+}
+
+.profile-follow {
+    /* 위치 및 모양 기존 유지 */
+    position: absolute;
+    right: 9px;
+    padding: 9px 33px;
+    border-radius: 999px;
+    background: #0F1419;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: -36px;
+}
+
+.profile-avatar {
+    position: absolute; /* 항상 absolute */
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: #E1E8ED;
+    border: 4px solid #fff;
+    margin-left: -4px;
+    
+    background-image: url("https://doy-is-here.github.io/profile/profile-nomad.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-top: -74px;
+    transition: transform 0.15s linear; /* 부드럽고 빠른 전환 */
+    transform-origin: bottom center;
+    left: 9px;
+}
+
+.content-wrapper {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* 탭 */
+
+.profile-tabs {
+    display: flex;
+    border-bottom: 1px solid #EAEDF0;
+    position: sticky;
+    top: 55px;
+    z-index: 20;
+    background: #FFFFFF;
+    justify-content: center;
+}
+
+.tabs {
+    display: flex;
+    gap : 70px;
+}
+
+.tabs span {
+    text-align: center;
+    padding: 12px 0;
+    font-size: 15px;
+    color: #536471;
+    font-weight: 600;
+    position: relative; 
+}
+
+.tabs .active {
+    color: #0F1419;
+}
+
+.tabs .active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 50px;        
+    height: 3px;        
+    background: #1D9BF0;
+    transform: translateX(-50%);
+    border-radius: 999px;
+}
+

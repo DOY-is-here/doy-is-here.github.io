@@ -135,10 +135,11 @@
     display: flex;
     border-bottom: 1px solid #EAEDF0;
     position: sticky;
-    top: 0; 
+    top: 48px;
     z-index: 20;
     background: #FFFFFF;
 }
+
 
 .tab-item {
     flex: 1;
@@ -218,13 +219,6 @@
 }
 
 
-
-.profile-tabs {
-    position: sticky;
-    top: 48px;
-    z-index: 20;
-    background: #FFFFFF; 
-}
 
 /* 탭 컨텐츠 컨테이너 */
 
