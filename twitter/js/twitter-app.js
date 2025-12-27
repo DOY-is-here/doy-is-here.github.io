@@ -1,5 +1,14 @@
 import { tweets, photoTweets, getTweetsByTab } from './tweets.js';
 
+// 스크롤 위치 저장
+let scrollPositions = {
+    posts: 0,
+    highlights: 0,
+    photos: 0
+};
+
+let currentTab = 'posts';
+
 // ========== 유틸리티 함수 ==========
 
 // 날짜 포맷팅 (날짜만, 시간 제거)
@@ -47,7 +56,15 @@ function renderMedia(images) {
         const isVideo = /\.(mp4|webm|mov)$/i.test(img);
         
         if (isVideo) {
-            return `<div class="media-item"><video src="${img}" controls playsinline></video></div>`;
+            return `<div class="media-item">
+                <video src="${img}" playsinline preload="metadata"></video>
+                <div class="video-overlay">
+                    <svg class="play-icon" viewBox="0 0 24 24" width="48" height="48">
+                        <circle cx="12" cy="12" r="10" fill="rgba(255,255,255,0.9)"/>
+                        <path d="M9.5 8.5l7 3.5-7 3.5z" fill="#000"/>
+                    </svg>
+                </div>
+            </div>`;
         } else {
             return `<div class="media-item"><img src="${img}" alt="트윗 이미지" loading="lazy"></div>`;
         }
@@ -101,7 +118,7 @@ function renderTweet(tweet) {
             const highlightedThreadText = highlightHashtags(escapedThreadText);
             
             return `
-        <article class="tweet" data-tweet-id="${t.id}" data-is-thread="true" data-thread-date="${tweet.rawDate}">
+        <article class="tweet" data-tweet-id="${t.id}" data-is-thread="true" data-thread-key="${tweet.threadKey}">
             <div class="tweet-avatar">
             </div>
             <div class="tweet-content">
@@ -306,6 +323,8 @@ function renderTimeline(tab = 'posts') {
     
     if (!timeline) return;
     
+    currentTab = tab;
+    
     let filteredTweets = [];
     
     // 탭별 필터링
@@ -352,6 +371,14 @@ function renderTimeline(tab = 'posts') {
     
     timeline.innerHTML = filteredTweets.map(renderTweet).join('');
     
+    // 탭 전환 시 스크롤을 맨 위로
+    setTimeout(() => {
+        const profilePage = document.getElementById('profile-page');
+        if (profilePage) {
+            profilePage.scrollTop = 0;
+        }
+    }, 0);
+    
     // 트윗 클릭 이벤트
     document.querySelectorAll('.tweet').forEach(tweetEl => {
         tweetEl.addEventListener('click', () => {
@@ -359,9 +386,9 @@ function renderTimeline(tab = 'posts') {
             const isThread = tweetEl.dataset.isThread === 'true';
             
             if (isThread) {
-                // 타래 트윗인 경우 - 전체 타래 찾기
-                const threadDate = tweetEl.dataset.threadDate;
-                const threadGroup = tweets.find(t => t.isThreadGroup && t.rawDate === threadDate);
+                // 타래 트윗인 경우 - threadKey로 전체 타래 찾기
+                const threadKey = tweetEl.dataset.threadKey;
+                const threadGroup = tweets.find(t => t.isThreadGroup && t.threadKey === threadKey);
                 
                 if (threadGroup) {
                     showTweetDetail(threadGroup);
@@ -385,6 +412,12 @@ function renderTimeline(tab = 'posts') {
 
 // ========== 트윗 상세 표시 ==========
 function showTweetDetail(tweet) {
+    // 현재 스크롤 위치 저장
+    const profilePage = document.getElementById('profile-page');
+    if (profilePage) {
+        scrollPositions[currentTab] = profilePage.scrollTop;
+    }
+    
     const detailContent = document.getElementById('tweet-detail-content');
     detailContent.innerHTML = renderTweetDetail(tweet);
     showPage('tweet-detail-page');
@@ -401,6 +434,14 @@ if (backBtn) {
 
       document.getElementById("profile-page")
         .classList.add("active");
+      
+      // 스크롤 위치 복원
+      setTimeout(() => {
+          const profilePage = document.getElementById('profile-page');
+          if (profilePage && scrollPositions[currentTab] !== undefined) {
+              profilePage.scrollTop = scrollPositions[currentTab];
+          }
+      }, 0);
     });
 }
 

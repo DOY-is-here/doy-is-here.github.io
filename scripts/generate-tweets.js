@@ -53,16 +53,19 @@ function parseFileName(fileName) {
     // 240405-1 (1).jpg -> { date: "240405", tweetNum: 1, sequence: 1, isThread: false }
     // 240405.jpg -> { date: "240405", tweetNum: null, sequence: null, isThread: false }
     // 240405-ps.jpg -> { date: "240405", tweetNum: null, sequence: null, isThread: true }
+    // 240405-2-ps.jpg -> { date: "240405", tweetNum: 2, sequence: null, isThread: true }
+    // 240405-2-ps (1).jpg -> { date: "240405", tweetNum: 2, sequence: 1, isThread: true }
     // 240405 (1).jpg -> { date: "240405", tweetNum: null, sequence: 1, isThread: false }
     
-    const match = fileName.match(/^(\d{6})(?:-(\d+|ps))?(?:\s*\((\d+)\))?/);
+    const match = fileName.match(/^(\d{6})(?:-(\d+))?(?:-ps)?(?:\s*\((\d+)\))?/);
+    const isThread = fileName.includes('-ps');
     
     if (!match) return null;
     
     return {
         date: match[1],
-        tweetNum: match[2] && match[2] !== 'ps' ? parseInt(match[2]) : null,
-        isThread: match[2] === 'ps',
+        tweetNum: match[2] ? parseInt(match[2]) : null,
+        isThread: isThread,
         sequence: match[3] ? parseInt(match[3]) : null,
         fileName: fileName
     };
@@ -142,19 +145,21 @@ function groupMediaByTweet(mediaFiles, folderPath, type, metadata) {
         // 메타데이터에서 트윗 정보 가져오기
         let tweetData = { text: '' };
         
-        if (group.isThread) {
-            // 타래인 경우
-            if (metadata[group.date] && metadata[group.date]['ps']) {
-                tweetData = metadata[group.date]['ps'];
-                appliedCount++;
-            }
-        } else if (group.tweetNum !== null && metadata[group.date]) {
+        if (group.tweetNum !== null && metadata[group.date]) {
+            // 번호가 있는 경우 (타래든 일반이든)
             const tweetNumStr = String(group.tweetNum);
             if (metadata[group.date][tweetNumStr]) {
                 tweetData = metadata[group.date][tweetNumStr];
                 appliedCount++;
             }
+        } else if (group.tweetNum === null && group.isThread && metadata[group.date]) {
+            // 번호 없는 타래 (240405-ps.jpg)
+            if (metadata[group.date]['ps']) {
+                tweetData = metadata[group.date]['ps'];
+                appliedCount++;
+            }
         } else if (group.tweetNum === null && metadata[group.date]) {
+            // 번호 없는 일반 트윗
             if (typeof metadata[group.date] === 'object' && metadata[group.date].text !== undefined) {
                 tweetData = metadata[group.date];
                 appliedCount++;
@@ -182,10 +187,49 @@ function groupMediaByTweet(mediaFiles, folderPath, type, metadata) {
     return tweets;
 }
 
+// 타래 그룹화 함수
+function groupThreads(tweets) {
+    const grouped = [];
+    const threadMap = new Map();
+    
+    tweets.forEach(tweet => {
+        if (tweet.isThread) {
+            // 타래 키: 날짜 + 번호 (240405-2-ps → "240405-2", 240405-ps → "240405")
+            const threadKey = tweet.tweetNum !== null 
+                ? `${tweet.rawDate}-${tweet.tweetNum}`
+                : tweet.rawDate;
+                
+            if (!threadMap.has(threadKey)) {
+                threadMap.set(threadKey, []);
+            }
+            threadMap.get(threadKey).push(tweet);
+        } else {
+            grouped.push(tweet);
+        }
+    });
+    
+    // 타래를 하나의 객체로 만들기
+    threadMap.forEach((threadTweets, threadKey) => {
+        threadTweets.sort((a, b) => a.id.localeCompare(b.id)); // ID 순서로 정렬
+        
+        const mainThread = {
+            ...threadTweets[0],
+            isThreadGroup: true,
+            threadCount: threadTweets.length,
+            threadTweets: threadTweets,
+            threadKey: threadKey  // 타래 식별용
+        };
+        
+        grouped.push(mainThread);
+    });
+    
+    return grouped;
+}
+
 // tweets.js 파일 생성
 function generateTweetsJS(groupTweets, photoTweets) {
     // 모든 트윗 합치기
-    const allTweets = [...groupTweets, ...photoTweets];
+    let allTweets = [...groupTweets, ...photoTweets];
     
     // 날짜순 정렬 (최신순)
     allTweets.sort((a, b) => {
@@ -197,6 +241,9 @@ function generateTweetsJS(groupTweets, photoTweets) {
         const bNum = b.tweetNum || 0;
         return bNum - aNum;
     });
+    
+    // 타래 그룹화
+    allTweets = groupThreads(allTweets);
     
     const content = `// 트윗 데이터 (자동 생성됨)
 

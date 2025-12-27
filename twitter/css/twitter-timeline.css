@@ -1,4 +1,3 @@
-
 /* ========== Timeline ========== */
 .timeline {
   padding-bottom: 60px;
@@ -236,4 +235,20 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+/* 동영상 오버레이 */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.play-icon {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }

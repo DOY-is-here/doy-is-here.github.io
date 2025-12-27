@@ -3,12 +3,13 @@ const path = require('path');
 
 // 날짜 파싱 함수
 function parseDate(filename) {
-    const match = filename.match(/^(\d{6})(-\d+|-ps)?/);
+    const match = filename.match(/^(\d{6})(-\d+)?(-ps)?/);
     if (!match) return null;
     
     return {
         rawDate: match[1],
-        tweetNum: match[2] ? (match[2] === '-ps' ? 'ps' : parseInt(match[2].substring(1))) : null
+        tweetNum: match[2] ? parseInt(match[2].substring(1)) : null,
+        isThread: match[3] === '-ps'
     };
 }
 
@@ -55,19 +56,16 @@ function analyzeFileStructure() {
                 const dateInfo = parseDate(filenameWithoutExt);
                 
                 if (dateInfo) {
-                    const { rawDate, tweetNum } = dateInfo;
+                    const { rawDate, tweetNum, isThread } = dateInfo;
                     
                     if (!structure[rawDate]) {
                         structure[rawDate] = {
                             hasMultiple: false,
-                            hasThread: false,
                             tweetNums: []
                         };
                     }
                     
-                    if (tweetNum === 'ps') {
-                        structure[rawDate].hasThread = true;
-                    } else if (tweetNum !== null) {
+                    if (tweetNum !== null) {
                         structure[rawDate].hasMultiple = true;
                         if (!structure[rawDate].tweetNums.includes(tweetNum)) {
                             structure[rawDate].tweetNums.push(tweetNum);
@@ -79,7 +77,7 @@ function analyzeFileStructure() {
                     processedCount++;
                     
                     if (processedCount <= 5) {
-                        console.log(`   📄 파일: ${item} → ${rawDate}${tweetNum ? (tweetNum === 'ps' ? '-ps' : '-'+tweetNum) : ''}`);
+                        console.log(`   📄 파일: ${item} → ${rawDate}${tweetNum ? '-'+tweetNum : ''}${isThread ? '-ps' : ''}`);
                     }
                 }
             }
@@ -105,25 +103,7 @@ function updateMetadataStructure(existingMetadata, fileStructure) {
     for (const [rawDate, structure] of Object.entries(fileStructure)) {
         const existing = existingMetadata[rawDate];
         
-        // Case 1: 타래가 있는 경우
-        if (structure.hasThread) {
-            if (!existing || typeof existing !== 'object') {
-                updatedMetadata[rawDate] = {
-                    ps: { text: '' }
-                };
-                changes.push(`${rawDate}-ps: 새로 추가 (타래)`);
-            } else if (existing.ps) {
-                updatedMetadata[rawDate] = { ...existing };
-            } else {
-                updatedMetadata[rawDate] = {
-                    ...existing,
-                    ps: { text: '' }
-                };
-                changes.push(`${rawDate}-ps: 타래 추가`);
-            }
-        }
-        
-        // Case 2: 다중 tweetNum 구조 필요
+        // Case 1: 다중 tweetNum 구조 필요
         if (structure.hasMultiple) {
             if (existing && typeof existing === 'object' && existing.text !== undefined) {
                 // 단일 → 다중 변환
