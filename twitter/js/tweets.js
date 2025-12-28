@@ -18,7 +18,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251208%20(2).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251208",
         "tweetNum": null
     },
@@ -34,10 +33,11 @@ export const tweets = [
         "displayDate": "2025.11.25.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125.jpg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125%20(3).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251125",
         "tweetNum": null
     },
@@ -56,7 +56,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251122-2.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251122",
         "tweetNum": 2
     },
@@ -75,7 +74,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251122-1.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251122",
         "tweetNum": 1
     },
@@ -97,7 +95,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251122%20(4).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251122",
         "tweetNum": null
     },
@@ -116,7 +113,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251120.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251120",
         "tweetNum": null
     },
@@ -135,7 +131,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251027.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251027",
         "tweetNum": null
     },
@@ -157,7 +152,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251027%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251027",
         "tweetNum": null
     },
@@ -176,7 +170,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251024.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251024",
         "tweetNum": null
     },
@@ -196,7 +189,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251020%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251020",
         "tweetNum": null
     },
@@ -215,7 +207,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251018.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251018",
         "tweetNum": null
     },
@@ -235,7 +226,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251017%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251017",
         "tweetNum": null
     },
@@ -257,7 +247,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251011%20(4).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251011",
         "tweetNum": null
     },
@@ -278,7 +267,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251008%20(3).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251008",
         "tweetNum": null
     },
@@ -298,7 +286,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250928%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250928",
         "tweetNum": null
     },
@@ -320,7 +307,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250916-2%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250916",
         "tweetNum": 2
     },
@@ -342,7 +328,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250916-1%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250916",
         "tweetNum": 1
     },
@@ -364,7 +349,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250910%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250910",
         "tweetNum": null
     },
@@ -386,7 +370,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250816%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250816",
         "tweetNum": null
     },
@@ -406,7 +389,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250810%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250810",
         "tweetNum": null
     },
@@ -425,7 +407,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250809.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250809",
         "tweetNum": null
     },
@@ -444,7 +425,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250808.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250808",
         "tweetNum": null
     },
@@ -463,7 +443,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250720.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250720",
         "tweetNum": null
     },
@@ -483,7 +462,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250720%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250720",
         "tweetNum": null
     },
@@ -503,7 +481,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250719%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250719",
         "tweetNum": null
     },
@@ -524,7 +501,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250715%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250715",
         "tweetNum": null
     },
@@ -543,7 +519,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250713.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250713",
         "tweetNum": null
     },
@@ -565,7 +540,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250704%20(4).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250704",
         "tweetNum": null
     },
@@ -584,7 +558,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250702.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250702",
         "tweetNum": null
     },
@@ -606,7 +579,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250614%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250614",
         "tweetNum": null
     },
@@ -625,7 +597,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250613.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250613",
         "tweetNum": null
     },
@@ -644,7 +615,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250612.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250612",
         "tweetNum": null
     },
@@ -666,7 +636,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250608%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250608",
         "tweetNum": null
     },
@@ -686,7 +655,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250607%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250607",
         "tweetNum": null
     },
@@ -708,7 +676,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250601%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250601",
         "tweetNum": null
     },
@@ -727,7 +694,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250531.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250531",
         "tweetNum": null
     },
@@ -746,7 +712,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250505.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250505",
         "tweetNum": null
     },
@@ -768,7 +733,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250504%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250504",
         "tweetNum": null
     },
@@ -788,7 +752,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250503%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250503",
         "tweetNum": null
     },
@@ -808,7 +771,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250501%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250501",
         "tweetNum": null
     },
@@ -827,7 +789,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250412.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250412",
         "tweetNum": null
     },
@@ -849,7 +810,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250403%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250403",
         "tweetNum": null
     },
@@ -871,7 +831,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-6%20(4).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 6
     },
@@ -893,7 +852,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-5%20(4).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 5
     },
@@ -912,7 +870,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-4.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 4
     },
@@ -931,7 +888,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-3.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 3
     },
@@ -950,7 +906,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 2
     },
@@ -969,7 +924,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 1
     },
@@ -991,7 +945,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250321%20(4).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250321",
         "tweetNum": null
     },
@@ -1013,7 +966,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250318%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250318",
         "tweetNum": null
     },
@@ -1032,7 +984,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250316.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250316",
         "tweetNum": null
     },
@@ -1051,7 +1002,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250315.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250315",
         "tweetNum": null
     },
@@ -1070,7 +1020,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250314.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250314",
         "tweetNum": null
     },
@@ -1092,7 +1041,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250313%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250313",
         "tweetNum": null
     },
@@ -1111,7 +1059,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250312-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250312",
         "tweetNum": 2
     },
@@ -1130,7 +1077,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250312-1.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250312",
         "tweetNum": 1
     },
@@ -1152,7 +1098,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250312%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250312",
         "tweetNum": null
     },
@@ -1171,7 +1116,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250311-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250311",
         "tweetNum": 2
     },
@@ -1190,7 +1134,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250311-1.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250311",
         "tweetNum": 1
     },
@@ -1210,7 +1153,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250310-3%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250310",
         "tweetNum": 3
     },
@@ -1229,7 +1171,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250310-2.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250310",
         "tweetNum": 2
     },
@@ -1248,7 +1189,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250310-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250310",
         "tweetNum": 1
     },
@@ -1268,7 +1208,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250310%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250310",
         "tweetNum": null
     },
@@ -1287,7 +1226,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250308-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250308",
         "tweetNum": 2
     },
@@ -1306,7 +1244,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250308-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250308",
         "tweetNum": 1
     },
@@ -1326,7 +1263,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250305%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250305",
         "tweetNum": null
     },
@@ -1345,7 +1281,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250302-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250302",
         "tweetNum": 2
     },
@@ -1364,7 +1299,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250302-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250302",
         "tweetNum": 1
     },
@@ -1383,7 +1317,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250301-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250301",
         "tweetNum": 2
     },
@@ -1403,7 +1336,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250301-1%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250301",
         "tweetNum": 1
     },
@@ -1422,7 +1354,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250228-3.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250228",
         "tweetNum": 3
     },
@@ -1442,7 +1373,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250228-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250228",
         "tweetNum": 2
     },
@@ -1461,7 +1391,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250228-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250228",
         "tweetNum": 1
     },
@@ -1481,7 +1410,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250223%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250223",
         "tweetNum": null
     },
@@ -1503,7 +1431,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250219%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250219",
         "tweetNum": null
     },
@@ -1522,7 +1449,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250216.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250216",
         "tweetNum": null
     },
@@ -1543,7 +1469,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250212%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250212",
         "tweetNum": null
     },
@@ -1563,7 +1488,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250209-2%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250209",
         "tweetNum": 2
     },
@@ -1585,7 +1509,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250209-1%20(4).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250209",
         "tweetNum": 1
     },
@@ -1605,7 +1528,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250208-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250208",
         "tweetNum": 2
     },
@@ -1625,7 +1547,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250208-1%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250208",
         "tweetNum": 1
     },
@@ -1645,7 +1566,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250207%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250207",
         "tweetNum": null
     },
@@ -1664,7 +1584,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250202.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250202",
         "tweetNum": null
     },
@@ -1686,7 +1605,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250130%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250130",
         "tweetNum": null
     },
@@ -1705,7 +1623,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250127.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250127",
         "tweetNum": null
     },
@@ -1724,7 +1641,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250125.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250125",
         "tweetNum": null
     },
@@ -1744,7 +1660,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250122%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250122",
         "tweetNum": null
     },
@@ -1765,7 +1680,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250122%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250122",
         "tweetNum": null
     },
@@ -1784,7 +1698,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250116.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250116",
         "tweetNum": null
     },
@@ -1806,7 +1719,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250113%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250113",
         "tweetNum": null
     },
@@ -1826,7 +1738,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250108%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250108",
         "tweetNum": null
     },
@@ -1845,7 +1756,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241229.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241229",
         "tweetNum": null
     },
@@ -1867,7 +1777,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241229%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241229",
         "tweetNum": null
     },
@@ -1887,7 +1796,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241228%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241228",
         "tweetNum": null
     },
@@ -1906,7 +1814,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241227.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241227",
         "tweetNum": null
     },
@@ -1926,7 +1833,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241226%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241226",
         "tweetNum": null
     },
@@ -1945,7 +1851,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241225-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241225",
         "tweetNum": 2
     },
@@ -1964,7 +1869,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241225-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241225",
         "tweetNum": 1
     },
@@ -1986,7 +1890,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241225%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241225",
         "tweetNum": null
     },
@@ -2006,7 +1909,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241224%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241224",
         "tweetNum": null
     },
@@ -2025,7 +1927,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241223.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241223",
         "tweetNum": null
     },
@@ -2046,7 +1947,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241223%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241223",
         "tweetNum": null
     },
@@ -2065,7 +1965,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241222.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241222",
         "tweetNum": null
     },
@@ -2084,7 +1983,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241221.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241221",
         "tweetNum": null
     },
@@ -2106,7 +2004,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241221%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241221",
         "tweetNum": null
     },
@@ -2126,7 +2023,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241220%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241220",
         "tweetNum": null
     },
@@ -2147,7 +2043,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241219%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241219",
         "tweetNum": null
     },
@@ -2168,7 +2063,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241218-2%20(3).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241218",
         "tweetNum": 2
     },
@@ -2187,7 +2081,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241218-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241218",
         "tweetNum": 1
     },
@@ -2208,7 +2101,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241218%20(3).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241218",
         "tweetNum": null
     },
@@ -2227,7 +2119,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241215.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241215",
         "tweetNum": null
     },
@@ -2246,7 +2137,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241214.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241214",
         "tweetNum": null
     },
@@ -2265,7 +2155,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241213.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241213",
         "tweetNum": null
     },
@@ -2284,7 +2173,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241212.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241212",
         "tweetNum": null
     },
@@ -2306,7 +2194,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241212%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241212",
         "tweetNum": null
     },
@@ -2325,7 +2212,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241207-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241207",
         "tweetNum": 2
     },
@@ -2344,7 +2230,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241207-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241207",
         "tweetNum": 1
     },
@@ -2366,7 +2251,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241204%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241204",
         "tweetNum": null
     },
@@ -2385,7 +2269,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241201.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241201",
         "tweetNum": null
     },
@@ -2407,7 +2290,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241201%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241201",
         "tweetNum": null
     },
@@ -2426,7 +2308,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241130.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241130",
         "tweetNum": null
     },
@@ -2445,7 +2326,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241128.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241128",
         "tweetNum": null
     },
@@ -2467,7 +2347,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241127%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241127",
         "tweetNum": null
     },
@@ -2487,7 +2366,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241125%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241125",
         "tweetNum": null
     },
@@ -2506,7 +2384,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241124.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241124",
         "tweetNum": null
     },
@@ -2525,7 +2402,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241123.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241123",
         "tweetNum": null
     },
@@ -2545,7 +2421,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241123%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241123",
         "tweetNum": null
     },
@@ -2564,7 +2439,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241122.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241122",
         "tweetNum": null
     },
@@ -2583,7 +2457,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241121.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241121",
         "tweetNum": null
     },
@@ -2602,7 +2475,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241119.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241119",
         "tweetNum": null
     },
@@ -2622,7 +2494,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241118%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241118",
         "tweetNum": null
     },
@@ -2642,7 +2513,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241117%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241117",
         "tweetNum": null
     },
@@ -2661,7 +2531,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241114.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241114",
         "tweetNum": null
     },
@@ -2680,7 +2549,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241113.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241113",
         "tweetNum": null
     },
@@ -2699,7 +2567,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241112-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241112",
         "tweetNum": 2
     },
@@ -2718,7 +2585,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241112-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241112",
         "tweetNum": 1
     },
@@ -2740,7 +2606,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241111%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241111",
         "tweetNum": null
     },
@@ -2759,7 +2624,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241110.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241110",
         "tweetNum": null
     },
@@ -2778,7 +2642,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241109.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241109",
         "tweetNum": null
     },
@@ -2797,7 +2660,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241108-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241108",
         "tweetNum": 2
     },
@@ -2816,7 +2678,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241108-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241108",
         "tweetNum": 1
     },
@@ -2835,7 +2696,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241107.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241107",
         "tweetNum": null
     },
@@ -2854,7 +2714,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241106.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241106",
         "tweetNum": null
     },
@@ -2873,7 +2732,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241103.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241103",
         "tweetNum": null
     },
@@ -2892,7 +2750,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241102.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241102",
         "tweetNum": null
     },
@@ -2914,7 +2771,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241102%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241102",
         "tweetNum": null
     },
@@ -2934,7 +2790,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241101-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241101",
         "tweetNum": 2
     },
@@ -2953,7 +2808,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241101-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241101",
         "tweetNum": 1
     },
@@ -2975,7 +2829,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241101%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241101",
         "tweetNum": null
     },
@@ -2994,7 +2847,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241031.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241031",
         "tweetNum": null
     },
@@ -3013,7 +2865,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241030.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241030",
         "tweetNum": null
     },
@@ -3033,7 +2884,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241028%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241028",
         "tweetNum": null
     },
@@ -3053,7 +2903,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241027%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241027",
         "tweetNum": null
     },
@@ -3072,7 +2921,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241026.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241026",
         "tweetNum": null
     },
@@ -3093,7 +2941,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241026%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241026",
         "tweetNum": null
     },
@@ -3112,7 +2959,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241024.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241024",
         "tweetNum": null
     },
@@ -3132,7 +2978,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241021%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241021",
         "tweetNum": null
     },
@@ -3152,7 +2997,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241020%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241020",
         "tweetNum": null
     },
@@ -3171,7 +3015,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241019.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241019",
         "tweetNum": null
     },
@@ -3191,7 +3034,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241018%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241018",
         "tweetNum": null
     },
@@ -3210,7 +3052,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241017.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241017",
         "tweetNum": null
     },
@@ -3229,7 +3070,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241016.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241016",
         "tweetNum": null
     },
@@ -3251,7 +3091,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241016%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241016",
         "tweetNum": null
     },
@@ -3270,7 +3109,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241015.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241015",
         "tweetNum": null
     },
@@ -3290,7 +3128,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241014%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241014",
         "tweetNum": null
     },
@@ -3310,7 +3147,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241013%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241013",
         "tweetNum": null
     },
@@ -3329,7 +3165,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241012.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241012",
         "tweetNum": null
     },
@@ -3350,7 +3185,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241012%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241012",
         "tweetNum": null
     },
@@ -3369,7 +3203,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241011.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241011",
         "tweetNum": null
     },
@@ -3388,7 +3221,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241010.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241010",
         "tweetNum": null
     },
@@ -3407,7 +3239,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241009.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241009",
         "tweetNum": null
     },
@@ -3426,7 +3257,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240930.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240930",
         "tweetNum": null
     },
@@ -3446,7 +3276,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240928%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240928",
         "tweetNum": null
     },
@@ -3466,7 +3295,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240927%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240927",
         "tweetNum": null
     },
@@ -3485,7 +3313,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240920.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240920",
         "tweetNum": null
     },
@@ -3504,7 +3331,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240916-2.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240916",
         "tweetNum": 2
     },
@@ -3523,7 +3349,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240916-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240916",
         "tweetNum": 1
     },
@@ -3545,7 +3370,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240916%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240916",
         "tweetNum": null
     },
@@ -3564,7 +3388,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240914.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240914",
         "tweetNum": null
     },
@@ -3583,7 +3406,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240914.jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240914",
         "tweetNum": null
     },
@@ -3603,7 +3425,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240913%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240913",
         "tweetNum": null
     },
@@ -3622,7 +3443,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240906.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240906",
         "tweetNum": null
     },
@@ -3642,7 +3462,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240905%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240905",
         "tweetNum": null
     },
@@ -3664,7 +3483,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240831%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240831",
         "tweetNum": null
     },
@@ -3684,7 +3502,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240829%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240829",
         "tweetNum": null
     },
@@ -3704,7 +3521,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240824%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240824",
         "tweetNum": null
     },
@@ -3725,7 +3541,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240822%20(3).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240822",
         "tweetNum": null
     },
@@ -3746,7 +3561,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240817%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240817",
         "tweetNum": null
     },
@@ -3766,12 +3580,11 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240815%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240815",
         "tweetNum": null
     },
     {
-        "id": "group-240807",
+        "id": "group-240807-2",
         "author": {
             "name": "NOMAD",
             "username": "NOMAD_is_here",
@@ -3782,12 +3595,29 @@ export const tweets = [
         "displayDate": "2024.8.7.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240807.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240807-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240807",
-        "tweetNum": null
+        "tweetNum": 2
+    },
+    {
+        "id": "group-240807-1",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-08-07T12:00:00Z",
+        "displayDate": "2024.8.7.",
+        "text": "",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240807-1.mp4"
+        ],
+        "type": "group",
+        "rawDate": "240807",
+        "tweetNum": 1
     },
     {
         "id": "group-240731",
@@ -3804,8 +3634,25 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240731.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240731",
+        "tweetNum": null
+    },
+    {
+        "id": "group-240730",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-07-30T12:00:00Z",
+        "displayDate": "2024.7.30.",
+        "text": "",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240730.mp4"
+        ],
+        "type": "group",
+        "rawDate": "240730",
         "tweetNum": null
     },
     {
@@ -3823,7 +3670,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240727.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240727",
         "tweetNum": null
     },
@@ -3842,7 +3688,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240725.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240725",
         "tweetNum": null
     },
@@ -3861,7 +3706,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240704.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240704",
         "tweetNum": null
     },
@@ -3883,7 +3727,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240619%20(4).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240619",
         "tweetNum": null
     },
@@ -3903,7 +3746,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240617%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240617",
         "tweetNum": null
     },
@@ -3922,7 +3764,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240606-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240606",
         "tweetNum": 2
     },
@@ -3941,7 +3782,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240606-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240606",
         "tweetNum": 1
     },
@@ -3960,7 +3800,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240530.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240530",
         "tweetNum": null
     },
@@ -3980,7 +3819,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240516%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240516",
         "tweetNum": null
     },
@@ -4000,7 +3838,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240426%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240426",
         "tweetNum": null
     },
@@ -4019,7 +3856,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240418.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240418",
         "tweetNum": null
     },
@@ -4038,7 +3874,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240410.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240410",
         "tweetNum": null
     },
@@ -4057,7 +3892,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240404.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240404",
         "tweetNum": null
     },
@@ -4076,7 +3910,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240402.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240402",
         "tweetNum": null
     },
@@ -4092,10 +3925,10 @@ export const tweets = [
         "displayDate": "2024.3.28.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240328.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240328%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240328%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240328",
         "tweetNum": null
     },
@@ -4111,10 +3944,10 @@ export const tweets = [
         "displayDate": "2024.3.21.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240321.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240321%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240321%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240321",
         "tweetNum": null
     },
@@ -4130,10 +3963,10 @@ export const tweets = [
         "displayDate": "2024.3.19.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240319.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240319%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240319%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240319",
         "tweetNum": null
     },
@@ -4153,7 +3986,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240317%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240317",
         "tweetNum": null
     },
@@ -4172,7 +4004,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240316.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240316",
         "tweetNum": null
     },
@@ -4188,10 +4019,10 @@ export const tweets = [
         "displayDate": "2024.3.15.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240315.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240315%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240315%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240315",
         "tweetNum": null
     },
@@ -4207,10 +4038,10 @@ export const tweets = [
         "displayDate": "2024.3.14.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240314.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240314%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240314%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240314",
         "tweetNum": null
     },
@@ -4229,7 +4060,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240313.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240313",
         "tweetNum": null
     },
@@ -4245,10 +4075,10 @@ export const tweets = [
         "displayDate": "2024.3.12.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240312-2.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240312-2%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240312-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240312",
         "tweetNum": 2
     },
@@ -4268,7 +4098,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240312-1%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240312",
         "tweetNum": 1
     },
@@ -4288,7 +4117,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240311%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240311",
         "tweetNum": null
     },
@@ -4304,10 +4132,10 @@ export const tweets = [
         "displayDate": "2024.3.9.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240309-2.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240309-2%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240309-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240309",
         "tweetNum": 2
     },
@@ -4326,7 +4154,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240309-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240309",
         "tweetNum": 1
     },
@@ -4342,10 +4169,10 @@ export const tweets = [
         "displayDate": "2024.3.8.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240308.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240308%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240308%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240308",
         "tweetNum": null
     },
@@ -4361,10 +4188,10 @@ export const tweets = [
         "displayDate": "2024.3.7.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240307.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240307%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240307%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240307",
         "tweetNum": null
     },
@@ -4380,10 +4207,10 @@ export const tweets = [
         "displayDate": "2024.3.5.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-2.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-2%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240305",
         "tweetNum": 2
     },
@@ -4400,10 +4227,10 @@ export const tweets = [
         "text": "",
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-1%20(1).jpeg",
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-1%20(2).jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-1%20(2).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-1%20(3).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240305",
         "tweetNum": 1
     },
@@ -4419,10 +4246,10 @@ export const tweets = [
         "displayDate": "2024.3.3.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240303.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240303%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240303%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240303",
         "tweetNum": null
     },
@@ -4438,10 +4265,10 @@ export const tweets = [
         "displayDate": "2024.3.2.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-2.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-2%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240302",
         "tweetNum": 2
     },
@@ -4457,10 +4284,10 @@ export const tweets = [
         "displayDate": "2024.3.2.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-1.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-1%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-1%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240302",
         "tweetNum": 1
     },
@@ -4479,7 +4306,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240301.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240301",
         "tweetNum": null
     },
@@ -4500,7 +4326,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240229%20(3).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240229",
         "tweetNum": null
     },
@@ -4520,7 +4345,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240213%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240213",
         "tweetNum": null
     },
@@ -4540,7 +4364,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240212%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240212",
         "tweetNum": null
     },
@@ -4560,7 +4383,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240210%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240210",
         "tweetNum": null
     },
@@ -4579,7 +4401,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240208.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240208",
         "tweetNum": null
     },
@@ -4598,7 +4419,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240206.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240206",
         "tweetNum": null
     },
@@ -4618,7 +4438,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240120%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240120",
         "tweetNum": null
     },
@@ -4637,7 +4456,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240114.jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240114",
         "tweetNum": null
     },
@@ -4656,7 +4474,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240111.jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240111",
         "tweetNum": null
     },
@@ -4677,7 +4494,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240101%20(3).png"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240101",
         "tweetNum": null
     },
@@ -4699,7 +4515,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/231230%20(4).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "231230",
         "tweetNum": null
     },
@@ -4720,7 +4535,6 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/231228%20(3).png"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "231228",
         "tweetNum": null
     },
@@ -4741,574 +4555,8 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/231218%20(3).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "231218",
         "tweetNum": null
-    },
-    {
-        "id": "group-251125-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2025-11-25T12:00:00Z",
-        "displayDate": "2025.11.25.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125-ps%20(1).jpg",
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125-ps%20(2).jpg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "251125",
-        "tweetNum": null,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-251125-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2025-11-25T12:00:00Z",
-                "displayDate": "2025.11.25.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125-ps%20(1).jpg",
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125-ps%20(2).jpg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "251125",
-                "tweetNum": null
-            }
-        ],
-        "threadKey": "251125"
-    },
-    {
-        "id": "group-240328-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-28T12:00:00Z",
-        "displayDate": "2024.3.28.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240328-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240328",
-        "tweetNum": null,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240328-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-28T12:00:00Z",
-                "displayDate": "2024.3.28.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240328-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240328",
-                "tweetNum": null
-            }
-        ],
-        "threadKey": "240328"
-    },
-    {
-        "id": "group-240321-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-21T12:00:00Z",
-        "displayDate": "2024.3.21.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240321-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240321",
-        "tweetNum": null,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240321-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-21T12:00:00Z",
-                "displayDate": "2024.3.21.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240321-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240321",
-                "tweetNum": null
-            }
-        ],
-        "threadKey": "240321"
-    },
-    {
-        "id": "group-240319-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-19T12:00:00Z",
-        "displayDate": "2024.3.19.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240319-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240319",
-        "tweetNum": null,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240319-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-19T12:00:00Z",
-                "displayDate": "2024.3.19.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240319-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240319",
-                "tweetNum": null
-            }
-        ],
-        "threadKey": "240319"
-    },
-    {
-        "id": "group-240315-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-15T12:00:00Z",
-        "displayDate": "2024.3.15.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240315-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240315",
-        "tweetNum": null,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240315-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-15T12:00:00Z",
-                "displayDate": "2024.3.15.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240315-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240315",
-                "tweetNum": null
-            }
-        ],
-        "threadKey": "240315"
-    },
-    {
-        "id": "group-240314-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-14T12:00:00Z",
-        "displayDate": "2024.3.14.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240314-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240314",
-        "tweetNum": null,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240314-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-14T12:00:00Z",
-                "displayDate": "2024.3.14.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240314-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240314",
-                "tweetNum": null
-            }
-        ],
-        "threadKey": "240314"
-    },
-    {
-        "id": "group-240312-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-12T12:00:00Z",
-        "displayDate": "2024.3.12.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240312-2-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240312",
-        "tweetNum": 2,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240312-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-12T12:00:00Z",
-                "displayDate": "2024.3.12.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240312-2-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240312",
-                "tweetNum": 2
-            }
-        ],
-        "threadKey": "240312-2"
-    },
-    {
-        "id": "group-240309-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-09T12:00:00Z",
-        "displayDate": "2024.3.9.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240309-2-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240309",
-        "tweetNum": 2,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240309-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-09T12:00:00Z",
-                "displayDate": "2024.3.9.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240309-2-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240309",
-                "tweetNum": 2
-            }
-        ],
-        "threadKey": "240309-2"
-    },
-    {
-        "id": "group-240308-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-08T12:00:00Z",
-        "displayDate": "2024.3.8.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240308-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240308",
-        "tweetNum": null,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240308-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-08T12:00:00Z",
-                "displayDate": "2024.3.8.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240308-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240308",
-                "tweetNum": null
-            }
-        ],
-        "threadKey": "240308"
-    },
-    {
-        "id": "group-240307-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-07T12:00:00Z",
-        "displayDate": "2024.3.7.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240307-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240307",
-        "tweetNum": null,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240307-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-07T12:00:00Z",
-                "displayDate": "2024.3.7.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240307-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240307",
-                "tweetNum": null
-            }
-        ],
-        "threadKey": "240307"
-    },
-    {
-        "id": "group-240305-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-05T12:00:00Z",
-        "displayDate": "2024.3.5.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-1-ps.jpeg",
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-2-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240305",
-        "tweetNum": 1,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240305-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-05T12:00:00Z",
-                "displayDate": "2024.3.5.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-1-ps.jpeg",
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-2-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240305",
-                "tweetNum": 1
-            }
-        ],
-        "threadKey": "240305-1"
-    },
-    {
-        "id": "group-240303-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-03T12:00:00Z",
-        "displayDate": "2024.3.3.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240303-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240303",
-        "tweetNum": null,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240303-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-03T12:00:00Z",
-                "displayDate": "2024.3.3.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240303-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240303",
-                "tweetNum": null
-            }
-        ],
-        "threadKey": "240303"
-    },
-    {
-        "id": "group-240302-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-02T12:00:00Z",
-        "displayDate": "2024.3.2.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-1-ps.jpeg",
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-2-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240302",
-        "tweetNum": 1,
-        "isThreadGroup": true,
-        "threadCount": 1,
-        "threadTweets": [
-            {
-                "id": "group-240302-ps",
-                "author": {
-                    "name": "NOMAD",
-                    "username": "NOMAD_is_here",
-                    "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-                    "verified": true
-                },
-                "date": "2024-03-02T12:00:00Z",
-                "displayDate": "2024.3.2.",
-                "text": "",
-                "images": [
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-1-ps.jpeg",
-                    "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-2-ps.jpeg"
-                ],
-                "type": "group",
-                "isThread": true,
-                "rawDate": "240302",
-                "tweetNum": 1
-            }
-        ],
-        "threadKey": "240302-1"
     }
 ];
 
@@ -5329,7 +4577,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240111.jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240111",
         "tweetNum": null
     },
@@ -5348,7 +4595,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240114.jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240114",
         "tweetNum": null
     },
@@ -5368,7 +4614,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240120%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240120",
         "tweetNum": null
     },
@@ -5389,7 +4634,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240817%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240817",
         "tweetNum": null
     },
@@ -5409,7 +4653,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240829%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240829",
         "tweetNum": null
     },
@@ -5431,7 +4674,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240831%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240831",
         "tweetNum": null
     },
@@ -5451,7 +4693,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240913%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240913",
         "tweetNum": null
     },
@@ -5470,7 +4711,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240914.jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240914",
         "tweetNum": null
     },
@@ -5492,7 +4732,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/240916%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "240916",
         "tweetNum": null
     },
@@ -5513,7 +4752,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241012%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241012",
         "tweetNum": null
     },
@@ -5535,7 +4773,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241016%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241016",
         "tweetNum": null
     },
@@ -5555,7 +4792,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241021%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241021",
         "tweetNum": null
     },
@@ -5576,7 +4812,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241026%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241026",
         "tweetNum": null
     },
@@ -5596,7 +4831,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241028%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241028",
         "tweetNum": null
     },
@@ -5618,7 +4852,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241101%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241101",
         "tweetNum": null
     },
@@ -5640,7 +4873,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241102%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241102",
         "tweetNum": null
     },
@@ -5662,7 +4894,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241111%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241111",
         "tweetNum": null
     },
@@ -5682,7 +4913,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241118%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241118",
         "tweetNum": null
     },
@@ -5702,7 +4932,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241123%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241123",
         "tweetNum": null
     },
@@ -5722,7 +4951,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241125%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241125",
         "tweetNum": null
     },
@@ -5744,7 +4972,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241127%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241127",
         "tweetNum": null
     },
@@ -5766,7 +4993,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241201%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241201",
         "tweetNum": null
     },
@@ -5788,7 +5014,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241204%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241204",
         "tweetNum": null
     },
@@ -5810,7 +5035,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241212%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241212",
         "tweetNum": null
     },
@@ -5831,7 +5055,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241218%20(3).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241218",
         "tweetNum": null
     },
@@ -5852,7 +5075,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241219%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241219",
         "tweetNum": null
     },
@@ -5874,7 +5096,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241221%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241221",
         "tweetNum": null
     },
@@ -5895,7 +5116,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241223%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241223",
         "tweetNum": null
     },
@@ -5917,7 +5137,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241225%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241225",
         "tweetNum": null
     },
@@ -5937,7 +5156,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241226%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241226",
         "tweetNum": null
     },
@@ -5959,7 +5177,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/241229%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "241229",
         "tweetNum": null
     },
@@ -5981,7 +5198,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250113%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250113",
         "tweetNum": null
     },
@@ -6002,7 +5218,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250122%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250122",
         "tweetNum": null
     },
@@ -6024,7 +5239,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250130%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250130",
         "tweetNum": null
     },
@@ -6044,7 +5258,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250207%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250207",
         "tweetNum": null
     },
@@ -6065,7 +5278,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250212%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250212",
         "tweetNum": null
     },
@@ -6087,7 +5299,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250219%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250219",
         "tweetNum": null
     },
@@ -6107,7 +5318,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250223%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250223",
         "tweetNum": null
     },
@@ -6127,7 +5337,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250310%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250310",
         "tweetNum": null
     },
@@ -6149,7 +5358,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250312%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250312",
         "tweetNum": null
     },
@@ -6171,7 +5379,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250313%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250313",
         "tweetNum": null
     },
@@ -6193,7 +5400,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250318%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250318",
         "tweetNum": null
     },
@@ -6215,7 +5421,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250321%20(4).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250321",
         "tweetNum": null
     },
@@ -6237,7 +5442,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250403%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250403",
         "tweetNum": null
     },
@@ -6259,7 +5463,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250504%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250504",
         "tweetNum": null
     },
@@ -6281,7 +5484,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250601%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250601",
         "tweetNum": null
     },
@@ -6303,7 +5505,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250608%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250608",
         "tweetNum": null
     },
@@ -6325,7 +5526,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250614%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250614",
         "tweetNum": null
     },
@@ -6347,7 +5547,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250704%20(4).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250704",
         "tweetNum": null
     },
@@ -6368,7 +5567,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250715%20(3).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250715",
         "tweetNum": null
     },
@@ -6388,7 +5586,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250720%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250720",
         "tweetNum": null
     },
@@ -6408,7 +5605,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250810%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250810",
         "tweetNum": null
     },
@@ -6430,7 +5626,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250816%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250816",
         "tweetNum": null
     },
@@ -6452,7 +5647,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250910%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250910",
         "tweetNum": null
     },
@@ -6474,7 +5668,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251011%20(4).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251011",
         "tweetNum": null
     },
@@ -6494,7 +5687,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251017%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251017",
         "tweetNum": null
     },
@@ -6514,7 +5706,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251020%20(2).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251020",
         "tweetNum": null
     },
@@ -6536,7 +5727,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251027%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251027",
         "tweetNum": null
     },
@@ -6558,7 +5748,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251122%20(4).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251122",
         "tweetNum": null
     },
@@ -6578,7 +5767,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251208%20(2).jpg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "251208",
         "tweetNum": null
     },
@@ -6600,7 +5788,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250916-1%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250916",
         "tweetNum": 1
     },
@@ -6622,7 +5809,6 @@ export const photoTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/250916-2%20(4).jpeg"
         ],
         "type": "photo",
-        "isThread": false,
         "rawDate": "250916",
         "tweetNum": 2
     }
@@ -6647,7 +5833,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/231218%20(3).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "231218",
         "tweetNum": null
     },
@@ -6668,7 +5853,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/231228%20(3).png"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "231228",
         "tweetNum": null
     },
@@ -6690,7 +5874,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/231230%20(4).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "231230",
         "tweetNum": null
     },
@@ -6711,7 +5894,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240101%20(3).png"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240101",
         "tweetNum": null
     },
@@ -6730,7 +5912,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240206.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240206",
         "tweetNum": null
     },
@@ -6749,7 +5930,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240208.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240208",
         "tweetNum": null
     },
@@ -6769,7 +5949,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240210%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240210",
         "tweetNum": null
     },
@@ -6789,7 +5968,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240212%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240212",
         "tweetNum": null
     },
@@ -6809,7 +5987,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240213%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240213",
         "tweetNum": null
     },
@@ -6830,7 +6007,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240229%20(3).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240229",
         "tweetNum": null
     },
@@ -6849,7 +6025,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240301.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240301",
         "tweetNum": null
     },
@@ -6865,10 +6040,10 @@ export const groupTweets = [
         "displayDate": "2024.3.3.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240303.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240303%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240303%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240303",
         "tweetNum": null
     },
@@ -6884,10 +6059,10 @@ export const groupTweets = [
         "displayDate": "2024.3.7.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240307.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240307%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240307%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240307",
         "tweetNum": null
     },
@@ -6903,10 +6078,10 @@ export const groupTweets = [
         "displayDate": "2024.3.8.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240308.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240308%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240308%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240308",
         "tweetNum": null
     },
@@ -6926,7 +6101,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240311%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240311",
         "tweetNum": null
     },
@@ -6945,7 +6119,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240313.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240313",
         "tweetNum": null
     },
@@ -6961,10 +6134,10 @@ export const groupTweets = [
         "displayDate": "2024.3.14.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240314.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240314%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240314%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240314",
         "tweetNum": null
     },
@@ -6980,10 +6153,10 @@ export const groupTweets = [
         "displayDate": "2024.3.15.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240315.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240315%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240315%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240315",
         "tweetNum": null
     },
@@ -7002,7 +6175,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240316.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240316",
         "tweetNum": null
     },
@@ -7022,7 +6194,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240317%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240317",
         "tweetNum": null
     },
@@ -7038,10 +6209,10 @@ export const groupTweets = [
         "displayDate": "2024.3.19.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240319.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240319%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240319%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240319",
         "tweetNum": null
     },
@@ -7057,10 +6228,10 @@ export const groupTweets = [
         "displayDate": "2024.3.21.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240321.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240321%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240321%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240321",
         "tweetNum": null
     },
@@ -7076,10 +6247,10 @@ export const groupTweets = [
         "displayDate": "2024.3.28.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240328.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240328%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240328%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240328",
         "tweetNum": null
     },
@@ -7098,7 +6269,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240402.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240402",
         "tweetNum": null
     },
@@ -7117,7 +6287,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240404.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240404",
         "tweetNum": null
     },
@@ -7136,7 +6305,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240410.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240410",
         "tweetNum": null
     },
@@ -7155,7 +6323,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240418.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240418",
         "tweetNum": null
     },
@@ -7175,7 +6342,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240426%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240426",
         "tweetNum": null
     },
@@ -7195,7 +6361,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240516%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240516",
         "tweetNum": null
     },
@@ -7214,7 +6379,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240530.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240530",
         "tweetNum": null
     },
@@ -7234,7 +6398,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240617%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240617",
         "tweetNum": null
     },
@@ -7256,7 +6419,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240619%20(4).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240619",
         "tweetNum": null
     },
@@ -7275,7 +6437,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240704.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240704",
         "tweetNum": null
     },
@@ -7294,7 +6455,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240725.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240725",
         "tweetNum": null
     },
@@ -7313,8 +6473,25 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240727.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240727",
+        "tweetNum": null
+    },
+    {
+        "id": "group-240730",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-07-30T12:00:00Z",
+        "displayDate": "2024.7.30.",
+        "text": "",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240730.mp4"
+        ],
+        "type": "group",
+        "rawDate": "240730",
         "tweetNum": null
     },
     {
@@ -7332,27 +6509,7 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240731.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240731",
-        "tweetNum": null
-    },
-    {
-        "id": "group-240807",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-08-07T12:00:00Z",
-        "displayDate": "2024.8.7.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240807.jpeg"
-        ],
-        "type": "group",
-        "isThread": false,
-        "rawDate": "240807",
         "tweetNum": null
     },
     {
@@ -7371,7 +6528,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240815%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240815",
         "tweetNum": null
     },
@@ -7392,7 +6548,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240822%20(3).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240822",
         "tweetNum": null
     },
@@ -7412,7 +6567,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240824%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240824",
         "tweetNum": null
     },
@@ -7432,7 +6586,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240905%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240905",
         "tweetNum": null
     },
@@ -7451,7 +6604,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240906.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240906",
         "tweetNum": null
     },
@@ -7470,7 +6622,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240914.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240914",
         "tweetNum": null
     },
@@ -7489,7 +6640,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240920.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240920",
         "tweetNum": null
     },
@@ -7509,7 +6659,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240927%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240927",
         "tweetNum": null
     },
@@ -7529,7 +6678,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240928%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240928",
         "tweetNum": null
     },
@@ -7548,7 +6696,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240930.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240930",
         "tweetNum": null
     },
@@ -7567,7 +6714,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241009.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241009",
         "tweetNum": null
     },
@@ -7586,7 +6732,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241010.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241010",
         "tweetNum": null
     },
@@ -7605,7 +6750,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241011.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241011",
         "tweetNum": null
     },
@@ -7624,7 +6768,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241012.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241012",
         "tweetNum": null
     },
@@ -7644,7 +6787,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241013%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241013",
         "tweetNum": null
     },
@@ -7664,7 +6806,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241014%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241014",
         "tweetNum": null
     },
@@ -7683,7 +6824,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241015.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241015",
         "tweetNum": null
     },
@@ -7702,7 +6842,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241016.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241016",
         "tweetNum": null
     },
@@ -7721,7 +6860,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241017.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241017",
         "tweetNum": null
     },
@@ -7741,7 +6879,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241018%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241018",
         "tweetNum": null
     },
@@ -7760,7 +6897,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241019.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241019",
         "tweetNum": null
     },
@@ -7780,7 +6916,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241020%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241020",
         "tweetNum": null
     },
@@ -7799,7 +6934,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241024.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241024",
         "tweetNum": null
     },
@@ -7818,7 +6952,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241026.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241026",
         "tweetNum": null
     },
@@ -7838,7 +6971,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241027%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241027",
         "tweetNum": null
     },
@@ -7857,7 +6989,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241030.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241030",
         "tweetNum": null
     },
@@ -7876,7 +7007,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241031.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241031",
         "tweetNum": null
     },
@@ -7895,7 +7025,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241102.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241102",
         "tweetNum": null
     },
@@ -7914,7 +7043,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241103.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241103",
         "tweetNum": null
     },
@@ -7933,7 +7061,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241106.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241106",
         "tweetNum": null
     },
@@ -7952,7 +7079,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241107.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241107",
         "tweetNum": null
     },
@@ -7971,7 +7097,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241109.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241109",
         "tweetNum": null
     },
@@ -7990,7 +7115,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241110.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241110",
         "tweetNum": null
     },
@@ -8009,7 +7133,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241113.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241113",
         "tweetNum": null
     },
@@ -8028,7 +7151,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241114.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241114",
         "tweetNum": null
     },
@@ -8048,7 +7170,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241117%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241117",
         "tweetNum": null
     },
@@ -8067,7 +7188,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241119.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241119",
         "tweetNum": null
     },
@@ -8086,7 +7206,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241121.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241121",
         "tweetNum": null
     },
@@ -8105,7 +7224,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241122.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241122",
         "tweetNum": null
     },
@@ -8124,7 +7242,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241123.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241123",
         "tweetNum": null
     },
@@ -8143,7 +7260,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241124.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241124",
         "tweetNum": null
     },
@@ -8162,7 +7278,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241128.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241128",
         "tweetNum": null
     },
@@ -8181,7 +7296,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241130.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241130",
         "tweetNum": null
     },
@@ -8200,7 +7314,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241201.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241201",
         "tweetNum": null
     },
@@ -8219,7 +7332,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241212.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241212",
         "tweetNum": null
     },
@@ -8238,7 +7350,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241213.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241213",
         "tweetNum": null
     },
@@ -8257,7 +7368,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241214.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241214",
         "tweetNum": null
     },
@@ -8276,7 +7386,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241215.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241215",
         "tweetNum": null
     },
@@ -8296,7 +7405,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241220%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241220",
         "tweetNum": null
     },
@@ -8315,7 +7423,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241221.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241221",
         "tweetNum": null
     },
@@ -8334,7 +7441,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241222.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241222",
         "tweetNum": null
     },
@@ -8353,7 +7459,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241223.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241223",
         "tweetNum": null
     },
@@ -8373,7 +7478,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241224%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241224",
         "tweetNum": null
     },
@@ -8392,7 +7496,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241227.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241227",
         "tweetNum": null
     },
@@ -8412,7 +7515,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241228%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241228",
         "tweetNum": null
     },
@@ -8431,7 +7533,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241229.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241229",
         "tweetNum": null
     },
@@ -8451,7 +7552,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250108%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250108",
         "tweetNum": null
     },
@@ -8470,7 +7570,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250116.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250116",
         "tweetNum": null
     },
@@ -8490,7 +7589,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250122%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250122",
         "tweetNum": null
     },
@@ -8509,7 +7607,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250125.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250125",
         "tweetNum": null
     },
@@ -8528,7 +7625,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250127.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250127",
         "tweetNum": null
     },
@@ -8547,7 +7643,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250202.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250202",
         "tweetNum": null
     },
@@ -8566,7 +7661,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250216.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250216",
         "tweetNum": null
     },
@@ -8586,7 +7680,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250305%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250305",
         "tweetNum": null
     },
@@ -8605,7 +7698,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250314.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250314",
         "tweetNum": null
     },
@@ -8624,7 +7716,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250315.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250315",
         "tweetNum": null
     },
@@ -8643,7 +7734,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250316.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250316",
         "tweetNum": null
     },
@@ -8662,7 +7752,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250412.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250412",
         "tweetNum": null
     },
@@ -8682,7 +7771,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250501%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250501",
         "tweetNum": null
     },
@@ -8702,7 +7790,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250503%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250503",
         "tweetNum": null
     },
@@ -8721,7 +7808,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250505.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250505",
         "tweetNum": null
     },
@@ -8740,7 +7826,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250531.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250531",
         "tweetNum": null
     },
@@ -8760,7 +7845,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250607%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250607",
         "tweetNum": null
     },
@@ -8779,7 +7863,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250612.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250612",
         "tweetNum": null
     },
@@ -8798,7 +7881,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250613.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250613",
         "tweetNum": null
     },
@@ -8817,7 +7899,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250702.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250702",
         "tweetNum": null
     },
@@ -8836,7 +7917,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250713.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250713",
         "tweetNum": null
     },
@@ -8856,7 +7936,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250719%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250719",
         "tweetNum": null
     },
@@ -8875,7 +7954,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250720.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250720",
         "tweetNum": null
     },
@@ -8894,7 +7972,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250808.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250808",
         "tweetNum": null
     },
@@ -8913,7 +7990,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250809.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250809",
         "tweetNum": null
     },
@@ -8933,7 +8009,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250928%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250928",
         "tweetNum": null
     },
@@ -8954,7 +8029,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251008%20(3).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251008",
         "tweetNum": null
     },
@@ -8973,7 +8047,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251018.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251018",
         "tweetNum": null
     },
@@ -8992,7 +8065,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251024.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251024",
         "tweetNum": null
     },
@@ -9011,7 +8083,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251027.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251027",
         "tweetNum": null
     },
@@ -9030,7 +8101,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251120.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251120",
         "tweetNum": null
     },
@@ -9046,32 +8116,13 @@ export const groupTweets = [
         "displayDate": "2025.11.25.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125.jpg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125%20(1).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125%20(2).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125%20(3).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251125",
         "tweetNum": null
-    },
-    {
-        "id": "group-240302-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-02T12:00:00Z",
-        "displayDate": "2024.3.2.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-1-ps.jpeg",
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-2-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240302",
-        "tweetNum": 1
     },
     {
         "id": "group-240302-1",
@@ -9085,10 +8136,10 @@ export const groupTweets = [
         "displayDate": "2024.3.2.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-1.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-1%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-1%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240302",
         "tweetNum": 1
     },
@@ -9104,31 +8155,12 @@ export const groupTweets = [
         "displayDate": "2024.3.2.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-2.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-2%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240302-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240302",
         "tweetNum": 2
-    },
-    {
-        "id": "group-240303-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-03T12:00:00Z",
-        "displayDate": "2024.3.3.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240303-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240303",
-        "tweetNum": null
     },
     {
         "id": "group-240305-1",
@@ -9143,30 +8175,10 @@ export const groupTweets = [
         "text": "",
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-1%20(1).jpeg",
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-1%20(2).jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-1%20(2).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-1%20(3).jpeg"
         ],
         "type": "group",
-        "isThread": false,
-        "rawDate": "240305",
-        "tweetNum": 1
-    },
-    {
-        "id": "group-240305-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-05T12:00:00Z",
-        "displayDate": "2024.3.5.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-1-ps.jpeg",
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-2-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
         "rawDate": "240305",
         "tweetNum": 1
     },
@@ -9182,50 +8194,12 @@ export const groupTweets = [
         "displayDate": "2024.3.5.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-2.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-2%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240305-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240305",
         "tweetNum": 2
-    },
-    {
-        "id": "group-240307-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-07T12:00:00Z",
-        "displayDate": "2024.3.7.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240307-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240307",
-        "tweetNum": null
-    },
-    {
-        "id": "group-240308-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-08T12:00:00Z",
-        "displayDate": "2024.3.8.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240308-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240308",
-        "tweetNum": null
     },
     {
         "id": "group-240309-1",
@@ -9242,28 +8216,8 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240309-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240309",
         "tweetNum": 1
-    },
-    {
-        "id": "group-240309-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-09T12:00:00Z",
-        "displayDate": "2024.3.9.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240309-2-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240309",
-        "tweetNum": 2
     },
     {
         "id": "group-240309-2",
@@ -9277,10 +8231,10 @@ export const groupTweets = [
         "displayDate": "2024.3.9.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240309-2.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240309-2%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240309-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240309",
         "tweetNum": 2
     },
@@ -9300,28 +8254,8 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240312-1%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240312",
         "tweetNum": 1
-    },
-    {
-        "id": "group-240312-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-12T12:00:00Z",
-        "displayDate": "2024.3.12.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240312-2-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240312",
-        "tweetNum": 2
     },
     {
         "id": "group-240312-2",
@@ -9335,107 +8269,12 @@ export const groupTweets = [
         "displayDate": "2024.3.12.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240312-2.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240312-2%20(1).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240312-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240312",
         "tweetNum": 2
-    },
-    {
-        "id": "group-240314-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-14T12:00:00Z",
-        "displayDate": "2024.3.14.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240314-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240314",
-        "tweetNum": null
-    },
-    {
-        "id": "group-240315-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-15T12:00:00Z",
-        "displayDate": "2024.3.15.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240315-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240315",
-        "tweetNum": null
-    },
-    {
-        "id": "group-240319-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-19T12:00:00Z",
-        "displayDate": "2024.3.19.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240319-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240319",
-        "tweetNum": null
-    },
-    {
-        "id": "group-240321-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-21T12:00:00Z",
-        "displayDate": "2024.3.21.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240321-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240321",
-        "tweetNum": null
-    },
-    {
-        "id": "group-240328-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2024-03-28T12:00:00Z",
-        "displayDate": "2024.3.28.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240328-ps.jpeg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "240328",
-        "tweetNum": null
     },
     {
         "id": "group-240606-1",
@@ -9452,7 +8291,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240606-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240606",
         "tweetNum": 1
     },
@@ -9471,8 +8309,43 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240606-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240606",
+        "tweetNum": 2
+    },
+    {
+        "id": "group-240807-1",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-08-07T12:00:00Z",
+        "displayDate": "2024.8.7.",
+        "text": "",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240807-1.mp4"
+        ],
+        "type": "group",
+        "rawDate": "240807",
+        "tweetNum": 1
+    },
+    {
+        "id": "group-240807-2",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-08-07T12:00:00Z",
+        "displayDate": "2024.8.7.",
+        "text": "",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240807-2.jpeg"
+        ],
+        "type": "group",
+        "rawDate": "240807",
         "tweetNum": 2
     },
     {
@@ -9490,7 +8363,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240916-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240916",
         "tweetNum": 1
     },
@@ -9509,7 +8381,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240916-2.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "240916",
         "tweetNum": 2
     },
@@ -9528,7 +8399,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241101-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241101",
         "tweetNum": 1
     },
@@ -9548,7 +8418,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241101-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241101",
         "tweetNum": 2
     },
@@ -9567,7 +8436,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241108-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241108",
         "tweetNum": 1
     },
@@ -9586,7 +8454,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241108-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241108",
         "tweetNum": 2
     },
@@ -9605,7 +8472,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241112-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241112",
         "tweetNum": 1
     },
@@ -9624,7 +8490,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241112-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241112",
         "tweetNum": 2
     },
@@ -9643,7 +8508,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241207-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241207",
         "tweetNum": 1
     },
@@ -9662,7 +8526,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241207-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241207",
         "tweetNum": 2
     },
@@ -9681,7 +8544,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241218-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241218",
         "tweetNum": 1
     },
@@ -9702,7 +8564,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241218-2%20(3).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241218",
         "tweetNum": 2
     },
@@ -9721,7 +8582,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241225-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241225",
         "tweetNum": 1
     },
@@ -9740,7 +8600,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241225-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "241225",
         "tweetNum": 2
     },
@@ -9760,7 +8619,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250208-1%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250208",
         "tweetNum": 1
     },
@@ -9780,7 +8638,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250208-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250208",
         "tweetNum": 2
     },
@@ -9802,7 +8659,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250209-1%20(4).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250209",
         "tweetNum": 1
     },
@@ -9822,7 +8678,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250209-2%20(2).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250209",
         "tweetNum": 2
     },
@@ -9841,7 +8696,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250228-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250228",
         "tweetNum": 1
     },
@@ -9861,7 +8715,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250228-2%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250228",
         "tweetNum": 2
     },
@@ -9880,7 +8733,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250228-3.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250228",
         "tweetNum": 3
     },
@@ -9900,7 +8752,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250301-1%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250301",
         "tweetNum": 1
     },
@@ -9919,7 +8770,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250301-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250301",
         "tweetNum": 2
     },
@@ -9938,7 +8788,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250302-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250302",
         "tweetNum": 1
     },
@@ -9957,7 +8806,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250302-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250302",
         "tweetNum": 2
     },
@@ -9976,7 +8824,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250308-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250308",
         "tweetNum": 1
     },
@@ -9995,7 +8842,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250308-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250308",
         "tweetNum": 2
     },
@@ -10014,7 +8860,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250310-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250310",
         "tweetNum": 1
     },
@@ -10033,7 +8878,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250310-2.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250310",
         "tweetNum": 2
     },
@@ -10053,7 +8897,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250310-3%20(2).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250310",
         "tweetNum": 3
     },
@@ -10072,7 +8915,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250311-1.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250311",
         "tweetNum": 1
     },
@@ -10091,7 +8933,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250311-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250311",
         "tweetNum": 2
     },
@@ -10110,7 +8951,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250312-1.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250312",
         "tweetNum": 1
     },
@@ -10129,7 +8969,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250312-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250312",
         "tweetNum": 2
     },
@@ -10148,7 +8987,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-1.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 1
     },
@@ -10167,7 +9005,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-2.jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 2
     },
@@ -10186,7 +9023,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-3.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 3
     },
@@ -10205,7 +9041,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-4.mp4"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 4
     },
@@ -10227,7 +9062,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-5%20(4).jpeg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 5
     },
@@ -10249,7 +9083,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250401-6%20(4).jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "250401",
         "tweetNum": 6
     },
@@ -10268,7 +9101,6 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251122-1.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251122",
         "tweetNum": 1
     },
@@ -10287,29 +9119,8 @@ export const groupTweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251122-2.jpg"
         ],
         "type": "group",
-        "isThread": false,
         "rawDate": "251122",
         "tweetNum": 2
-    },
-    {
-        "id": "group-251125-ps",
-        "author": {
-            "name": "NOMAD",
-            "username": "NOMAD_is_here",
-            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
-            "verified": true
-        },
-        "date": "2025-11-25T12:00:00Z",
-        "displayDate": "2025.11.25.",
-        "text": "",
-        "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125-ps%20(1).jpg",
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/251125-ps%20(2).jpg"
-        ],
-        "type": "group",
-        "isThread": true,
-        "rawDate": "251125",
-        "tweetNum": null
     }
 ];
 
