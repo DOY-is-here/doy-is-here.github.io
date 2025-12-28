@@ -1,5 +1,5 @@
 .profile-body {
-    height: 210px;
+    height: 190px;
     padding: 47px 9px 0 9px;
     transition: all 0.25s ease;
 }
@@ -37,43 +37,115 @@
 }
 
 .following, .followers {
-    margin-right: 16px;
-}
-
-.profile-follow {
-    /* 위치 및 모양 기존 유지 */
-    position: absolute;
-    right: 9px;
-    padding: 9px 33px;
-    border-radius: 999px;
-    background: #0F1419;
-    color: #fff;
-    font-weight: 500;
-    border: none;
-    font-size: 12px;
-    cursor: pointer;
-    margin-top: -36px;
+    margin-right: 10px;
 }
 
 .profile-avatar {
-    position: absolute; /* 항상 absolute */
+    position: absolute; 
     width: 74px;
     height: 74px;
     border-radius: 50%;
     background: #E1E8ED;
     border: 4px solid #fff;
     margin-left: -4px;
-    
     background-image: url("https://doy-is-here.github.io/profile/profile-nomad.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     flex-shrink: 0;
     margin-top: -74px;
-    transition: transform 0.15s linear; /* 부드럽고 빠른 전환 */
+    transition: transform 0.15s linear;
     transform-origin: bottom center;
-    left: 9px;
 }
+
+
+
+/* 버튼 컨테이너 */
+.profile-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: -36px;
+    justify-content: flex-end;
+}
+
+/* 공통 버튼 스타일 */
+.profile-btn {
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #CFD9DE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0F1419;
+    cursor: pointer;
+}
+
+/* 아이콘만 있는 작은 버튼 */
+.profile-btn.icon-only {
+    width: 32px;
+    min-width: 32px;
+    flex: 0 0 32px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+/* 텍스트가 있는 버튼 */
+.profile-btn.text-btn {
+    padding: 9px 27px;
+    gap: 6px;
+    border-radius: 999px;
+}
+
+/* 아이콘 스타일 */
+.profile-btn .icon {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+.icon-notion{
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.62842 2.08057C5.40452 2.08057 3.52839 3.76129 3.24951 6.00342L2.6333 10.9604H12.6284L12.3315 8.6001H13.8003L14.2817 12.4399H11.1987C10.8617 14.1286 9.39224 15.3998 7.63135 15.3999C5.87039 15.3999 4.40101 14.1286 4.06396 12.4399H0.981934L1.80518 5.81787C2.17571 2.83567 4.67432 0.600098 7.62842 0.600098V2.08057ZM5.57178 12.4399C5.8717 13.302 6.68062 13.9204 7.63135 13.9204C8.58201 13.9203 9.39101 13.302 9.69092 12.4399H5.57178ZM14.0972 1.92334L14.8413 2.66846L15.0181 2.84521L10.4097 7.45361L7.92822 4.97217L8.10498 4.79541L8.8501 4.05127L9.02686 3.87451L10.4097 5.25732L13.9204 1.74658L14.0972 1.92334Z' fill='%230F1419'/%3E%3C/svg%3E");
+}
+
+.icon-dm{
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.649902 3.30556C0.649902 2.30817 1.47237 1.5 2.4874 1.5H13.5124C14.5274 1.5 15.3499 2.30817 15.3499 3.30556V12.6944C15.3499 13.6918 14.5274 14.5 13.5124 14.5H2.4874C1.47237 14.5 0.649902 13.6918 0.649902 12.6944V3.30556ZM2.4874 2.94444C2.28454 2.94444 2.1199 3.10622 2.1199 3.30556V5.30178L7.9999 7.92922L13.8799 5.30322V3.30556C13.8799 3.10622 13.7153 2.94444 13.5124 2.94444H2.4874ZM13.8799 6.88994L7.9999 9.51594L2.1199 6.8885V12.6944C2.1199 12.8938 2.28454 13.0556 2.4874 13.0556H13.5124C13.7153 13.0556 13.8799 12.8938 13.8799 12.6944V6.88994Z' fill='%230F1419'/%3E%3C/svg%3E");
+}
+
+.profil-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    
+}
+
+.profil-date-cal,
+.profil-date-drop {
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.profil-date-cal {
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.0002 1.89995V1.19995H5.4002V1.89995H9.6002V1.19995H11.0002V1.89995H12.0502C13.0232 1.89995 13.8002 2.68395 13.8002 3.64995V12.05C13.8002 13.016 13.0232 13.8 12.0502 13.8H2.9502C1.9842 13.8 1.2002 13.016 1.2002 12.05V3.64995C1.2002 2.68395 1.9842 1.89995 2.9502 1.89995H4.0002ZM4.0002 3.29995H2.9502C2.7612 3.29995 2.6002 3.45395 2.6002 3.64995V12.05C2.6002 12.246 2.7612 12.4 2.9502 12.4H12.0502C12.2462 12.4 12.4002 12.246 12.4002 12.05V3.64995C12.4002 3.45395 12.2462 3.29995 12.0502 3.29995H11.0002V3.99995H9.6002V3.29995H5.4002V3.99995H4.0002V3.29995ZM4.0002 7.49995H5.4002V6.09995H4.0002V7.49995ZM4.0002 10.3H5.4002V8.89995H4.0002V10.3ZM6.8002 7.49995H8.2002V6.09995H6.8002V7.49995ZM6.8002 10.3H8.2002V8.89995H6.8002V10.3ZM9.6002 7.49995H11.0002V6.09995H9.6002V7.49995Z' fill='%23536471'/%3E%3C/svg%3E");
+}
+
+.profil-date-drop {
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7382 7.46524C11.777 7.50432 11.7772 7.56715 11.7382 7.60611L6.0109 13.3334C5.97194 13.3724 5.90842 13.3729 5.86934 13.3341L4.94955 12.4143C4.91077 12.3752 4.91128 12.3117 4.95024 12.2727L9.68731 7.53568L4.87912 2.72749C4.84006 2.68844 4.84006 2.62429 4.87912 2.58524L5.79822 1.66614C5.83727 1.62709 5.90072 1.62778 5.93978 1.66683L11.7382 7.46524Z' fill='%23536471'/%3E%3C/svg%3E");
+}
+
+.profil-date .profile-meta {
+    margin: 0;
+}
+
 
 .content-wrapper {
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);

@@ -1,0 +1,32 @@
+/* 페이지별 독립 스크롤 */
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 스크롤바 숨기기 */
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+.page {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.page:not(.active) {
+    display: none;
+}
+
+#twitter-root {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}

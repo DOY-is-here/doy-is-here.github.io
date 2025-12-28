@@ -172,3 +172,9 @@
   display: flex;
   right: 9px;
 }
+
+/* 동영상 지원 */
+.detail-media video {
+  width: 100%;
+  display: block;
+}

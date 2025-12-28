@@ -128,7 +128,7 @@
 
 .tweet-actions-left {
   display: flex;
-  gap: 45px; /* 왼쪽 아이콘들 간격 */
+  gap: 45px;
   right: 27px;
 }
 
@@ -159,42 +159,94 @@
   color: #1D9BF0;
 }
 
-/* Media Grid */
+/* ========== Media Grid ========== */
 .tweet-media {
   margin-top: 12px;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #EFF3F4;
+  border: 1px solid #D1D8DD;
 }
 
 .media-grid {
   display: grid;
-  gap: 2px;
-  background-color: #F7F9F9;
+  gap: 3px;
+  background-color: #fff;
 }
 
+/* 사진 1개 - 원본 비율 유지, 최대 비율 제한 */
 .media-grid.count-1 {
   grid-template-columns: 1fr;
-  max-height: 440px;
 }
 
+.media-grid.count-1 .media-item {
+  width: 100%;
+  max-height: none;
+}
+
+.media-grid.count-1 .media-item img,
+.media-grid.count-1 .media-item video {
+  width: 100%;
+  height: auto;
+  max-height: 506px; /* 3:4 비율 최대 높이 (가로 380px 기준) */
+  object-fit: contain;
+  object-position: top;
+}
+
+/* 사진 2개 - 16:9 비율 틀, 동일 사이즈 */
 .media-grid.count-2 {
   grid-template-columns: 1fr 1fr;
-  max-height: 220px;
+  aspect-ratio: 16 / 9;
 }
 
+.media-grid.count-2 .media-item {
+  height: 100%;
+}
+
+.media-grid.count-2 .media-item img,
+.media-grid.count-2 .media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 사진 3개 - 16:9 비율 틀, 왼쪽 1개 오른쪽 2개 */
 .media-grid.count-3 {
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 110px);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  aspect-ratio: 16 / 9;
 }
 
 .media-grid.count-3 .media-item:first-child {
   grid-row: 1 / 3;
 }
 
+.media-grid.count-3 .media-item {
+  height: 100%;
+}
+
+.media-grid.count-3 .media-item img,
+.media-grid.count-3 .media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 사진 4개 - 16:9 비율 틀, 2x2 그리드 */
 .media-grid.count-4 {
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 110px 110px;
+  grid-template-rows: 1fr 1fr;
+  aspect-ratio: 16 / 9;
+}
+
+.media-grid.count-4 .media-item {
+  height: 100%;
+}
+
+.media-grid.count-4 .media-item img,
+.media-grid.count-4 .media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .media-item {
@@ -202,18 +254,26 @@
   height: 100%;
   overflow: hidden;
   background-color: #F7F9F9;
+  position: relative;
 }
 
 .media-item img,
 .media-item video {
+  display: block;
+}
+
+.media-item video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 100%;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  background: #000;
+  
 }
-
-
-
 
 /* ========== 사진 그리드 (1:1) ========== */
 .photo-grid {
@@ -228,6 +288,7 @@
   overflow: hidden;
   background-color: #F7F9F9;
   cursor: pointer;
+  position: relative; 
 }
 
 .photo-grid-item img {
@@ -236,19 +297,32 @@
   object-fit: cover;
   display: block;
 }
-/* 동영상 오버레이 */
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+
+.photo-grid-item video {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
+  display: block;
+  background: #000;
+  position: absolute;
+}
+
+/* 타임라인 동영상 클릭 방지 */
+.media-item video,
+.photo-grid-item video {
   pointer-events: none;
 }
 
-.play-icon {
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+.video-duration-overlay {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px 4px;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 2;
 }

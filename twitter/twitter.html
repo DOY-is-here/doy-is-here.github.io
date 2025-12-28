@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/twitter-profile.css">
 <link rel="stylesheet" href="css/twitter-timeline.css">
 <link rel="stylesheet" href="css/twitter-tweet.css">
-<link rel="stylesheet" href="css/twitter-thread.css">
+<link rel="stylesheet" href="css/twitter-scroll-fix.css">
 
 <title>X Mobile</title>
 </head>
@@ -22,7 +22,7 @@
         <div class="topbar-header">
           <div class="topbar-left">
             <button class="topbar-icon back"></button>   
-            <p class="topbar-title">NOMAD<br><b>게시물 2,616개</b></p></div>
+            <p class="topbar-title">NOMAD<br><b id="tweet-count">게시물 0개</b></p></div>
             <div class="topbar-right">
             <button class="topbar-icon grok"></button>
             <button class="topbar-icon search"></button>
@@ -36,7 +36,15 @@
         <div class="profile-body">
           <div class="profile-avatar"></div>
           <div class="content-wrapper"></div>
-          <button class="profile-follow">팔로잉</button>
+
+          <div class="profile-actions">
+            <button class="profile-btn icon-only">
+              <div class="icon icon-notion"></div>
+            </button>
+          <button class="profile-btn icon-only">
+              <div class="icon icon-dm"></div>
+            </button>
+          <button class="profile-btn text-btn">팔로잉</button></div>
 
           <h2 class="profile-name">
             NOMAD <span class="verified"></span>
@@ -44,7 +52,11 @@
 
           <p class="profile-handle">@NOMAD_is_here</p>
           <p class="profile-bio">NOMAD OFFICIAL X</p>
+          <div class="profil-date">
+          <div class="profil-date-cal"></div>
           <p class="profile-meta">2023년 12월에 가입함</p>
+          <div class="profil-date-drop"></div>
+          </div>
 
           <div class="profile-meta">
             <span class="following"><b>0</b> 팔로잉</span>

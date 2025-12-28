@@ -47,25 +47,20 @@ function getMediaFiles(dir) {
     return mediaFiles;
 }
 
-// 파일명에서 날짜, 트윗 번호, 이미지 순서, 타래 여부 추출
+// 파일명에서 날짜, 트윗 번호, 이미지 순서 추출
 function parseFileName(fileName) {
-    // 240405-1.jpg -> { date: "240405", tweetNum: 1, sequence: null, isThread: false }
-    // 240405-1 (1).jpg -> { date: "240405", tweetNum: 1, sequence: 1, isThread: false }
-    // 240405.jpg -> { date: "240405", tweetNum: null, sequence: null, isThread: false }
-    // 240405-ps.jpg -> { date: "240405", tweetNum: null, sequence: null, isThread: true }
-    // 240405-2-ps.jpg -> { date: "240405", tweetNum: 2, sequence: null, isThread: true }
-    // 240405-2-ps (1).jpg -> { date: "240405", tweetNum: 2, sequence: 1, isThread: true }
-    // 240405 (1).jpg -> { date: "240405", tweetNum: null, sequence: 1, isThread: false }
+    // 240405-1.jpg -> { date: "240405", tweetNum: 1, sequence: null }
+    // 240405-1 (1).jpg -> { date: "240405", tweetNum: 1, sequence: 1 }
+    // 240405.jpg -> { date: "240405", tweetNum: null, sequence: null }
+    // 240405 (1).jpg -> { date: "240405", tweetNum: null, sequence: 1 }
     
-    const match = fileName.match(/^(\d{6})(?:-(\d+))?(?:-ps)?(?:\s*\((\d+)\))?/);
-    const isThread = fileName.includes('-ps');
+    const match = fileName.match(/^(\d{6})(?:-(\d+))?(?:\s*\((\d+)\))?/);
     
     if (!match) return null;
     
     return {
         date: match[1],
         tweetNum: match[2] ? parseInt(match[2]) : null,
-        isThread: isThread,
         sequence: match[3] ? parseInt(match[3]) : null,
         fileName: fileName
     };
@@ -98,14 +93,12 @@ function groupMediaByTweet(mediaFiles, folderPath, type, metadata) {
     
     console.log(`   파싱 결과: ${parsed.length}/${mediaFiles.length}개 성공`);
     
-    // 날짜 + 트윗 번호 + 타래로 그룹화
+    // 날짜 + 트윗 번호로 그룹화
     const grouped = {};
     
     parsed.forEach(item => {
         let tweetKey;
-        if (item.isThread) {
-            tweetKey = `${item.date}-ps`;
-        } else if (item.tweetNum !== null) {
+        if (item.tweetNum !== null) {
             tweetKey = `${item.date}-${item.tweetNum}`;
         } else {
             tweetKey = item.date;
@@ -115,7 +108,6 @@ function groupMediaByTweet(mediaFiles, folderPath, type, metadata) {
             grouped[tweetKey] = {
                 date: item.date,
                 tweetNum: item.tweetNum,
-                isThread: item.isThread,
                 media: []
             };
         }
@@ -146,16 +138,10 @@ function groupMediaByTweet(mediaFiles, folderPath, type, metadata) {
         let tweetData = { text: '' };
         
         if (group.tweetNum !== null && metadata[group.date]) {
-            // 번호가 있는 경우 (타래든 일반이든)
+            // 번호가 있는 경우
             const tweetNumStr = String(group.tweetNum);
             if (metadata[group.date][tweetNumStr]) {
                 tweetData = metadata[group.date][tweetNumStr];
-                appliedCount++;
-            }
-        } else if (group.tweetNum === null && group.isThread && metadata[group.date]) {
-            // 번호 없는 타래 (240405-ps.jpg)
-            if (metadata[group.date]['ps']) {
-                tweetData = metadata[group.date]['ps'];
                 appliedCount++;
             }
         } else if (group.tweetNum === null && metadata[group.date]) {
@@ -174,7 +160,6 @@ function groupMediaByTweet(mediaFiles, folderPath, type, metadata) {
             text: tweetData.text || '',
             images: mediaUrls,
             type: type, // 'group' 또는 'photo'
-            isThread: group.isThread,
             rawDate: group.date,
             tweetNum: group.tweetNum
         };
@@ -185,45 +170,6 @@ function groupMediaByTweet(mediaFiles, folderPath, type, metadata) {
     console.log(`   📝 메타데이터 적용: ${appliedCount}/${tweets.length}개`);
     
     return tweets;
-}
-
-// 타래 그룹화 함수
-function groupThreads(tweets) {
-    const grouped = [];
-    const threadMap = new Map();
-    
-    tweets.forEach(tweet => {
-        if (tweet.isThread) {
-            // 타래 키: 날짜 + 번호 (240405-2-ps → "240405-2", 240405-ps → "240405")
-            const threadKey = tweet.tweetNum !== null 
-                ? `${tweet.rawDate}-${tweet.tweetNum}`
-                : tweet.rawDate;
-                
-            if (!threadMap.has(threadKey)) {
-                threadMap.set(threadKey, []);
-            }
-            threadMap.get(threadKey).push(tweet);
-        } else {
-            grouped.push(tweet);
-        }
-    });
-    
-    // 타래를 하나의 객체로 만들기
-    threadMap.forEach((threadTweets, threadKey) => {
-        threadTweets.sort((a, b) => a.id.localeCompare(b.id)); // ID 순서로 정렬
-        
-        const mainThread = {
-            ...threadTweets[0],
-            isThreadGroup: true,
-            threadCount: threadTweets.length,
-            threadTweets: threadTweets,
-            threadKey: threadKey  // 타래 식별용
-        };
-        
-        grouped.push(mainThread);
-    });
-    
-    return grouped;
 }
 
 // tweets.js 파일 생성
@@ -241,9 +187,6 @@ function generateTweetsJS(groupTweets, photoTweets) {
         const bNum = b.tweetNum || 0;
         return bNum - aNum;
     });
-    
-    // 타래 그룹화
-    allTweets = groupThreads(allTweets);
     
     const content = `// 트윗 데이터 (자동 생성됨)
 

@@ -3,13 +3,12 @@ const path = require('path');
 
 // 날짜 파싱 함수
 function parseDate(filename) {
-    const match = filename.match(/^(\d{6})(-\d+)?(-ps)?/);
+    const match = filename.match(/^(\d{6})(-\d+)?/);
     if (!match) return null;
     
     return {
         rawDate: match[1],
-        tweetNum: match[2] ? parseInt(match[2].substring(1)) : null,
-        isThread: match[3] === '-ps'
+        tweetNum: match[2] ? parseInt(match[2].substring(1)) : null
     };
 }
 
@@ -56,7 +55,7 @@ function analyzeFileStructure() {
                 const dateInfo = parseDate(filenameWithoutExt);
                 
                 if (dateInfo) {
-                    const { rawDate, tweetNum, isThread } = dateInfo;
+                    const { rawDate, tweetNum } = dateInfo;
                     
                     if (!structure[rawDate]) {
                         structure[rawDate] = {
@@ -77,7 +76,7 @@ function analyzeFileStructure() {
                     processedCount++;
                     
                     if (processedCount <= 5) {
-                        console.log(`   📄 파일: ${item} → ${rawDate}${tweetNum ? '-'+tweetNum : ''}${isThread ? '-ps' : ''}`);
+                        console.log(`   📄 파일: ${item} → ${rawDate}${tweetNum ? '-'+tweetNum : ''}`);
                     }
                 }
             }
@@ -141,11 +140,6 @@ function updateMetadataStructure(existingMetadata, fileStructure) {
                         changes.push(`${rawDate}-${num}: 새로 추가`);
                     }
                 });
-                
-                // 타래도 유지
-                if (existing.ps) {
-                    updatedMetadata[rawDate].ps = existing.ps;
-                }
             } else {
                 // 새로 생성
                 updatedMetadata[rawDate] = {};
@@ -157,9 +151,9 @@ function updateMetadataStructure(existingMetadata, fileStructure) {
                 changes.push(`${rawDate}: 새로 추가 (다중)`);
             }
         }
-        // Case 3: 단일 구조 필요
-        else if (structure.hasSingle && !structure.hasThread) {
-            if (existing && typeof existing === 'object' && !existing.text && !existing.ps) {
+        // Case 2: 단일 구조 필요
+        else if (structure.hasSingle) {
+            if (existing && typeof existing === 'object' && !existing.text) {
                 // 다중 → 단일 변환
                 console.log(`   📝 ${rawDate}: 다중 → 단일 (텍스트 보존)`);
                 changes.push(`${rawDate}: 다중 → 단일`);
@@ -207,11 +201,7 @@ function main() {
             if (typeof updatedMetadata[key] === 'object' && !updatedMetadata[key].text) {
                 const sorted = {};
                 Object.keys(updatedMetadata[key])
-                    .sort((a, b) => {
-                        if (a === 'ps') return 1;
-                        if (b === 'ps') return -1;
-                        return parseInt(a) - parseInt(b);
-                    })
+                    .sort((a, b) => parseInt(a) - parseInt(b))
                     .forEach(subKey => {
                         sorted[subKey] = updatedMetadata[key][subKey];
                     });
@@ -246,7 +236,7 @@ function main() {
     }
     
     console.log(`\n✅ twitter-metadata.json 업데이트 완료!`);
-    console.log(`   이 ${Object.keys(sortedMetadata).length}개 항목`);
+    console.log(`   총 ${Object.keys(sortedMetadata).length}개 항목`);
     
     if (changes.length > 0) {
         console.log(`   변경사항 ${changes.length}개:`);
