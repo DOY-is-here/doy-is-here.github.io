@@ -79,10 +79,13 @@ function renderMedia(images) {
         
         if (isVideo) {
             return `<div class="media-item video-thumbnail" data-video-src="${img}">
-                <img src="${img}" 
-                     alt="동영상 썸네일" 
-                     loading="lazy"
-                     style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                <video src="${img}" 
+                       class="timeline-video"
+                       playsinline 
+                       muted 
+                       loop 
+                       preload="metadata"
+                       data-autoplay="true"></video>
                 <div class="video-play-icon"></div>
                 <div class="video-duration-overlay" data-video-url="${img}">0:00</div>
             </div>`;
@@ -125,6 +128,24 @@ function loadVideoDurations() {
                     overlay.textContent = formatDuration(duration);
                     overlay.dataset.loaded = 'true';
                 }
+                
+                // 동영상 1개일 때 비율 체크하여 클래스 추가
+                const mediaItem = overlay.closest('.media-item');
+                const mediaGrid = mediaItem?.closest('.media-grid');
+                
+                if (mediaGrid && mediaGrid.classList.contains('count-1')) {
+                    const videoWidth = this.videoWidth;
+                    const videoHeight = this.videoHeight;
+                    
+                    if (videoWidth && videoHeight) {
+                        // 가로가 세로보다 길면 landscape, 아니면 portrait
+                        if (videoWidth > videoHeight) {
+                            mediaItem.classList.add('landscape');
+                        } else {
+                            mediaItem.classList.add('portrait');
+                        }
+                    }
+                }
             }, { once: true });
             
             video.addEventListener('error', function() {
@@ -135,6 +156,38 @@ function loadVideoDurations() {
             
             video.src = videoUrl;
         }, index * 50);
+    });
+}
+
+// 타임라인 동영상 자동재생 설정
+function setupVideoAutoplay() {
+    const videos = document.querySelectorAll('.timeline-video');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.75) {
+                // 75% 이상 보이면 재생
+                video.play().catch(err => {
+                    console.log('자동재생 실패:', err);
+                });
+            } else {
+                // 화면에서 벗어나면 일시정지
+                video.pause();
+            }
+        });
+    }, {
+        threshold: [0, 0.25, 0.5, 0.75, 1.0]
+    });
+    
+    videos.forEach(video => {
+        observer.observe(video);
+        
+        // 첫 프레임 표시
+        video.addEventListener('loadedmetadata', function() {
+            this.currentTime = 0.1;
+        }, { once: true });
     });
 }
 
@@ -293,9 +346,10 @@ function renderTimeline(tab) {
     
     timeline.innerHTML = filteredTweets.map(renderTweet).join('');
     
-    // 동영상 길이 로드
+    // 동영상 길이 로드 및 자동재생 설정
     requestAnimationFrame(() => {
         loadVideoDurations();
+        setupVideoAutoplay();
     });
     
     // 탭 전환 시 profile-page 스크롤 강제 초기화

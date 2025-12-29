@@ -183,13 +183,28 @@
   max-height: none;
 }
 
-.media-grid.count-1 .media-item img,
-.media-grid.count-1 .media-item video {
+.media-grid.count-1 .media-item img {
   width: 100%;
   height: auto;
   max-height: 506px; /* 3:4 비율 최대 높이 (가로 380px 기준) */
   object-fit: contain;
   object-position: top;
+}
+
+/* 가로가 긴 동영상 - 최대 16:9 */
+.media-grid.count-1 .media-item.video-thumbnail.landscape {
+  aspect-ratio: 16 / 9;
+}
+.media-grid.count-1 .media-item.video-thumbnail.landscape video {
+  object-fit: contain;  /* 전체 보이게 (검은 여백 가능) */
+}
+
+/* 세로가 긴 동영상 - 1:1 */
+.media-grid.count-1 .media-item.video-thumbnail.portrait {
+  aspect-ratio: 1 / 1;
+}
+.media-grid.count-1 .media-item.video-thumbnail.portrait video {
+  object-fit: cover;  /* 꽉 채우게 (위아래 잘림 가능) */
 }
 
 /* 사진 2개 - 16:9 비율 틀, 동일 사이즈 */
@@ -317,10 +332,9 @@
     position: absolute;
     bottom: 4px;
     left: 4px;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.6);
     color: #FFFFFF;
     font-size: 13px;
-    font-weight: 700;
     padding: 2px 4px;
     border-radius: 4px;
     pointer-events: none;
