@@ -1,6 +1,7 @@
-// 스토리 관련 모듈
-
-import { isVideo } from './insta-grid.js';
+// 스토리 뷰어 렌더링 및 관리
+import { isVideo } from './insta-utils.js';
+import { getStories } from './insta-data.js';
+import { saveScrollPosition, showProfile } from './insta-profile.js';
 
 let currentMediaIndex = 0;
 let storyProgressInterval = null;
@@ -197,3 +198,15 @@ export function getCurrentMediaIndex() {
 export function getAllMediaItems() {
     return allMediaItems;
 }
+
+// window에 함수 등록
+window.showStoryGroup = function(date) {
+    const stories = getStories();
+    saveScrollPosition();
+    const root = window.instaRoot;
+    root.innerHTML = `<div class="story-viewer">${showStoryGroup(date, stories)}</div>`;
+    initStoryViewer();
+};
+
+window.nextStory = nextStory;
+window.previousStory = previousStory;

@@ -6,6 +6,19 @@ let initialized = false;
 let highlightPositions = [];
 let currentIndex = -1;
 
+// 검색 네비게이션 생성
+export function createSearchNav() {
+    const searchNav = document.createElement("div");
+    searchNav.className = "search-nav";
+    searchNav.innerHTML = `
+        <button id="prev-result"></button>
+        <span id="search-index"></span>
+        <button id="next-result"></button>
+    `;
+    searchNav.style.display = "none"; // 초기에는 숨김
+    document.body.appendChild(searchNav);
+}
+
 function initCache() {
     if (initialized) return;
 

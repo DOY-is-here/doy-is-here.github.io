@@ -2,7 +2,8 @@ import { loadText, parseMessages } from "./parser.js";
 import { createHeader, initHeaderEvents } from "./header.js";
 import { renderMessages } from "./ui/messages.js";
 import { createCalendar, initCalendar } from "./calendar.js";
-import { initDaysCounter } from "./daysCounter.js"; 
+import { initDaysCounter } from "./daysCounter.js";
+import { createSearchNav } from "./search.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
     const text = await loadText();
@@ -20,6 +21,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     // 캘린더 초기화
     initCalendar(parsedData);
     createCalendar();
+
+    // 검색 네비게이션 생성
+    createSearchNav();
 
     // 헤더 이벤트 초기화
     initHeaderEvents();

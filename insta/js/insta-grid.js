@@ -1,10 +1,5 @@
 // 그리드 렌더링 모듈
-
-// 영상 파일인지 확인하는 함수
-export function isVideo(url) {
-    if (!url) return false;
-    return url.toLowerCase().match(/\.(mp4|mov|avi|webm|mkv)$/) !== null;
-}
+import { isVideo, initVideoThumbnails } from './insta-utils.js';
 
 // 그리드 렌더링 (3:4 비율) - 일반 포스트
 export function renderGrid(postsArray) {
@@ -176,32 +171,10 @@ export function renderEmptyTag() {
 
 // 그리드 비디오 썸네일 초기화
 export function initGridVideoThumbnails() {
-    const gridVideos = document.querySelectorAll('.grid-video');
-    gridVideos.forEach(video => {
-        // 이미 메타데이터가 로드된 경우 즉시 설정
-        if (video.readyState >= 1) {
-            video.currentTime = 0.1;
-        }
-        
-        // 아직 로드 안 된 경우 이벤트 리스너 추가
-        video.addEventListener('loadedmetadata', function() {
-            this.currentTime = 0.1;
-        }, { once: true });
-    });
+    initVideoThumbnails('.grid-video');
 }
 
 // 스토리 그리드 비디오 초기화
 export function initStoryGridVideos() {
-    const storyVideos = document.querySelectorAll('.grid-916 .grid-video');
-    storyVideos.forEach(video => {
-        // 이미 메타데이터가 로드된 경우 즉시 설정
-        if (video.readyState >= 1) {
-            video.currentTime = 0.1;
-        }
-        
-        // 아직 로드 안 된 경우 이벤트 리스너 추가
-        video.addEventListener('loadedmetadata', function() {
-            this.currentTime = 0.1;
-        }, { once: true });
-    });
+    initVideoThumbnails('.grid-916 .grid-video');
 }
