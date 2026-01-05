@@ -1,0 +1,101 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 394px;
+    height: 47px;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header-menu::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.0249 6.03516H19.9749M4.0249 11.9651H19.9749M4.0249 17.9651H19.9749' stroke='white' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+.header-logo img {
+    width: auto;
+    height: 24px;
+    content: url("https://doy-is-here.github.io/profile/profile-nomad.jpg");
+    display: block;
+}
+
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.header-icon.notification::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.1001 18.25H21.9001M19.9001 18.25V10.325C19.9001 5.97571 16.3743 2.44995 12.0251 2.44995C7.67586 2.44995 4.1501 5.97571 4.1501 10.325V18.25H19.9001ZM8.9001 18.25H15.1001V18.45C15.1001 20.1621 13.7122 21.55 12.0001 21.55C10.288 21.55 8.9001 20.1621 8.9001 18.45V18.25Z' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.header-icon.calendar::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.57471 10.4999H20.5747M7.1248 2.6499V5.0499M16.9051 2.6499V5.0499M4.1748 21.3499H19.8248C20.3771 21.3499 20.8248 20.9021 20.8248 20.3499V6.64985C20.8248 6.09757 20.3771 5.64985 19.8248 5.64985H4.1748C3.62252 5.64985 3.1748 6.09757 3.1748 6.64985V20.3499C3.1748 20.9021 3.62252 21.3499 4.1748 21.3499Z' stroke='white' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.header-icon.profile::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.5298 7.29736C16.5298 9.78264 14.515 11.7974 12.0298 11.7974C9.54448 11.7974 7.52977 9.78264 7.52977 7.29736C7.52977 4.81208 9.54448 2.79736 12.0298 2.79736C14.515 2.79736 16.5298 4.81208 16.5298 7.29736Z' stroke='white' stroke-width='1.4'/%3E%3Cpath d='M21.1653 18.3526C22.0873 19.5517 21.1174 21.1799 19.6049 21.1819L4.39521 21.2028C2.88256 21.2049 1.91088 19.5802 2.83552 18.3831C3.46743 17.5649 4.19908 16.795 5.08978 16.088C6.95023 14.6115 9.5732 14.0974 12.0498 14.0974C14.5315 14.0974 17.1262 14.615 18.9598 16.088C19.8306 16.7876 20.5459 17.5469 21.1653 18.3526Z' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

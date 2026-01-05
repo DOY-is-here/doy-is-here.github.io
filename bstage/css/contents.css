@@ -1,0 +1,143 @@
+.contents-hero {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.contents-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.contents-hero-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+    color: white;
+}
+
+.contents-hero-text p {
+    font-size: 12px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.contents-hero-text h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.contents-thumbnails {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.contents-thumbnails::-webkit-scrollbar {
+    display: none;
+}
+
+.contents-thumbnails img {
+    width: 110px;
+    height: 62px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.contents-tags {
+    display: flex;
+    gap: 8px;
+    padding: 0 16px 16px 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.contents-tags::-webkit-scrollbar {
+    display: none;
+}
+
+.tag-btn {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.tag-btn:hover {
+    background-color: #2a2a2a;
+}
+
+.contents-section {
+    padding: 16px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.section-header h3 {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.section-header button {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.contents-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.content-card {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.content-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+}

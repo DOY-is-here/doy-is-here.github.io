@@ -1,0 +1,129 @@
+.nomad-stories {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.nomad-stories::-webkit-scrollbar {
+    display: none;
+}
+
+.story-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 80px;
+}
+
+.story-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
+.story-item span {
+    color: #888;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.nomad-feed {
+    padding: 0;
+}
+
+.nomad-post {
+    background-color: #000;
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-author {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.post-menu {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.post-images {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.post-images::-webkit-scrollbar {
+    display: none;
+}
+
+.post-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.post-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #333;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: white;
+}
+
+.post-text {
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
