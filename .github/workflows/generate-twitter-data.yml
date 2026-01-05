@@ -7,7 +7,8 @@ on:
     paths:
       - 'x-group/**'
       - 'x-photo/**'
-      - 'metadata/twitter-metadata.json'
+      - 'metadata/twitter-group-metadata.json'
+      - 'metadata/twitter-photo-metadata.json'
       - 'scripts/generate-twitter.js'
       - 'scripts/generate-twitter-metadata.js'
   workflow_dispatch:
@@ -35,13 +36,13 @@ jobs:
             echo "✅ x-group folder exists"
             ls -la x-group | head -10
           else
-            echo "❌ x-group folder not found"
+            echo "⚠️ x-group folder not found"
           fi
           if [ -d "x-photo" ]; then
             echo "✅ x-photo folder exists"
             ls -la x-photo | head -10
           else
-            echo "❌ x-photo folder not found"
+            echo "⚠️ x-photo folder not found"
           fi
       
       - name: Generate twitter metadata structure
@@ -57,21 +58,35 @@ jobs:
       - name: Check generated files
         run: |
           echo "📋 Checking generated files..."
-          if [ -f "metadata/twitter-metadata.json" ]; then
-            echo "✅ twitter-metadata.json exists"
-            wc -l metadata/twitter-metadata.json
+          if [ -f "metadata/twitter-group-metadata.json" ]; then
+            echo "✅ twitter-group-metadata.json exists"
+            wc -l metadata/twitter-group-metadata.json
+          fi
+          if [ -f "metadata/twitter-photo-metadata.json" ]; then
+            echo "✅ twitter-photo-metadata.json exists"
+            wc -l metadata/twitter-photo-metadata.json
           fi
           if [ -f "twitter/js/tweets.js" ]; then
             echo "✅ tweets.js exists"
             wc -l twitter/js/tweets.js
+          fi
+          if [ -f "twitter/js/data/group/group.js" ]; then
+            echo "✅ group.js exists"
+          fi
+          if [ -f "twitter/js/data/photo/photo.js" ]; then
+            echo "✅ photo.js exists"
           fi
       
       - name: Commit and push if changed
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add metadata/twitter-metadata.json twitter/js/tweets.js
-          git diff --staged --quiet || git commit -m "🤖 Auto-generate twitter data [skip ci]"
-          git push
+          git add -A metadata/ twitter/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🤖 Auto-generate twitter data [skip ci]"
+            git push
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
