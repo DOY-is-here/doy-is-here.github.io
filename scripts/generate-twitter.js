@@ -7,8 +7,17 @@ const FOLDERS = {
     photo: 'x-photo'
 };
 
-const OUTPUT_FILE = 'twitter/js/tweets.js';
-const METADATA_FILE = 'metadata/twitter-metadata.json';
+const OUTPUT_FILES = {
+    tweets: 'twitter/js/tweets.js',
+    group: 'twitter/js/data/group/group.js',
+    photo: 'twitter/js/data/photo/photo.js'
+};
+
+const METADATA_FILES = {
+    group: 'metadata/twitter-group-metadata.json',
+    photo: 'metadata/twitter-photo-metadata.json'
+};
+
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main';
 
 // 프로필 정보
@@ -19,15 +28,15 @@ const PROFILE = {
     verified: true
 };
 
-// 메타데이터 로드
-function loadMetadata() {
+// 메타데이터 로드 (타입별로)
+function loadMetadata(type) {
     try {
-        const metadataPath = path.join(__dirname, '..', METADATA_FILE);
+        const metadataPath = path.join(__dirname, '..', METADATA_FILES[type]);
         if (fs.existsSync(metadataPath)) {
             return JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
         }
     } catch (error) {
-        console.warn(`⚠️  Warning: Could not load twitter-metadata.json:`, error.message);
+        console.warn(`⚠️ Warning: Could not load ${METADATA_FILES[type]}:`, error.message);
     }
     return {};
 }
@@ -49,11 +58,6 @@ function getMediaFiles(dir) {
 
 // 파일명에서 날짜, 트윗 번호, 이미지 순서 추출
 function parseFileName(fileName) {
-    // 240405-1.jpg -> { date: "240405", tweetNum: 1, sequence: null }
-    // 240405-1 (1).jpg -> { date: "240405", tweetNum: 1, sequence: 1 }
-    // 240405.jpg -> { date: "240405", tweetNum: null, sequence: null }
-    // 240405 (1).jpg -> { date: "240405", tweetNum: null, sequence: 1 }
-    
     const match = fileName.match(/^(\d{6})(?:-(\d+))?(?:\s*\((\d+)\))?/);
     
     if (!match) return null;
@@ -66,7 +70,7 @@ function parseFileName(fileName) {
     };
 }
 
-// 날짜를 표시 형식으로 변환 (2024.4.5.)
+// 날짜를 표시 형식으로 변환
 function formatDisplayDate(dateStr) {
     const year = "20" + dateStr.substring(0, 2);
     const month = parseInt(dateStr.substring(2, 4));
@@ -159,7 +163,7 @@ function groupMediaByTweet(mediaFiles, folderPath, type, metadata) {
             displayDate: formatDisplayDate(group.date),
             text: tweetData.text || '',
             images: mediaUrls,
-            type: type, // 'group' 또는 'photo'
+            type: type,
             rawDate: group.date,
             tweetNum: group.tweetNum
         };
@@ -172,32 +176,34 @@ function groupMediaByTweet(mediaFiles, folderPath, type, metadata) {
     return tweets;
 }
 
-// tweets.js 파일 생성
+// 개별 데이터 파일 생성 (data/group/group.js, data/photo/photo.js)
+function generateDataFile(tweets, type) {
+    const outputFile = OUTPUT_FILES[type];
+    const variableName = type === 'group' ? 'groups' : 'photos';
+    
+    const content = `// ${type === 'group' ? 'x-group' : 'x-photo'} 데이터
+
+export const ${variableName} = ${JSON.stringify(tweets, null, 4)};
+`;
+    
+    // 출력 디렉토리 확인
+    const outputDir = path.dirname(outputFile);
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
+    
+    fs.writeFileSync(outputFile, content, 'utf8');
+    console.log(`✅ ${outputFile} 생성 완료!`);
+}
+
+// 통합 tweets.js 파일 생성
 function generateTweetsJS(groupTweets, photoTweets) {
-    // 모든 트윗 합치기
-    let allTweets = [...groupTweets, ...photoTweets];
-    
-    // 날짜순 정렬 (최신순)
-    allTweets.sort((a, b) => {
-        if (a.rawDate !== b.rawDate) {
-            return b.rawDate.localeCompare(a.rawDate);
-        }
-        // 같은 날짜면 tweetNum 내림차순
-        const aNum = a.tweetNum || 0;
-        const bNum = b.tweetNum || 0;
-        return bNum - aNum;
-    });
-    
-    const content = `// 트윗 데이터 (자동 생성됨)
+    const content = `// 트윗 데이터 통합 파일
+import { groups } from './data/group/group.js';
+import { photos } from './data/photo/photo.js';
 
-// 전체 트윗 (게시물 탭용 - group + photo)
-export const tweets = ${JSON.stringify(allTweets, null, 4)};
-
-// 포토만 (하이라이트 탭용)
-export const photoTweets = ${JSON.stringify(photoTweets, null, 4)};
-
-// 그룹만
-export const groupTweets = ${JSON.stringify(groupTweets, null, 4)};
+// 모든 트윗 합치기
+export const tweets = [...groups, ...photos];
 
 // 트윗 개수
 export function getTweetCount() {
@@ -220,7 +226,7 @@ export function getTweetsByTab(tab) {
         case 'posts':
             return tweets; // group + photo 모두
         case 'highlights':
-            return photoTweets; // photo만
+            return photos; // photo만
         case 'photos':
             return tweets.filter(t => t.images && t.images.length > 0);
         default:
@@ -230,40 +236,67 @@ export function getTweetsByTab(tab) {
 `;
     
     // 출력 디렉토리 확인
-    const outputDir = path.dirname(OUTPUT_FILE);
+    const outputDir = path.dirname(OUTPUT_FILES.tweets);
     if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir, { recursive: true });
     }
     
-    fs.writeFileSync(OUTPUT_FILE, content, 'utf8');
+    fs.writeFileSync(OUTPUT_FILES.tweets, content, 'utf8');
     
     console.log('✅ tweets.js 생성 완료!');
     console.log(`📊 그룹: ${groupTweets.length}개`);
     console.log(`📊 포토: ${photoTweets.length}개`);
-    console.log(`📊 전체: ${allTweets.length}개`);
+    console.log(`📊 전체: ${groupTweets.length + photoTweets.length}개`);
 }
 
 // 메인 실행
 function main() {
-    console.log('🐦 트윗 데이터 생성 중...\n');
+    console.log('🦋 트윗 데이터 생성 중...\n');
     
-    // 메타데이터 로드
+    // 1. 메타데이터 로드 (타입별로)
     console.log('📖 메타데이터 로드 중...');
-    const metadata = loadMetadata();
-    console.log(`   twitter-metadata: ${Object.keys(metadata).length}개 항목\n`);
+    const groupMetadata = loadMetadata('group');
+    const photoMetadata = loadMetadata('photo');
+    console.log(`   group-metadata: ${Object.keys(groupMetadata).length}개 항목`);
+    console.log(`   photo-metadata: ${Object.keys(photoMetadata).length}개 항목\n`);
     
-    // 미디어 파일 읽기
+    // 2. 미디어 파일 읽기
     console.log('📁 미디어 파일 스캔 중...');
     const groupFiles = getMediaFiles(FOLDERS.group);
     const photoFiles = getMediaFiles(FOLDERS.photo);
     
-    console.log('\n📝 트윗 데이터 생성 중...');
+    console.log('\n🔨 트윗 데이터 생성 중...');
     
-    // 트윗 생성
-    const groupTweets = groupMediaByTweet(groupFiles, FOLDERS.group, 'group', metadata);
-    const photoTweets = groupMediaByTweet(photoFiles, FOLDERS.photo, 'photo', metadata);
+    // 3. 트윗 생성
+    const groupTweets = groupMediaByTweet(groupFiles, FOLDERS.group, 'group', groupMetadata);
+    const photoTweets = groupMediaByTweet(photoFiles, FOLDERS.photo, 'photo', photoMetadata);
     
-    console.log('\n💾 tweets.js 파일 생성 중...');
+    // 날짜순 정렬 (최신순)
+    groupTweets.sort((a, b) => {
+        if (a.rawDate !== b.rawDate) {
+            return b.rawDate.localeCompare(a.rawDate);
+        }
+        const aNum = a.tweetNum || 0;
+        const bNum = b.tweetNum || 0;
+        return bNum - aNum;
+    });
+    
+    photoTweets.sort((a, b) => {
+        if (a.rawDate !== b.rawDate) {
+            return b.rawDate.localeCompare(a.rawDate);
+        }
+        const aNum = a.tweetNum || 0;
+        const bNum = b.tweetNum || 0;
+        return bNum - aNum;
+    });
+    
+    console.log('\n💾 파일 생성 중...');
+    
+    // 4. 개별 데이터 파일 생성
+    generateDataFile(groupTweets, 'group');
+    generateDataFile(photoTweets, 'photo');
+    
+    // 5. 통합 tweets.js 생성
     generateTweetsJS(groupTweets, photoTweets);
     
     console.log('\n✨ 완료!');

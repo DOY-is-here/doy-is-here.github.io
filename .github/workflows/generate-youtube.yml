@@ -1,0 +1,43 @@
+name: Generate YouTube Data
+
+on:
+  push:
+    paths:
+      - 'reels/**'
+      - 'metadata/reels-metadata.json'
+  workflow_dispatch:  # 수동 실행 가능
+
+jobs:
+  update-reels:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Generate metadata template
+        run: node scripts/generate-reels-metadata.js
+      
+      - name: Generate youtube-data.js
+        run: node scripts/generate-youtube-data.js
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet metadata/reels-metadata.json js/youtube-data.js || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push if changed
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add metadata/reels-metadata.json js/youtube-data.js
+          git commit -m "🤖 Auto-update reels data [skip ci]"
+          git push

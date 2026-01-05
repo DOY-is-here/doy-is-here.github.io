@@ -23,7 +23,7 @@ export function renderVideoList(videos) {
                     <div class="video-info">
                         <div class="video-title">${video.title}</div>
                         <div class="video-meta">
-                            조회수 ${video.views} • ${video.uploadDate}
+                            ${video.uploadDate}
                         </div>
                     </div>
                     <div class="video-options">
@@ -37,11 +37,14 @@ export function renderVideoList(videos) {
 
 // Shorts 그리드 렌더링 (9:16 비율 - Instagram 스토리 그리드와 동일)
 export function renderShortsGrid(shorts) {
+    console.log('renderShortsGrid called with:', shorts);
+    
     if (!shorts || shorts.length === 0) {
+        console.log('No shorts data');
         return '<div class="empty-state">Shorts가 없습니다</div>';
     }
     
-    return `
+    const html = `
         <div class="shorts-grid grid-916">
             ${shorts.map(short => {
                 const isVideoFile = isVideo(short.thumbnail);
@@ -50,29 +53,20 @@ export function renderShortsGrid(shorts) {
                     return `
                         <div class="grid-item grid-item-video" data-short-id="${short.id}">
                             <video src="${short.thumbnail}" preload="metadata" muted playsinline class="grid-video"></video>
-                            <div class="shorts-views">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
-                                    <path d="M8 3C4.5 3 1.73 5.61 1 9c.73 3.39 3.5 6 7 6s6.27-2.61 7-6c-.73-3.39-3.5-6-7-6zm0 10c-2.76 0-5.14-1.95-5.93-4.5C2.86 5.95 5.24 4 8 4s5.14 1.95 5.93 4.5C13.14 11.05 10.76 13 8 13zm0-7c-1.38 0-2.5 1.12-2.5 2.5S6.62 11 8 11s2.5-1.12 2.5-2.5S9.38 6 8 6z"/>
-                                </svg>
-                                ${short.views}
-                            </div>
                         </div>
                     `;
                 } else {
                     return `
                         <div class="grid-item" data-short-id="${short.id}" style="background-image: url('${short.thumbnail}')">
-                            <div class="shorts-views">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
-                                    <path d="M8 3C4.5 3 1.73 5.61 1 9c.73 3.39 3.5 6 7 6s6.27-2.61 7-6c-.73-3.39-3.5-6-7-6zm0 10c-2.76 0-5.14-1.95-5.93-4.5C2.86 5.95 5.24 4 8 4s5.14 1.95 5.93 4.5C13.14 11.05 10.76 13 8 13zm0-7c-1.38 0-2.5 1.12-2.5 2.5S6.62 11 8 11s2.5-1.12 2.5-2.5S9.38 6 8 6z"/>
-                                </svg>
-                                ${short.views}
-                            </div>
                         </div>
                     `;
                 }
             }).join('')}
         </div>
     `;
+    
+    console.log('Generated HTML length:', html.length);
+    return html;
 }
 
 // 그리드 비디오 썸네일 초기화 (Instagram과 동일)

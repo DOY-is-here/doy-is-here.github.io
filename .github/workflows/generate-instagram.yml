@@ -1,4 +1,4 @@
-name: Generate Posts
+name: Generate Instagram
 
 on:
   push:
@@ -61,10 +61,10 @@ jobs:
             echo "Story metadata entries: $(cat metadata/story-metadata.json | grep -o '\"[0-9]\{6\}\"' | wc -l)"
           fi
       
-      - name: Update metadata templates
+      - name: Update insta metadata
         run: |
-          echo "=== Running generate-metadata-template.js ==="
-          node scripts/generate-metadata-template.js
+          echo "=== Running generate-insta-metadata.js ==="
+          node scripts/generate-insta-metadata.js
       
       # 디버깅: 업데이트된 메타데이터 확인
       - name: Check updated metadata
@@ -83,10 +83,10 @@ jobs:
             fi
           fi
       
-      - name: Generate posts.js
+      - name: Generate insta posts.js
         run: |
-          echo "=== Running generate-posts.js ==="
-          node scripts/generate-posts.js
+          echo "=== Running generate-insta-posts.js ==="
+          node scripts/generate-insta-posts.js
       
       - name: Check for changes
         id: check_changes

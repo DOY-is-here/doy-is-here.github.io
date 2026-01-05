@@ -13,15 +13,15 @@ function parseDate(filename) {
 }
 
 // 기존 metadata 로드
-function loadExistingMetadata() {
-    const metadataPath = path.join(__dirname, '..', 'metadata', 'twitter-metadata.json');
+function loadExistingMetadata(filename) {
+    const metadataPath = path.join(__dirname, '..', 'metadata', filename);
     
     if (fs.existsSync(metadataPath)) {
         try {
             const content = fs.readFileSync(metadataPath, 'utf8');
             return JSON.parse(content);
         } catch (error) {
-            console.warn(`⚠️  기존 twitter-metadata.json 읽기 실패:`, error.message);
+            console.warn(`⚠️ 기존 ${filename} 읽기 실패:`, error.message);
             return {};
         }
     }
@@ -29,63 +29,59 @@ function loadExistingMetadata() {
     return {};
 }
 
-// 실제 파일 구조 분석 (x-group + x-photo)
-function analyzeFileStructure() {
-    const folders = ['x-group', 'x-photo'];
+// 실제 파일 구조 분석 (특정 폴더만)
+function analyzeFileStructure(folderName) {
     const structure = {};
+    const folderPath = path.join(__dirname, '..', folderName);
     
-    folders.forEach(folderName => {
-        const folderPath = path.join(__dirname, '..', folderName);
+    if (!fs.existsSync(folderPath)) {
+        console.log(`   ⚠️ 폴더가 존재하지 않습니다: ${folderPath}`);
+        return structure;
+    }
+    
+    const items = fs.readdirSync(folderPath);
+    console.log(`   📂 ${folderName}: ${items.length}개 항목 발견`);
+    
+    let processedCount = 0;
+    
+    for (const item of items) {
+        const stat = fs.statSync(path.join(folderPath, item));
         
-        if (!fs.existsSync(folderPath)) {
-            console.log(`   ⚠️  폴더가 존재하지 않습니다: ${folderPath}`);
-            return;
-        }
-        
-        const items = fs.readdirSync(folderPath);
-        console.log(`   📂 ${folderName}: ${items.length}개 항목 발견`);
-        
-        let processedCount = 0;
-        
-        for (const item of items) {
-            const stat = fs.statSync(path.join(folderPath, item));
+        if (stat.isFile() && /\.(jpg|jpeg|png|gif|mp4|webm|mov)$/i.test(item)) {
+            const filenameWithoutExt = item.replace(/\.(jpg|jpeg|png|gif|mp4|webm|mov)$/i, '');
+            const dateInfo = parseDate(filenameWithoutExt);
             
-            if (stat.isFile() && /\.(jpg|jpeg|png|gif|mp4|webm|mov)$/i.test(item)) {
-                const filenameWithoutExt = item.replace(/\.(jpg|jpeg|png|gif|mp4|webm|mov)$/i, '');
-                const dateInfo = parseDate(filenameWithoutExt);
+            if (dateInfo) {
+                const { rawDate, tweetNum } = dateInfo;
                 
-                if (dateInfo) {
-                    const { rawDate, tweetNum } = dateInfo;
-                    
-                    if (!structure[rawDate]) {
-                        structure[rawDate] = {
-                            hasMultiple: false,
-                            tweetNums: []
-                        };
+                if (!structure[rawDate]) {
+                    structure[rawDate] = {
+                        hasMultiple: false,
+                        tweetNums: []
+                    };
+                }
+                
+                if (tweetNum !== null) {
+                    structure[rawDate].hasMultiple = true;
+                    if (!structure[rawDate].tweetNums.includes(tweetNum)) {
+                        structure[rawDate].tweetNums.push(tweetNum);
                     }
-                    
-                    if (tweetNum !== null) {
-                        structure[rawDate].hasMultiple = true;
-                        if (!structure[rawDate].tweetNums.includes(tweetNum)) {
-                            structure[rawDate].tweetNums.push(tweetNum);
-                        }
-                    } else {
-                        structure[rawDate].hasSingle = true;
-                    }
-                    
-                    processedCount++;
-                    
-                    if (processedCount <= 5) {
-                        console.log(`   📄 파일: ${item} → ${rawDate}${tweetNum ? '-'+tweetNum : ''}`);
-                    }
+                } else {
+                    structure[rawDate].hasSingle = true;
+                }
+                
+                processedCount++;
+                
+                if (processedCount <= 5) {
+                    console.log(`   📄 파일: ${item} → ${rawDate}${tweetNum ? '-'+tweetNum : ''}`);
                 }
             }
         }
-        
-        if (processedCount > 5) {
-            console.log(`   ... 외 ${processedCount - 5}개 처리됨`);
-        }
-    });
+    }
+    
+    if (processedCount > 5) {
+        console.log(`   ... 외 ${processedCount - 5}개 처리됨`);
+    }
     
     return structure;
 }
@@ -95,7 +91,7 @@ function updateMetadataStructure(existingMetadata, fileStructure) {
     const updatedMetadata = {};
     const changes = [];
     
-    console.log(`   📝 메타데이터 업데이트 시작...`);
+    console.log(`   🔄 메타데이터 업데이트 시작...`);
     console.log(`      기존: ${Object.keys(existingMetadata).length}개`);
     console.log(`      파일: ${Object.keys(fileStructure).length}개`);
     
@@ -106,7 +102,7 @@ function updateMetadataStructure(existingMetadata, fileStructure) {
         if (structure.hasMultiple) {
             if (existing && typeof existing === 'object' && existing.text !== undefined) {
                 // 단일 → 다중 변환
-                console.log(`   📝 ${rawDate}: 단일 → 다중 (텍스트 보존)`);
+                console.log(`   🔄 ${rawDate}: 단일 → 다중 (텍스트 보존)`);
                 changes.push(`${rawDate}: 단일 → 다중`);
                 
                 if (!updatedMetadata[rawDate]) {
@@ -155,7 +151,7 @@ function updateMetadataStructure(existingMetadata, fileStructure) {
         else if (structure.hasSingle) {
             if (existing && typeof existing === 'object' && !existing.text) {
                 // 다중 → 단일 변환
-                console.log(`   📝 ${rawDate}: 다중 → 단일 (텍스트 보존)`);
+                console.log(`   🔄 ${rawDate}: 다중 → 단일 (텍스트 보존)`);
                 changes.push(`${rawDate}: 다중 → 단일`);
                 
                 const firstTweetNum = Object.keys(existing).sort()[0];
@@ -176,53 +172,38 @@ function updateMetadataStructure(existingMetadata, fileStructure) {
     return { updatedMetadata, changes };
 }
 
-// 메인 실행
-function main() {
-    console.log('🐦 트위터 메타데이터 업데이트 중...\n');
-    
-    console.log('📁 x-group, x-photo 처리 중...');
-    
-    // 1. 기존 메타데이터 로드
-    const existingMetadata = loadExistingMetadata();
-    console.log(`   기존 메타데이터: ${Object.keys(existingMetadata).length}개 항목`);
-    
-    // 2. 실제 파일 구조 분석
-    const fileStructure = analyzeFileStructure();
-    console.log(`   📊 분석 완료: ${Object.keys(fileStructure).length}개 날짜`);
-    
-    // 3. 메타데이터 구조 업데이트
-    const { updatedMetadata, changes } = updateMetadataStructure(existingMetadata, fileStructure);
-    
-    // 4. 정렬
+// 메타데이터 저장
+function saveMetadata(metadata, filename) {
+    // 정렬
     const sortedMetadata = {};
-    Object.keys(updatedMetadata)
+    Object.keys(metadata)
         .sort((a, b) => b.localeCompare(a))
         .forEach(key => {
-            if (typeof updatedMetadata[key] === 'object' && !updatedMetadata[key].text) {
+            if (typeof metadata[key] === 'object' && !metadata[key].text) {
                 const sorted = {};
-                Object.keys(updatedMetadata[key])
+                Object.keys(metadata[key])
                     .sort((a, b) => parseInt(a) - parseInt(b))
                     .forEach(subKey => {
-                        sorted[subKey] = updatedMetadata[key][subKey];
+                        sorted[subKey] = metadata[key][subKey];
                     });
                 sortedMetadata[key] = sorted;
             } else {
-                sortedMetadata[key] = updatedMetadata[key];
+                sortedMetadata[key] = metadata[key];
             }
         });
     
-    // 5. 저장
+    // 저장
     const metadataDir = path.join(__dirname, '..', 'metadata');
     if (!fs.existsSync(metadataDir)) {
         fs.mkdirSync(metadataDir);
         console.log(`   📁 metadata 폴더 생성`);
     }
     
-    const outputPath = path.join(metadataDir, 'twitter-metadata.json');
+    const outputPath = path.join(metadataDir, filename);
     const jsonContent = JSON.stringify(sortedMetadata, null, 2);
     
-    console.log(`   💾 저장 중: ${outputPath}`);
-    console.log(`   📝 파일 크기: ${(jsonContent.length / 1024).toFixed(2)} KB`);
+    console.log(`   💾 저장 중: ${filename}`);
+    console.log(`   📊 파일 크기: ${(jsonContent.length / 1024).toFixed(2)} KB`);
     
     fs.writeFileSync(outputPath, jsonContent, 'utf8');
     
@@ -235,20 +216,52 @@ function main() {
         console.log(`   ❌ 저장 실패!`);
     }
     
-    console.log(`\n✅ twitter-metadata.json 업데이트 완료!`);
-    console.log(`   총 ${Object.keys(sortedMetadata).length}개 항목`);
+    return sortedMetadata;
+}
+
+// 메인 실행
+function main() {
+    console.log('🦋 트위터 메타데이터 업데이트 중...\n');
     
-    if (changes.length > 0) {
-        console.log(`   변경사항 ${changes.length}개:`);
-        changes.slice(0, 5).forEach(change => {
-            console.log(`      - ${change}`);
-        });
-        if (changes.length > 5) {
-            console.log(`      ... 외 ${changes.length - 5}개`);
+    const folders = [
+        { name: 'x-group', metadataFile: 'twitter-group-metadata.json' },
+        { name: 'x-photo', metadataFile: 'twitter-photo-metadata.json' }
+    ];
+    
+    folders.forEach(({ name, metadataFile }) => {
+        console.log(`\n📦 ${name} 처리 중...`);
+        
+        // 1. 기존 메타데이터 로드
+        const existingMetadata = loadExistingMetadata(metadataFile);
+        console.log(`   기존 메타데이터: ${Object.keys(existingMetadata).length}개 항목`);
+        
+        // 2. 실제 파일 구조 분석
+        const fileStructure = analyzeFileStructure(name);
+        console.log(`   📊 분석 완료: ${Object.keys(fileStructure).length}개 날짜`);
+        
+        // 3. 메타데이터 구조 업데이트
+        const { updatedMetadata, changes } = updateMetadataStructure(existingMetadata, fileStructure);
+        
+        // 4. 저장
+        const savedMetadata = saveMetadata(updatedMetadata, metadataFile);
+        
+        console.log(`\n✅ ${metadataFile} 업데이트 완료!`);
+        console.log(`   총 ${Object.keys(savedMetadata).length}개 항목`);
+        
+        if (changes.length > 0) {
+            console.log(`   변경사항 ${changes.length}개:`);
+            changes.slice(0, 5).forEach(change => {
+                console.log(`      - ${change}`);
+            });
+            if (changes.length > 5) {
+                console.log(`      ... 외 ${changes.length - 5}개`);
+            }
+        } else {
+            console.log(`   변경사항 없음`);
         }
-    } else {
-        console.log(`   변경사항 없음`);
-    }
+    });
+    
+    console.log('\n\n✨ 모든 메타데이터 업데이트 완료!');
 }
 
 main();

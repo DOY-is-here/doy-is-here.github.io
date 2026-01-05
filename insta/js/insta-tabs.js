@@ -1,4 +1,4 @@
-// 탭 전환 및 스와이프 기능
+// 탭 관련 기능 모듈
 import { initGridVideoThumbnails, initStoryGridVideos } from './insta-grid.js';
 
 let currentTab = 'grid';
@@ -7,14 +7,8 @@ let touchEndX = 0;
 let touchStartY = 0;
 let touchEndY = 0;
 
-export function initTabs(initialTab = 'grid') {
-    currentTab = initialTab;
-    attachTabClickEvents();
-    attachGridClickEvents();
-    initSwipe();
-}
-
-function attachTabClickEvents() {
+// 탭 초기화
+export function initTabs() {
     const tabs = document.querySelectorAll(".tab-item");
     const contents = document.querySelectorAll(".tab-content");
 
@@ -22,12 +16,9 @@ function attachTabClickEvents() {
         tab.addEventListener("click", () => {
             tabs.forEach(t => t.classList.remove("active"));
             contents.forEach(c => c.classList.remove("active"));
-            
             tab.classList.add("active");
             currentTab = tab.dataset.tab;
-            
-            const targetContent = document.querySelector(`.tab-content[data-content="${tab.dataset.tab}"]`);
-            targetContent.classList.add("active");
+            document.querySelector(`.tab-content[data-content="${tab.dataset.tab}"]`).classList.add("active");
             
             // 스크롤 맨 위로 초기화
             window.scrollTo(0, 0);
@@ -38,9 +29,7 @@ function attachTabClickEvents() {
             }, 100);
         });
     });
-}
-
-function attachGridClickEvents() {
+    
     const tabsContainer = document.getElementById('tabs-container');
     if (tabsContainer) {
         tabsContainer.addEventListener('click', function(e) {
@@ -54,6 +43,7 @@ function attachGridClickEvents() {
     }
 }
 
+// 탭 전환
 export function switchTab(tabName) {
     currentTab = tabName;
     
@@ -75,14 +65,13 @@ export function switchTab(tabName) {
     }, 100);
 }
 
-function initSwipe() {
+// 스와이프 초기화
+export function initSwipe() {
     const container = document.getElementById('tabs-container');
-    
     container.addEventListener('touchstart', (e) => {
         touchStartX = e.changedTouches[0].screenX;
         touchStartY = e.changedTouches[0].screenY;
     });
-    
     container.addEventListener('touchend', (e) => {
         touchEndX = e.changedTouches[0].screenX;
         touchEndY = e.changedTouches[0].screenY;
@@ -90,16 +79,15 @@ function initSwipe() {
     });
 }
 
+// 스와이프 처리
 function handleSwipe() {
     const swipeThreshold = 50;
     const diffX = touchStartX - touchEndX;
     const diffY = touchStartY - touchEndY;
-    
     if (Math.abs(diffX) < swipeThreshold || Math.abs(diffY) > Math.abs(diffX)) return;
     
     const tabs = ['grid', 'tagged', 'story', 'repost'];
     const currentIndex = tabs.indexOf(currentTab);
-    
     if (diffX > 0 && currentIndex < tabs.length - 1) {
         switchTab(tabs[currentIndex + 1]);
     } else if (diffX < 0 && currentIndex > 0) {
@@ -107,6 +95,12 @@ function handleSwipe() {
     }
 }
 
+// 현재 탭 가져오기
 export function getCurrentTab() {
     return currentTab;
+}
+
+// 현재 탭 설정
+export function setCurrentTab(tab) {
+    currentTab = tab;
 }

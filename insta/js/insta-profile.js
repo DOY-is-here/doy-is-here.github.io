@@ -1,38 +1,7 @@
-// 프로필 화면 렌더링 및 관리
-import { getPostCount, posts, getTaggedPosts, getStories } from './insta-data.js';
-import { renderGrid, renderTaggedGrid, renderStoryGrid, renderRepostGrid, initGridVideoThumbnails, initStoryGridVideos } from './insta-grid.js';
-import { initTabs } from './insta-tabs.js';
+// 프로필 UI 생성 모듈
 
-let savedScrollPosition = 0;
-
-export function showProfile(initialTab = 'grid', restoreScroll = false) {
-    const root = window.instaRoot;
-    
-    root.innerHTML = `
-        ${createHeader()}
-        ${createProfileHeader()}
-        ${createProfileInfo()}
-        ${createProfileActions()}
-        ${createTabs(initialTab)}
-        ${createTabsContainer(initialTab)}
-    `;
-    
-    initTabs(initialTab);
-    
-    if (restoreScroll) {
-        setTimeout(() => window.scrollTo(0, savedScrollPosition), 0);
-    }
-    
-    // 비디오 썸네일 초기화
-    requestAnimationFrame(() => {
-        setTimeout(() => {
-            initGridVideoThumbnails();
-            initStoryGridVideos();
-        }, 150);
-    });
-}
-
-function createHeader() {
+// 프로필 전체 HTML 생성
+export function createProfileHTML(currentTab, getPostCount) {
     return `
         <div class="insta-header">
             <div class="header-back"></div>
@@ -42,10 +11,16 @@ function createHeader() {
                 <div class="header-icon dots"></div>
             </div>
         </div>
+        
+        ${createProfileHeader(getPostCount)}
+        ${createProfileInfo()}
+        ${createProfileActions()}
+        ${createProfileTabs(currentTab)}
     `;
 }
 
-function createProfileHeader() {
+// 프로필 헤더 (아바타 + 통계)
+function createProfileHeader(getPostCount) {
     return `
         <div class="profile-header">
             <div class="profile-avatar">
@@ -53,7 +28,7 @@ function createProfileHeader() {
             </div>
             <div class="profile-stats">
                 <div class="stat-item">
-                    <div class="stat-number">${getPostCount('grid')}</div>
+                    <div class="stat-number">${getPostCount()}</div>
                     <div class="stat-label">게시물</div>
                 </div>
                 <div class="stat-item">
@@ -69,6 +44,7 @@ function createProfileHeader() {
     `;
 }
 
+// 프로필 정보
 function createProfileInfo() {
     return `
         <div class="profile-info">
@@ -83,6 +59,7 @@ function createProfileInfo() {
     `;
 }
 
+// 프로필 액션 버튼
 function createProfileActions() {
     return `
         <div class="profile-actions">
@@ -100,7 +77,8 @@ function createProfileActions() {
     `;
 }
 
-function createTabs(currentTab) {
+// 프로필 탭 UI
+export function createProfileTabs(currentTab) {
     return `
         <div class="profile-tabs" id="profile-tabs">
             <div class="tab-item ${currentTab === 'grid' ? 'active' : ''}" data-tab="grid">
@@ -118,33 +96,3 @@ function createTabs(currentTab) {
         </div>
     `;
 }
-
-function createTabsContainer(currentTab) {
-    return `
-        <div class="tabs-container" id="tabs-container">
-            <div class="tab-content ${currentTab === 'grid' ? 'active' : ''}" data-content="grid">
-                ${renderGrid(posts)}
-            </div>
-            <div class="tab-content ${currentTab === 'tagged' ? 'active' : ''}" data-content="tagged">
-                ${renderTaggedGrid(getTaggedPosts)}
-            </div>
-            <div class="tab-content ${currentTab === 'story' ? 'active' : ''}" data-content="story">
-                ${renderStoryGrid(getStories)}
-            </div>
-            <div class="tab-content ${currentTab === 'repost' ? 'active' : ''}" data-content="repost">
-                ${renderRepostGrid(posts, getTaggedPosts)}
-            </div>                
-        </div>
-    `;
-}
-
-export function saveScrollPosition() {
-    savedScrollPosition = window.scrollY || window.pageYOffset;
-}
-
-export function getSavedScrollPosition() {
-    return savedScrollPosition;
-}
-
-// window에 함수 등록
-window.showProfile = showProfile;

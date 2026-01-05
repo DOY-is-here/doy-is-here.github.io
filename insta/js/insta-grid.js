@@ -1,5 +1,5 @@
 // 그리드 렌더링 모듈
-import { isVideo, initVideoThumbnails } from './insta-utils.js';
+import { isVideo } from './insta-utils.js';
 
 // 그리드 렌더링 (3:4 비율) - 일반 포스트
 export function renderGrid(postsArray) {
@@ -171,10 +171,32 @@ export function renderEmptyTag() {
 
 // 그리드 비디오 썸네일 초기화
 export function initGridVideoThumbnails() {
-    initVideoThumbnails('.grid-video');
+    const gridVideos = document.querySelectorAll('.grid-video');
+    gridVideos.forEach(video => {
+        // 이미 메타데이터가 로드된 경우 즉시 설정
+        if (video.readyState >= 1) {
+            video.currentTime = 0.1;
+        }
+        
+        // 아직 로드 안 된 경우 이벤트 리스너 추가
+        video.addEventListener('loadedmetadata', function() {
+            this.currentTime = 0.1;
+        }, { once: true });
+    });
 }
 
 // 스토리 그리드 비디오 초기화
 export function initStoryGridVideos() {
-    initVideoThumbnails('.grid-916 .grid-video');
+    const storyVideos = document.querySelectorAll('.grid-916 .grid-video');
+    storyVideos.forEach(video => {
+        // 이미 메타데이터가 로드된 경우 즉시 설정
+        if (video.readyState >= 1) {
+            video.currentTime = 0.1;
+        }
+        
+        // 아직 로드 안 된 경우 이벤트 리스너 추가
+        video.addEventListener('loadedmetadata', function() {
+            this.currentTime = 0.1;
+        }, { once: true });
+    });
 }
