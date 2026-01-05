@@ -8,7 +8,7 @@ on:
       - 'x-group/**'
       - 'x-photo/**'
       - 'metadata/twitter-metadata.json'
-      - 'scripts/generate-tweets.js'
+      - 'scripts/generate-twitter.js'
       - 'scripts/generate-twitter-metadata.js'
   workflow_dispatch:
 
@@ -52,7 +52,7 @@ jobs:
       - name: Generate tweets data
         run: |
           echo "🐦 Generating tweets data..."
-          node scripts/generate-tweets.js
+          node scripts/generate-twitter.js
       
       - name: Check generated files
         run: |

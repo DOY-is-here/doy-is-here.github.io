@@ -23,7 +23,7 @@ jobs:
           node-version: '18'
       
       - name: Generate metadata template
-        run: node scripts/generate-reels-metadata.js
+        run: node scripts/generate-youtube-metadata.js
       
       - name: Generate youtube-data.js
         run: node scripts/generate-youtube-data.js
