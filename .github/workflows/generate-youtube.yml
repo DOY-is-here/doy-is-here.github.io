@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'reels/**'
-      - 'metadata/reels-metadata.json'
+      - 'metadata/videos-metadata.json'
   workflow_dispatch:  # 수동 실행 가능
 
 jobs:
@@ -31,13 +31,13 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
-          git diff --quiet metadata/reels-metadata.json js/youtube-data.js || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet metadata/videos-metadata.json js/youtube-data.js || echo "changed=true" >> $GITHUB_OUTPUT
       
       - name: Commit and push if changed
         if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add metadata/reels-metadata.json js/youtube-data.js
-          git commit -m "🤖 Auto-update reels data [skip ci]"
+          git add metadata/videos-metadata.json js/youtube-data.js
+          git commit -m "🤖 Auto-update YouTube data [skip ci]"
           git push

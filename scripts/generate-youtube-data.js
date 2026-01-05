@@ -6,7 +6,7 @@ const GITHUB_USER = 'DOY-is-here';
 const GITHUB_REPO = 'doy-is-here.github.io';
 const REELS_FOLDER = 'reels';
 const OUTPUT_FILE = 'js/youtube-data.js';
-const METADATA_FILE = 'metadata/reels-metadata.json';
+const METADATA_FILE = 'metadata/videos-metadata.json';
 const GITHUB_RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main`;
 
 // 메타데이터 로드
@@ -97,8 +97,8 @@ function applyMetadata(short, metadata) {
     // 메타데이터 적용
     if (meta) {
         if (meta.title !== undefined) short.title = meta.title;
+        if (meta.duration !== undefined) short.duration = meta.duration;
         if (meta.description !== undefined) short.description = meta.description;
-        if (meta.displayDate !== undefined) short.uploadDate = meta.displayDate;
     }
     
     return short;
@@ -130,7 +130,7 @@ function generateShortsData(videoFiles, folderPath, metadata) {
             id: `short-${index + 1}`,
             title: item.fileName.replace(/\.(mp4|mov|avi|webm|mkv)$/i, ''),
             thumbnail: `${GITHUB_RAW_BASE}/${folderPath}/${encodeURIComponent(item.fileName)}`,
-            duration: '--:--',
+            duration: '0:00',
             uploadDate: getRelativeTime(item.date),
             type: 'shorts',
             rawDate: item.date,
@@ -149,7 +149,7 @@ function generateShortsData(videoFiles, folderPath, metadata) {
 
 // youtube-data.js 파일 생성
 function generateYoutubeDataJS(shorts) {
-    const content = `// YouTube 데이터 관리
+    const content = `// YouTube 데이터 관리 (자동 생성됨)
 
 // 동영상 데이터
 export const videos = [
@@ -203,7 +203,7 @@ export const channelInfo = {
     name: 'NOMAD',
     handle: '@NOMAD_is_here',
     subscribers: '9.16만',
-    videoCount: '150',
+    videoCount: '${shorts.length}',
     description: 'NOMAD OFFICIAL YouTube Channel',
     banner: 'https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/insta-photo/250930%20(4).jpg'
 };
