@@ -20,16 +20,18 @@
         <div id="bst-root">
             <!-- Header -->
             <header class="header">
-                <div class="header-right">
-                <button class="header-menu"></button>
-                <button class="header-logo" aria-label="Home">
-                <img alt="Logo">
-                </button>
+                <div class="header-left">
+                    <button class="header-menu"></button>
+                    <div class="header-logo">
+                        <img src="https://doy-is-here.github.io/profile/logo.png" alt="NOMAD">
+                    </div>
                 </div>
                 <div class="header-right">
-                    <button class="header-icon notification"></button>
+                    <button class="header-icon notification">
+                        <span class="notification-dot"></span>
+                    </button>
                     <button class="header-icon calendar"></button>
-                    <button class="header-icon profile"></button>                    </button>
+                    <button class="header-icon profile"></button>
                 </div>
             </header>
 
@@ -39,8 +41,9 @@
                 <div class="tab-content active" data-tab="home">
                     <div class="home-hero">
                         <div class="home-hero-content">
-                            <img class="home-logo" src="https://via.placeholder.com/200x80/000000/ffffff?text=NOMAD" alt="NOMAD">
-                            <p class="home-subtitle">NOMAD OFFICIAL FAN COMMUNITY</p>
+                            <div class="home-logo">
+                                <img src="https://doy-is-here.github.io/profile/logo.png" alt="NOMAD">
+                            </div>                            <p class="home-subtitle">NOMAD OFFICIAL FAN COMMUNITY</p>
                             <div class="home-social">
                                 <a href="#" class="social-icon">
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
@@ -83,45 +86,42 @@
                             </div>
                         </div>
                     </div>
+                    <div class="home-section">
+                        <div class="section-title">
+                        <h2 class="section-title">NOMAD</h2>
+                        </div>
+                        <div class="contents-grid">
+                            <div class="content-card">
+                                <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
+                            </div>
+                            <div class="content-card">
+                                <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-section">
+                        <h2 class="section-title">NOMAD</h2>
+                        <div class="home-grid">
+                            <div class="home-card-album">
+                                <img src="https://via.placeholder.com/150x200/333333/ffffff?text=Member+1" alt="Member">
+                            </div>
+                        </div>
+                    </div>                                        
                 </div>
 
                 <!-- NOMAD Tab -->
                 <div class="tab-content" data-tab="nomad">
-                    <div class="nomad-stories">
-                        <div class="story-item">
-                            <img src="https://via.placeholder.com/80/444444/ffffff?text=ONE" alt="ONE">
-                            <span>ONE</span>
-                        </div>
-                        <div class="story-item">
-                            <img src="https://via.placeholder.com/80/444444/ffffff?text=JUNHO" alt="JUNHO">
-                            <span>JUNHO</span>
-                        </div>
-                        <div class="story-item">
-                            <img src="https://via.placeholder.com/80/444444/ffffff?text=SANGHA" alt="SANGHA">
-                            <span>SANGHA</span>
-                        </div>
-                        <div class="story-item">
-                            <img src="https://via.placeholder.com/80/444444/ffffff?text=도의" alt="도의">
-                            <span>도의</span>
-                        </div>
-                        <div class="story-item">
-                            <img src="https://via.placeholder.com/80/444444/ffffff?text=NOMAD" alt="NOMAD">
-                            <span>NOMAD</span>
-                        </div>
-                    </div>
                     <div class="nomad-feed">
                         <div class="nomad-post">
                             <div class="post-header">
-                                <img src="https://via.placeholder.com/40/444444/ffffff?text=도의" alt="도의">
+                                <div class="post-profile large"></div>
                                 <span class="post-author">도의</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="#3b82f6">
-                                    <path d="M8 0L10.5 5.5L16 6.5L12 10.5L13 16L8 13L3 16L4 10.5L0 6.5L5.5 5.5L8 0Z"/>
-                                </svg>
-                                <button class="post-menu">⋮</button>
+                                <button class="post-icon-check"></button>
+                                <div class="post-right">
+                                <button class="post-menu"></button></div>
                             </div>
                             <div class="post-images">
                                 <img src="https://via.placeholder.com/360x480/e8e8e8/666666?text=Image+1" alt="Post image">
-                                <img src="https://via.placeholder.com/360x480/e8e8e8/666666?text=Image+2" alt="Post image">
                             </div>
                             <div class="post-indicators">
                                 <span class="indicator active"></span>
@@ -138,7 +138,32 @@
                                 이번 노플랜에 와 준 베이스도, 오지 못 했던 베이스도 모
                             </div>
                         </div>
+                        <div class="nomad-post">
+                            <div class="post-header">
+                                <div class="post-profile large"></div>
+                                <span class="post-author">도의</span>
+                                <button class="post-icon-check"></button>
+                                <div class="post-right">
+                                <button class="post-menu"></button></div>
+                            </div>
+                            <div class="post-text">
+                                베이스 뭐해~?<br>
+                                좋은 하루 보내고 있어~?<br>
+                                많이 춥더라~ 따뜻하게 입었길😌🤍
+                            </div>
+                            <div class="post-meta">
+                                <span>1달 전</span>
+                                <span>👀 66</span>
+                                <span>💬 125</span>
+                            </div>
+                            <div class="post-comment">
+                                <div class="post-profile small"></div>
+                                <h1><span>SANGHA</span></h1>
+                                <h2><span>도의와 함께한 soft spot! 많이 봐주고 많이 들어줘요~...</span></h2>
+                            </div>
+                        </div>                            
                     </div>
+                
                 </div>
 
                 <!-- Contents Tab -->
@@ -149,14 +174,15 @@
                             <p>NOMAD 1st Single 'Call Me Back' ›</p>
                             <h2>'Call Me Back' Album Concept<br>Trailer - RIVR | NOMAD 노매드</h2>
                         </div>
+                        <div class="contents-thumbnails">
+                            <img src="https://via.placeholder.com/110x62/2a2a2a/ffffff?text=Video" alt="Thumbnail">
+                            <img src="https://via.placeholder.com/110x62/2a2a2a/ffffff?text=Video" alt="Thumbnail">
+                            <img src="https://via.placeholder.com/110x62/2a2a2a/ffffff?text=Video" alt="Thumbnail">
                     </div>
-                    <div class="contents-thumbnails">
-                        <img src="https://via.placeholder.com/110x62/2a2a2a/ffffff?text=Video" alt="Thumbnail">
-                        <img src="https://via.placeholder.com/110x62/2a2a2a/ffffff?text=Video" alt="Thumbnail">
-                        <img src="https://via.placeholder.com/110x62/2a2a2a/ffffff?text=Video" alt="Thumbnail">
                     </div>
                     <div class="contents-tags">
-                        <button class="tag-btn">🏷️ NOMAD</button>
+                        <button class="contents-icon-tag"></button>
+                        <button class="tag-btn">NOMAD</button>
                         <button class="tag-btn">ALBUM</button>
                         <button class="tag-btn">BEHIND</button>
                         <button class="tag-btn">STAGE</button>
@@ -178,31 +204,10 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Community Tab -->
+                
+                <!--
+                Community Tab 
                 <div class="tab-content" data-tab="community">
-                    <div class="community-stories">
-                        <div class="story-item">
-                            <img src="https://via.placeholder.com/80/444444/ffffff?text=SANGHA" alt="SANGHA">
-                            <span>SANGHA</span>
-                        </div>
-                        <div class="story-item">
-                            <img src="https://via.placeholder.com/80/444444/ffffff?text=도의" alt="도의">
-                            <span>도의</span>
-                        </div>
-                        <div class="story-item">
-                            <img src="https://via.placeholder.com/80/444444/ffffff?text=ONE" alt="ONE">
-                            <span>ONE</span>
-                        </div>
-                        <div class="story-item">
-                            <img src="https://via.placeholder.com/80/444444/ffffff?text=RIVR" alt="RIVR">
-                            <span>RIVR</span>
-                        </div>
-                        <div class="story-item">
-                            <img src="https://via.placeholder.com/80/444444/ffffff?text=JUNHO" alt="JUNHO">
-                            <span>JUNHO</span>
-                        </div>
-                    </div>
                     <div class="community-feed">
                         <div class="community-post">
                             <div class="post-header">
@@ -266,80 +271,23 @@
                         </div>
                     </div>
                 </div>
+                -->
 
                 <!-- POP Tab -->
                 <div class="tab-content" data-tab="pop">
-                    <div class="pop-header">
-                        <h2>밍o</h2>
-                    </div>
                     <div class="pop-section">
                         <h3>채팅</h3>
                         <div class="pop-list">
                             <div class="pop-item">
-                                <img src="https://via.placeholder.com/48/444444/ffffff?text=RIVR" alt="RIVR">
-                                <div class="pop-info">
-                                    <div class="pop-name">RIVR</div>
-                                    <div class="pop-message">미리 잘 자 😴😴😴</div>
-                                    <div class="pop-time">1달 전</div>
-                                </div>
-                                <span class="pop-unread"></span>
-                            </div>
-                            <div class="pop-item">
-                                <img src="https://via.placeholder.com/48/444444/ffffff?text=도의" alt="도의">
+                                <div class="post-profile large"></div>
                                 <div class="pop-info">
                                     <div class="pop-name">도의</div>
+                                    <button class="post-icon-check"></button>
                                     <div class="pop-message">보고있어도 보고싶고 안보고있으면 더 보고싶은 홍...</div>
                                     <div class="pop-time">1달 전</div>
                                 </div>
                             </div>
-                            <div class="pop-item">
-                                <img src="https://via.placeholder.com/48/444444/ffffff?text=SANGHA" alt="SANGHA">
-                                <div class="pop-info">
-                                    <div class="pop-name">SANGHA</div>
-                                    <div class="pop-message">물른 난 건강!!😁</div>
-                                    <div class="pop-time">1달 전</div>
-                                </div>
-                                <span class="pop-unread"></span>
-                            </div>
-                            <div class="pop-item">
-                                <img src="https://via.placeholder.com/48/444444/ffffff?text=ONE" alt="ONE">
-                                <div class="pop-info">
-                                    <div class="pop-name">ONE</div>
-                                    <div class="pop-message">이것만 알려주면 안될까...</div>
-                                    <div class="pop-time">1달 전</div>
-                                </div>
-                            </div>
-                            <div class="pop-item">
-                                <img src="https://via.placeholder.com/48/444444/ffffff?text=JUNHO" alt="JUNHO">
-                                <div class="pop-info">
-                                    <div class="pop-name">JUNHO</div>
-                                    <div class="pop-message">여허</div>
-                                    <div class="pop-time">2달 전</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pop-section">
-                        <div class="pop-section-header">
-                            <h3>지금 구독해보세요</h3>
-                            <button>전체 보기</button>
-                        </div>
-                        <div class="pop-subscribe">
-                            <div class="pop-subscribe-item">
-                                <img src="https://via.placeholder.com/48/444444/ffffff?text=RIVR" alt="RIVR">
-                                <span class="pop-name">RIVR</span>
-                                <button class="subscribe-btn">구독하기</button>
-                            </div>
-                            <div class="pop-subscribe-item">
-                                <img src="https://via.placeholder.com/48/444444/ffffff?text=도의" alt="도의">
-                                <span class="pop-name">도의</span>
-                                <button class="subscribe-btn">구독하기</button>
-                            </div>
-                            <div class="pop-subscribe-item">
-                                <img src="https://via.placeholder.com/48/444444/ffffff?text=SANGHA" alt="SANGHA">
-                                <span class="pop-name">SANGHA</span>
-                                <button class="subscribe-btn">구독하기</button>
-                            </div>
+
                         </div>
                     </div>
                 </div>

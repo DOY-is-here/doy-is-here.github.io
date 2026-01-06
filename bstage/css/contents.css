@@ -1,7 +1,7 @@
 .contents-hero {
     position: relative;
     width: 100%;
-    height: 240px;
+    height: 453px;
     background-color: #1a1a1a;
     overflow: hidden;
 }
@@ -11,6 +11,7 @@
     height: 100%;
     object-fit: cover;
     opacity: 0.6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .contents-hero-text {
@@ -49,20 +50,29 @@
 }
 
 .contents-thumbnails img {
-    width: 110px;
-    height: 62px;
+    width: 96px;
+    height: 55px;
     border-radius: 6px;
     object-fit: cover;
     flex-shrink: 0;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
+
+.contents-thumbnails img.active {
+    box-shadow: inset 0 0 0 2px white;
+}
+
 
 .contents-tags {
     display: flex;
     gap: 8px;
-    padding: 0 16px 16px 16px;
+    align-items: center;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    
 }
 
 .contents-tags::-webkit-scrollbar {
@@ -70,9 +80,9 @@
 }
 
 .tag-btn {
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(238, 238, 238, 0.15);
+    color: #BABABA;
     font-size: 13px;
     font-weight: 500;
     padding: 8px 16px;
@@ -80,6 +90,19 @@
     cursor: pointer;
     white-space: nowrap;
     transition: all 0.2s;
+}
+
+.contents-icon-tag {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M22.2068 12.449C22.9876 13.2301 22.9878 14.4965 22.2068 15.2774L15.2773 22.2069C14.4964 22.9879 13.23 22.9877 12.4489 22.2069L4.75633 14.5144C4.34292 14.101 4.13077 13.527 4.17628 12.9441L4.67761 6.51662C4.75425 5.53504 5.53428 4.75528 6.51581 4.67842L12.944 4.1764C13.5269 4.1309 14.1009 4.34304 14.5143 4.75645L22.2068 12.449ZM11.034 8.34723C10.292 7.60523 9.08841 7.60523 8.34642 8.34723C7.6047 9.08925 7.6052 10.2922 8.34711 11.0341C9.08903 11.7757 10.2914 11.7757 11.0333 11.0341C11.7752 10.2922 11.7757 9.08925 11.034 8.34723Z' fill='%23999999'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    width: 24px;
+    height: 24px;
 }
 
 .tag-btn:hover {
@@ -119,9 +142,19 @@
 
 .content-card {
     position: relative;
+    width: 187px;
+    height: 107px;
     aspect-ratio: 1;
     border-radius: 8px;
     overflow: hidden;
+}
+
+.content-card:nth-child(3n+1) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.content-card:nth-child(3n+2) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .content-card img {

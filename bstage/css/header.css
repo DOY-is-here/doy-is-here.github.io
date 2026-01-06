@@ -5,15 +5,22 @@
     transform: translateX(-50%);
     width: 394px;
     height: 47px;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: transparent;
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 15px;
     z-index: 100;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
 }
+
+.header.scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid rgba(238, 238, 238, 0.1);
+}
+
 
 .header-left {
     display: flex;
@@ -42,14 +49,24 @@
     background-size: contain;
 }
 
+.header-logo {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
 
 .header-logo img {
     width: auto;
     height: 24px;
-    content: url("https://doy-is-here.github.io/profile/logo.png");
     display: block;
+    object-fit: contain;
 }
 
+.header.scrolled .header-logo {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
 
 
 .header-right {
@@ -99,3 +116,4 @@
     background-position: center;
     background-size: contain;
 }
+

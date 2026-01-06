@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Image carousel for posts
     initializeImageCarousels();
+    
+    // Header scroll effect
+    initializeHeaderScroll();
 });
 
 function initializeImageCarousels() {
@@ -48,5 +51,19 @@ function initializeImageCarousels() {
                 dots[currentIndex].classList.add('active');
             }
         });
+    });
+}
+
+function initializeHeaderScroll() {
+    const header = document.querySelector('.header');
+    
+    if (!header) return;
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
     });
 }
