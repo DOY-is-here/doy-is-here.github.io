@@ -1,25 +1,16 @@
 .pop-header {
-    padding: 20px 16px 16px 16px;
+    padding: 20px 15px;
     border-bottom: 1px solid #1a1a1a;
-    
-}
-
-.pop-header h2 {
-    color: white;
-    font-size: 28px;
-    font-weight: 700;
+    margin-bottom: 100px;
+    padding-top: 47px;
 }
 
 .pop-section {
-    padding: 20px 16px;
-    margin-bottom: 100px;
-}
-
-.pop-section h3 {
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 16px;
+    padding-left: 9px;
+    color: #999;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .pop-section-header {
@@ -29,37 +20,17 @@
     margin-bottom: 16px;
 }
 
-.pop-section-header h3 {
-    margin-bottom: 0;
-}
-
-.pop-section-header button {
-    background: none;
-    border: none;
-    color: #888;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-.pop-list {
-    display: flex;
-    flex-direction: column;
-}
-
 .pop-item {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 12px;
-    position: relative;
+    margin: 0 auto;
     width: 356px;
     height: 74px;
-    padding: 12px;
-    background-color: #0a0a0a;
     border-radius: 12px;
-}
-
-.pop-item:last-child {
-    border-bottom: none;
+    padding: 16px;
+    background-color: #1A1B1D;
+    gap: 12px;
 }
 
 .pop-item img {
@@ -68,32 +39,31 @@
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
 }
 
-.pop-info {
+.pop-preview {
     flex: 1;
     min-width: 0;
 }
 
+.pop-info {
+    display: flex;
+    align-items: center;
+    gap : 8px;
+    margin-bottom: 6px;
+}
+
 .pop-name {
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 4px;
+    color: #EEE;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .pop-message {
-    color: #888;
-    font-size: 13px;
+    color: #999;
+    font-size: 11px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-bottom: 2px;
-}
-
-.pop-time {
-    color: #666;
-    font-size: 12px;
 }
 

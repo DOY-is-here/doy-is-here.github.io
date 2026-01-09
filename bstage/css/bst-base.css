@@ -6,7 +6,20 @@
 }
 
 body {
-    font-family: 'Pretendard', -apple-system, system-ui, sans-serif;
+    font-family:
+      'Pretendard JP Variable',
+      'Pretendard JP',
+      'Pretendard Variable',
+      'Pretendard',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      'Helvetica Neue',
+      Arial,
+      'Noto Sans',
+      sans-serif;
+
     background-color: #FAFAFA;
     display: flex;
     justify-content: center;
@@ -15,6 +28,7 @@ body {
     overflow-y: scroll;
     width: 100%;
     min-height: 100vh;
+    
 }
 
 .scale-wrapper {
@@ -24,10 +38,11 @@ body {
 
 #bst-root {
     width: 394px;
-    background-color: #151515dc;
+    background-color: #151515;
     min-height: 100vh;
     position: relative;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 100px;
 }
 
 .scale-wrapper {

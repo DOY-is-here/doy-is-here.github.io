@@ -1,0 +1,37 @@
+/* 컨텐츠 포스트 - 이미지 */
+.post-detalil-img {
+    padding: 16px;
+}
+
+.detalil-img-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 6px;
+    margin-top: 37px;
+    margin-bottom: 26px;
+}
+
+.detalil-img-card {
+    width: 362px;
+    height: 330px;
+    background-color: #fa709a;
+}
+
+.detalil-img-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #EEEEEE;
+    margin-bottom: 14px;
+}
+
+.detalil-img-date {
+    font-size: 12px;
+    color: #999;
+}
+
+.detalil-img-tag {
+    font-size: 14px;
+    color: #0090FF;
+    margin-bottom: 65px;
+}

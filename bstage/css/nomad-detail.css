@@ -1,0 +1,145 @@
+/* 
+.nomad-feed (양 옆 간격)
+.post-profile (프로필사진)
+.post-author (이름)
+.post-icon-check (체크마크)
+.post-meta (날짜)
+.post-right, .post-menu (더보기)
+.post-images (이미지)
+.post-indicators (닷)
+>> nomad.css에 있음
+*/
+
+
+/* 상세 포스트 */
+
+/* top + 날짜 */
+.post-detail-user {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* 이름 + 체크마크 */
+.post-user-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nomad-detail-post{
+    padding-top: 16px;
+    padding-bottom: 30px;    
+}
+
+/* 전체 기본 간격 */
+.nomad-detail-post > * {
+    margin-bottom: 16px;
+}
+
+/* 포스트 내용 */
+.post-detail-text {
+    color: #EEEEEE;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    margin-top: 80px;
+}
+
+/* 댓글 */
+.nomad-comment-feed {
+    padding: 15.5px;
+    background-color: #111111;
+}
+
+.post-comments {
+    padding: 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;   
+}
+
+.post-comment-star{
+    color: #EEEEEE;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+/* 프로필 */
+.post-profile-comment{
+    width: 23.5px;
+    height: 23.5px;
+    background-image: url("https://doy-is-here.github.io/profile/profile.PNG");
+    border-radius: 50%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;  
+}
+
+.profile-ring {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    border: 1px solid rgba(238, 238, 238, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-comment-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.post-comment-name {
+    color: #BABABA;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.post-comment-user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 3px;
+}
+
+/* 프로필, 댓글박스 간격 */
+.post-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+/* 댓글박스 */
+.post-comment-box {
+    width: 327px;
+    padding: 13px 16px;
+    background-color: #191919;
+    border: 1px solid rgba(238, 238, 238, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post-comment-text {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;    
+}
+
+.post-comment h1 {
+    color: #999999;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.post-comment h2 {
+    color: #BABABA;
+    font-size: 14px;
+    font-weight: 500;
+}

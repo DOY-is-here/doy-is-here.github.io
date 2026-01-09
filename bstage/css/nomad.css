@@ -1,39 +1,43 @@
 .nomad-feed {
-    padding: 0;
+    padding: 15.5px;
+    padding-top: 47px;
 }
 
 .nomad-post {
-    background-color: #000;
+    padding-top: 24px;
+    padding-bottom: 22px;    
+    box-shadow: 0 1px 0 rgba(238, 238, 238, 0.05);
+}
+
+.nomad-post > * {
     margin-bottom: 16px;
-    padding: 16px;
 }
 
 .post-header {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 12px;
+    gap: 10px;
 }
 
+/* 프로필 사진 */
 .post-profile {
-
-    border-radius: 50%;
-    object-fit: cover;
-    background-image: url("https://doy-is-here.github.io/profile/profile.PNG");
-    border: 1px solid rgba(238, 238, 238, 0.1);    
-    background-size: cover;
-    background-position: center;
-    flex-shrink: 0;
-}
-
-.post-profile.large {
     width: 40px;
     height: 40px;
+    border: 1px solid rgba(238, 238, 238, 0.1);  
+    background-image: url("https://doy-is-here.github.io/profile/profile.PNG");
+    border-radius: 50%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;   
 }
 
-.post-profile.small{
-    width: 18px;
-    height: 18px;
+/* 이름 + 체크마크 */
+.post-user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: -2px;
 }
 
 .post-author {
@@ -50,11 +54,12 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    padding: 4px;
     width: 14px;
-    height: 14px;   
+    height: 14px;
+    margin-top: 1px;   
 }
 
+/* 더보기 */
 .post-right {
     display: flex;
     align-items: center;
@@ -73,9 +78,9 @@
     background-color: transparent;
 }
 
+/* 이미지 */
 .post-images {
     display: flex;
-    gap: 4px;
     margin-bottom: 12px;
     overflow-x: auto;
     scrollbar-width: none;
@@ -89,17 +94,17 @@
 .post-images img {
     width: 362px;
     height: 363px;
-    border-radius: 8px;
+    border-radius: 10px;
     object-fit: cover;
     background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fdfbfb 100%);
-    border: 1px solid rgba(238, 238, 238, 0.1);
+    border: 0.5px solid rgba(238, 238, 238, 0.05);
 }
 
+ /* 닷 */
 .post-indicators {
     display: flex;
     justify-content: center;
-    gap: 6px;
-    margin-bottom: 12px;
+    gap: 10px;
 }
 
 .indicator {
@@ -114,59 +119,26 @@
     background-color: #EEEEEE;
 }
 
+/* 포스트 글 */
 .post-text {
     color: #EEEEEE;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
 }
 
+/* 날짜, 댓글 */
 .post-meta {
     display: flex;
     align-items: center;
     gap: 6px;
     color: #999999;
     font-size: 11px;
-    font-weight: 500;
-    margin-bottom: 12px;
 }
 
+/* 날짜, 댓글 사이 점 */
 .post-meta span:not(:last-child)::after {
     content: '•';
     margin-left: 6px;
     color: #999999;
-}
-
-.post-comment {
-    background-color: #0a0a0a;
-    border-radius: 8px;
-    color: #999999;
-    font-size: 13px;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.post-comment h1 {
-    color: #eee;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.post-comment h2 {
-    color: #999999;
-    font-size: 12px;
-}
-
-.post-comment img {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    border: 1px solid rgba(238, 238, 238, 0.1);
-}
-
-.post-comment span {
-    display: inline;
 }

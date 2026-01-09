@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-jp.css">
     <title>NOMAD Official Fan Community</title>
 
     <link rel="stylesheet" href="css/bst-base.css">
@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/nomad.css">
+    <link rel="stylesheet" href="css/nomad-detail.css">
     <link rel="stylesheet" href="css/contents.css">
-    <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="css/contents-post.css">
+    <link rel="stylesheet" href="css/contents-img.css">
+    <link rel="stylesheet" href="css/contents-video.css">
     <link rel="stylesheet" href="css/pop.css">
 </head>
 <body>
@@ -73,7 +76,7 @@
                         </div>
                     </div>
                     <div class="home-section">
-                        <h2 class="section-title">NOMAD</h2>
+                        <div class="section-title">NOMAD</div>
                         <div class="home-grid">
                             <div class="home-card">
                                 <img src="https://via.placeholder.com/150x200/333333/ffffff?text=Member+1" alt="Member">
@@ -81,44 +84,41 @@
                             <div class="home-card">
                                 <img src="https://via.placeholder.com/150x200/333333/ffffff?text=Member+2" alt="Member">
                             </div>
-                            <div class="home-card">
-                                <img src="https://via.placeholder.com/150x200/333333/ffffff?text=Member+3" alt="Member">
-                            </div>
+                            <div class="home-card card-more">전체보기</div>                            
                         </div>
                     </div>
                     <div class="home-section">
-                        <div class="section-title">
-                        <h2 class="section-title">NOMAD</h2>
-                        </div>
-                        <div class="contents-grid">
-                            <div class="content-card">
-                                <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
-                            </div>
-                            <div class="content-card">
-                                <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="home-section">
-                        <h2 class="section-title">NOMAD</h2>
+                        <div class="section-title">NOMAD1</div>
                         <div class="home-grid">
-                            <div class="home-card-album">
-                                <img src="https://via.placeholder.com/150x200/333333/ffffff?text=Member+1" alt="Member">
+                            <div class="home-card-contnets">
+                                <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
                             </div>
+                            <div class="home-card-contnets">
+                                <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
+                            </div>
+                            <div class="content-card card-more">전체보기</div> 
                         </div>
-                    </div>                                        
-                </div>
+                    </div>
+                    <div class="home-section">
+                        <div class="section-title">NOMAD</div>
+                        <div class="home-card-album"></div>
+                    </div>
+                </div>  
+
 
                 <!-- NOMAD Tab -->
                 <div class="tab-content" data-tab="nomad">
                     <div class="nomad-feed">
                         <div class="nomad-post">
                             <div class="post-header">
-                                <div class="post-profile large"></div>
-                                <span class="post-author">도의</span>
-                                <button class="post-icon-check"></button>
+                                <div class="post-profile"></div>
+                                <div class="post-user">
+                                    <span class="post-author">도의</span>
+                                    <span class="post-icon-check"></span>
+                                </div>
                                 <div class="post-right">
-                                <button class="post-menu"></button></div>
+                                    <button class="post-menu"></button>
+                                </div>
                             </div>
                             <div class="post-images">
                                 <img src="https://via.placeholder.com/360x480/e8e8e8/666666?text=Image+1" alt="Post image">
@@ -140,11 +140,14 @@
                         </div>
                         <div class="nomad-post">
                             <div class="post-header">
-                                <div class="post-profile large"></div>
-                                <span class="post-author">도의</span>
-                                <button class="post-icon-check"></button>
+                                <div class="post-profile"></div>
+                                <div class="post-user">
+                                    <span class="post-author">도의</span>
+                                    <span class="post-icon-check"></span>
+                                </div>
                                 <div class="post-right">
-                                <button class="post-menu"></button></div>
+                                    <button class="post-menu"></button>
+                                </div>
                             </div>
                             <div class="post-text">
                                 베이스 뭐해~?<br>
@@ -156,15 +159,93 @@
                                 <span>👀 66</span>
                                 <span>💬 125</span>
                             </div>
-                            <div class="post-comment">
-                                <div class="post-profile small"></div>
-                                <h1><span>SANGHA</span></h1>
-                                <h2><span>도의와 함께한 soft spot! 많이 봐주고 많이 들어줘요~...</span></h2>
-                            </div>
-                        </div>                            
+                        </div>
                     </div>
-                
                 </div>
+
+
+                <!-- NOMAD Tab detail post --> 
+                <div class="tab-content" data-tab="nomad">
+                    <div class="nomad-feed">
+                        <div class="nomad-detail-post">         
+                            <div class="post-header">
+                                <div class="post-profile"></div>
+                                <div class="post-detail-user">
+                                    <div class="post-user-top">
+                                        <span class="post-author">도의</span>
+                                        <span class="post-icon-check"></span>
+                                    </div>
+                                    <span class="post-meta">2024.00.00</span>
+                                </div>
+                                <div class="post-right">
+                                    <button class="post-menu"></button>
+                                </div>
+                            </div>
+                            <div class="post-images">
+                                <img src="https://via.placeholder.com/360x480/e8e8e8/666666?text=Image+1" alt="Post image">
+                            </div>
+                            <div class="post-indicators">
+                                <span class="indicator active"></span>
+                                <span class="indicator"></span>
+                                <span class="indicator"></span>
+                                <span class="indicator"></span>
+                                <span class="indicator"></span>
+                                <span class="indicator"></span>
+                                <span class="indicator"></span>
+                            </div>
+                            <div class="post-detail-text">
+                                안녕 도의입니다.<br>
+                                평생 잊지 않을 특별한 추말이 순식간에 지나갔네요.<br>
+                                이번 노플랜에 와 준 베이스도, 오지 못 했던 베이스도 모두 고맙고 사랑합니다🤍
+                            </div>
+                            <div class="post-meta">
+                                <span>1달 전</span>
+                                <span>💬 125</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nomad-comment-feed">
+                        <div class="post-comments">
+                            <div class="post-comment-star">스타댓글</div>
+                            <div class="post-comment-header">
+                                <div class="profile-ring">
+                                    <div class="post-profile-comment"></div>
+                                </div>
+                                <div class="post-comment">
+                                    <div class="post-comment-user">
+                                        <span class="post-comment-name">도의</span>
+                                        <span class="post-icon-check"></span>
+                                    </div>
+                                    <div class="post-comment-box">
+                                        <div class="post-comment-text">
+                                            <h1>00님의 답글</h1>
+                                            <h2>도의와 함께한 soft spot! 많이 봐주고 많이 들어줘요~...</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-comment-header">
+                                <div class="profile-ring">
+                                    <div class="post-profile-comment"></div>
+                                </div>
+                                <div class="post-comment">
+                                    <div class="post-comment-user">
+                                        <span class="post-comment-name">도의</span>
+                                        <span class="post-icon-check"></span>
+                                    </div>
+                                    <div class="post-comment-box">
+                                        <div class="post-comment-text">
+                                            <h1>00님의 답글</h1>
+                                            <h2>도의와 함께한 soft spot! 많이 봐주고 많이 들어줘요~...</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+                        
+
 
                 <!-- Contents Tab -->
                 <div class="tab-content" data-tab="contents">
@@ -173,12 +254,13 @@
                         <div class="contents-hero-text">
                             <p>NOMAD 1st Single 'Call Me Back' ›</p>
                             <h2>'Call Me Back' Album Concept<br>Trailer - RIVR | NOMAD 노매드</h2>
-                        </div>
+                        
                         <div class="contents-thumbnails">
                             <img src="https://via.placeholder.com/110x62/2a2a2a/ffffff?text=Video" alt="Thumbnail">
                             <img src="https://via.placeholder.com/110x62/2a2a2a/ffffff?text=Video" alt="Thumbnail">
                             <img src="https://via.placeholder.com/110x62/2a2a2a/ffffff?text=Video" alt="Thumbnail">
-                    </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="contents-tags">
                         <button class="contents-icon-tag"></button>
@@ -190,101 +272,160 @@
                     <div class="contents-section">
                         <div class="section-header">
                             <h3>NOMAD</h3>
-                            <button>전체보기</button>
+                            <button onclick="window.BSTApp.showContentsList()">전체보기</button>
+                        </div>
+                    
+                    <div class="contents-grid">
+                        <div class="content-item">
+                            <div class="content-card" onclick="window.BSTApp.showContentsPost('video-1')">
+                                <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
+                                <span class="content-badge">YouTube</span>
+                            </div>
+                            <div class="content-info">
+                                <span class="content-date">2025 KANGDANIEL FAN CONCERT 'KEEPSAKE' ONLINE LIVE</span>
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="content-card" onclick="window.BSTApp.showContentsPost('video-1')">
+                                <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
+                                <span class="content-badge">YouTube</span>
+                            </div>
+                            <div class="content-info">
+                                <span class="content-date">2025 KANGDANIEL FAN CONCERT 'KEEPSAKE' ONLINE LIVE</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="contents-section">
+                        <div class="section-header">
+                            <h3>NOMAD</h3>
+                            <button onclick="window.BSTApp.showContentsList()">전체보기</button>
                         </div>
                         <div class="contents-grid">
-                            <div class="content-card">
-                                <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
-                                <span class="content-badge">YouTube</span>
+                            <div class="content-item">
+                                <div class="content-card" onclick="window.BSTApp.showContentsPost('video-1')">
+                                    <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
+                                    <span class="content-badge">YouTube</span>
+                                </div>
+                                <div class="content-info">
+                                    <span class="content-date">2025 KANGDANIEL FAN CONCERT 'KEEPSAKE' ONLINE LIVE</span>
+                                </div>
                             </div>
-                            <div class="content-card">
-                                <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
-                                <span class="content-badge">YouTube</span>
+                            <div class="content-item">
+                                <div class="content-card" onclick="window.BSTApp.showContentsPost('video-1')">
+                                    <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
+                                    <span class="content-badge">YouTube</span>
+                                </div>
+                                <div class="content-info">
+                                    <span class="content-date">2025 KANGDANIEL FAN CONCERT 'KEEPSAKE' ONLINE LIVE</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="tab-content" data-tab="content-list">
+
+                        <div class="content-post-header">
+                            <button class="back-btn" onclick="window.BSTApp.showContentsTab()">← 뒤로</button>
+                            <h2>전체 콘텐츠</h2>
+                        </div>
+
+                    <div class="contents-section-post">
+                        <div class="section-post-header">
+                            <span class="content-post-name">NOMAD</span>
+                            <span class="content-post-meta">15개 콘텐츠</span>
+                        </div>
+
+                        <div class="contents-post-grid">
+
+                            <div class="content-post-item">
+                                <div class="content-post-card" onclick="window.BSTApp.showContentsPost('video-1')">
+                                    <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
+                                    <span class="content-badge">YouTube</span>
+                                </div>
+                                <div class="content-post-info">
+                                    <span class="content-post-date">2025 KANGDANIEL FAN CONCERT 'KEEPSAKE' ONLINE LIVE</span>
+                                    <span class="content-post-meta">15개 콘텐츠</span>
+                                </div>  
+                            </div>
+
+                            <div class="content-post-item">
+                                <div class="content-post-card" onclick="window.BSTApp.showContentsPost('video-1')">
+
+                                    <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
+                                    <span class="content-badge">YouTube</span>
+                                </div>
+                                <div class="content-post-info">
+                                    <span class="content-post-date">2025 KANGDANIEL FAN CONCERT 'KEEPSAKE' ONLINE LIVE</span>
+                                    <span class="content-post-meta">15개 콘텐츠</span>
+                                </div>
+                            </div>
+
+                            <div class="content-post-item">
+                                <div class="content-post-card" onclick="window.BSTApp.showContentsPost('video-1')">
+                                    <img src="https://via.placeholder.com/172x172/333333/ffffff?text=Video" alt="Content">
+                                    <span class="content-badge">YouTube</span>
+                                </div>
+                                <div class="content-post-info">
+                                    <span class="content-post-date">2025 KANGDANIEL FAN CONCERT 'KEEPSAKE' ONLINE LIVE</span>
+                                    <span class="content-post-meta">15개 콘텐츠</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
                 
-                <!--
-                Community Tab 
-                <div class="tab-content" data-tab="community">
-                    <div class="community-feed">
-                        <div class="community-post">
-                            <div class="post-header">
-                                <img src="https://via.placeholder.com/40/444444/ffffff?text=SANGHA" alt="SANGHA">
-                                <span class="post-author">SANGHA</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="#3b82f6">
-                                    <path d="M8 0L10.5 5.5L16 6.5L12 10.5L13 16L8 13L3 16L4 10.5L0 6.5L5.5 5.5L8 0Z"/>
-                                </svg>
-                                <button class="post-menu">⋮</button>
-                            </div>
-                            <div class="post-text">
-                                새해에는 더 좋은일만 가득하길 바랄게요.<br>
-                                항상 고맙고 사랑합니다🤍
-                            </div>
-                            <div class="post-meta">
-                                <span>4일 전</span>
-                                <span>👀 70</span>
-                                <span>💬 38</span>
-                            </div>
-                            <div class="post-comment">
-                                명e✌️💛 ✨ 2026년 1월 5일 월요일 오하야사 ✨ 1위 롤고기자리 ...
-                            </div>
-                            <div class="post-reactions">
-                                <button class="reaction">👍 6</button>
-                                <button class="reaction">💗 30</button>
-                                <button class="reaction">🍿 3</button>
-                                <button class="reaction">✅ 2</button>
-                                <button class="reaction">🌸 6</button>
-                                <button class="reaction">🍊 4</button>
-                                <button class="reaction">😮 6</button>
-                                <button class="reaction">😭 8</button>
-                                <button class="reaction">💡 3</button>
-                                <button class="reaction">😎 2</button>
-                                <button class="reaction">⏱️</button>
-                            </div>
-                        </div>
-                        <div class="community-post">
-                            <div class="post-header">
-                                <img src="https://via.placeholder.com/40/444444/ffffff?text=SANGHA" alt="SANGHA">
-                                <span class="post-author">SANGHA</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="#3b82f6">
-                                    <path d="M8 0L10.5 5.5L16 6.5L12 10.5L13 16L8 13L3 16L4 10.5L0 6.5L5.5 5.5L8 0Z"/>
-                                </svg>
-                                <button class="post-menu">⋮</button>
-                            </div>
-                            <div class="post-text">
-                                베이스 뭐해~?<br>
-                                좋은 하루 보내고 있어~?<br>
-                                많이 춥더라~ 따뜻하게 입었길😌🤍
-                            </div>
-                            <div class="post-meta">
-                                <span>1달 전</span>
-                                <span>👀 66</span>
-                                <span>💬 125</span>
-                            </div>
-                            <div class="post-comment">
-                                <img src="https://via.placeholder.com/24/444444/ffffff?text=S" alt="SANGHA">
-                                <span>SANGHA</span>
-                                <span>도의와 함께한 soft spot! 많이 봐주고 많이 들어줘요~...</span>
-                            </div>
+                <div class="tab-content" data-tab="content-post">
+
+                    <div class="content-post-header">
+                        <button class="back-btn" onclick="window.BSTApp.showContentsTab()">← 뒤로</button>
+                        <h2>전체 콘텐츠</h2>
+                    </div>                    
+
+                    <div class="post-detalil">
+                        <div class="post-detalil-video"></div>
+                        <div class="post-detalil-text">
+                            <div class="post-detalil-title">[NOMAD DRIVE ]</div>
+                            <div class="detalil-text-exp">NOMAD</div>
+                            <div class="detalil-text-date">2024.10.21</div>
                         </div>
                     </div>
                 </div>
-                -->
+
+                <div class="tab-content" data-tab="content-post">
+
+                    <div class="content-post-header">
+                        <button class="back-btn" onclick="window.BSTApp.showContentsTab()">← 뒤로</button>
+                        <h2>전체 콘텐츠</h2>
+                    </div>                   
+
+                    <div class="post-detalil-img">
+                        <div class="detalil-img-title">NOMAD</div>
+                        <div class="detalil-img-date">2024.01.01</div>
+                        <div class="detalil-img-grid">
+                            <div class="detalil-img-card"></div>
+                            <div class="detalil-img-card"></div>
+                        </div>
+                        <div class="detalil-img-tag">#MAD.zip</div>
+                    </div>
+                </div>                
+
+
+
 
                 <!-- POP Tab -->
                 <div class="tab-content" data-tab="pop">
-                    <div class="pop-section">
-                        <h3>채팅</h3>
+                    <div class="pop-header">
+                    <div class="pop-section">채팅</div>
                         <div class="pop-list">
                             <div class="pop-item">
-                                <div class="post-profile large"></div>
+                                <div class="post-profile"></div>
+                                <div class="pop-preview">
                                 <div class="pop-info">
                                     <div class="pop-name">도의</div>
-                                    <button class="post-icon-check"></button>
+                                    <button class="post-icon-check"></button></div>
                                     <div class="pop-message">보고있어도 보고싶고 안보고있으면 더 보고싶은 홍...</div>
-                                    <div class="pop-time">1달 전</div>
                                 </div>
                             </div>
 
@@ -304,9 +445,6 @@
                 <button class="nav-item" data-tab="contents">
                     <span>Contents</span>
                 </button>
-                <button class="nav-item" data-tab="community">
-                    <span>Community</span>
-                </button>
                 <button class="nav-item" data-tab="pop">
                     <span>POP</span>
                 </button>
@@ -317,3 +455,5 @@
     <script type="module" src="js/app.js"></script>
 </body>
 </html>
+
+
