@@ -1,17 +1,24 @@
 .nomad-feed {
-    padding: 15.5px;
-    padding-top: 47px;
+    padding: 48px 16px 60px 16px;
 }
 
 .nomad-post {
     padding-top: 24px;
-    padding-bottom: 22px;    
-    box-shadow: 0 1px 0 rgba(238, 238, 238, 0.05);
+    cursor: pointer;
 }
 
-.nomad-post > * {
-    margin-bottom: 16px;
+.nomad-post:not(:last-child)::after {
+    content: "";
+    display: block;
+    height: 0.8px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 32px;
 }
+
+.nomad-post:last-child {
+    padding-bottom: 32px;
+}
+
 
 .post-header {
     display: flex;
@@ -20,10 +27,10 @@
 }
 
 /* 프로필 사진 */
-.post-profile {
+.profile-pic {
     width: 40px;
     height: 40px;
-    border: 1px solid rgba(238, 238, 238, 0.1);  
+    border: 0.8px solid rgba(238, 238, 238, 0.1);  
     background-image: url("https://doy-is-here.github.io/profile/profile.PNG");
     border-radius: 50%;
     object-fit: cover;
@@ -33,30 +40,27 @@
 }
 
 /* 이름 + 체크마크 */
-.post-user {
+.profile-user {
     display: flex;
     align-items: center;
-    gap: 6px;
-    margin-top: -2px;
+    gap: 4px;
 }
 
-.post-author {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
+.profile-name {
+    color: rgb(238, 238, 238);
+    font-size: 15px;
+    font-weight: 600;
 }
 
-.post-icon-check {
+.profile-icon-check {
     background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.37644 0.619251C6.30085 -0.206473 7.69806 -0.206361 8.62253 0.619251L9.36667 1.28429L10.3637 1.34093C11.6014 1.41062 12.5898 2.39821 12.6596 3.63585L12.7153 4.63195L13.3803 5.37609C14.2064 6.30058 14.2064 7.69861 13.3803 8.62316L12.7153 9.3673L12.6596 10.3634C12.59 11.6012 11.6016 12.5906 10.3637 12.6603L9.36667 12.7159L8.62253 13.381C7.69804 14.2065 6.30082 14.2067 5.37644 13.381L4.6323 12.7159L3.6362 12.6603C2.3983 12.5906 1.4099 11.6013 1.34031 10.3634L1.28366 9.3673L0.619602 8.62316C-0.206534 7.69861 -0.206534 6.30063 0.619602 5.37609L1.28366 4.63195L1.34031 3.63585C1.41011 2.39818 2.39846 1.41056 3.6362 1.34093L4.6323 1.28429L5.37644 0.619251ZM10.5385 4.02355C10.2382 3.78059 9.79746 3.82704 9.55417 4.12706L6.07859 8.41906L4.68503 7.0255C4.41171 6.75221 3.96817 6.75228 3.6948 7.0255C3.42177 7.29889 3.42157 7.74248 3.6948 8.01574L5.63913 9.96007C5.64727 9.9682 5.65805 9.97391 5.66648 9.98156C5.6756 9.98978 5.68319 10.0001 5.69284 10.0079C5.70136 10.0148 5.71246 10.0191 5.72116 10.0255C5.74219 10.041 5.76335 10.0556 5.78562 10.0685C5.80292 10.0784 5.82049 10.0875 5.83835 10.0958C5.86117 10.1065 5.88406 10.116 5.90769 10.1241C5.92736 10.1308 5.94722 10.1368 5.96726 10.1417C5.99332 10.1481 6.01985 10.152 6.04636 10.1554C6.06268 10.1574 6.0788 10.1594 6.09519 10.1603C6.1243 10.1619 6.15301 10.1613 6.1821 10.1593C6.19681 10.1583 6.21144 10.1573 6.22605 10.1554C6.25831 10.1511 6.29022 10.1446 6.32175 10.1359C6.331 10.1333 6.33995 10.13 6.34909 10.1271C6.38145 10.1166 6.41297 10.1042 6.44382 10.089C6.45689 10.0825 6.47018 10.0758 6.48288 10.0685C6.50856 10.0537 6.53308 10.037 6.5571 10.0187C6.56884 10.0097 6.58004 10.0002 6.59128 9.99035C6.60329 9.97988 6.61793 9.97148 6.62937 9.96007C6.64247 9.94696 6.65272 9.931 6.66452 9.9171C6.66827 9.9127 6.67354 9.90892 6.67722 9.90441L10.6421 5.0089C10.8851 4.70851 10.8388 4.2668 10.5385 4.02355Z' fill='%23292929'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     background-color: transparent;
     border: none;
-    cursor: pointer;
-    width: 14px;
-    height: 14px;
-    margin-top: 1px;   
+    width: 18px;
+    height: 18px;
 }
 
 /* 더보기 */
@@ -66,38 +70,59 @@
     margin-left: auto;  
 }
 
-.post-menu {
+.profile-more {
+    right: 0;
     border: none;
     cursor: pointer;
-    padding: 4px;
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.5 2.125C9.5 2.95343 8.82843 3.625 8 3.625C7.17157 3.625 6.5 2.95343 6.5 2.125C6.5 1.29657 7.17157 0.625 8 0.625C8.82843 0.625 9.5 1.29657 9.5 2.125Z' fill='%23999999'/%3E%3Cpath d='M9.5 8.02502C9.5 8.85345 8.82843 9.52502 8 9.52502C7.17157 9.52502 6.5 8.85345 6.5 8.02502C6.5 7.1966 7.17157 6.52502 8 6.52502C8.82843 6.52502 9.5 7.1966 9.5 8.02502Z' fill='%23999999'/%3E%3Cpath d='M9.5 13.875C9.5 14.7034 8.82843 15.375 8 15.375C7.17157 15.375 6.5 14.7034 6.5 13.875C6.5 13.0466 7.17157 12.375 8 12.375C8.82843 12.375 9.5 13.0466 9.5 13.875Z' fill='%23999999'/%3E%3C/svg%3E");    background-repeat: no-repeat;
     background-position: center;
-    background-size: 16px 16px;
     background-color: transparent;
 }
 
-/* 이미지 */
-.post-images {
-    display: flex;
-    margin-bottom: 12px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+
+.media-container {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 0.8px solid rgba(255, 255, 255, 0.1);
 }
 
-.post-images::-webkit-scrollbar {
-    display: none;
-}
-
-.post-images img {
-    width: 362px;
-    height: 363px;
-    border-radius: 10px;
+/* 실제 이미지/비디오 */
+.media-container img,
+.media-container video {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fdfbfb 100%);
-    border: 0.5px solid rgba(238, 238, 238, 0.05);
+    display: block;
+}
+
+/* 이미지용 간격 */
+.post-media--image {
+    margin-top: 17px;
+    margin-bottom: 12px;
+}
+
+/* 비디오용 간격 */
+.post-media--video {
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.media-container-track {
+    width: 360px;
+    height: 360px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.media-container-track::-webkit-scrollbar {
+  display: none;
 }
 
  /* 닷 */
@@ -111,20 +136,35 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: #777777;
+    background-color: rgb(119, 119, 119);
     transition: background-color 0.3s;
 }
 
 .indicator.active {
-    background-color: #EEEEEE;
+    background-color: rgb(238, 238, 238);
 }
+
+.video-time {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    font-weight: 400;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
 
 /* 포스트 글 */
 .post-text {
-    color: #EEEEEE;
-    font-size: 16px;
-    line-height: 1.6;
-    letter-spacing: 0.5px;
+    width: 100%;
+    max-height: 188px;
+    color: rgb(238, 238, 238);
+    font-size: 17px;
+    font-weight: 400;
+    padding: 16px 0;
 }
 
 /* 날짜, 댓글 */
@@ -132,13 +172,28 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    color: #999999;
-    font-size: 11px;
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+    font-weight: 500;
 }
 
 /* 날짜, 댓글 사이 점 */
-.post-meta span:not(:last-child)::after {
-    content: '•';
+.post-meta :not(:last-child)::after {
+    content: '·';
     margin-left: 6px;
-    color: #999999;
+    color: rgb(153, 153, 153);
 }
+
+.btn-more-post {
+    width: 362px;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(238, 238, 238) ;
+    border: 0.8px solid rgba(255, 255, 255, 0.04);
+    background-color: transparent;
+    margin: 0 auto 48px; 
+    display: block;
+    cursor: pointer;
+ }

@@ -1,37 +1,53 @@
+/* 헤더 */
 .header {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 394px;
-    height: 47px;
+    height: 48px;
     background-color: transparent;
-    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 4px 8px;
     z-index: 100;
     border-bottom: 1px solid transparent;
+}
+
+
+ /* 스크롤 관련 */
+.header.scrolled, .header.fixed-scrolled {
+    background-color: #151515;
+}
+
+.header.fixed-scrolled .header-logo {
+    opacity: 1;
+    visibility: visible;
+    transition: none !important;
+}
+
+.header.scrolled .header-logo {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
     transition: all 0.3s ease;
 }
 
-.header.scrolled {
-    background-color: rgba(0, 0, 0, 0.95);
-}
 
-
+/* 헤더 왼쪽 */
 .header-left {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 2px;
 }
 
+/* 헤더 왼쪽 - 메뉴 */
 .header-menu {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    margin: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,42 +64,73 @@
     background-size: contain;
 }
 
+/* 헤더 왼쪽 - 로고 */
 .header-logo {
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-logo img {
     width: auto;
-    height: 24px;
+    height: 28px;
     display: block;
     object-fit: contain;
+    margin: 6px;
 }
 
-.header.scrolled .header-logo {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
+.header.post-view .header-logo img {
+    display: none;
+}
+
+.header.post-view .header-logo::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 
+/* 포스트일 때 - 뒤로가기 */
+.header.post-view .header-menu::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.506 4.6106C11.7794 4.33776 12.223 4.33753 12.4962 4.6106C12.7691 4.88383 12.769 5.32753 12.4962 5.60082L6.09707 12L12.4962 18.3992C12.7693 18.6724 12.7691 19.116 12.4962 19.3894C12.2229 19.6627 11.7794 19.6626 11.506 19.3894L4.61173 12.4951C4.57767 12.4611 4.54753 12.4247 4.52196 12.386C4.41905 12.2305 4.38479 12.0429 4.41907 11.866C4.42965 11.8116 4.44867 11.7591 4.47224 11.7079C4.50593 11.6347 4.55145 11.5652 4.61173 11.5049L11.506 4.6106Z' fill='white'/%3E%3C/svg%3E");
+}
+
+/* 포스트일 때 - 홈 */
+.header.post-view .header-logo::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.4664 3.19579L11.0926 2.60397V2.60397L11.4664 3.19579ZM12.5344 3.19573L12.1606 3.7876V3.7876L12.5344 3.19573ZM20.3843 8.15275L20.7581 7.56088V7.56088L20.3843 8.15275ZM3.61636 8.1542L3.24254 7.56237L3.61636 8.1542ZM12.7005 16.4586C12.7005 16.072 12.3871 15.7586 12.0005 15.7586C11.6139 15.7586 11.3005 16.072 11.3005 16.4586H12.0005H12.7005ZM20.8504 8.99828H20.1504V19.4585H20.8504H21.5504V8.99828H20.8504ZM19.8504 20.4585V19.7585H4.15039V20.4585V21.1585H19.8504V20.4585ZM3.15039 19.4585H3.85039V8.99966H3.15039H2.45039V19.4585H3.15039ZM3.61636 8.1542L3.99018 8.74603L11.8403 3.78762L11.4664 3.19579L11.0926 2.60397L3.24254 7.56237L3.61636 8.1542ZM12.5344 3.19573L12.1606 3.7876L20.0106 8.74462L20.3843 8.15275L20.7581 7.56088L12.9081 2.60386L12.5344 3.19573ZM11.4664 3.19579L11.8403 3.78762C11.9381 3.72581 12.0628 3.72581 12.1606 3.7876L12.5344 3.19573L12.9081 2.60386C12.3536 2.25369 11.6471 2.25373 11.0926 2.60397L11.4664 3.19579ZM4.15039 20.4585V19.7585C3.98471 19.7585 3.85039 19.6242 3.85039 19.4585H3.15039H2.45039C2.45039 20.3974 3.21151 21.1585 4.15039 21.1585V20.4585ZM20.8504 19.4585H20.1504C20.1504 19.6242 20.0161 19.7585 19.8504 19.7585V20.4585V21.1585C20.7893 21.1585 21.5504 20.3974 21.5504 19.4585H20.8504ZM20.8504 8.99828H21.5504C21.5504 8.41494 21.2513 7.87234 20.7581 7.56088L20.3843 8.15275L20.0106 8.74462C20.0976 8.79958 20.1504 8.89534 20.1504 8.99828H20.8504ZM3.15039 8.99966H3.85039C3.85039 8.89674 3.90316 8.80099 3.99018 8.74603L3.61636 8.1542L3.24254 7.56237C2.74941 7.87385 2.45039 8.4164 2.45039 8.99966H3.15039ZM12.0005 16.4586H11.3005V20.9586H12.0005H12.7005V16.4586H12.0005Z' fill='white'/%3E%3C/svg%3E");
+}
+
+.header.post-view .header-menu,
+.header.post-view .header-logo {
+    cursor: pointer;
+    margin: 8px;
+}
+
+
+
+
+/* 헤더 오른쪽 */
 .header-right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 2px;
 }
 
+/* 헤더 아이콘 */
 .header-icon {
     background: none;
     border: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
 }
 
 .header-icon.notification::before {
@@ -104,6 +151,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    cursor: pointer;    
 }
 
 .header-icon.profile::before {
@@ -114,5 +162,5 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    cursor: pointer;
 }
-

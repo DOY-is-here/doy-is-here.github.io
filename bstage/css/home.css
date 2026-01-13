@@ -2,7 +2,7 @@
 .home-hero {
     position: relative;
     width: 394px;
-    height: 525px;
+    height: 526px;
     background: linear-gradient(135deg, #4a3520 0%, #2a1a10 50%, #1a1410 100%);
     display: flex;
     align-items: center;
@@ -10,90 +10,130 @@
     overflow: hidden;
 }
 
-.home-hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255, 200, 100, 0.3) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
 .home-hero-content {
-    position: relative;
+    position: absolute;
+    width: 394px;
+    height: 248px;
+    bottom: 0; 
     z-index: 2;
-    text-align: center;
-    padding-top: 283px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 16px;
+    gap: 8px;
 }
 
 .home-logo img {
-    width: auto;
-    height: 80px;
+    width: 120px;
+    height: 78px;
     display: block;
     object-fit: contain;
     margin: 0 auto; 
-    margin-bottom: 10px;
+}
+
+/* 정보 텍스트 */
+.home-subtitle {
+    color:  rgba(255, 255, 255, 0.73);
+    font-size: 15px;
+    font-weight: 400;
 }
 
  /* 어플아이콘 */
-.home-subtitle {
-    color: #EEEEEE;
-    font-size: 14px;
-    margin-bottom: 16px;
-}
-
 .home-social {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 16px;
+    gap: 8px;
 }
 
 .social-icon {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
 }
 
+.social-icon-dot {
+    color: rgb(238, 238, 238);
+    font-size: 18px;
+}
+
+/* YouTube */
+.icon-youtube {
+    background-size: 24px 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20.5978 4.71569C21.5447 4.96794 22.2898 5.71693 22.5421 6.67159C23 8.39853 22.9961 11.9999 22.9961 11.9999C22.9961 11.9999 22.9961 15.6012 22.5382 17.3281C22.2859 18.2789 21.5408 19.0279 20.5939 19.284C18.8786 19.7459 11.9981 19.7459 11.9981 19.7459C11.9981 19.7459 5.11748 19.7459 3.40219 19.284C2.45528 19.0318 1.71018 18.2828 1.45793 17.3281C1 15.6012 1 11.9999 1 11.9999C1 11.9999 1 8.39853 1.46181 6.66771C1.71406 5.71693 2.45916 4.96794 3.40607 4.71181C5.12136 4.25 12.0019 4.25 12.0019 4.25C12.0019 4.25 18.8786 4.25 20.5978 4.71569ZM9.7511 8.72842V15.2714L15.5024 11.9999L9.7511 8.72842Z' fill='%23EEEEEE'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Instagram */
+.icon-instagram {
+    background-size: 24px 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.85848 2.06994C6.79447 2.12014 6.06786 2.28994 5.43265 2.53954C4.77524 2.79575 4.21804 3.13955 3.66363 3.69595C3.10923 4.25236 2.76782 4.80997 2.51342 5.46837C2.26722 6.10498 2.10042 6.83219 2.05342 7.8968C2.00642 8.96141 1.99602 9.30361 2.00122 12.0192C2.00642 14.7349 2.01842 15.0753 2.07002 16.1421C2.12082 17.2059 2.29002 17.9323 2.53962 18.5677C2.79622 19.2251 3.13963 19.7821 3.69623 20.3367C4.25284 20.8913 4.81004 21.2319 5.47005 21.4867C6.10606 21.7325 6.83347 21.9001 7.89788 21.9467C8.96229 21.9933 9.30489 22.0041 12.0197 21.9989C14.7345 21.9937 15.0763 21.9817 16.143 21.9311C17.2096 21.8805 17.9322 21.7101 18.5678 21.4617C19.2252 21.2045 19.7826 20.8617 20.3368 20.3049C20.891 19.7481 21.2322 19.1901 21.4864 18.5313C21.7328 17.8953 21.9002 17.1679 21.9464 16.1043C21.993 15.0369 22.004 14.6961 21.9988 11.9808C21.9936 9.26561 21.9814 8.92521 21.9308 7.8588C21.8802 6.79239 21.7108 6.06818 21.4614 5.43237C21.2044 4.77497 20.8614 4.21836 20.305 3.66335C19.7486 3.10835 19.1902 2.76735 18.5316 2.51374C17.8952 2.26754 17.1682 2.09974 16.1038 2.05374C15.0393 2.00774 14.6967 1.99594 11.9809 2.00114C9.26509 2.00634 8.92509 2.01794 7.85848 2.06994ZM7.97528 20.1477C7.00027 20.1053 6.47086 19.9433 6.11806 19.8077C5.65085 19.6277 5.31805 19.4101 4.96645 19.0619C4.61484 18.7137 4.39884 18.3797 4.21644 17.9135C4.07944 17.5607 3.91444 17.0319 3.86884 16.0569C3.81923 15.0031 3.80883 14.6867 3.80303 12.0168C3.79723 9.34701 3.80743 9.03101 3.85363 7.9768C3.89524 7.00259 4.05824 6.47258 4.19364 6.11998C4.37364 5.65217 4.59044 5.31997 4.93945 4.96857C5.28845 4.61716 5.62145 4.40076 6.08806 4.21836C6.44046 4.08076 6.96927 3.91716 7.94388 3.87076C8.99849 3.82076 9.31449 3.81076 11.9839 3.80496C14.6533 3.79916 14.9701 3.80916 16.0252 3.85556C16.9994 3.89796 17.5296 4.05936 17.8818 4.19556C18.3492 4.37556 18.6818 4.59176 19.0332 4.94137C19.3846 5.29097 19.6012 5.62277 19.7836 6.09038C19.9214 6.44178 20.085 6.97039 20.131 7.9456C20.1812 9.00021 20.1926 9.31641 20.1974 11.9856C20.2022 14.6549 20.1928 14.9719 20.1466 16.0257C20.104 17.0007 19.9424 17.5303 19.8066 17.8835C19.6266 18.3505 19.4096 18.6835 19.0604 19.0347C18.7112 19.3859 18.3786 19.6023 17.9118 19.7847C17.5598 19.9221 17.0304 20.0861 16.0566 20.1325C15.0019 20.1821 14.6859 20.1925 12.0155 20.1983C9.34509 20.2041 9.03009 20.1933 7.97548 20.1477M16.1276 6.65538C16.128 6.89274 16.1987 7.12465 16.3309 7.32178C16.4631 7.51891 16.6508 7.6724 16.8703 7.76285C17.0897 7.8533 17.3311 7.87664 17.5638 7.82991C17.7965 7.78319 18.0101 7.66851 18.1777 7.50036C18.3452 7.33222 18.4591 7.11817 18.505 6.88529C18.5508 6.6524 18.5266 6.41115 18.4354 6.19203C18.3441 5.97292 18.1899 5.78579 17.9923 5.65431C17.7947 5.52282 17.5625 5.4529 17.3252 5.45337C17.007 5.45401 16.7021 5.58099 16.4775 5.8064C16.2529 6.03181 16.127 6.33719 16.1276 6.65538ZM6.86547 12.01C6.87107 14.8461 9.17429 17.1399 12.0097 17.1345C14.8451 17.1291 17.1406 14.8261 17.1352 11.99C17.1298 9.15401 14.8259 6.85959 11.9901 6.86519C9.15429 6.87079 6.86007 9.17441 6.86547 12.01ZM8.66668 12.0064C8.66538 11.3471 8.85961 10.7023 9.2248 10.1534C9.59 9.60447 10.1098 9.17619 10.7184 8.92268C11.327 8.66918 11.9971 8.60184 12.644 8.72918C13.2908 8.85652 13.8854 9.17282 14.3525 9.63809C14.8196 10.1034 15.1383 10.6967 15.2682 11.3431C15.3981 11.9894 15.3334 12.6598 15.0823 13.2694C14.8312 13.879 14.405 14.4005 13.8576 14.7678C13.3101 15.1352 12.666 15.332 12.0067 15.3333C11.5689 15.3342 11.1353 15.2489 10.7305 15.0822C10.3257 14.9155 9.95773 14.6707 9.64757 14.3617C9.33741 14.0528 9.09115 13.6858 8.92284 13.2816C8.75454 12.8775 8.6675 12.4442 8.66668 12.0064Z' fill='%23EEEEEE'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* X (Twitter) */
+.icon-x {
+    background-size: 24px 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_402_9)'%3E%3Cpath d='M17.1761 3H19.9362L13.9061 10.6246L21 21H15.4456L11.0951 14.7074L6.11723 21H3.35544L9.80517 12.8446L3 3H8.69545L12.6279 8.75169L17.1761 3ZM16.2073 19.1723H17.7368L7.86441 4.73169H6.2232L16.2073 19.1723Z' fill='%23EEEEEE'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_402_9'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* TikTok */
+.icon-tiktok {
+    background-size: 24px 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_402_13)'%3E%3Cpath d='M20.7541 7.00339V10.2696C20.7541 10.2696 17.9312 10.4234 15.6964 8.5596V16.0421C15.6964 16.3316 15.6693 16.6121 15.615 16.9016C15.3435 18.2316 14.2126 21.5974 9.76109 21.9864C9.53489 22.0045 9.3087 22.0045 9.08251 21.9864C7.81582 21.8779 4.02483 21.1721 3.27387 16.6121C3.18339 16.0873 3.17434 15.5535 3.25577 15.0287C3.48196 13.4725 5.09246 9.19294 10.3854 9.70866V12.9568C10.3854 12.9568 8.1144 12.4139 7.01058 14.1692C6.43152 15.0921 6.36819 16.2502 6.85676 17.2183C7.22772 17.9602 7.97868 18.7202 9.44441 18.7745C10.0597 18.7745 12.014 18.5573 12.4483 16.1416V2H15.6964C15.6964 2 15.6964 6.68672 20.7631 7.00339H20.7541Z' fill='%23EEEEEE'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_402_13'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 /* 공유버튼 */
 .home-share-btn {
-    width: 80px;
-    height: 39px;
+    height: 40px;
     background-color: rgba(0, 0, 0, 0);
-    border: 1px solid rgba(238, 238, 238, 0.15);
-    color: #EEEEEE;
-    font-size: 14px;
-    font-weight: 700;
+    border: 0.8px solid rgba(255, 255, 255, 0.1);
+    color:  rgb(238, 238, 238);
     cursor: pointer;
-    transition: all 0.3s;
+    margin-top: 8px;
+}
+
+.home-share-btn text{
+    color: rgb(238, 238, 238);
+    padding: 4px 16px;
+    font-size: 15px;
+    font-weight: 500;    
 }
 
 
 /* 홈화면 하단 */
 .home-section {
-    padding: 24px 0;
+    padding: 16px 0;
 }
 
 .section-title {
-    color: #EEEEEE;
-    font-size: 15px;
+    color: rgba(255, 255, 255, 0.93);
+    font-size: 16px;
     font-weight: 600;
-    padding: 0 16px;
-    margin-bottom: 16px;
+    padding: 4px 16px 0 16px;
+    margin-bottom: 12px;
 }
 
 .home-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    padding: 0 16px;    
+    grid-template-columns: auto-fit;
+    grid-auto-flow: column;
+    gap: 12px;
+    padding: 0 16px;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -104,25 +144,42 @@
 }
 
 /* NOMAD탭 */
-.home-card {
-    border-radius: 5px;
-    width: 187px;
-    height: 251px;
+.home-nomad {
+    position: relative;
+    border-radius: 8px;
+    width: 180px;
+    height: 240px;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.home-card:nth-child(3n+1) {
+.home-nomad:nth-child(3n+1) {
+}
+
+.home-nomad:nth-child(3n+2) {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.home-card:nth-child(3n+2) {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+.home-nomad-text{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(153, 153, 153, 0.15);
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* 컨텐츠탭 */
 .home-card-contnets {
-    border-radius: 5px;
-    width: 187px;
+    border-radius: 8px;
+    width: 190px;
     height: 107px;
+    cursor: pointer;
+}
+
+.home-card-contnets.hidden {
+    display: none;
 }
 
 .home-card-contnets:nth-child(3n+1) {
@@ -130,25 +187,62 @@
 }
 
 .home-card-contnets:nth-child(3n+2) {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-color: transparent;
 }
 
+
 /* 앨범 */
-.home-card-album {
+.spotify-embed {
     width: 362px;
-    height: 345px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    margin: 0 16px;
+    height: 352px;
+    display: block;    
+    margin: 0 auto;   
+    overflow: hidden;
+    border: none;
+    margin-bottom: 16px;
 }
 
 /* 전체보기 */
+.card-all{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(153, 153, 153, 0.2);
+    color: rgba(255, 255, 255, 0.73);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .card-more{
-    background-color: #2F2F2F;
-    color: #C6C6C6;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.73);
     font-size: 13px;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.card-icon-more {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 0.200195C18.517 0.200195 23.7998 5.48304 23.7998 12C23.7997 18.5169 18.5169 23.7998 12 23.7998C5.48319 23.7997 0.200288 18.5168 0.200195 12C0.200195 5.48311 5.48313 0.200301 12 0.200195ZM12.9414 6.76855C12.6487 6.47649 12.1736 6.47665 11.8809 6.76855C11.5881 7.06133 11.5883 7.53716 11.8809 7.83008L15.5498 11.499H6.4502C6.03614 11.499 5.70045 11.835 5.7002 12.249C5.70041 12.6631 6.03612 12.999 6.4502 12.999H15.5498L11.8809 16.668C11.5881 16.9607 11.5885 17.4366 11.8809 17.7295C12.1737 18.0221 12.6486 18.0221 12.9414 17.7295L17.8916 12.7793C17.928 12.7428 17.961 12.7036 17.9883 12.6621C18.0704 12.5374 18.1104 12.3928 18.1104 12.249C18.1102 12.1534 18.0922 12.0568 18.0557 11.9668C18.0283 11.8996 17.991 11.8349 17.9434 11.7764C17.9274 11.7568 17.9098 11.737 17.8916 11.7188L12.9414 6.76855Z' fill='%23B2B2B2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;   
+}
+
+
+
+.tab-content{
+    padding-bottom: 60px;
 }

@@ -1,75 +1,129 @@
-/* 
-.nomad-feed (양 옆 간격)
-.post-profile (프로필사진)
-.post-author (이름)
-.post-icon-check (체크마크)
-.post-meta (날짜)
-.post-right, .post-menu (더보기)
-.post-images (이미지)
-.post-indicators (닷)
->> nomad.css에 있음
-*/
-
-
 /* 상세 포스트 */
+/* 중복인건 naomd.css에 있음 */
 
-/* top + 날짜 */
-.post-detail-user {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-/* 이름 + 체크마크 */
-.post-user-top {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.nomad-feed-detail {
+    padding: 0 16px;
+    padding-top: 48px;
 }
 
 .nomad-detail-post{
     padding-top: 16px;
-    padding-bottom: 30px;    
+    padding-bottom: 32px;    
 }
 
-/* 전체 기본 간격 */
-.nomad-detail-post > * {
-    margin-bottom: 16px;
+/* top + 날짜 */
+.profile-user-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* 시간 */
+.post-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgb(119, 119, 119);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* 더보기 */
+.profile-more-detail {
+    right: 0;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.5 2.125C9.5 2.95343 8.82843 3.625 8 3.625C7.17157 3.625 6.5 2.95343 6.5 2.125C6.5 1.29657 7.17157 0.625 8 0.625C8.82843 0.625 9.5 1.29657 9.5 2.125Z' fill='%23999999'/%3E%3Cpath d='M9.5 8.02502C9.5 8.85345 8.82843 9.52502 8 9.52502C7.17157 9.52502 6.5 8.85345 6.5 8.02502C6.5 7.1966 7.17157 6.52502 8 6.52502C8.82843 6.52502 9.5 7.1966 9.5 8.02502Z' fill='%23999999'/%3E%3Cpath d='M9.5 13.875C9.5 14.7034 8.82843 15.375 8 15.375C7.17157 15.375 6.5 14.7034 6.5 13.875C6.5 13.0466 7.17157 12.375 8 12.375C8.82843 12.375 9.5 13.0466 9.5 13.875Z' fill='%23999999'/%3E%3C/svg%3E");    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+
+
+/* 미디어 컨테이너 */
+.post-detail-media {
+    width: 362px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 0.8px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 타입별 간격 */
+.post-detail-media--image {
+    margin: 20px 0 12px 0;
+}
+
+.post-detail-media--video {
+    margin: 20px 0;
+}
+
+/* 단일 미디어 */
+.post-detail-media--single img,
+.post-detail-media--single video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* 다중 미디어 (슬라이드) */
+.post-detail-media--multiple {
+    height: 362px;
+}
+
+.post-detail-media__track {
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.post-detail-media__track::-webkit-scrollbar {
+    display: none;
+}
+
+.post-detail-media__track img {
+    width: 362px;
+    height: 362px;
+    flex-shrink: 0;
+    object-fit: cover;
+    scroll-snap-align: start;
 }
 
 /* 포스트 내용 */
-.post-detail-text {
-    color: #EEEEEE;
-    font-size: 16px;
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-    margin-top: 80px;
+.detail-text {
+    width: 100%;
+    color: rgb(238, 238, 238);
+    font-size: 17px;
+    font-weight: 400;
+    padding-top: 64px;
 }
 
 /* 댓글 */
 .nomad-comment-feed {
-    padding: 15.5px;
-    background-color: #111111;
+    padding: 12px 16px 20px 16px;
+    background-color: rgb(17, 17, 17);
+    border-top: 0.8px solid rgba(255, 255, 255, 0.04);
 }
 
 .post-comments {
-    padding: 28px 0;
     display: flex;
     flex-direction: column;
-    gap: 16px;   
 }
 
 .post-comment-star{
-    color: #EEEEEE;
-    font-size: 15px;
+    color:  rgb(238, 238, 238);
+    font-size: 16px;
     font-weight: 500;
-    margin-bottom: 2px;
+    padding: 12px 0;
 }
 
 /* 프로필 */
 .post-profile-comment{
-    width: 23.5px;
-    height: 23.5px;
+    width: 24px;
+    height: 24px;
     background-image: url("https://doy-is-here.github.io/profile/profile.PNG");
     border-radius: 50%;
     object-fit: cover;
@@ -82,64 +136,58 @@
     width: 29px;
     height: 29px;
     border-radius: 50%;
-    border: 1px solid rgba(238, 238, 238, 0.1);
+    border: 0.8px solid rgba(238, 238, 238, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.post-comment-header {
+.post-comment-list {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
+    padding: 8px 0;
 }
 
 .post-comment-name {
-    color: #BABABA;
-    font-size: 12px;
-    font-weight: 500;
+    color: rgb(186, 186, 186);
+    font-size: 13px;
+    font-weight: 600;
 }
 
-.post-comment-user {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 3px;
-}
 
 /* 프로필, 댓글박스 간격 */
 .post-comment {
     display: flex;
     flex-direction: column;
-    gap: 13px;
+    gap: 10px;
 }
 
 /* 댓글박스 */
 .post-comment-box {
     width: 327px;
-    padding: 13px 16px;
-    background-color: #191919;
-    border: 1px solid rgba(238, 238, 238, 0.1);
-    border-radius: 10px;
+    padding: 12px 16px;
+    background-color: rgba(153, 153, 153, 0.06);
+    border: 0.8px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
     display: flex;
     align-items: center;
-    gap: 8px;
 }
 
 .post-comment-text {
     display: flex;
     flex-direction: column;
-    gap: 7px;    
+    gap: 6px;    
 }
 
 .post-comment h1 {
-    color: #999999;
-    font-size: 11px;
+    color: rgb(153, 153, 153);
+    font-size: 12px;
     font-weight: 500;
 }
 
 .post-comment h2 {
-    color: #BABABA;
-    font-size: 14px;
-    font-weight: 500;
+    color: rgb(186, 186, 186);
+    font-size: 15px;
+    font-weight: 400;
 }

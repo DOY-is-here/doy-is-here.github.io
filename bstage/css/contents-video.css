@@ -1,35 +1,28 @@
 /* 컨텐츠 포스트 - 비디오 */
-.post-detalil {
-}
 
-.post-detalil-video {
+.post-vid {
     position: relative;
     width: 394px;
-    height: 220px;
+    height: 222px;
+    aspect-ratio: 16 / 9;
     align-items: center;
     background-color: #fa709a;
-    margin-bottom: 4px;
+    margin-top: 48px;
 }
 
-.post-detalil-text {
-    padding: 16px;
+.post-vid-info {
+    padding: 20px 16px;
 }
 
-.post-detalil-title {
-    font-size: 19px;
-    font-weight: 700;
-    color: #EEEEEE;
-    margin-bottom: 5px;
+.post-vid-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(238, 238, 238);
+    padding-bottom: 26px;
 }
 
-.detalil-text-exp {
-    font-size: 14px;
-    font-weight: 500;
-    color: #BABABA;
-    margin-bottom: 8px;
-}
-
-.detalil-text-date {
-    font-size: 12px;
-    color: #999;
+.post-vid-time {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
 }

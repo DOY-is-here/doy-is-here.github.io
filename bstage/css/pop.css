@@ -1,23 +1,23 @@
-.pop-header {
-    padding: 20px 15px;
-    border-bottom: 1px solid #1a1a1a;
-    margin-bottom: 100px;
-    padding-top: 47px;
+.pop-feed {
+    padding-top: 48px;
 }
 
-.pop-section {
-    padding-left: 9px;
-    color: #999;
-    font-size: 12px;
-    font-weight: 500;
-    margin-bottom: 10px;
+.pop-nick {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(238, 238, 238);
+    padding: 24px;
 }
 
-.pop-section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
+.pop-chat {
+    color: rgb(153, 153, 153);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 16px 24px 8px 24px;
+}
+
+.pop-list {
+    padding: 6px 20px;
 }
 
 .pop-item {
@@ -25,45 +25,39 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
-    width: 356px;
-    height: 74px;
-    border-radius: 12px;
-    padding: 16px;
-    background-color: #1A1B1D;
+    width: 354px;
+    height: auto;
+    border-radius: 20px;
+    padding: 12px 16px;
+    background-color: rgba(112, 124, 160, 0.06);
     gap: 12px;
-}
-
-.pop-item img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
+    cursor: pointer;
 }
 
 .pop-preview {
-    flex: 1;
-    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .pop-info {
     display: flex;
     align-items: center;
-    gap : 8px;
-    margin-bottom: 6px;
+    gap : 4px;
+    margin-bottom: 2px;
 }
 
 .pop-name {
-    color: #EEE;
-    font-size: 14px;
+    color: rgb(238, 238, 238);
+    font-size: 15px;
     font-weight: 500;
 }
 
 .pop-message {
-    color: #999;
-    font-size: 11px;
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+    font-weight: 400;    
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
