@@ -180,13 +180,13 @@
     gap: 6px;    
 }
 
-.post-comment h1 {
+.post-comment-base {
     color: rgb(153, 153, 153);
     font-size: 12px;
     font-weight: 500;
 }
 
-.post-comment h2 {
+.post-comment-doy {
     color: rgb(186, 186, 186);
     font-size: 15px;
     font-weight: 400;
