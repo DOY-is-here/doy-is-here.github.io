@@ -122,30 +122,6 @@
       "comments": 0
     },
     {
-      "id": "post-251020",
-      "date": "2025-10-20",
-      "text": "",
-      "media": [
-        {
-          "type": "image",
-          "src": "bstage-nomad/251020 (1).jpeg"
-        },
-        {
-          "type": "image",
-          "src": "bstage-nomad/251020 (2).jpeg"
-        },
-        {
-          "type": "image",
-          "src": "bstage-nomad/251020 (3).jpeg"
-        },
-        {
-          "type": "image",
-          "src": "bstage-nomad/251020 (4).jpeg"
-        }
-      ],
-      "comments": 0
-    },
-    {
       "id": "post-251010",
       "date": "2025-10-10",
       "text": "촬young이었다",
@@ -665,6 +641,18 @@
         {
           "type": "image",
           "src": "bstage-nomad/250220 (7).jpeg"
+        }
+      ],
+      "comments": 0
+    },
+    {
+      "id": "post-250220",
+      "date": "2025-02-20",
+      "text": "안녕",
+            "media": [
+        {
+          "type": "image",
+          "src": "bstage-nomad/250211 (1).jpeg"
         }
       ],
       "comments": 0
