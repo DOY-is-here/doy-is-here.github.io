@@ -375,12 +375,12 @@ class ContentsRenderer {
         container.innerHTML = `
             <img class="contents-hero-img" src="${heroThumb?.src || ''}" alt="">
             <div class="contents-hero-item">
-                <div class="contents-thumbnails">
-                    ${thumbnails}
-                </div>
                 <div class="contents-hero-text">
                     <p class="contents-hero-exp">Latest</p>
                     <h2 class="contents-hero-title">Contents</h2>
+                </div>
+                    <div class="contents-thumbnails">
+                    ${thumbnails}
                 </div>
             </div>
         `;

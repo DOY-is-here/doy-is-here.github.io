@@ -196,6 +196,7 @@ class BSTApp {
                 NOMADPost.innerHTML = this.nomadRenderer.renderDetailPost(post);
             }
             NOMADPost.style.display = 'block';
+            this.initializeImageCarousels();
             NOMADPost.dataset.currentPost = postId;
         }
 
@@ -379,7 +380,7 @@ class BSTApp {
             const images = track.querySelectorAll('img');
             if (images.length <= 1) return;
 
-            const post = track.closest('.nomad-post');
+            const post = track.closest('.nomad-post') || track.closest('.nomad-detail-post');
             const indicators = post?.querySelector('.post-indicators');
             if (!indicators) return;
 

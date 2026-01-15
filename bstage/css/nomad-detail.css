@@ -88,13 +88,14 @@
     width: 362px;
     height: 362px;
     flex-shrink: 0;
-    object-fit: cover;
+    object-fit: contain;
     scroll-snap-align: start;
 }
 
 /* 포스트 내용 */
 .detail-text {
     width: 100%;
+    line-height: 26px;
     color: rgb(238, 238, 238);
     font-size: 17px;
     font-weight: 400;
