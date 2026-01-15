@@ -1,10 +1,10 @@
 /**
  * 폴더 스캔 → JSON 자동 생성 스크립트
  * 
- * 사용법: node generate-posts.js
+ * 사용법: node scripts/generate-posts.js
  * 
- * bstage-nomad/ → data/nomad-posts.json (NOMAD 탭)
- * bstage-madzip/ → data/contents-posts.json (Contents 탭)
+ * - 새 파일만 추가 (기존 데이터 유지)
+ * - text, category, youtube 등 수동 입력한 값 보존
  */
 
 const fs = require('fs');
@@ -15,18 +15,17 @@ const CONFIG = {
     nomad: {
         folder: 'bstage-nomad',
         output: 'data/nomad-posts.json',
-        name: 'NOMAD'
+        type: 'nomad'
     },
     contents: {
         folder: 'bstage-madzip',
         output: 'data/contents-posts.json',
-        name: 'MAD.zip'
+        type: 'contents'
     }
 };
 
 // 파일명에서 날짜 추출 (YYMMDD → YYYY-MM-DD)
 function parseDate(filename) {
-    // 240402.jpeg 또는 240402 (1).jpeg 형태에서 날짜 추출
     const match = filename.match(/^(\d{6})/);
     if (!match) return null;
     
@@ -38,7 +37,7 @@ function parseDate(filename) {
     return `${year}-${month}-${day}`;
 }
 
-// 파일명에서 순번 추출 (없으면 0)
+// 파일명에서 순번 추출
 function parseIndex(filename) {
     const match = filename.match(/\((\d+)\)/);
     return match ? parseInt(match[1]) : 0;
@@ -55,11 +54,23 @@ function getMediaType(filename) {
     return null;
 }
 
+// 기존 JSON 로드
+function loadExistingPosts(outputPath) {
+    try {
+        if (fs.existsSync(outputPath)) {
+            const data = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
+            return data.posts || [];
+        }
+    } catch (error) {
+        console.log(`   ⚠️  기존 JSON 로드 실패: ${error.message}`);
+    }
+    return [];
+}
+
 // 폴더 스캔 → JSON 생성
 function generatePostsJSON(config) {
     const folderPath = config.folder;
     
-    // 폴더 존재 확인
     if (!fs.existsSync(folderPath)) {
         console.log(`⚠️  폴더 없음: ${folderPath}`);
         return null;
@@ -98,30 +109,49 @@ function generatePostsJSON(config) {
         postsByDate[date].sort((a, b) => a.index - b.index);
     });
     
-    // JSON 구조 생성
-    const posts = Object.keys(postsByDate)
-        .sort((a, b) => new Date(b) - new Date(a)) // 최신순 정렬
-        .map(date => {
-            const mediaFiles = postsByDate[date];
-            const dateId = date.replace(/-/g, '').substring(2); // 2024-04-02 → 240402
-            
-            return {
-                id: `post-${dateId}`,
-                date: date,
-                text: "",
-                media: mediaFiles.map(f => {
-                    const item = {
-                        type: f.type,
-                        src: `${config.folder}/${f.filename}`
-                    };
-                    if (f.type === 'video') {
-                        item.duration = "";
-                    }
-                    return item;
-                }),
-                comments: 0
-            };
-        });
+    // 기존 포스트 로드
+    const existingPosts = loadExistingPosts(config.output);
+    const existingPostsMap = {};
+    existingPosts.forEach(p => {
+        existingPostsMap[p.id] = p;
+    });
+    
+    // 새 포스트 생성 (기존 데이터 유지)
+    const allDates = Object.keys(postsByDate).sort((a, b) => new Date(b) - new Date(a));
+    
+    const posts = allDates.map(date => {
+        const mediaFiles = postsByDate[date];
+        const dateId = date.replace(/-/g, '').substring(2);
+        const postId = `post-${dateId}`;
+        
+        // 기존 포스트가 있으면 데이터 유지
+        const existing = existingPostsMap[postId];
+        
+        const newPost = {
+            id: postId,
+            date: date,
+            text: existing?.text || "",
+            media: mediaFiles.map(f => {
+                const item = {
+                    type: f.type,
+                    src: `${config.folder}/${f.filename}`
+                };
+                if (f.type === 'video') {
+                    item.duration = "";
+                }
+                return item;
+            }),
+            comments: existing?.comments || 0
+        };
+        
+        // Contents 타입이면 category, youtube 필드 추가
+        if (config.type === 'contents') {
+            newPost.category = existing?.category || "madzip";
+            newPost.youtube = existing?.youtube || "";
+        }
+        
+        return newPost;
+    });
     
     const result = { posts };
     
@@ -134,7 +164,9 @@ function generatePostsJSON(config) {
     // JSON 파일 저장
     fs.writeFileSync(config.output, JSON.stringify(result, null, 2), 'utf8');
     
-    console.log(`✅ ${config.output} 생성 완료 (${posts.length}개 포스트)`);
+    const newCount = posts.filter(p => !existingPostsMap[p.id]).length;
+    console.log(`✅ ${config.output} 저장 완료`);
+    console.log(`   총 ${posts.length}개 포스트 (새로 추가: ${newCount}개)`);
     
     return result;
 }
@@ -142,16 +174,13 @@ function generatePostsJSON(config) {
 // 메인 실행
 console.log('🚀 JSON 생성 시작\n');
 
-// NOMAD 포스트 생성
 generatePostsJSON(CONFIG.nomad);
-
 console.log('');
-
-// Contents 포스트 생성
 generatePostsJSON(CONFIG.contents);
 
 console.log('\n✨ 완료!');
-console.log('\n📝 다음 단계:');
-console.log('   1. data/nomad-posts.json에서 "text" 필드에 본문 입력');
-console.log('   2. data/contents-posts.json에서 "text" 필드에 제목/설명 입력');
-console.log('   3. 비디오의 경우 "duration" 필드에 재생시간 입력 (예: "0:32")');
+console.log('\n📝 수동 입력이 필요한 필드:');
+console.log('   - text: 포스트 본문/제목');
+console.log('   - category: madzip, behind, vlog, interview, etc (Contents만)');
+console.log('   - youtube: 유튜브 URL (Contents만)');
+console.log('   - duration: 비디오 재생시간 (예: "0:32")');
