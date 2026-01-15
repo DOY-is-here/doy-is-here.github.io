@@ -211,7 +211,8 @@ class BSTApp {
         // 히어로 섹션 렌더링
         if (this.contentsRenderer.posts.length > 0) {
             this.contentsRenderer.renderHero('.contents-hero');
-            this.contentsRenderer.renderContentsSection('.contents-grid', 4);
+            // 카테고리별 섹션들 렌더링
+            this.contentsRenderer.renderAllSections('.contents-sections-container');
         }
         
         this.initializeContentsThumbnails();
@@ -237,19 +238,20 @@ class BSTApp {
         this.deactivatePostHeader();
     }
 
-    showContentsList() {
+    showContentsList(category = null) {
         const tabContent = document.querySelector('.tab-content[data-tab="contents"]');
         const contentList = document.querySelector('.tab-content[data-tab="content-list"]');
         
         if (tabContent) tabContent.style.display = 'none';
         
-        // 리스트 렌더링
+        // 리스트 렌더링 (카테고리별)
         if (contentList && this.contentsRenderer.posts.length > 0) {
-            this.contentsRenderer.renderContentsList('.tab-content[data-tab="content-list"]');
+            this.contentsRenderer.renderContentsList('.tab-content[data-tab="content-list"]', category);
             contentList.style.display = 'block';
         }
 
         this.previousView = 'list';
+        this.currentCategory = category; // 현재 카테고리 저장
         this.activatePostHeader();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -272,7 +274,7 @@ class BSTApp {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Contents 상세 보기 (이미지/비디오 자동 판별)
+    // Contents 상세 보기 (유튜브/이미지/비디오 자동 판별)
     showContentsDetail(contentId) {
         console.log('🟢 showContentsDetail:', contentId);
         
@@ -287,18 +289,19 @@ class BSTApp {
         if (tabContent) tabContent.style.display = 'none';
         if (contentList) contentList.style.display = 'none';
         
+        // 유튜브나 비디오면 content-video 탭 사용
         const isVideo = this.contentsRenderer.isVideoPost(post);
         
         if (isVideo) {
             if (contentIMG) contentIMG.style.display = 'none';
             if (contentVID) {
-                contentVID.innerHTML = this.contentsRenderer.renderDetailVID(post);
+                contentVID.innerHTML = this.contentsRenderer.renderDetail(post);
                 contentVID.style.display = 'block';
             }
         } else {
             if (contentVID) contentVID.style.display = 'none';
             if (contentIMG) {
-                contentIMG.innerHTML = this.contentsRenderer.renderDetailIMG(post);
+                contentIMG.innerHTML = this.contentsRenderer.renderDetail(post);
                 contentIMG.style.display = 'block';
             }
         }
