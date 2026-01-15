@@ -14,12 +14,12 @@ const path = require('path');
 const CONFIG = {
     nomad: {
         folder: 'bstage-nomad',
-        output: 'data/nomad-posts.json',
+        output: 'bstage/data/nomad-posts.json',
         type: 'nomad'
     },
     contents: {
         folder: 'bstage-madzip',
-        output: 'data/contents-posts.json',
+        output: 'bstage/data/contents-posts.json',
         type: 'contents'
     }
 };

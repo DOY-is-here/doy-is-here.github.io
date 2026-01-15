@@ -5,7 +5,7 @@ on:
     paths:
       - 'bstage-nomad/**'
       - 'bstage-madzip/**'
-  workflow_dispatch:  # 수동 실행도 가능
+  workflow_dispatch:
 
 jobs:
   generate-json:
@@ -23,7 +23,7 @@ jobs:
           node-version: '20'
       
       - name: Create data directory
-        run: mkdir -p data
+        run: mkdir -p bstage/data
       
       - name: Generate JSON files
         run: node scripts/generate-posts.js
