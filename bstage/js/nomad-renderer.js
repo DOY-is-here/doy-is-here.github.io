@@ -208,9 +208,7 @@ class NomadRenderer {
                                 <span class="profile-name">도의</span>
                                 <span class="profile-icon-check"></span>
                             </div>
-                            <div class="post-date">
-                                <span>${this.formatDate(post.date)}</span>
-                            </div>
+                            <span class="post-date">${this.formatDate(post.date)}</span>
                         </div>
                         <div class="post-right">
                             <button class="profile-more-detail"></button>
@@ -220,10 +218,9 @@ class NomadRenderer {
                     ${mediaHTML}
 
                     ${post.text ? `<div class="detail-text">${post.text}</div>` : ''}
-                    
-                    ${commentsHTML}
                 </div>
             </div>
+            ${commentsHTML}
         `;
     }
 

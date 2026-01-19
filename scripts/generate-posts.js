@@ -149,10 +149,35 @@ function scanFolder(folderPath) {
     return mediaFiles;
 }
 
+// 댓글 폴더에서 날짜 목록 추출
+function getCommentDates(commentFolder) {
+    if (!commentFolder || !fs.existsSync(commentFolder)) {
+        return [];
+    }
+    
+    const files = fs.readdirSync(commentFolder);
+    const dates = [];
+    
+    files.forEach(file => {
+        // comment_240408.txt 형식에서 날짜 추출
+        const match = file.match(/^comment_(\d{6})\.txt$/);
+        if (match) {
+            const dateStr = match[1];
+            const year = '20' + dateStr.substring(0, 2);
+            const month = dateStr.substring(2, 4);
+            const day = dateStr.substring(4, 6);
+            dates.push(`${year}-${month}-${day}`);
+        }
+    });
+    
+    return dates;
+}
+
 // 미디어 파일들을 포스트로 그룹화
 function groupIntoPosts(mediaFiles, folderPath, commentFolder) {
     const groups = {};
     
+    // 1. 미디어 파일로 포스트 생성
     mediaFiles.forEach(file => {
         // 포스트 ID 생성: 날짜-번호 또는 날짜만
         const postId = file.postNumber > 0 
@@ -173,6 +198,22 @@ function groupIntoPosts(mediaFiles, folderPath, commentFolder) {
             slideIndex: file.slideIndex
         });
     });
+    
+    // 2. 댓글 파일만 있고 미디어가 없는 날짜도 포스트 생성
+    if (commentFolder) {
+        const commentDates = getCommentDates(commentFolder);
+        commentDates.forEach(date => {
+            const postId = `post-${date.replace(/-/g, '').substring(2)}`;
+            if (!groups[postId]) {
+                // 미디어 없이 댓글만 있는 포스트 생성
+                groups[postId] = {
+                    id: postId,
+                    date: date,
+                    media: []
+                };
+            }
+        });
+    }
     
     // 각 포스트 내 미디어 정렬 (slideIndex 기준) + 댓글 파싱
     Object.values(groups).forEach(post => {
