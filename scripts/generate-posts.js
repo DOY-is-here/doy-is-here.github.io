@@ -1,10 +1,12 @@
 /**
- * 폴더 스캔 → JSON 자동 생성 스크립트
+ * 폴더 스캔 → JSON 자동 생성 스크립트 (병합 모드)
  * 
  * 사용법: node scripts/generate-posts.js
  * 
- * - 새 파일만 추가 (기존 데이터 유지)
- * - text, category, youtube 등 수동 입력한 값 보존
+ * 특징:
+ * - 기존 JSON과 비교하여 새로운 파일만 추가
+ * - 삭제된 파일만 제거
+ * - 기존 text, tags, category, youtube 등 수동 입력 데이터 보존
  */
 
 const fs = require('fs');
@@ -24,6 +26,10 @@ const CONFIG = {
     }
 };
 
+// 지원 확장자
+const IMAGE_EXTS = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
+const VIDEO_EXTS = ['.mp4', '.mov', '.webm'];
+
 // 파일명에서 날짜 추출 (YYMMDD → YYYY-MM-DD)
 function parseDate(filename) {
     const match = filename.match(/^(\d{6})/);
@@ -37,150 +43,231 @@ function parseDate(filename) {
     return `${year}-${month}-${day}`;
 }
 
-// 파일명에서 순번 추출
-function parseIndex(filename) {
+// 파일명에서 게시물 번호 추출 (240202-1 → 1)
+function parsePostNumber(filename) {
+    const match = filename.match(/^(\d{6})-(\d+)/);
+    return match ? parseInt(match[2]) : 0;
+}
+
+// 파일명에서 슬라이드 순번 추출 (240202 (1) → 1)
+function parseSlideIndex(filename) {
     const match = filename.match(/\((\d+)\)/);
     return match ? parseInt(match[1]) : 0;
 }
 
-// 파일 타입 확인
-function getMediaType(filename) {
-    const ext = path.extname(filename).toLowerCase();
-    if (['.jpg', '.jpeg', '.png', '.gif', '.webp'].includes(ext)) {
-        return 'image';
-    } else if (['.mp4', '.webm', '.mov'].includes(ext)) {
-        return 'video';
-    }
-    return null;
-}
-
-// 기존 JSON 로드
-function loadExistingPosts(outputPath) {
-    try {
-        if (fs.existsSync(outputPath)) {
-            const data = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
-            return data.posts || [];
-        }
-    } catch (error) {
-        console.log(`   ⚠️  기존 JSON 로드 실패: ${error.message}`);
-    }
-    return [];
-}
-
-// 폴더 스캔 → JSON 생성
-function generatePostsJSON(config) {
-    const folderPath = config.folder;
-    
+// 폴더 스캔
+function scanFolder(folderPath) {
     if (!fs.existsSync(folderPath)) {
         console.log(`⚠️  폴더 없음: ${folderPath}`);
-        return null;
+        return [];
     }
     
-    // 파일 목록 읽기
-    const files = fs.readdirSync(folderPath)
-        .filter(f => getMediaType(f) !== null)
-        .sort();
+    const files = fs.readdirSync(folderPath);
+    const mediaFiles = [];
     
-    console.log(`📁 ${folderPath}: ${files.length}개 파일 발견`);
-    
-    // 날짜별로 그룹화
-    const postsByDate = {};
-    
-    files.forEach(filename => {
-        const date = parseDate(filename);
-        if (!date) {
-            console.log(`   ⚠️  날짜 파싱 실패: ${filename}`);
-            return;
-        }
+    files.forEach(file => {
+        const ext = path.extname(file).toLowerCase();
+        const isImage = IMAGE_EXTS.includes(ext);
+        const isVideo = VIDEO_EXTS.includes(ext);
         
-        if (!postsByDate[date]) {
-            postsByDate[date] = [];
-        }
+        if (!isImage && !isVideo) return;
         
-        postsByDate[date].push({
-            filename,
-            index: parseIndex(filename),
-            type: getMediaType(filename)
+        const date = parseDate(file);
+        if (!date) return;
+        
+        const postNumber = parsePostNumber(file);
+        const slideIndex = parseSlideIndex(file);
+        
+        mediaFiles.push({
+            filename: file,
+            date,
+            postNumber,
+            slideIndex,
+            type: isVideo ? 'video' : 'image',
+            ext
         });
     });
     
-    // 각 날짜 내에서 순번 정렬
-    Object.keys(postsByDate).forEach(date => {
-        postsByDate[date].sort((a, b) => a.index - b.index);
-    });
+    return mediaFiles;
+}
+
+// 미디어 파일들을 포스트로 그룹화
+function groupIntoPosts(mediaFiles, folderPath) {
+    const groups = {};
     
-    // 기존 포스트 로드
-    const existingPosts = loadExistingPosts(config.output);
-    const existingPostsMap = {};
-    existingPosts.forEach(p => {
-        existingPostsMap[p.id] = p;
-    });
-    
-    // 새 포스트 생성 (기존 데이터 유지)
-    const allDates = Object.keys(postsByDate).sort((a, b) => new Date(b) - new Date(a));
-    
-    const posts = allDates.map(date => {
-        const mediaFiles = postsByDate[date];
-        const dateId = date.replace(/-/g, '').substring(2);
-        const postId = `post-${dateId}`;
+    mediaFiles.forEach(file => {
+        // 포스트 ID 생성: 날짜-번호 또는 날짜만
+        const postId = file.postNumber > 0 
+            ? `post-${file.date.replace(/-/g, '').substring(2)}-${file.postNumber}`
+            : `post-${file.date.replace(/-/g, '').substring(2)}`;
         
-        // 기존 포스트가 있으면 데이터 유지
-        const existing = existingPostsMap[postId];
-        
-        const newPost = {
-            id: postId,
-            date: date,
-            text: existing?.text || "",
-            media: mediaFiles.map(f => {
-                const item = {
-                    type: f.type,
-                    src: `${config.folder}/${f.filename}`
-                };
-                if (f.type === 'video') {
-                    item.duration = "";
-                }
-                return item;
-            }),
-            comments: existing?.comments || 0
-        };
-        
-        // Contents 타입이면 category, youtube 필드 추가
-        if (config.type === 'contents') {
-            newPost.category = existing?.category || "madzip";
-            newPost.youtube = existing?.youtube || "";
+        if (!groups[postId]) {
+            groups[postId] = {
+                id: postId,
+                date: file.date,
+                media: []
+            };
         }
         
-        return newPost;
+        groups[postId].media.push({
+            type: file.type,
+            src: `${folderPath}/${file.filename}`,
+            slideIndex: file.slideIndex
+        });
     });
     
-    const result = { posts };
+    // 각 포스트 내 미디어 정렬 (slideIndex 기준)
+    Object.values(groups).forEach(post => {
+        post.media.sort((a, b) => a.slideIndex - b.slideIndex);
+        // slideIndex 필드 제거
+        post.media.forEach(m => delete m.slideIndex);
+    });
     
-    // 출력 폴더 생성
-    const outputDir = path.dirname(config.output);
-    if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir, { recursive: true });
+    return Object.values(groups).sort((a, b) => 
+        new Date(b.date) - new Date(a.date)
+    );
+}
+
+// 기존 JSON 로드
+function loadExistingJSON(outputPath) {
+    if (!fs.existsSync(outputPath)) {
+        return { posts: [] };
     }
     
-    // JSON 파일 저장
-    fs.writeFileSync(config.output, JSON.stringify(result, null, 2), 'utf8');
+    try {
+        const content = fs.readFileSync(outputPath, 'utf8');
+        return JSON.parse(content);
+    } catch (error) {
+        console.log(`⚠️  기존 JSON 파싱 실패, 새로 생성: ${outputPath}`);
+        return { posts: [] };
+    }
+}
+
+// 포스트 병합 (기존 데이터 보존)
+function mergePosts(existingPosts, newPosts, type) {
+    const existingMap = new Map();
+    existingPosts.forEach(post => existingMap.set(post.id, post));
     
-    const newCount = posts.filter(p => !existingPostsMap[p.id]).length;
-    console.log(`✅ ${config.output} 저장 완료`);
-    console.log(`   총 ${posts.length}개 포스트 (새로 추가: ${newCount}개)`);
+    const newMap = new Map();
+    newPosts.forEach(post => newMap.set(post.id, post));
     
-    return result;
+    const result = [];
+    let added = 0;
+    let updated = 0;
+    let removed = 0;
+    
+    // 새 포스트 처리
+    newPosts.forEach(newPost => {
+        const existing = existingMap.get(newPost.id);
+        
+        if (existing) {
+            // 기존 포스트 있음 → 수동 입력 데이터 보존
+            result.push({
+                id: newPost.id,
+                date: newPost.date,
+                text: existing.text || '',
+                category: existing.category || (type === 'contents' ? 'etc' : undefined),
+                tags: existing.tags || [],
+                youtube: existing.youtube || undefined,
+                media: newPost.media,  // 미디어는 새로 스캔한 것으로 업데이트
+                comments: existing.comments || 0
+            });
+            
+            // 미디어 변경 체크
+            const existingMedia = JSON.stringify(existing.media);
+            const newMedia = JSON.stringify(newPost.media);
+            if (existingMedia !== newMedia) {
+                updated++;
+            }
+        } else {
+            // 새 포스트
+            const post = {
+                id: newPost.id,
+                date: newPost.date,
+                text: '',
+                media: newPost.media,
+                comments: 0
+            };
+            
+            // contents 타입이면 기본 카테고리, 빈 태그 추가
+            if (type === 'contents') {
+                post.category = 'etc';
+                post.tags = [];
+            }
+            
+            result.push(post);
+            added++;
+        }
+    });
+    
+    // 삭제된 포스트 카운트
+    existingPosts.forEach(existing => {
+        if (!newMap.has(existing.id)) {
+            removed++;
+        }
+    });
+    
+    // 날짜순 정렬 (최신순)
+    result.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    // undefined 필드 제거
+    result.forEach(post => {
+        Object.keys(post).forEach(key => {
+            if (post[key] === undefined) {
+                delete post[key];
+            }
+        });
+    });
+    
+    return { posts: result, added, updated, removed };
+}
+
+// JSON 저장
+function saveJSON(outputPath, data) {
+    const dir = path.dirname(outputPath);
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+    }
+    
+    fs.writeFileSync(outputPath, JSON.stringify(data, null, 2), 'utf8');
 }
 
 // 메인 실행
-console.log('🚀 JSON 생성 시작\n');
+function main() {
+    console.log('🚀 JSON 생성 시작 (병합 모드)\n');
+    
+    Object.entries(CONFIG).forEach(([key, config]) => {
+        console.log(`📁 ${config.folder} 스캔 중...`);
+        
+        // 폴더 스캔
+        const mediaFiles = scanFolder(config.folder);
+        console.log(`   ${mediaFiles.length}개 미디어 파일 발견`);
+        
+        // 포스트로 그룹화
+        const newPosts = groupIntoPosts(mediaFiles, config.folder);
+        
+        // 기존 JSON 로드
+        const existing = loadExistingJSON(config.output);
+        
+        // 병합
+        const { posts, added, updated, removed } = mergePosts(
+            existing.posts, 
+            newPosts,
+            config.type
+        );
+        
+        // 저장
+        saveJSON(config.output, { posts });
+        
+        console.log(`✅ ${config.output} 저장 완료`);
+        console.log(`   총 ${posts.length}개 포스트`);
+        if (added > 0) console.log(`   ➕ 추가: ${added}개`);
+        if (updated > 0) console.log(`   🔄 미디어 변경: ${updated}개`);
+        if (removed > 0) console.log(`   ➖ 삭제: ${removed}개`);
+        console.log('');
+    });
+    
+    console.log('✨ 완료!');
+}
 
-generatePostsJSON(CONFIG.nomad);
-console.log('');
-generatePostsJSON(CONFIG.contents);
-
-console.log('\n✨ 완료!');
-console.log('\n📝 수동 입력이 필요한 필드:');
-console.log('   - text: 포스트 본문/제목');
-console.log('   - category: madzip, behind, vlog, interview, etc (Contents만)');
-console.log('   - youtube: 유튜브 URL (Contents만)');
-console.log('   - duration: 비디오 재생시간 (예: "0:32")');
+main();

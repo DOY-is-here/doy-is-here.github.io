@@ -43,6 +43,15 @@
                 <!-- Home Tab -->
                 <div class="tab-content active" data-tab="home">
                     <div class="home-hero">
+                            <video
+                            class="home-hero-video"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            >
+                                <source src="https://doy-is-here.github.io/profile/bstage-home.mp4" type="video/mp4">
+                            </video>
                         <div class="home-hero-content">
                             <div class="home-logo">
                                 <img src="https://doy-is-here.github.io/profile/logo.png" alt="NOMAD">
@@ -65,7 +74,8 @@
                     <div class="home-section">
                         <div class="section-title">NOMAD</div>
                         <div class="home-grid">
-                            <!-- JS에서 동적으로 채워짐 -->
+                            <div class="home-nomad" onclick="window.BSTApp.showContentsIMG('video-1')">
+                            </div>
                         </div>
                     </div>
 

@@ -1,4 +1,4 @@
-// Contents Renderer - 카테고리 + 유튜브 임베드 지원
+// Contents Renderer - 카테고리 + 태그 + 유튜브 임베드 지원
 class ContentsRenderer {
     constructor(baseUrl = 'https://doy-is-here.github.io/') {
         this.baseUrl = baseUrl;
@@ -14,8 +14,8 @@ class ContentsRenderer {
         };
     }
 
-    // JSON 데이터 로드
-    async loadPosts(jsonPath = 'data/contents-posts.json') {
+    // JSON 데이터 로드 (경로 수정: bstage/data)
+    async loadPosts(jsonPath = 'bstage/data/contents-posts.json') {
         try {
             const response = await fetch(jsonPath);
             const data = await response.json();
@@ -40,15 +40,12 @@ class ContentsRenderer {
     getYoutubeEmbedUrl(url) {
         if (!url) return null;
         
-        // youtube.com/watch?v=VIDEO_ID 형식
         let match = url.match(/[?&]v=([^&]+)/);
         if (match) return `https://www.youtube.com/embed/${match[1]}`;
         
-        // youtu.be/VIDEO_ID 형식
         match = url.match(/youtu\.be\/([^?&]+)/);
         if (match) return `https://www.youtube.com/embed/${match[1]}`;
         
-        // 이미 embed URL인 경우
         if (url.includes('/embed/')) return url;
         
         return null;
@@ -60,17 +57,14 @@ class ContentsRenderer {
         
         let videoId = null;
         
-        // youtube.com/watch?v=VIDEO_ID 형식
         let match = url.match(/[?&]v=([^&]+)/);
         if (match) videoId = match[1];
         
-        // youtu.be/VIDEO_ID 형식
         if (!videoId) {
             match = url.match(/youtu\.be\/([^?&]+)/);
             if (match) videoId = match[1];
         }
         
-        // embed URL에서 추출
         if (!videoId) {
             match = url.match(/embed\/([^?&]+)/);
             if (match) videoId = match[1];
@@ -89,6 +83,23 @@ class ContentsRenderer {
             .sort((a, b) => new Date(b.date) - new Date(a.date));
     }
 
+    // 태그별 포스트 필터링
+    getPostsByTag(tag) {
+        return this.posts.filter(p => p.tags && p.tags.includes(tag))
+            .sort((a, b) => new Date(b.date) - new Date(a.date));
+    }
+
+    // 모든 태그 가져오기 (중복 제거)
+    getAllTags() {
+        const tagSet = new Set();
+        this.posts.forEach(post => {
+            if (post.tags) {
+                post.tags.forEach(tag => tagSet.add(tag));
+            }
+        });
+        return Array.from(tagSet).sort();
+    }
+
     // 카테고리 이름 가져오기
     getCategoryName(category) {
         return this.categories[category]?.name || category;
@@ -101,19 +112,16 @@ class ContentsRenderer {
 
     // 썸네일 소스 결정 (이미지 > 유튜브 썸네일)
     getThumbnailSrc(post) {
-        // 미디어에 이미지가 있으면 사용
         const image = post.media?.find(m => m.type === 'image');
         if (image) {
             return { type: 'local', src: `${this.baseUrl}${image.src}` };
         }
         
-        // 유튜브 썸네일 사용
         if (post.youtube) {
             const thumb = this.getYoutubeThumbnail(post.youtube);
             if (thumb) return { type: 'youtube', src: thumb };
         }
         
-        // 비디오 있으면 사용
         const video = post.media?.find(m => m.type === 'video');
         if (video) {
             return { type: 'video', src: `${this.baseUrl}${video.src}` };
@@ -168,7 +176,6 @@ class ContentsRenderer {
         const container = document.querySelector(containerSelector);
         if (!container) return;
 
-        // 카테고리별로 포스트가 있는 것만 섹션 생성
         const sectionsHTML = Object.keys(this.categories)
             .filter(cat => this.getPostsByCategory(cat).length > 0)
             .map(cat => {
@@ -244,12 +251,80 @@ class ContentsRenderer {
         `;
     }
 
-    // 상세 포스트 렌더링 (유튜브 임베드 지원)
+    // 태그별 리스트 렌더링
+    renderTagList(containerSelector, tag) {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+
+        const posts = this.getPostsByTag(tag);
+
+        const listHTML = posts.map(post => {
+            const thumbnail = this.getThumbnailSrc(post);
+            const hasYoutube = !!post.youtube;
+            
+            let mediaHTML = '';
+            if (thumbnail) {
+                if (thumbnail.type === 'video') {
+                    mediaHTML = `<video src="${thumbnail.src}" muted></video>`;
+                } else {
+                    mediaHTML = `<img src="${thumbnail.src}" alt="" loading="lazy">`;
+                }
+            }
+            
+            return `
+                <div class="content-list-item">
+                    <div class="content-list-card" onclick="window.BSTApp.showContentsDetail('${post.id}')">
+                        ${mediaHTML}
+                        ${hasYoutube ? '<span class="content-youtube">YouTube</span>' : ''}
+                    </div>
+                    <div class="content-list-info">
+                        <span class="content-list-data">${post.text || this.formatDate(post.date)}</span>
+                        <span class="content-list-time">${this.formatDate(post.date)}</span>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        container.innerHTML = `
+            <div class="contents-section-post">
+                <div class="section-post-header">
+                    <span class="content-list-title">#${tag}</span>
+                    <span class="content-list-count">${posts.length}개 콘텐츠</span>
+                </div>
+                <div class="contents-list-grid">
+                    ${listHTML}
+                </div>
+            </div>
+        `;
+    }
+
+    // 태그 렌더링 (클릭 가능한 태그 버튼들)
+    renderTags(post) {
+        const tags = post.tags || [];
+        const category = post.category || 'etc';
+        const categoryTag = this.getCategoryTag(category);
+        
+        // 카테고리 태그 + 사용자 정의 태그
+        const allTags = [categoryTag];
+        tags.forEach(tag => {
+            const formattedTag = tag.startsWith('#') ? tag : `#${tag}`;
+            if (!allTags.includes(formattedTag)) {
+                allTags.push(formattedTag);
+            }
+        });
+        
+        return allTags.map(tag => {
+            const tagName = tag.replace('#', '');
+            return `<span class="post-img-tag" onclick="window.BSTApp.showTagList('${tagName}')">${tag}</span>`;
+        }).join('');
+    }
+
+    // 상세 포스트 렌더링 (유튜브 임베드 + 태그 표시)
     renderDetail(post) {
         if (!post) return '';
 
         const category = post.category || 'etc';
-        const categoryTag = this.getCategoryTag(category);
+        const tagsHTML = this.renderTags(post);
 
         // 유튜브가 있으면 임베드
         if (post.youtube) {
@@ -269,8 +344,7 @@ class ContentsRenderer {
                         <div class="post-vid-time">${this.formatDate(post.date)}</div>
                     </div>
                     <div class="post-img-tags">
-                        <span class="post-img-tag">${categoryTag}</span>
-                        <span class="post-img-tag">#NOMAD</span>
+                        ${tagsHTML}
                     </div>
                 </div>
             `;
@@ -289,8 +363,7 @@ class ContentsRenderer {
                         <div class="post-vid-time">${this.formatDate(post.date)}</div>
                     </div>
                     <div class="post-img-tags">
-                        <span class="post-img-tag">${categoryTag}</span>
-                        <span class="post-img-tag">#NOMAD</span>
+                        ${tagsHTML}
                     </div>
                 </div>
             `;
@@ -312,8 +385,7 @@ class ContentsRenderer {
                     ${imagesHTML}
                 </div>
                 <div class="post-img-tags">
-                    <span class="post-img-tag">${categoryTag}</span>
-                    <span class="post-img-tag">#NOMAD</span>
+                    ${tagsHTML}
                 </div>
             </div>
         `;
@@ -357,12 +429,20 @@ class ContentsRenderer {
         `;
     }
 
-    // 히어로 섹션 렌더링
+    // 히어로 섹션 렌더링 (madzip 카테고리 제외)
     renderHero(containerSelector) {
         const container = document.querySelector(containerSelector);
         if (!container || this.posts.length === 0) return;
 
-        const latestPosts = [...this.posts]
+        // madzip 카테고리 제외한 포스트만 필터링
+        const filteredPosts = this.posts.filter(p => p.category !== 'madzip');
+        
+        if (filteredPosts.length === 0) {
+            container.innerHTML = '';
+            return;
+        }
+
+        const latestPosts = [...filteredPosts]
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .slice(0, 4);
 

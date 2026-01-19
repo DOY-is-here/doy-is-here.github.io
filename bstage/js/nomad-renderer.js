@@ -5,8 +5,8 @@ class NomadRenderer {
         this.posts = [];
     }
 
-    // JSON 데이터 로드
-    async loadPosts(jsonPath = 'data/nomad-posts.json') {
+    // JSON 데이터 로드 (경로 수정: bstage/data)
+    async loadPosts(jsonPath = 'bstage/data/nomad-posts.json') {
         try {
             const response = await fetch(jsonPath);
             const data = await response.json();
@@ -78,7 +78,7 @@ class NomadRenderer {
                 <div class="post-header">
                     <div class="profile-pic"></div>
                     <div class="profile-user">
-                        <span class="profile-name">도의</span>
+                        <span class="profile-name">도영</span>
                         <span class="profile-icon-check"></span>
                     </div>
                     <div class="post-right">
@@ -151,7 +151,7 @@ class NomadRenderer {
                         <div class="profile-pic"></div>
                         <div class="profile-user-detail">
                             <div class="profile-user">
-                                <span class="profile-name">도의</span>
+                                <span class="profile-name">도영</span>
                                 <span class="profile-icon-check"></span>
                             </div>
                             <div class="post-date">
