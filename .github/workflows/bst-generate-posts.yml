@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'bstage-nomad/**'
+      - 'bstage-nomad-comment/**'
       - 'bstage-madzip/**'
   workflow_dispatch:
 

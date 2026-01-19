@@ -78,7 +78,7 @@ class NomadRenderer {
                 <div class="post-header">
                     <div class="profile-pic"></div>
                     <div class="profile-user">
-                        <span class="profile-name">도영</span>
+                        <span class="profile-name">도의</span>
                         <span class="profile-icon-check"></span>
                     </div>
                     <div class="post-right">
@@ -90,6 +90,57 @@ class NomadRenderer {
                 <div class="post-meta">
                     <span>${this.formatDate(post.date)}</span>
                     <span>댓글 ${post.comments}개</span>
+                </div>
+            </div>
+        `;
+    }
+
+    // 댓글 렌더링
+    renderComments(commentList) {
+        if (!commentList || commentList.length === 0) {
+            return '';
+        }
+
+        const commentsHTML = commentList.map(comment => {
+            // base가 있으면 표시, 없으면 생략
+            const baseHTML = comment.base 
+                ? `<div class="post-comment-base">${comment.base}</div>` 
+                : '';
+            
+            // doy가 있으면 표시, 없으면 생략
+            const doyHTML = comment.doy 
+                ? `<div class="post-comment-doy">${comment.doy}</div>` 
+                : '';
+            
+            // 둘 다 없으면 아이템 자체를 생략
+            if (!comment.base && !comment.doy) return '';
+
+            return `
+                <div class="post-comment-list">
+                    <div class="profile-ring">
+                        <div class="post-profile-comment"></div>
+                    </div>
+                    <div class="post-comment">
+                        <div class="post-comment-user">
+                            <span class="post-comment-name">도의</span>
+                            <span class="profile-icon-check"></span>
+                        </div>
+                        <div class="post-comment-box">
+                            <div class="post-comment-text">
+                                ${baseHTML}
+                                ${doyHTML}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        return `
+            <div class="nomad-comment-feed">
+                <div class="post-comments">
+                    <div class="post-comment-star">스타댓글</div>
+                    ${commentsHTML}
                 </div>
             </div>
         `;
@@ -144,6 +195,9 @@ class NomadRenderer {
             `;
         }
 
+        // 댓글 렌더링
+        const commentsHTML = this.renderComments(post.commentList);
+
         return `
             <div class="nomad-feed-detail">
                 <div class="nomad-detail-post">
@@ -151,7 +205,7 @@ class NomadRenderer {
                         <div class="profile-pic"></div>
                         <div class="profile-user-detail">
                             <div class="profile-user">
-                                <span class="profile-name">도영</span>
+                                <span class="profile-name">도의</span>
                                 <span class="profile-icon-check"></span>
                             </div>
                             <div class="post-date">
@@ -166,6 +220,8 @@ class NomadRenderer {
                     ${mediaHTML}
 
                     ${post.text ? `<div class="detail-text">${post.text}</div>` : ''}
+                    
+                    ${commentsHTML}
                 </div>
             </div>
         `;
