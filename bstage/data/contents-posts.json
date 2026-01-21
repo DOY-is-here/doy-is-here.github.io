@@ -32,7 +32,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-250220",
@@ -66,7 +66,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-250128",
@@ -104,7 +104,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-250123",
@@ -134,7 +134,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-250111",
@@ -184,7 +184,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-250105",
@@ -218,7 +218,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-241224",
@@ -244,7 +244,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-241208",
@@ -270,7 +270,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-241123",
@@ -292,7 +292,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-241031",
@@ -326,7 +326,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-241030",
@@ -352,7 +352,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-241023",
@@ -406,7 +406,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-241013",
@@ -456,7 +456,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-240920",
@@ -482,7 +482,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-240823",
@@ -508,7 +508,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-240610",
@@ -538,7 +538,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-240607",
@@ -568,7 +568,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-240402",
@@ -590,7 +590,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-240401",
@@ -640,7 +640,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-240321",
@@ -670,7 +670,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-240314",
@@ -716,7 +716,7 @@
       ],
       "comments": 0,
       "category": "madzip",
-      "tags": []
+      "tags": ["#PHOTO"]
     },
     {
       "id": "post-240214",
@@ -733,8 +733,8 @@
         }
       ],
       "comments": 0,
-      "category": "BEHIND",
-      "tags": []
+      "category": "behind",
+      "tags": ["#PHOTO"]
     }
   ]
 }

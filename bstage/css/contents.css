@@ -70,7 +70,6 @@
     border-radius: 6px;
     object-fit: cover;
     flex-shrink: 0;
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
     cursor: pointer;
 }
 
@@ -245,12 +244,13 @@
     font-size: 14px;
     font-weight: 400;
     color: rgb(238, 238, 238);
+    max-width: 190px;    
+    display: -webkit-box;
 }
 
 .content-item {
     display: flex;
     flex-direction: column;
-    gap: 16px;
 }
 
 

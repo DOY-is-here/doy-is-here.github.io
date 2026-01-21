@@ -6,11 +6,18 @@ class ContentsRenderer {
         
         // 카테고리 설정
         this.categories = {
+            whoami: { name: 'WHO AM I', tag: '#WHOAMI' },
+            nomad: { name: '1st EP NOMAD', tag: '#NOMAD' },
+            callmeback: { name: '1st Single Call Me Back', tag: '#CallMeBack' },
+            carnival: { name: 'Digital Single CARNIVAL', tag: '#CARNIVAL' },
             madzip: { name: 'MAD.zip', tag: '#MAD.zip' },
             behind: { name: 'Behind', tag: '#Behind' },
-            vlog: { name: 'V-log', tag: '#V-log' },
-            interview: { name: 'Interview', tag: '#Interview' },
-            etc: { name: '기타', tag: '#기타' }
+            cover: { name: 'COVER', tag: '#COVER' },
+            nobackgo: { name: 'NOBACKGO', tag: '#NOBACKGO' },
+            nogotit: { name: 'NO! GOT IT!', tag: '#NOGOTIT' },
+            noriter: { name: 'NORITER', tag: '#NORITER' },
+            nomaddrive: { name: 'NOMAD DRIVE', tag: '#NOMADDRIVE' },
+            '도쏜트': { name: '도쏜트', tag: '#도쏜트' },
         };
     }
 
@@ -406,15 +413,17 @@ class ContentsRenderer {
             .join('');
 
         return `
-            <div class="post-img-info">
-                <div class="post-img-title">${post.text || this.getCategoryName(category)}</div>
-                <div class="post-img-time">${this.formatDate(post.date)}</div>
-            </div>
-            <div class="post-img-grid">
-                ${imagesHTML}
-            </div>
-            <div class="post-tags">
-                ${tagsHTML}
+            <div class="contents-section-post">
+                <div class="post-img-info">
+                    <div class="post-img-title">${post.text || this.getCategoryName(category)}</div>
+                    <div class="post-img-time">${this.formatDate(post.date)}</div>
+                </div>    
+                <div class="post-img-grid">
+                    ${imagesHTML}
+                </div>
+                <div class="post-tags">
+                    ${tagsHTML}
+                </div>
             </div>
         `;
     }

@@ -47,6 +47,12 @@
     margin-top: 48px;
 }
 
+.post-vid iframe {
+    width: 100%;
+    height: 100%;
+    border: none; 
+}
+
 .post-vid-info {
     padding: 20px 16px;
 }
@@ -70,6 +76,7 @@
     font-weight: 500;
     color: rgb(238, 238, 238);
     padding-top: 9px;
+    line-height: 22px;      
 }
 
 

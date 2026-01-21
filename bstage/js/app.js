@@ -16,7 +16,7 @@ class BSTApp {
             // 데이터 로드
             await Promise.all([
                 this.nomadRenderer.loadPosts('data/nomad-posts.json'),
-                this.contentsRenderer.loadPosts('data/contents-posts.json')
+                this.contentsRenderer.loadPosts('data/contents-posts.json', 'data/youtube-posts.json')
             ]);
             
             this.initializeTabSwitching();
