@@ -438,6 +438,17 @@ function mergePosts(existingPosts, newPosts, type) {
                 post.comments = post.commentList.length;
             }
             
+            // youtube 타입이면 youtube, description 추가
+            if (type === 'youtube') {
+                post.text = newPost.text || '';
+                post.youtube = newPost.youtube;
+                post.description = newPost.description || '';
+                post.category = newPost.category || 'etc';
+                post.tags = newPost.tags || [];
+                delete post.media;
+                delete post.comments;
+            }
+            
             result.push(post);
             added++;
         }
