@@ -25,8 +25,113 @@ const CONFIG = {
         folder: 'bstage-madzip',
         output: 'bstage/data/contents-posts.json',
         type: 'contents'
+    },
+    youtube: {
+        youtubeFile: 'bstage-madzip/youtube-url.txt',
+        output: 'bstage/data/youtube-posts.json',
+        type: 'youtube'
     }
 };
+
+// 유튜브 txt 파일 파싱
+function parseYoutubeFile(filePath) {
+    if (!filePath || !fs.existsSync(filePath)) {
+        return [];
+    }
+    
+    try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        const lines = content.split('\n');
+        const posts = [];
+        const dateCount = {}; // 같은 날짜 카운트용
+        
+        let currentDate = null;
+        let currentTitle = null;
+        let currentUrl = null;
+        let currentDesc = [];
+        let urlFound = false;
+        
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+            
+            // 날짜 패턴: 2025. 12. 29. 또는 2024. 1. 8.
+            const dateMatch = line.match(/^(\d{4})\.\s*(\d{1,2})\.\s*(\d{1,2})\.?\s*$/);
+            if (dateMatch) {
+                // 이전 항목 저장
+                if (currentDate && currentUrl) {
+                    const dateStr = currentDate.replace(/-/g, '').substring(2);
+                    dateCount[dateStr] = (dateCount[dateStr] || 0) + 1;
+                    const count = dateCount[dateStr];
+                    const postId = count > 1 ? `yt-${dateStr}-${count}` : `yt-${dateStr}`;
+                    
+                    posts.push({
+                        id: postId,
+                        date: currentDate,
+                        text: currentTitle || '',
+                        description: currentDesc.join('\n').trim() || '',
+                        youtube: currentUrl.split('?')[0], // si= 파라미터 제거
+                        media: [],
+                        category: 'etc',
+                        tags: []
+                    });
+                }
+                
+                // 새 항목 시작
+                const year = dateMatch[1];
+                const month = dateMatch[2].padStart(2, '0');
+                const day = dateMatch[3].padStart(2, '0');
+                currentDate = `${year}-${month}-${day}`;
+                currentTitle = null;
+                currentUrl = null;
+                currentDesc = [];
+                urlFound = false;
+                continue;
+            }
+            
+            // 유튜브 URL 패턴
+            if (line.includes('youtube.com') || line.includes('youtu.be')) {
+                currentUrl = line;
+                urlFound = true;
+                continue;
+            }
+            
+            // 제목 (날짜 다음 줄, URL 전)
+            if (currentDate && !currentTitle && line && !urlFound) {
+                currentTitle = line;
+                continue;
+            }
+            
+            // 설명 (URL 다음 줄들)
+            if (urlFound && line) {
+                currentDesc.push(line);
+            }
+        }
+        
+        // 마지막 항목 저장
+        if (currentDate && currentUrl) {
+            const dateStr = currentDate.replace(/-/g, '').substring(2);
+            dateCount[dateStr] = (dateCount[dateStr] || 0) + 1;
+            const count = dateCount[dateStr];
+            const postId = count > 1 ? `yt-${dateStr}-${count}` : `yt-${dateStr}`;
+            
+            posts.push({
+                id: postId,
+                date: currentDate,
+                text: currentTitle || '',
+                description: currentDesc.join('\n').trim() || '',
+                youtube: currentUrl.split('?')[0],
+                media: [],
+                category: 'etc',
+                tags: []
+            });
+        }
+        
+        return posts;
+    } catch (error) {
+        console.log(`   ⚠️  유튜브 파일 읽기 실패: ${filePath}`);
+        return [];
+    }
+}
 
 // 지원 확장자
 const IMAGE_EXTS = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
@@ -276,9 +381,25 @@ function mergePosts(existingPosts, newPosts, type) {
             
             // contents 타입이면 카테고리, 태그 보존
             if (type === 'contents') {
-                merged.category = existing.category || 'etc';
+                merged.category = existing.category || newPost.category || 'etc';
                 merged.tags = existing.tags || [];
-                if (existing.youtube) merged.youtube = existing.youtube;
+                // youtube는 새 값 우선, 없으면 기존 값
+                if (newPost.youtube) merged.youtube = newPost.youtube;
+                else if (existing.youtube) merged.youtube = existing.youtube;
+                // description도 새 값 우선
+                if (newPost.description) merged.description = newPost.description;
+                else if (existing.description) merged.description = existing.description;
+            }
+            
+            // youtube 타입
+            if (type === 'youtube') {
+                merged.text = existing.text || newPost.text || '';
+                merged.category = existing.category || newPost.category || 'etc';
+                merged.tags = existing.tags || [];
+                merged.youtube = newPost.youtube || existing.youtube;
+                merged.description = newPost.description || existing.description || '';
+                delete merged.media;
+                delete merged.comments;
             }
             
             // nomad 타입이면 댓글 목록 업데이트 + 개수 자동 계산
@@ -356,9 +477,37 @@ function saveJSON(outputPath, data) {
 
 // 메인 실행
 function main() {
-    console.log('🚀 JSON 생성 시작 (병합 모드 + 댓글 지원)\n');
+    console.log('🚀 JSON 생성 시작 (병합 모드 + 댓글/유튜브 지원)\n');
     
     Object.entries(CONFIG).forEach(([key, config]) => {
+        // youtube 타입은 별도 처리
+        if (config.type === 'youtube') {
+            console.log(`🎬 유튜브 파일 스캔 중...`);
+            
+            const youtubePosts = parseYoutubeFile(config.youtubeFile);
+            console.log(`   ${youtubePosts.length}개 유튜브 영상 발견`);
+            
+            // 기존 JSON 로드
+            const existing = loadExistingJSON(config.output);
+            
+            // 병합
+            const { posts, added, updated, removed } = mergePosts(
+                existing.posts, 
+                youtubePosts,
+                config.type
+            );
+            
+            // 저장
+            saveJSON(config.output, { posts });
+            
+            console.log(`✅ ${config.output} 저장 완료`);
+            console.log(`   총 ${posts.length}개 포스트`);
+            if (added > 0) console.log(`   ➕ 추가: ${added}개`);
+            if (removed > 0) console.log(`   ➖ 삭제: ${removed}개`);
+            console.log('');
+            return;
+        }
+        
         console.log(`📁 ${config.folder} 스캔 중...`);
         
         // 폴더 스캔
@@ -366,7 +515,7 @@ function main() {
         console.log(`   ${mediaFiles.length}개 미디어 파일 발견`);
         
         // 포스트로 그룹화 (댓글 폴더 전달)
-        const newPosts = groupIntoPosts(
+        let newPosts = groupIntoPosts(
             mediaFiles, 
             config.folder, 
             config.commentFolder || null

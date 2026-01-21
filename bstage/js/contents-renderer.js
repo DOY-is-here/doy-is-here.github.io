@@ -14,12 +14,32 @@ class ContentsRenderer {
         };
     }
 
-    // JSON 데이터 로드 (경로 수정: bstage/data)
-    async loadPosts(jsonPath = 'bstage/data/contents-posts.json') {
+    // JSON 데이터 로드 (contents + youtube 합쳐서)
+    async loadPosts(contentsPath = 'bstage/data/contents-posts.json', youtubePath = 'bstage/data/youtube-posts.json') {
         try {
-            const response = await fetch(jsonPath);
-            const data = await response.json();
-            this.posts = data.posts;
+            // contents와 youtube 동시 로드
+            const [contentsRes, youtubeRes] = await Promise.all([
+                fetch(contentsPath).catch(() => null),
+                fetch(youtubePath).catch(() => null)
+            ]);
+            
+            let contentsPosts = [];
+            let youtubePosts = [];
+            
+            if (contentsRes && contentsRes.ok) {
+                const contentsData = await contentsRes.json();
+                contentsPosts = contentsData.posts || [];
+            }
+            
+            if (youtubeRes && youtubeRes.ok) {
+                const youtubeData = await youtubeRes.json();
+                youtubePosts = youtubeData.posts || [];
+            }
+            
+            // 합쳐서 날짜순 정렬
+            this.posts = [...contentsPosts, ...youtubePosts]
+                .sort((a, b) => new Date(b.date) - new Date(a.date));
+            
             return this.posts;
         } catch (error) {
             console.error('Failed to load contents:', error);
@@ -143,6 +163,9 @@ class ContentsRenderer {
                 mediaHTML = `<img src="${thumbnail.src}" alt="" loading="lazy">`;
             }
         }
+
+        // 카테고리 표시
+        const categoryName = this.getCategoryName(post.category);
         
         return `
             <div class="content-item">
@@ -150,7 +173,13 @@ class ContentsRenderer {
                     ${mediaHTML}
                     ${hasYoutube ? '<span class="content-youtube">YouTube</span>' : ''}
                 </div>
-                <span class="content-data">${post.text || this.formatDate(post.date)}</span>
+                <div class="content-info">
+                    <div class="content-category">
+                        <span class="content-folder-icon"></span>
+                        <span class="content-category-name">${categoryName}</span>
+                    </div>
+                    <span class="content-data">${post.text || ''}</span>
+                </div>
             </div>
         `;
     }
@@ -315,37 +344,39 @@ class ContentsRenderer {
         
         return allTags.map(tag => {
             const tagName = tag.replace('#', '');
-            return `<span class="post-img-tag" onclick="window.BSTApp.showTagList('${tagName}')">${tag}</span>`;
+            return `<span class="post-tag" onclick="window.BSTApp.showTagList('${tagName}')">${tag}</span>`;
         }).join('');
     }
 
-    // 상세 포스트 렌더링 (유튜브 임베드 + 태그 표시)
+    // 상세 포스트 렌더링 (유튜브 임베드 + 태그 + 설명 표시)
     renderDetail(post) {
         if (!post) return '';
 
         const category = post.category || 'etc';
         const tagsHTML = this.renderTags(post);
+        const descHTML = post.description 
+            ? `<div class="post-vid-exp">${post.description.replace(/\n/g, '<br>')}</div>` 
+            : '';
 
         // 유튜브가 있으면 임베드
         if (post.youtube) {
             const embedUrl = this.getYoutubeEmbedUrl(post.youtube);
             return `
-                <div class="contents-section-post">
-                    <div class="post-vid">
-                        <iframe 
-                            src="${embedUrl}" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="post-vid-info">
-                        <div class="post-vid-title">${post.text || this.getCategoryName(category)}</div>
-                        <div class="post-vid-time">${this.formatDate(post.date)}</div>
-                    </div>
-                    <div class="post-img-tags">
+                <div class="post-vid">
+                    <iframe 
+                        src="${embedUrl}" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="post-vid-info">
+                    <div class="post-vid-title">${post.text || this.getCategoryName(category)}</div>
+                    <div class="post-vid-time">${this.formatDate(post.date)}</div>
+                    <div class="post-tags">
                         ${tagsHTML}
                     </div>
+                    ${descHTML}
                 </div>
             `;
         }
@@ -354,17 +385,16 @@ class ContentsRenderer {
         const video = post.media?.find(m => m.type === 'video');
         if (video) {
             return `
-                <div class="contents-section-post">
-                    <div class="post-vid">
-                        <video src="${this.baseUrl}${video.src}" controls playsinline></video>
-                    </div>
-                    <div class="post-vid-info">
-                        <div class="post-vid-title">${post.text || this.getCategoryName(category)}</div>
-                        <div class="post-vid-time">${this.formatDate(post.date)}</div>
-                    </div>
-                    <div class="post-img-tags">
+                <div class="post-vid">
+                    <video src="${this.baseUrl}${video.src}" controls playsinline></video>
+                </div>
+                <div class="post-vid-info">
+                    <div class="post-vid-title">${post.text || this.getCategoryName(category)}</div>
+                    <div class="post-vid-time">${this.formatDate(post.date)}</div>
+                    <div class="post-tags">
                         ${tagsHTML}
                     </div>
+                    ${descHTML}
                 </div>
             `;
         }
@@ -376,17 +406,15 @@ class ContentsRenderer {
             .join('');
 
         return `
-            <div class="contents-section-post">
-                <div class="post-img-info">
-                    <div class="post-img-title">${post.text || this.getCategoryName(category)}</div>
-                    <div class="post-img-time">${this.formatDate(post.date)}</div>
-                </div>
-                <div class="post-img-grid">
-                    ${imagesHTML}
-                </div>
-                <div class="post-img-tags">
-                    ${tagsHTML}
-                </div>
+            <div class="post-img-info">
+                <div class="post-img-title">${post.text || this.getCategoryName(category)}</div>
+                <div class="post-img-time">${this.formatDate(post.date)}</div>
+            </div>
+            <div class="post-img-grid">
+                ${imagesHTML}
+            </div>
+            <div class="post-tags">
+                ${tagsHTML}
             </div>
         `;
     }

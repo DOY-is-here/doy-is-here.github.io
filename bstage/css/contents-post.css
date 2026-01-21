@@ -36,13 +36,51 @@
     color: rgb(153, 153, 153);
 }
 
-.post-img-tags {
+
+/* 컨텐츠 포스트 - 비디오 */
+.post-vid {
+    position: relative;
+    width: 394px;
+    height: 222px;
+    aspect-ratio: 16 / 9;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.post-vid-info {
+    padding: 20px 16px;
+}
+
+.post-vid-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(238, 238, 238);
+    padding-bottom: 26px;
+}
+
+.post-vid-time {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+    padding-bottom: 24px;
+}
+
+.post-vid-exp {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(238, 238, 238);
+    padding-top: 9px;
+}
+
+
+/* 태그 */
+.post-tags {
   display: flex;
   flex-wrap: wrap;   
   gap: 8px;          
 }
 
-.post-img-tag {
+.post-tag {
   font-size: 15px;
   font-weight: 400;
   color: rgb(0, 144, 255);
