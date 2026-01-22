@@ -140,7 +140,7 @@
       "date": "2025-04-11",
       "text": "[노빠꾸 NOBACKGO] EP.09 東京 特集 : 【それは何だよ RIVR君 ツアー】 그.뭔.립 투어 (※한국어 자막 있음)",
       "category": "nobackgo",
-      "tags": [],
+      "tags": ["노빠꾸"],
       "youtube": "https://youtu.be/755841_GUzo",
       "description": "그게 뭔데 리버야…?\n리버 가이드와 함께 하는 노매드의 도쿄 투어!\n잔뜩 기대하고 있는 멤버들에게\n상상도 못한 투어 일정들이 기다리고 있는데…\n“우리 리버 하고 싶은 거 다 해~”"
     },
@@ -158,7 +158,7 @@
       "date": "2025-03-21",
       "text": "[NOMAD DRIVE] 'CARNIVAL' SELFIE CAM",
       "category": "carnival",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/srUeoXocHws",
       "description": ""
     },
@@ -167,7 +167,7 @@
       "date": "2025-03-18",
       "text": "[NOMAD DRIVE] 'CARNIVAL' LIVE IN CARNIVAL",
       "category": "carnival",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/-zFYNquWYJ0",
       "description": ""
     },
@@ -185,7 +185,7 @@
       "date": "2025-03-04",
       "text": "'CARNIVAL' Recording Behind",
       "category": "carnival",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/MobjqVjF6MA",
       "description": ""
     },
@@ -194,7 +194,7 @@
       "date": "2025-02-28",
       "text": "NOMAD 노매드 'CARNIVAL' Official Audio",
       "category": "carnival",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/7hdCjdBJzd8",
       "description": ""
     },
@@ -221,7 +221,7 @@
       "date": "2025-01-28",
       "text": "[노빠꾸 NOBACKGO] EP.08 HAPPY NEW YEAR 2025 : 설날매드 NOMAD’s Seollal",
       "category": "nobackgo",
-      "tags": [],
+      "tags": ["노빠꾸"],
       "youtube": "https://youtu.be/eNA30eoYOxg",
       "description": "노매드가 함께 맞이하는 첫 설날!\n상하는 멤버들에게 설날을 제대로 느끼게 해주겠다며\n집으로 초대를 하는데…\n상하네 집에 초대된 멤버들은 어떤 하루를 보내게 될까?!"
     },
@@ -248,7 +248,7 @@
       "date": "2025-01-05",
       "text": "[노빠꾸 NOBACKGO] EP.07 GOODBYE 2024 : 노매드 송년회 NOMAD year-end party",
       "category": "nobackgo",
-      "tags": [],
+      "tags": ["노빠꾸"],
       "youtube": "https://youtu.be/799o_J7I_Ko",
       "description": "GOODBYE 2024!\n2024년 한 해 정신없이 달려온 멤버들을 위한 힐링매드부터\n예스매드가 준비한 2024 NOMAD AWARDS까지\n노매드의 첫 번째 송년회!!"
     },
@@ -257,7 +257,7 @@
       "date": "2024-12-24",
       "text": "[노가리 NO! GOT IT!] EP.09 크리스마스 만찬회 with BASE",
       "category": "nogotit",
-      "tags": [],
+      "tags": ["노가리","PODCAST"],
       "youtube": "https://youtu.be/bqOSF6DAWO0",
       "description": ""
     },
@@ -284,7 +284,7 @@
       "date": "2024-11-22",
       "text": "[노빠꾸 NOBACKGO] EP.06 직장매드 PART 2 : 아이디어 빼먹는 부장님 Grabbing out ideas from team members",
       "category": "nobackgo",
-      "tags": [],
+      "tags": ["노빠꾸"],
       "youtube": "https://youtu.be/QHgnyBdRPv0",
       "description": "직장매드 두 번째 이야기!\nNOMAD ENT. 마케팅팀의 하루!\n팀원들 아이디어로 실적 올리는 부장님…?\n빠꾸 없이 보여주는 노매드 멤버들의 직장 생활!!"
     },
@@ -293,7 +293,7 @@
       "date": "2024-11-15",
       "text": "[노빠꾸 NOBACKGO] EP.05 직장매드 PART 1 : 마케팅팀의 하루 A Day Being as Marketing Team",
       "category": "nobackgo",
-      "tags": [],
+      "tags": ["노빠꾸"],
       "youtube": "https://youtu.be/NwGF9URtMJk",
       "description": "직장매드 첫 번째 이야기!\nNOMAD ENT. 마케팅팀의 하루!\n우리 회사에 이런 상사가 있다면…?\n빠꾸 없이 보여주는 노매드 멤버들의 직장 생활!!"
     },
@@ -329,7 +329,7 @@
       "date": "2024-10-26",
       "text": "[노가리 NO! GOT IT!] Spin-off with Cha cha Malone",
       "category": "nogotit",
-      "tags": [],
+      "tags": ["노가리","PODCAST"],
       "youtube": "https://youtu.be/D_vufXrEp1k",
       "description": ""
     },
@@ -338,7 +338,7 @@
       "date": "2024-10-22",
       "text": "NOMAD (노매드) 'Call Me Back' Dance Practice",
       "category": "callmeback",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/4pkoIZpvZzA",
       "description": ""
     },
@@ -347,7 +347,7 @@
       "date": "2024-10-20",
       "text": "'Call Me Back' Listening Party (with BASE)",
       "category": "callmeback",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/GW_-oLCW4is",
       "description": ""
     },
@@ -356,7 +356,7 @@
       "date": "2024-10-14",
       "text": "'Call Me Back' Recording Behind",
       "category": "callmeback",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/ldacFE9TCZY",
       "description": ""
     },
@@ -365,7 +365,7 @@
       "date": "2024-10-12",
       "text": "'Call Me Back' Official MV Behind",
       "category": "callmeback",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/wuwAWx37-Sk",
       "description": ""
     },
@@ -374,7 +374,7 @@
       "date": "2024-10-10",
       "text": "'Call Me Back' Official MV Commentary",
       "category": "callmeback",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/TW1JERs1mI8",
       "description": ""
     },
@@ -383,7 +383,7 @@
       "date": "2024-10-09",
       "text": "NOMAD (노매드) 'Call Me Back' Official MV",
       "category": "callmeback",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/sD44sjGm1GM",
       "description": "NOMAD (노매드) 'Call Me Back' Official MV\nCredits:\nLyrics by DOY\nComposed and Arranged by\nJordan Kyle, Daniel Church, Jayrah Gibson, DOY, DK\nVocal Directed by DOY, Maxx Song, DK\nBackground Vocals by DOY, RIVR\nRecorded by DOY, 김재연, DK @ ICONIC Studio\nDigital Editing by DOY, 김재연, Maxx Song\nMixed by 김재연 @ ICONIC Studio\nMastered by 최효영 @ Suono mastering\nARTIST | NOMAD\nMusic Video Director | jjirun, lord, kino, won @MILPOWDER\nExecutive Director | SEOK HYUNG LEE\nCreative Director | SEO DONGGEON\nArt & Design | 박지상, 김아름, 강은교 @ Studio MONUAL\nPhotography | 윤이서\nHAIR | CHOI BORA\nMAKE UP | HAN AHREUM\nSTYLIST | LEE DONGYUN\nChoreography by Sungchan Park\nDirected by Sungchan Park, DOY"
     },
@@ -392,7 +392,7 @@
       "date": "2024-10-08",
       "text": "NOMAD (노매드) 'Call Me Back' Official Teaser",
       "category": "callmeback",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/YxBbHgWI-UY",
       "description": ""
     },
@@ -401,7 +401,7 @@
       "date": "2024-10-07",
       "text": "NOMAD (노매드) ‘Call Me Back’ Concept Trailer - 도의 (DOY)",
       "category": "callmeback",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/kHHlb7aE8_E",
       "description": ""
     },
@@ -410,7 +410,7 @@
       "date": "2024-10-02",
       "text": "'Call Me Back' Pre-Listening Reaction",
       "category": "callmeback",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/ddbN0UhPuzg",
       "description": ""
     },
@@ -419,7 +419,7 @@
       "date": "2024-09-20",
       "text": "[노빠꾸 NOBACKGO] EP.04 노매드의 나가리 PART 2 : 여름방학 NOMAD’s Summer Holidays",
       "category": "nobackgo",
-      "tags": [],
+      "tags": ["노빠꾸"],
       "youtube": "https://youtu.be/B00ssxKZmMM",
       "description": "노매드의 나가리 두 번째 이야기!\n노매드의 진짜 여름 방학이 시작된다!\n어디서도 볼 수 없던 노매드의 찐 모먼트!!"
     },
@@ -437,7 +437,7 @@
       "date": "2024-09-13",
       "text": "[노빠꾸 NOBACKGO] EP.03 노매드의 나가리 PART 1 : 낙오매드 NOMAD’s heading out",
       "category": "nobackgo",
-      "tags": [],
+      "tags": ["노빠꾸"],
       "youtube": "https://youtu.be/b7D3CcwAP7g",
       "description": "노매드의 여름 방학…인 줄 알았지~?\n한번 뱉은 말은 주워 담을 수 없다!\n노매드가 원하는 건 빠꾸없이 진행시키는 예스매드!!"
     },
@@ -446,7 +446,7 @@
       "date": "2024-09-04",
       "text": "[노가리 NO! GOT IT!] EP.08 만약 아이돌이 아니었다면? What if I wasn't a K-POP singer?",
       "category": "nogotit",
-      "tags": [],
+      "tags": ["노가리","PODCAST"],
       "youtube": "https://youtu.be/JJccGRp8dJM",
       "description": "#NOGOTITwithBASE\n베이스의 신박한 질문과 함께하는\nNOMAD의 팟캐스트 NO! GOT IT!\n백분토론을 방불케 하는 극강의 논리(?) 싸움🤜🤛\n과연 승자는?"
     },
@@ -455,7 +455,7 @@
       "date": "2024-08-26",
       "text": "[노가리 NO! GOT IT!] EP.07 DOY 형 리더 자리 저에게 주시죠? DOY, Let me be the Leader from now on",
       "category": "nogotit",
-      "tags": [],
+      "tags": ["노가리","PODCAST"],
       "youtube": "https://youtu.be/1Z-xC3rNaT4",
       "description": "DOY, Let me be the Leader from now on\n#NOGOTITwithBASE\n베이스의 신박한 질문과 함께하는\nNOMAD의 팟캐스트 NO! GOT IT!\n백분토론을 방불케 하는 극강의 논리(?) 싸움🤜🤛\n과연 승자는?"
     },
@@ -464,7 +464,7 @@
       "date": "2024-08-23",
       "text": "[노빠꾸 NOBACKGO] EP.02 여름 보양식 만들기 PART 2 : 요리도 노빠꾸다! Straight Forward Cooking",
       "category": "nobackgo",
-      "tags": [],
+      "tags": ["노빠꾸"],
       "youtube": "https://youtu.be/oV_Ws47ijAQ",
       "description": "말복 맞이 여름 보양식 만들기 두 번째 이야기!\n장바구니 공개와 함께 충격에 빠지는 노매드…\n빠꾸 없이 보여주는 노매드 멤버들의 케미!!"
     },
@@ -473,7 +473,7 @@
       "date": "2024-08-14",
       "text": "[노빠꾸 NOBACKGO] EP.01 여름 보양식 만들기 PART 1 : 빠꾸 없이 장보기! Making Summer Delicacy",
       "category": "nobackgo",
-      "tags": [],
+      "tags": ["노빠꾸"],
       "youtube": "https://youtu.be/FhCSJO6zj_M",
       "description": "드디어 시작된 노매드의 첫 자컨!\n말복 맞이 여름 보양식을 만들기 위해 장을 보는데…\n빠꾸 없이 보여주는 노매드 멤버들의 케미!!"
     },
@@ -482,7 +482,7 @@
       "date": "2024-08-12",
       "text": "No... Stop it..... | 노가리 NO! GOT IT! EP.06",
       "category": "nogotit",
-      "tags": [],
+      "tags": ["노가리","PODCAST"],
       "youtube": "https://youtu.be/cN1hPUQ3IKE",
       "description": "극강 밸런스 게임부터 노매드의 추천 플레이리스트까지\n자유롭게 씹고 뜯고 맛보고 즐겨 보아요😜"
     },
@@ -491,7 +491,7 @@
       "date": "2024-08-09",
       "text": "[노빠꾸 NOBACKGO] TEASER 노매드는! 빠꾸없다!",
       "category": "nobackgo",
-      "tags": [],
+      "tags": ["노빠꾸"],
       "youtube": "https://youtu.be/ldvEbMCCtsI",
       "description": ""
     },
@@ -500,7 +500,7 @@
       "date": "2024-08-01",
       "text": "먹는 거에 진심인 사람들🤤 | 노가리 NO! GOT IT! EP.05",
       "category": "nogotit",
-      "tags": [],
+      "tags": ["노가리","PODCAST"],
       "youtube": "https://youtu.be/bzyOnfgFPLQ",
       "description": ""
     },
@@ -509,7 +509,7 @@
       "date": "2024-07-24",
       "text": "고백을 많이 받아 봤다 손🖐️ | 노가리 NO! GOT IT! EP.04",
       "category": "nogotit",
-      "tags": [],
+      "tags": ["노가리","PODCAST"],
       "youtube": "https://youtu.be/U1Y_x6LOUUI",
       "description": ""
     },
@@ -536,7 +536,7 @@
       "date": "2024-07-04",
       "text": "어지럽다 어지러워😵‍💫 | 노가리 NO! GOT IT! EP.03",
       "category": "nogotit",
-      "tags": [],
+      "tags": ["노가리","PODCAST"],
       "youtube": "https://youtu.be/B7H3ydYvCNQ",
       "description": ""
     },
@@ -581,7 +581,7 @@
       "date": "2024-06-13",
       "text": "그게 대체 뭐길래⁉️ | 노가리 NO! GOT IT! EP.02",
       "category": "nogotit",
-      "tags": [],
+      "tags": ["노가리","PODCAST"],
       "youtube": "https://youtu.be/J2t5qyHizJo",
       "description": ""
     },
@@ -626,7 +626,7 @@
       "date": "2024-05-10",
       "text": "아니 그게 아니라요 오해입니다 | 노가리 NO! GOT IT! EP.01",
       "category": "nogotit",
-      "tags": [],
+      "tags": ["노가리","PODCAST"],
       "youtube": "https://youtu.be/guQdaYCxO94",
       "description": ""
     },
@@ -644,7 +644,7 @@
       "date": "2024-04-30",
       "text": "Chilling in VEGAS",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/ipj48n_1xVM",
       "description": ""
     },
@@ -653,7 +653,7 @@
       "date": "2024-04-26",
       "text": "겨울이지만 뜨거웠던 여긴 CALIFORNIA🌴 | 'California love' 음악방송 대기실 비하인드 _03",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/U7aT6CAM0Fo",
       "description": ""
     },
@@ -662,7 +662,7 @@
       "date": "2024-04-19",
       "text": "어떤 압박도 날 빛나게 만들지🔥 | 'No pressure' 음악방송 대기실 비하인드 _02",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/XdUtc0awHVw",
       "description": ""
     },
@@ -671,7 +671,7 @@
       "date": "2024-04-16",
       "text": "California Love YEAH",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/pnHC_6CtNzQ",
       "description": ""
     },
@@ -680,7 +680,7 @@
       "date": "2024-04-09",
       "text": "No Pressure No Diamonds💎 | 'No pressure' 음악방송 대기실 비하인드 _01",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/j2-JY6qWqqs",
       "description": ""
     },
@@ -689,7 +689,7 @@
       "date": "2024-03-28",
       "text": "'California love' Recording Behind",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/o288ROHnkTU",
       "description": ""
     },
@@ -698,7 +698,7 @@
       "date": "2024-03-22",
       "text": "'California love' Official MV Behind",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/UQVZh2bZKQc",
       "description": ""
     },
@@ -707,7 +707,7 @@
       "date": "2024-03-21",
       "text": "NOMAD (노매드) 'California love' Dance Practice",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/vjAVp5X68u8",
       "description": ""
     },
@@ -716,7 +716,7 @@
       "date": "2024-03-20",
       "text": "'California love' Official MV Commentary",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/4JdhOwVfBno",
       "description": ""
     },
@@ -725,7 +725,7 @@
       "date": "2024-03-18",
       "text": "NOMAD (노매드) 'California love' Choreography Video (Conti ver.)",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/ktYxK7nvBCw",
       "description": ""
     },
@@ -734,7 +734,7 @@
       "date": "2024-03-15",
       "text": "NOMAD (노매드) 'NOMAD' Jacket Behind the Scene (California love ver.)",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/PkPRmEypRpQ",
       "description": ""
     },
@@ -743,7 +743,7 @@
       "date": "2024-03-13",
       "text": "NOMAD (노매드) 'California love' Official MV",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/bJ0xBjneKRQ",
       "description": ""
     },
@@ -752,7 +752,7 @@
       "date": "2024-03-12",
       "text": "NOMAD (노매드) 'No pressure' Dance Practice",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/BAwko-ztRjk",
       "description": ""
     },
@@ -761,7 +761,7 @@
       "date": "2024-03-08",
       "text": "'No pressure' Official MV Behind",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/1KAAe5Uceh4",
       "description": ""
     },
@@ -770,7 +770,7 @@
       "date": "2024-03-06",
       "text": "'No pressure' Recording Behind",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/Z3WZJzPg_D8",
       "description": ""
     },
@@ -779,7 +779,7 @@
       "date": "2024-03-04",
       "text": "NOMAD (노매드) 'No pressure' Choreography Video (Conti ver.)",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/sHHOyFq22OY",
       "description": ""
     },
@@ -788,7 +788,7 @@
       "date": "2024-03-04",
       "text": "NOMAD (노매드) DEBUT SHOWCASE “NOMAD IS HERE”",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/UTjy-WRoQpU",
       "description": ""
     },
@@ -797,7 +797,7 @@
       "date": "2024-03-01",
       "text": "NOMAD (노매드) 'NOMAD' Jacket Behind the Scene (No pressure ver.)",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/jCHTOSJ26cY",
       "description": ""
     },
@@ -806,7 +806,7 @@
       "date": "2024-02-28",
       "text": "NOMAD (노매드) 'No pressure' Official MV",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/MOChNMoc6Rk",
       "description": "NOMAD (노매드) 'No pressure' Official MV\nCredits:\nLyrics by DOY\nComposed and Arranged by Jayrah Gibson, DOY, PK Gharah Degeddingseze, Steve’ Diamond, DK\nVocal Directed by DOY, Maxx Song, 김재연 Background Vocals by DOY\nRecorded by DOY @ICONIC Studio,김재연 @ICONIC Studio\nDigital Editing by DOY, 김재연, Maxx Song\nMixed by 김재연 @ICONIC Studio\nMastered by 권남우 @821 Sound Mastering\nARTIST | NOMAD\nCreative Direction | SEO DONGGEON DK\nDirector | David Aure @ Aww Films LLC Production\nLocation coordination | Aww Films LLC Production\nHAIR | CHOI BORA\nMAKE UP | HAN AHREUM\nSTYLIST | LEE DONGYUN"
     },
@@ -815,7 +815,7 @@
       "date": "2024-02-27",
       "text": "NOMAD (노매드) 'California love' Official Teaser",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/DssZjCtz0NM",
       "description": ""
     },
@@ -824,7 +824,7 @@
       "date": "2024-02-25",
       "text": "NOMAD (노매드) 'No pressure' Official Teaser",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/ZVL_ysSC_fc",
       "description": ""
     },
@@ -833,7 +833,7 @@
       "date": "2024-02-23",
       "text": "NOMAD (노매드) 'Let me love you' Track Video",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/JXyLeUIpmeg",
       "description": "NOMAD (노매드) 'Let me love you' Track Video\nCredits:\nLyrics by DOY\nComposed and Arranged by Cha Cha Malone, DOY, Casper, DK\nVocal Directed by DOY\nBackground Vocals by DOY\nRecorded by DOY @ICONIC Studio\nDigital Editing by 김재연\nMixed by Cha Cha Malone @Chase Studio, Seattle WA\nMastered by 권남우 @821 Sound Mastering\nARTIST | NOMAD\nCreative Direction | SEO DONGGEON\nDirector | SEO DONGGEON, Project Untitle Inc.\nDP | Lee Jiwoo , Hwang Inseop\nLocation coordination: NOMAD productions\nHAIR | CHOI BORA\nMAKE UP | HAN AHREUM\nSTYLIST | LEE DONGYUN"
     },
@@ -842,7 +842,7 @@
       "date": "2024-02-22",
       "text": "NOMAD (노매드) 1st EP 'NOMAD' Highlight Medley",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/5VzHcHEZVHU",
       "description": ""
     },
@@ -851,7 +851,7 @@
       "date": "2024-02-16",
       "text": "1st EP 'NOMAD' SPOILER | DOY, SANGHA",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/hwFp4zIk0N4",
       "description": "💿 NOMAD (노매드) 1st EP \"NOMAD\" RELEASE 2024.02.28 6pm (KST)\n00:00 Highlight\n00:11 Debut - 1st EP “NOMAD”'\n03:24 1st EP “NOMAD\" Making Story\n04:39 'No pressure' Lyrics Making Story\n08:02 'No pressure' Choreography Making Story\n11:50 'California love' Performance Making story\n14:27 'Oasis' Making story\n16:46 'Eye 2 eye' Making story\n17:51 'Automatic' Making story\n19:52 'Let me love you' Making story\n22:55 NOMAD’s Next Destination"
     },
@@ -860,7 +860,7 @@
       "date": "2024-02-09",
       "text": "NOMAD (노매드) 'Oasis' Track Video",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/FcF3m-sqVMI",
       "description": "NOMAD (노매드) 'Oasis' Track Video\nCredits:\nLyrics by DOY\nComposed and Arranged by Tha Aristocratz,\nChikk ‘Rodnae’ Bell, DOY, Moon Kim, DK\nVocal Directed by DOY, Maxx Song, 김재연\nBackground Vocals by DOY\nRecorded by DOY @ICONIC Studio\n김재연 @ICONIC Studio\nDigital Editing by DOY, 김재연, Maxx Song\nMixed by 김재연 @ICONIC Studio\nMastered by 권남우 @821 Sound Mastering\nARTIST | NOMAD\nCreative Direction | SEO DONGGEON DK\nDirector | David Aure @ Aww Films LLC Production\nLocation coordination | Aww Films LLC Production\nHAIR | CHOI BORA\nMAKE UP | HAN AHREUM\nSTYLIST | LEE DONGYUN"
     },
@@ -869,7 +869,7 @@
       "date": "2024-02-01",
       "text": "Producing BTS with Cha Cha Malone",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/oT-o4VYtw8g",
       "description": ""
     },
@@ -878,7 +878,7 @@
       "date": "2024-01-24",
       "text": "NOMAD (노매드) ‘Automatic’ (prod. By Cha Cha Malone) Lyric Video",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/f40cQ2Ax3h4",
       "description": "NOMAD (노매드) ‘Automatic’ (prod. By Cha Cha Malone) Lyric Video\nCredits:\nLyrics by DOY\nComposed and Arranged by Cha Cha Malone, DOY\nVocal Directed by DOY\nBackground Vocals by DOY, Cha Cha Malone\nRecorded by DOY @ ICONIC Studio\nCha Cha Malone @ The Hideout Recording Studio\nDigital Editing by 김재연\nMixed by Cha Cha Malone @ Chase Studio, Seattle WA\nMastered by 권남우 @ 821 Sound Mastering\nARTIST | NOMAD\nCreative Direction | SEO DONGGEON\nDirector | SEO DONGGEON, Project Untitle Inc.\nDP | Lee Jiwoo , Hwang Inseop\nLocation coordination | NOMAD productions\nHAIR | CHOI BORA\nMAKE UP | HAN AHREUM\nSTYLIST | LEE DONGYUN"
     },
@@ -905,7 +905,7 @@
       "date": "2024-01-12",
       "text": "NOMAD (노매드) ‘Eye 2 eye’ (prod. By Cha Cha Malone) Lyric Video",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/ZVvTZTgT5UI",
       "description": "NOMAD (노매드) ‘Eye 2 eye’ (prod. By Cha Cha Malone) Lyric Video\nCredits:\nLyrics by DOY\nComposed and Arranged by Cha Cha Malone, DOY\nVocal Directed by DOY\nBackground Vocals by DOY, Cha Cha Malone\nRecorded by DOY @ ICONIC Studio\nDigital Editing by 김재연\nMixed by Cha Cha Malone @ Chase Studio, Seattle WA\nMastered by 권남우 @ 821 Sound Mastering\nARTIST | NOMAD\nCreative Direction | SEO DONGGEON\nDirector | SEO DONGGEON, Project Untitle Inc.\nDP | Lee Jiwoo , Hwang Inseop\nLocation coordination | NOMAD productions\nHAIR | CHOI BORA\nMAKE UP | HAN AHREUM\nSTYLIST | LEE DONGYUN"
     },
@@ -914,7 +914,7 @@
       "date": "2024-01-08",
       "text": "'Lights on' Performance Video Behind",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/LG1v9tsjphE",
       "description": ""
     },
@@ -923,7 +923,7 @@
       "date": "2024-01-02",
       "text": "'Lights on' Recording Behind",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/QgSZzC_-oAk",
       "description": ""
     },
@@ -941,7 +941,7 @@
       "date": "2023-12-29",
       "text": "'Lights on' Dance Practice Behind",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/aFb62GuTnnI",
       "description": ""
     },
@@ -950,7 +950,7 @@
       "date": "2023-12-27",
       "text": "NOMAD (노매드) 'Lights on' Performance Video",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/SPh6FzSjOVk",
       "description": "NOMAD (노매드) 'Lights on' Performance Video\nCredits:\nLyrics by DOY, 수윤, DK\nComposed and Arranged by Tha Aristocratz, Jayrah Gibson, DOY, DK\nSampling of Aaliyah “More than a woman”\nChoreography by Sungchan Park, XION, Sungkwan Kim\nDirected by Sungchan Park, DOY\nARTIST | NOMAD\nVocal Directed by DOY, Maxx Song, 김재연\nBackground Vocals by DOY, RIVR\nRecorded by DOY, 김재연 @ICONIC Studio\nDigital Editing by DOY, 김재연, Maxx Song\nMixed by 김재연 @ICONIC Studio\nMastered by 권남우 @821 Sound Mastering\nCreative Direction | SEO DONGGEON\nDirector | LEE JAEDON\nAssistant Director | HAN DABIN, CHO YOUNGBIN\nProducer | HONG YOUNGPYO(Sometimes Lucky)\nProduction Assistant | GWON JEONGEUN\nART DIRECTOR | JEON MINKYU\nVISUAL DIRECTION | RAKTA\nHAIR | LEE BONGJOO\nMAKE UP | KANG YOONJIN\nSTYLIST | LEE DONGYUN\nD.O.P | ANDY IERE KIM\n1st A.C | KIM EUNKI\n2nd A.C | PARK YOUNGSEO\nDIT | KIM HYUNJI\n3rd A.C | KIM SANGPHIL\nGaffer | GO HYUNJEONG\n1st | IM JUNHYUNG\n2nd | HA YEJUN\n3rd | SHIN HYUNWOO, LEE HYUNJUN\nJimmy Jip | Yeonhuidong Dalguzi\nOperator | KIM KITAE\n1st | BING JUNGHYUN\n2nd | PARK SEJIN\n3rd | KANG SEOKHOON"
     },
@@ -968,7 +968,7 @@
       "date": "2023-12-18",
       "text": "Profile Mood Video 'DOY'",
       "category": "nomad",
-      "tags": [],
+      "tags": ["ALBUM"],
       "youtube": "https://youtu.be/qqw-lAOiRrE",
       "description": ""
     },

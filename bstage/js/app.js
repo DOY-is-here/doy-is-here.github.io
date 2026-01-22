@@ -124,12 +124,12 @@ class BSTApp {
         
         // NOMAD 섹션 미리보기
         if (this.nomadRenderer.posts.length > 0) {
-            this.nomadRenderer.renderHomePreview('.tab-content[data-tab="home"] .home-section:nth-of-type(1) .home-grid');
+            this.nomadRenderer.renderHomePreview('#home-nomad-grid');
         }
         
         // Contents 섹션 미리보기
         if (this.contentsRenderer.posts.length > 0) {
-            this.contentsRenderer.renderHomePreview('.tab-content[data-tab="home"] .home-section:nth-of-type(2) .home-grid');
+            this.contentsRenderer.renderHomePreview('#home-contents-grid');
         }
     }
 
@@ -204,7 +204,7 @@ class BSTApp {
         this.activatePostHeader();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
+    
     // ========== CONTENTS 탭 ==========
     initializeContents() {
         console.log('Contents tab initialized');
@@ -255,6 +255,23 @@ class BSTApp {
         this.currentCategory = category; // 현재 카테고리 저장
         this.activatePostHeader();
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    showTagList(tagName) {
+    const tabContent = document.querySelector('.tab-content[data-tab="contents"]');
+    const contentList = document.querySelector('.tab-content[data-tab="content-list"]');
+    
+    if (tabContent) tabContent.style.display = 'none';
+    
+    // 태그별 리스트 렌더링
+    if (contentList && this.contentsRenderer.posts.length > 0) {
+        this.contentsRenderer.renderTagList('.tab-content[data-tab="content-list"]', tagName);
+        contentList.style.display = 'block';
+    }
+
+    this.previousView = 'main';
+    this.activatePostHeader();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     showContentsTag(tagName) {

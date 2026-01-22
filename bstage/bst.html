@@ -72,7 +72,7 @@
                     <!-- NOMAD 섹션 - 동적 렌더링 -->
                     <div class="home-section">
                         <div class="section-title">NOMAD</div>
-                        <div class="home-grid">
+                        <div class="home-grid" id="home-nomad-grid">
                             <div class="home-nomad" onclick="window.BSTApp.showContentsIMG('video-1')">
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                     <!-- Contents 섹션 -->
                     <div class="home-section">
                         <div class="section-title">Contents</div>
-                        <div class="home-grid">
+                        <div class="home-grid" id="home-contents-grid">
                             <div class="home-card-contnets" onclick="window.BSTApp.showContentsIMG('video-1')">
                             </div>
                             <div class="home-card-contnets" onclick="window.BSTApp.showContentsIMG('video-1')">
@@ -129,11 +129,15 @@
                     
                     <div class="contents-tagbar-wrap">
                         <div class="contents-tagbar">
-                            <button class="contents-icon-tag" onclick="window.BSTApp.showContentsTag('NOMAD')"></button>
-                            <button class="tag-btn" onclick="window.BSTApp.showContentsList('madzip')">MAD.zip</button>
-                            <button class="tag-btn" onclick="window.BSTApp.showContentsList('behind')">Behind</button>
-                            <button class="tag-btn" onclick="window.BSTApp.showContentsList('PHOTO')">PHOTO</button>
-                            <button class="tag-btn" onclick="window.BSTApp.showContentsList('interview')">Interview</button>
+                            <button class="contents-icon-tag"></button>
+                            <button class="tag-btn" onclick="window.BSTApp.showTagList('MAD.zip')">MAD.zip</button>                            
+                            <button class="tag-btn" onclick="window.BSTApp.showTagList('BEHIND')">BEHIND</button>
+                            <button class="tag-btn" onclick="window.BSTApp.showTagList('PHOTO')">PHOTO</button>
+                            <button class="tag-btn" onclick="window.BSTApp.showTagList('ALBUM')">ALBUM</button>
+                            <button class="tag-btn" onclick="window.BSTApp.showTagList('COVER')">COVER</button>
+                            <button class="tag-btn" onclick="window.BSTApp.showTagList('NORITER')">NORITER</button>
+                            <button class="tag-btn" onclick="window.BSTApp.showTagList('NOBACKGO')">NOBACKGO</button>
+                            <button class="tag-btn" onclick="window.BSTApp.showTagList('PODCAST')">PODCAST</button>
                         </div>
                     </div>
 
@@ -230,7 +234,7 @@
                                         <div class="pop-name">도의</div>
                                         <button class="profile-icon-check"></button>
                                     </div>
-                                    <div class="pop-message">보고있어도 보고싶고 안보고있으면 더 보고싶은 홍...</div>
+                                    <div class="pop-message"><br></div>
                                 </div>
                             </div>
                         </div>

@@ -10,8 +10,8 @@ class ContentsRenderer {
             nomad: { name: '1st EP NOMAD', tag: '#NOMAD' },
             callmeback: { name: '1st Single Call Me Back', tag: '#CallMeBack' },
             carnival: { name: 'Digital Single CARNIVAL', tag: '#CARNIVAL' },
-            madzip: { name: 'MAD.zip', tag: '#MAD.zip' },
-            behind: { name: 'Behind', tag: '#Behind' },
+            'MAD.zip': { name: 'MAD.zip', tag: '#MAD.zip' },
+            behind: { name: 'BEHIND', tag: '#BEHIND' },
             cover: { name: 'COVER', tag: '#COVER' },
             nobackgo: { name: 'NOBACKGO', tag: '#NOBACKGO' },
             nogotit: { name: 'NO! GOT IT!', tag: '#NOGOTIT' },
@@ -111,10 +111,20 @@ class ContentsRenderer {
     }
 
     // 태그별 포스트 필터링
-    getPostsByTag(tag) {
-        return this.posts.filter(p => p.tags && p.tags.includes(tag))
-            .sort((a, b) => new Date(b.date) - new Date(a.date));
-    }
+getPostsByTag(tag) {
+    const searchTag = tag.replace('#', '').toLowerCase();
+    return this.posts.filter(p => {
+        // 카테고리 매칭
+        if (p.category && p.category.toLowerCase() === searchTag) {
+            return true;
+        }
+        // 태그 매칭
+        if (p.tags) {
+            return p.tags.some(t => t.replace('#', '').toLowerCase() === searchTag);
+        }
+        return false;
+    }).sort((a, b) => new Date(b.date) - new Date(a.date));
+}
 
     // 모든 태그 가져오기 (중복 제거)
     getAllTags() {
@@ -192,7 +202,7 @@ class ContentsRenderer {
     }
 
     // Contents 섹션 렌더링 (카테고리별)
-    renderContentsSection(containerSelector, category, limit = 4) {
+    renderContentsSection(containerSelector, category) {
         const container = document.querySelector(containerSelector);
         if (!container) return;
 
@@ -215,7 +225,7 @@ class ContentsRenderer {
         const sectionsHTML = Object.keys(this.categories)
             .filter(cat => this.getPostsByCategory(cat).length > 0)
             .map(cat => {
-                const posts = this.getPostsByCategory(cat).slice(0, 4);
+                const posts = this.getPostsByCategory(cat).slice(0);
                 const cardsHTML = posts.map(post => 
                     this.renderGridCard(post, `window.BSTApp.showContentsDetail('${post.id}')`)
                 ).join('');
@@ -324,8 +334,7 @@ class ContentsRenderer {
         container.innerHTML = `
             <div class="contents-section-post">
                 <div class="section-post-header">
-                    <span class="content-list-title">#${tag}</span>
-                    <span class="content-list-count">${posts.length}개 콘텐츠</span>
+                    <span class="content-tag-title">#${tag}</span>
                 </div>
                 <div class="contents-list-grid">
                     ${listHTML}
@@ -428,8 +437,8 @@ class ContentsRenderer {
         `;
     }
 
-    // 홈 탭 미리보기 렌더링
-    renderHomePreview(containerSelector, limit = 2) {
+// 홈 탭 미리보기 렌더링 (흔들림 방지 + 사이즈 고정)
+    renderHomePreview(containerSelector, limit = 9) {
         const container = document.querySelector(containerSelector);
         if (!container) return;
 
@@ -441,16 +450,27 @@ class ContentsRenderer {
             const thumbnail = this.getThumbnailSrc(post);
             
             let mediaHTML = '';
+            // [핵심] display: block으로 하단 여백 제거, GPU 가속(translateZ)으로 흔들림 방지
+            const commonStyle = "width: 100%; height: 100%; object-fit: cover; display: block; transform: translateZ(0); pointer-events: none;";
+
             if (thumbnail) {
                 if (thumbnail.type === 'video') {
-                    mediaHTML = `<video src="${thumbnail.src}" muted></video>`;
+                    // 비디오: #t=0.01로 첫 프레임 고정 (깜빡임 방지)
+                    mediaHTML = `<video src="${thumbnail.src}#t=0.01" muted preload="metadata" 
+                                    style="${commonStyle}"></video>`;
                 } else {
-                    mediaHTML = `<img src="${thumbnail.src}" alt="" loading="lazy">`;
+                    // 이미지
+                    mediaHTML = `<img src="${thumbnail.src}" alt="" loading="lazy" 
+                                    style="${commonStyle}">`;
                 }
+            } else {
+                 mediaHTML = `<div style="width: 100%; height: 100%; background: #333;"></div>`;
             }
             
+            // 부모 div에 border-radius와 overflow: hidden을 적용하여 이미지를 틀 안에 가둠
             return `
-                <div class="home-card-contnets" onclick="window.BSTApp.showContentsDetail('${post.id}')">
+                <div class="home-card-contnets" onclick="window.BSTApp.showContentsDetail('${post.id}')" 
+                     style="cursor: pointer; border-radius: 8px; overflow: hidden; background: #000; transform: translateZ(0); -webkit-mask-image: -webkit-radial-gradient(white, black);">
                     ${mediaHTML}
                 </div>
             `;
@@ -458,7 +478,8 @@ class ContentsRenderer {
 
         container.innerHTML = previewHTML + `
             <div class="home-card-contnets">
-                <div class="card-more" onclick="window.BSTApp.switchTab('contents')">        
+                <div class="card-more" onclick="window.BSTApp.switchTab('contents')" 
+                     style="cursor: pointer; border-radius: 8px; overflow: hidden; transform: translateZ(0);">        
                     <span class="card-icon-more"></span>
                     <span>더보기</span>
                 </div>

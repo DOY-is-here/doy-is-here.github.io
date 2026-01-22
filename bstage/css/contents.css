@@ -246,6 +246,12 @@
     color: rgb(238, 238, 238);
     max-width: 190px;    
     display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    word-break: break-word;  
+    white-space-collapse: preserve-breaks; 
 }
 
 .content-item {

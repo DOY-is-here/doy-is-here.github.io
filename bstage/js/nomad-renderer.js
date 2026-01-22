@@ -244,32 +244,58 @@ class NomadRenderer {
         this.initializeCarousels();
     }
 
-    // 홈 탭 미리보기 렌더링
+// 홈 탭 미리보기 렌더링 (흔들림 방지 + 정지 화면 + 마스킹 + GPU 가속)
     renderHomePreview(containerSelector = '.home-section .home-grid') {
         const container = document.querySelector(containerSelector);
         if (!container) return;
 
-        // 최신 2개 포스트
+        // 최신 10개 포스트
         const latestPosts = [...this.posts]
             .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .slice(0, 2);
+            .slice(0, 9);
 
         const previewHTML = latestPosts.map(post => {
             const hasMedia = post.media && post.media.length > 0;
             const thumbnail = hasMedia ? post.media[0] : null;
             const isVideo = thumbnail?.type === 'video';
             
-            let mediaHTML = '';
+            let contentHTML = '';
+            
+            // 공통 스타일: 꽉 채우기 + GPU 가속(translateZ)
+            const commonStyle = "width: 100%; height: 100%; object-fit: cover; display: block; transform: translateZ(0);";
+            
             if (thumbnail) {
-                mediaHTML = isVideo ? 
-                    `<video src="${this.baseUrl}${thumbnail.src}" muted></video>` :
-                    `<img src="${this.baseUrl}${thumbnail.src}" alt="">`;
+                if (isVideo) {
+                    // 동영상: #t=0.01 (정지화면), pointer-events: none, will-change 최적화
+                    contentHTML = `<video src="${this.baseUrl}${thumbnail.src}#t=0.01" 
+                                    muted preload="metadata" playsinline 
+                                    style="${commonStyle} pointer-events: none; will-change: transform;">
+                                   </video>`;
+                } else {
+                    // 이미지
+                    contentHTML = `<img src="${this.baseUrl}${thumbnail.src}" alt="" 
+                                    style="${commonStyle}">`;
+                }
+            } else {
+                // 미디어 없음: 텍스트 노출
+                const textSnippet = post.text 
+                    ? `<div class="home-nomad-text" style="position: relative; bottom: auto; padding: 10px; color: rgba(255,255,255,0.8);">
+                        ${post.text.substring(0, 30)}${post.text.length > 30 ? '...' : ''}
+                       </div>` 
+                    : '';
+                
+                contentHTML = `
+                    <div style="${commonStyle} background: #333; display: flex; align-items: center; justify-content: center; text-align: center;">
+                        ${textSnippet}
+                    </div>
+                `;
             }
             
+            // 부모 div 스타일: 마스킹(-webkit-mask-image) 적용으로 모바일 둥근 모서리 흔들림 방지
             return `
-                <div class="home-nomad" onclick="window.BSTApp.showNOMADPost('${post.id}')">
-                    ${mediaHTML}
-                    ${post.text ? `<div class="home-nomad-text">${post.text.substring(0, 30)}${post.text.length > 30 ? '...' : ''}</div>` : ''}
+                <div class="home-nomad" onclick="window.BSTApp.showNOMADPost('${post.id}')" 
+                     style="border-radius: 10px; overflow: hidden; background: #000; transform: translateZ(0); -webkit-mask-image: -webkit-radial-gradient(white, black);">
+                    ${contentHTML}
                 </div>
             `;
         }).join('');
@@ -280,6 +306,7 @@ class NomadRenderer {
             </div>
         `;
     }
+
 
     // 캐러셀 초기화
     initializeCarousels() {
