@@ -487,22 +487,31 @@ getPostsByTag(tag) {
         `;
     }
 
-    // 히어로 섹션 렌더링 (madzip 카테고리 제외)
-    renderHero(containerSelector) {
+    // 히어로 섹션 렌더링 (커스텀 옵션 지원)
+    // options: { postIds: ['id1', 'id2', ...], subtitle: 'Latest', title: 'Contents' }
+    renderHero(containerSelector, options = {}) {
         const container = document.querySelector(containerSelector);
         if (!container || this.posts.length === 0) return;
 
-        // madzip 카테고리 제외한 포스트만 필터링
-        const filteredPosts = this.posts.filter(p => p.category !== 'madzip');
+        let latestPosts;
         
-        if (filteredPosts.length === 0) {
+        // 특정 포스트 ID 지정된 경우
+        if (options.postIds && options.postIds.length > 0) {
+            latestPosts = options.postIds
+                .map(id => this.getPostById(id))
+                .filter(post => post !== undefined);
+        } else {
+            // 기본: madzip 제외하고 최신 4개
+            const filteredPosts = this.posts.filter(p => p.category !== 'madzip');
+            latestPosts = [...filteredPosts]
+                .sort((a, b) => new Date(b.date) - new Date(a.date))
+                .slice(0, 4);
+        }
+        
+        if (latestPosts.length === 0) {
             container.innerHTML = '';
             return;
         }
-
-        const latestPosts = [...filteredPosts]
-            .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .slice(0, 4);
 
         const heroThumb = this.getThumbnailSrc(latestPosts[0]);
         const thumbnails = latestPosts.map(post => {
@@ -510,12 +519,16 @@ getPostsByTag(tag) {
             return `<img src="${thumb?.src || ''}" alt="" loading="lazy" onclick="window.BSTApp.showContentsDetail('${post.id}')">`;
         }).join('');
 
+        // 커스텀 텍스트 (기본값: Latest, Contents)
+        const subtitle = options.subtitle ?? 'Latest';
+        const title = options.title ?? 'Contents';
+
         container.innerHTML = `
             <img class="contents-hero-img" src="${heroThumb?.src || ''}" alt="">
             <div class="contents-hero-item">
                 <div class="contents-hero-text">
-                    <p class="contents-hero-exp">Latest</p>
-                    <h2 class="contents-hero-title">Contents</h2>
+                    <p class="contents-hero-exp">${subtitle}</p>
+                    <h2 class="contents-hero-title">${title}</h2>
                 </div>
                     <div class="contents-thumbnails">
                     ${thumbnails}
