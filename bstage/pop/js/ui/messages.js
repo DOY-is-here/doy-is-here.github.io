@@ -61,7 +61,10 @@ function createMessageRow(message, showProfile) {
         const header = document.createElement("div");
         header.className = "message-header";
         header.innerHTML = `
-            <span class="sender-name">${message.sender}</span>
+            <div class="sender-info">
+                <span class="sender-name">${message.sender}</span>
+                <span class="check-icon"></span>
+            </div>
             <span class="message-time">${message.time}</span>
         `;
         contentDiv.appendChild(header);

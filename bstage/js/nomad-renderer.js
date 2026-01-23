@@ -37,7 +37,6 @@ class NomadRenderer {
         let mediaHTML = '';
 
         if (!hasMedia) {
-            // 미디어 없음 - 텍스트만
             mediaHTML = '';
         } else if (isMultiple) {
             const imagesHTML = post.media.map(m =>
@@ -61,7 +60,7 @@ class NomadRenderer {
             mediaHTML = `
                 <div class="media-container ${mediaClass}">
                     <video src="${this.baseUrl}${video.src}" playsinline muted loop></video>
-                    ${video.duration ? `<span class="video-time">${video.duration}</span>` : ''}
+                    <span class="video-time">0:00</span>
                 </div>
             `;
         } else {
@@ -102,17 +101,14 @@ class NomadRenderer {
         }
 
         const commentsHTML = commentList.map(comment => {
-            // base가 있으면 표시, 없으면 생략
             const baseHTML = comment.base 
                 ? `<div class="post-comment-base">${comment.base}</div>` 
                 : '';
             
-            // doy가 있으면 표시, 없으면 생략
             const doyHTML = comment.doy 
                 ? `<div class="post-comment-doy">${comment.doy}</div>` 
                 : '';
             
-            // 둘 다 없으면 아이템 자체를 생략
             if (!comment.base && !comment.doy) return '';
 
             return `
@@ -155,10 +151,8 @@ class NomadRenderer {
         let mediaHTML = '';
         
         if (!hasMedia) {
-            // 미디어 없음
             mediaHTML = '';
         } 
-        // 여러 이미지 → 피드와 동일한 캐러셀 구조
         else if (isMultiple) {
             const imagesHTML = post.media.map(m =>
                 `<img src="${this.baseUrl}${m.src}" alt="" loading="lazy">`
@@ -177,7 +171,6 @@ class NomadRenderer {
                 </div>
             `;
         }
-        // 비디오
         else if (isVideo) {
             const video = post.media[0];
             mediaHTML = `
@@ -186,7 +179,6 @@ class NomadRenderer {
                 </div>
             `;
         }
-        // 단일 이미지
         else {
             mediaHTML = `
                 <div class="media-container post-detail-media post-media--image">
@@ -195,7 +187,6 @@ class NomadRenderer {
             `;
         }
 
-        // 댓글 렌더링
         const commentsHTML = this.renderComments(post.commentList);
 
         return `
@@ -244,12 +235,11 @@ class NomadRenderer {
         this.initializeCarousels();
     }
 
-// 홈 탭 미리보기 렌더링 (흔들림 방지 + 정지 화면 + 마스킹 + GPU 가속)
+    // 홈 탭 미리보기 렌더링
     renderHomePreview(containerSelector = '.home-section .home-grid') {
         const container = document.querySelector(containerSelector);
         if (!container) return;
 
-        // 최신 10개 포스트
         const latestPosts = [...this.posts]
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .slice(0, 9);
@@ -261,23 +251,19 @@ class NomadRenderer {
             
             let contentHTML = '';
             
-            // 공통 스타일: 꽉 채우기 + GPU 가속(translateZ)
             const commonStyle = "width: 100%; height: 100%; object-fit: cover; display: block; transform: translateZ(0);";
             
             if (thumbnail) {
                 if (isVideo) {
-                    // 동영상: #t=0.01 (정지화면), pointer-events: none, will-change 최적화
                     contentHTML = `<video src="${this.baseUrl}${thumbnail.src}#t=0.01" 
                                     muted preload="metadata" playsinline 
                                     style="${commonStyle} pointer-events: none; will-change: transform;">
                                    </video>`;
                 } else {
-                    // 이미지
                     contentHTML = `<img src="${this.baseUrl}${thumbnail.src}" alt="" 
                                     style="${commonStyle}">`;
                 }
             } else {
-                // 미디어 없음: 텍스트 노출
                 const textSnippet = post.text 
                     ? `<div class="home-nomad-text" style="position: relative; bottom: auto; padding: 10px; color: rgba(255,255,255,0.8);">
                         ${post.text.substring(0, 30)}${post.text.length > 30 ? '...' : ''}
@@ -291,7 +277,6 @@ class NomadRenderer {
                 `;
             }
             
-            // 부모 div 스타일: 마스킹(-webkit-mask-image) 적용으로 모바일 둥근 모서리 흔들림 방지
             return `
                 <div class="home-nomad" onclick="window.BSTApp.showNOMADPost('${post.id}')" 
                      style="border-radius: 10px; overflow: hidden; background: #000; transform: translateZ(0); -webkit-mask-image: -webkit-radial-gradient(white, black);">
@@ -306,7 +291,6 @@ class NomadRenderer {
             </div>
         `;
     }
-
 
     // 캐러셀 초기화
     initializeCarousels() {
@@ -340,7 +324,6 @@ class NomadRenderer {
     }
 }
 
-// 전역으로 노출
 window.NomadRenderer = NomadRenderer;
 
 export default NomadRenderer;

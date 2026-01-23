@@ -151,7 +151,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    cursor: pointer;    
 }
 
 .header-icon.profile::before {
@@ -162,5 +161,4 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    cursor: pointer;
 }

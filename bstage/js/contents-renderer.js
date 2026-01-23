@@ -6,7 +6,7 @@ class ContentsRenderer {
         
         // 카테고리 설정
         this.categories = {
-            whoami: { name: 'WHO AM I', tag: '#WHOAMI' },
+            whoami: { name: 'Who Am I', tag: '#WhoAmI' },
             nomad: { name: '1st EP NOMAD', tag: '#NOMAD' },
             callmeback: { name: '1st Single Call Me Back', tag: '#CallMeBack' },
             carnival: { name: 'Digital Single CARNIVAL', tag: '#CARNIVAL' },
@@ -487,55 +487,152 @@ getPostsByTag(tag) {
         `;
     }
 
-    // 히어로 섹션 렌더링 (커스텀 옵션 지원)
-    // options: { postIds: ['id1', 'id2', ...], subtitle: 'Latest', title: 'Contents' }
-    renderHero(containerSelector, options = {}) {
-        const container = document.querySelector(containerSelector);
-        if (!container || this.posts.length === 0) return;
+// renderHero 메서드 수정
+renderHero(containerSelector, options = {}) {
+    const container = document.querySelector(containerSelector);
+    if (!container || this.posts.length === 0) return;
 
-        let latestPosts;
-        
-        // 특정 포스트 ID 지정된 경우
-        if (options.postIds && options.postIds.length > 0) {
-            latestPosts = options.postIds
-                .map(id => this.getPostById(id))
-                .filter(post => post !== undefined);
-        } else {
-            // 기본: madzip 제외하고 최신 4개
-            const filteredPosts = this.posts.filter(p => p.category !== 'madzip');
-            latestPosts = [...filteredPosts]
-                .sort((a, b) => new Date(b.date) - new Date(a.date))
-                .slice(0, 4);
-        }
-        
-        if (latestPosts.length === 0) {
-            container.innerHTML = '';
-            return;
-        }
-
-        const heroThumb = this.getThumbnailSrc(latestPosts[0]);
-        const thumbnails = latestPosts.map(post => {
-            const thumb = this.getThumbnailSrc(post);
-            return `<img src="${thumb?.src || ''}" alt="" loading="lazy" onclick="window.BSTApp.showContentsDetail('${post.id}')">`;
-        }).join('');
-
-        // 커스텀 텍스트 (기본값: Latest, Contents)
-        const subtitle = options.subtitle ?? 'Latest';
-        const title = options.title ?? 'Contents';
-
-        container.innerHTML = `
-            <img class="contents-hero-img" src="${heroThumb?.src || ''}" alt="">
-            <div class="contents-hero-item">
-                <div class="contents-hero-text">
-                    <p class="contents-hero-exp">${subtitle}</p>
-                    <h2 class="contents-hero-title">${title}</h2>
-                </div>
-                    <div class="contents-thumbnails">
-                    ${thumbnails}
-                </div>
-            </div>
-        `;
+    let heroItems = []; // { post, subtitle, title } 형태로 저장
+    
+    // 개별 설정이 있는 경우 (items 배열 사용)
+    if (options.items && options.items.length > 0) {
+        heroItems = options.items
+            .map(item => {
+                const post = this.getPostById(item.id);
+                if (!post) return null;
+                return {
+                    post,
+                    subtitle: item.subtitle || post.category || 'Latest',
+                    title: item.title || post.text || 'Contents'
+                };
+            })
+            .filter(item => item !== null);
+    } 
+    // 기존 방식 (postIds만 지정)
+    else if (options.postIds && options.postIds.length > 0) {
+        heroItems = options.postIds
+            .map(id => {
+                const post = this.getPostById(id);
+                if (!post) return null;
+                return {
+                    post,
+                    subtitle: options.subtitle || post.category || 'Latest',
+                    title: options.title || post.text || 'Contents'
+                };
+            })
+            .filter(item => item !== null);
+    } 
+    // 기본: 최신 포스트
+    else {
+        const filteredPosts = this.posts.filter(p => p.category !== 'madzip');
+        heroItems = [...filteredPosts]
+            .sort((a, b) => new Date(b.date) - new Date(a.date))
+            .slice(0, 5)
+            .map(post => ({
+                post,
+                subtitle: post.category || 'Latest',
+                title: post.text || 'Contents'
+            }));
     }
+    
+    if (heroItems.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+
+    // 히어로 아이템 데이터 저장
+    this.heroItems = heroItems;
+    this.currentHeroIndex = 0;
+
+    const firstItem = heroItems[0];
+    const heroThumb = this.getThumbnailSrc(firstItem.post);
+    
+    const thumbnails = heroItems.map((item, index) => {
+        const thumb = this.getThumbnailSrc(item.post);
+        return `<img src="${thumb?.src || ''}" alt="" loading="lazy" 
+                     class="${index === 0 ? 'active' : ''}"
+                     onclick="window.ContentsRenderer.instance.updateHeroByIndex(${index})">`;
+    }).join('');
+
+    container.innerHTML = `
+        <img class="contents-hero-img" src="${heroThumb?.src || ''}" alt="">
+        <div class="contents-hero-item">
+            <div class="contents-hero-text" onclick="window.ContentsRenderer.instance.goToCurrentHeroPost()" style="cursor: pointer;">
+                <div class="contents-hero-exp-wrap">    
+                    <div class="contents-hero-exp">${firstItem.subtitle}</div>
+                    <div class="contents-hero-exp-icon"></div>
+                </div>
+                <div class="contents-hero-title">${firstItem.title}</div>
+            </div>
+            <div class="contents-thumbnails">
+                ${thumbnails}
+            </div>
+        </div>
+    `;
+    
+    window.ContentsRenderer.instance = this;
+
+    this.startHeroAutoSlide();
+}
+
+//자동 슬라이드 시작
+startHeroAutoSlide() {
+    // 기존 인터벌 제거
+    this.stopHeroAutoSlide();
+    
+    // 3초마다 다음 슬라이드로
+    this.heroAutoSlideInterval = setInterval(() => {
+        if (!this.heroItems || this.heroItems.length <= 1) return;
+        
+        const nextIndex = (this.currentHeroIndex + 1) % this.heroItems.length;
+        this.updateHeroByIndex(nextIndex);
+    }, 3000);
+}
+
+// 자동 슬라이드 정지
+stopHeroAutoSlide() {
+    if (this.heroAutoSlideInterval) {
+        clearInterval(this.heroAutoSlideInterval);
+        this.heroAutoSlideInterval = null;
+    }
+}
+
+// 인덱스로 히어로 업데이트
+updateHeroByIndex(index) {
+    if (!this.heroItems || index >= this.heroItems.length) return;
+    
+    this.currentHeroIndex = index;
+    const item = this.heroItems[index];
+    
+    // 히어로 이미지 업데이트
+    const heroImg = document.querySelector('.contents-hero-img');
+    if (heroImg) {
+        const thumb = this.getThumbnailSrc(item.post);
+        heroImg.src = thumb?.src || '';
+    }
+    
+    // 히어로 텍스트 업데이트
+    const heroExp = document.querySelector('.contents-hero-exp');
+    const heroTitle = document.querySelector('.contents-hero-title');
+    if (heroExp) heroExp.textContent = item.subtitle;
+    if (heroTitle) heroTitle.textContent = item.title;
+    
+    // 썸네일 active 상태 업데이트
+    const thumbnails = document.querySelectorAll('.contents-thumbnails img');
+    thumbnails.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+    });
+    
+    // 자동 슬라이드 타이머 리셋 (수동 클릭 시 3초 다시 시작)
+    this.startHeroAutoSlide();
+}
+
+// 현재 히어로 포스트로 이동
+goToCurrentHeroPost() {
+    if (!this.heroItems || this.currentHeroIndex === undefined) return;
+    const postId = this.heroItems[this.currentHeroIndex].post.id;
+    window.BSTApp.showContentsDetail(postId);
+}
 
     // ID로 포스트 찾기
     getPostById(postId) {

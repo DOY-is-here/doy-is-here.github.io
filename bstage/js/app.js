@@ -1,7 +1,6 @@
 import NomadRenderer from './nomad-renderer.js';
 import ContentsRenderer from './contents-renderer.js';
 
-// BST App - Tab Switching & Interactive Features
 class BSTApp {
     constructor() {
         this.currentTab = 'home';
@@ -40,6 +39,33 @@ class BSTApp {
                 this.switchTab(savedTab);
             } else {
                 this.switchTab('home');
+            }
+        });
+    }
+
+    // ========== 비디오 시간 표시 ==========
+    formatVideoDuration(seconds) {
+        if (!seconds || isNaN(seconds)) return '0:00';
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    initializeVideoTimes() {
+        const videoContainers = document.querySelectorAll('.media-container');
+        
+        videoContainers.forEach(container => {
+            const video = container.querySelector('video');
+            const timeEl = container.querySelector('.video-time');
+            
+            if (!video || !timeEl) return;
+            
+            if (video.readyState >= 1 && video.duration) {
+                timeEl.textContent = this.formatVideoDuration(video.duration);
+            } else {
+                video.addEventListener('loadedmetadata', () => {
+                    timeEl.textContent = this.formatVideoDuration(video.duration);
+                }, { once: true });
             }
         });
     }
@@ -101,7 +127,6 @@ class BSTApp {
         this.currentTab = tabName;
         sessionStorage.setItem('bst_currentTab', this.currentTab);
 
-        // 탭 이동 시 해당 탭의 스크롤 위치 초기화
         this.clearTabScrollPositions(tabName);
 
         this.deactivatePostHeader();
@@ -111,7 +136,6 @@ class BSTApp {
     }
 
     clearTabScrollPositions(tabName) {
-        // 포스트에서 돌아올 때만 홈 스크롤 보존, 그 외 탭 이동은 전체 초기화
         if (this.returningFromPost) {
             const homeScroll = this.scrollPositions['home'];
             const homeNomadGrid = this.scrollPositions['home-nomad-grid'];
@@ -161,7 +185,6 @@ class BSTApp {
     initializeHome() {
         console.log('Home tab initialized');
         
-        // 포스트에서 돌아온 경우 그리드 스크롤 위치 저장
         const savedNomadGridScroll = this.returningFromPost ? this.scrollPositions['home-nomad-grid'] : 0;
         const savedContentsGridScroll = this.returningFromPost ? this.scrollPositions['home-contents-grid'] : 0;
         
@@ -173,7 +196,6 @@ class BSTApp {
             this.contentsRenderer.renderHomePreview('#home-contents-grid');
         }
         
-        // 포스트에서 돌아온 경우 그리드 스크롤 위치 복원, 아니면 초기화
         setTimeout(() => {
             const nomadGrid = document.querySelector('#home-nomad-grid');
             const contentsGrid = document.querySelector('#home-contents-grid');
@@ -210,6 +232,7 @@ class BSTApp {
             this.nomadRenderer.renderFeed();
         }
         
+        this.initializeVideoTimes();  // 비디오 시간 초기화
         this.showNOMADTab();
     }
 
@@ -287,8 +310,14 @@ class BSTApp {
         console.log('Contents tab initialized');
         
         if (this.contentsRenderer.posts.length > 0) {
-            this.contentsRenderer.renderHero('.contents-hero', {postIds: ['yt-250223'], subtitle: 'Who Am I', title: '2025 DOY'});
-            this.contentsRenderer.renderHero('.contents-hero', {postIds: ['yt-250223'], subtitle: 'Who Am I', title: '2025 DOY'});
+            this.contentsRenderer.renderHero('.contents-hero', {
+                items: [
+                    { id: 'yt-250223', subtitle: 'Who Am I', title: '2025 DOY 도의' },
+                    { id: 'yt-240115', subtitle: 'Who Am I', title: 'DOY 도의' },
+                    { id: 'yt-231218', subtitle: 'NOMAD', title: "Profile Mood Video 'DOY'" },
+                    { id: 'yt-240122', subtitle: 'COVER by DOY', title: 'Mask Off x HUMBLE (Mix)' },
+                    { id: 'yt-240517', subtitle: 'DOY LOG', title: 'Spoiler Man DOY' } ]
+            });
             this.contentsRenderer.renderAllSections('.contents-sections-container');
         }
         

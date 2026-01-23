@@ -1,5 +1,5 @@
 import { handleSearch, nextResult, prevResult, clearSearch } from "./search.js";
-import { closeCalendar } from "./calendar.js"; // toggleCalendar는 제거
+import { closeCalendar } from "./calendar.js"; 
 
 export function createHeader() {
     const h = document.createElement("div");

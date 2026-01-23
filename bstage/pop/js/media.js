@@ -1,4 +1,4 @@
-import { classifyRatio } from "./utils.js"; // utils.js가 있다면
+import { classifyRatio } from "./utils.js";
 
 // 메시지 타입에 따라 알맞은 HTML 요소를 만들어주는 공장 함수
 export function createContent(msg) {

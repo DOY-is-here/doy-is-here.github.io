@@ -1,5 +1,4 @@
 /* 상세 포스트 */
-/* 중복인건 naomd.css에 있음 */
 
 .nomad-feed-detail {
     padding: 0 16px;
@@ -9,6 +8,10 @@
 .nomad-detail-post{
     padding-top: 16px;
     padding-bottom: 32px;    
+}
+
+.nomad-detail-post:last-child {
+    padding-bottom: 60px;
 }
 
 /* top + 날짜 */
@@ -104,7 +107,7 @@
 
 /* 댓글 */
 .nomad-comment-feed {
-    padding: 12px 16px 20px 16px;
+    padding: 12px 16px 60px 16px;
     background-color: rgb(17, 17, 17);
     border-top: 0.8px solid rgba(255, 255, 255, 0.04);
 }
