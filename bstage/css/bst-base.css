@@ -55,3 +55,7 @@ body {
         transform: scale(calc(min(100vw / 3, 100vh * 0.8) / 394));
     }
 }
+
+.tab-content {
+    display: none;
+}

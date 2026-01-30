@@ -40,6 +40,13 @@ export function createHeader() {
 
 export function initHeaderEvents() {
     document.addEventListener("click", (e) => {
+        // 뒤로가기 버튼 - 바로 POP 탭으로
+        if (e.target.closest(".back-button")) {
+            sessionStorage.setItem('bst_currentTab', 'pop');
+            window.location.href = '../bst.html';
+            return;
+        }
+        
         if (e.target.closest(".search-button")) {
             toggleSearchBar();
             return;

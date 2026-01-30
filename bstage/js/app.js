@@ -15,33 +15,36 @@ class BSTApp {
         this.init();
     }
 
-    init() {
-        document.addEventListener('DOMContentLoaded', async () => {
-            await Promise.all([
-                this.nomadRenderer.loadPosts('data/nomad-posts.json'),
-                this.contentsRenderer.loadPosts('data/contents-posts.json', 'data/youtube-posts.json')
-            ]);
-            
-            this.initializeTabSwitching();
-            this.initializeImageCarousels();
-            this.initializeHeaderScroll();
-            this.initializeContentsThumbnails();
-            
+init() {
+    document.addEventListener('DOMContentLoaded', async () => {
+        await Promise.all([
+            this.nomadRenderer.loadPosts('data/nomad-posts.json'),
+            this.contentsRenderer.loadPosts('data/contents-posts.json', 'data/youtube-posts.json')
+        ]);
+        
+        this.initializeTabSwitching();
+        this.initializeImageCarousels();
+        this.initializeHeaderScroll();
+        this.initializeContentsThumbnails();
+        
+        // 저장된 탭 확인 먼저!
+        const savedTab = sessionStorage.getItem('bst_currentTab');
+        
+        if (savedTab) {
+            // 저장된 탭으로 바로 이동
+            this.switchTab(savedTab);
+        } else {
+            // 저장된 탭 없으면 home
             const homeTab = document.querySelector('.nav-item[data-tab="home"]');
             const homeContent = document.querySelector('.tab-content[data-tab="home"]');
             if (homeTab && homeContent) {
                 homeTab.classList.add('active');
                 homeContent.classList.add('active');
             }
-
-            const savedTab = sessionStorage.getItem('bst_currentTab');
-            if (savedTab) {
-                this.switchTab(savedTab);
-            } else {
-                this.switchTab('home');
-            }
-        });
-    }
+            this.switchTab('home');
+        }
+    });
+}
 
     // ========== 비디오 시간 표시 ==========
     formatVideoDuration(seconds) {
