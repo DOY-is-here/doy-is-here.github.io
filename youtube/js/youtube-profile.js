@@ -26,11 +26,10 @@ export function createChannelPage() {
                     <div class="channel-handle">${channelInfo.handle}</div>
                     <div class="channel-stats">
                         구독자 ${channelInfo.subscribers}<span class="separator">•</span>동영상 ${channelInfo.videoCount}개
-                    </div>
-                    <div class="channel-description">${channelInfo.description}</div>
+                    </div> 
                 </div>
             </div>
-            <button class="subscribe-btn">구독</button>
+            <button class="subscribe-btn">구독중</button>
         </div>
 
         <!-- Tabs -->
@@ -38,9 +37,8 @@ export function createChannelPage() {
             <button class="tab active" data-tab="home">홈</button>
             <button class="tab" data-tab="videos">동영상</button>
             <button class="tab" data-tab="shorts">Shorts</button>
+            <button class="tab" data-tab="live">라이브</button>
             <button class="tab" data-tab="playlists">재생목록</button>
-            <button class="tab" data-tab="channels">채널</button>
-            <button class="tab" data-tab="about">정보</button>
         </div>
 
         <!-- Content -->
