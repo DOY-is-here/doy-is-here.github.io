@@ -187,6 +187,24 @@ export const groups = [
         "tweetNum": null
     },
     {
+        "id": "group-250916",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2025-09-16T12:00:00Z",
+        "displayDate": "2025.9.16.",
+        "text": "",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250916.jpg"
+        ],
+        "type": "group",
+        "rawDate": "250916",
+        "tweetNum": null
+    },
+    {
         "id": "group-250809",
         "author": {
             "name": "NOMAD",
