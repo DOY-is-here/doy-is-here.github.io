@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="css/contents-list.css">
     <link rel="stylesheet" href="css/contents-post.css">
     <link rel="stylesheet" href="css/pop.css">
+    <link rel="stylesheet" href="css/inst-header.css">
+    <link rel="stylesheet" href="css/inst-main.css">
+    <link rel="stylesheet" href="css/x.css">
 </head>
 <body>
     <div class="scale-wrapper">
@@ -220,6 +223,82 @@
                     </div>
                 </div>             
 
+                <!-- INST Tab -->
+                <div class="tab-content" data-tab="inst">
+                    <div class="inst-header">
+                        <div class="inst-header-back"></div>
+                        <div class="inst-header-title">doy.is.here</div>
+                        <div class="inst-header-icons">
+                            <div class="inst-header-icon bell"></div>
+                            <div class="inst-header-icon dots"></div>
+                        </div>
+                    </div>
+                    <div class="inst-profile-header">
+                        <div class="inst-profile-avatar">
+                            <div class="inst-profile-avatar-inner"></div>
+                        </div>
+                        <div class="inst-profile-stats">
+                            <div class="inst-stat-item">
+                                <div class="inst-stat-number">${getPostCount()}</div>
+                                <div class="inst-stat-label">게시물</div>
+                            </div>
+                            <div class="inst-stat-item">
+                                <div class="inst-stat-number">9.16만</div>
+                                <div class="inst-stat-label">팔로워</div>
+                            </div>
+                            <div class="inst-stat-item">
+                                <div class="inst-stat-number">1</div>
+                                <div class="inst-stat-label">팔로잉</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inst-profile-info">
+                        <div class="inst-profile-username">@nomad.is.here</div>
+                        <div class="inst-profile-followers">
+                            <div class="inst-follower-avatars">
+                                <div class="inst-follower-avatar"></div>
+                                <div class="inst-follower-avatar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inst-profile-actions">
+                        <div class="inst-profile-btn">
+                            팔로잉
+                            <div class="inst-icon-down"></div>
+                        </div>
+                        <div class="inst-profile-btn">
+                            메시지
+                        </div>
+                        <div class="inst-profile-btn small">
+                            <div class="inst-icon-follow"></div>
+                        </div>
+                    </div>
+                    <div class="inst-profile-tabs" id="profile-tabs">
+                        <div class="inst-tab-item ${currentTab === 'grid' ? 'active' : ''}" data-tab="grid">
+                            <div class="inst-tab-icon grid"></div>
+                        </div>
+                        <div class="inst-tab-item ${currentTab === 'tagged' ? 'active' : ''}" data-tab="tagged">
+                            <div class="inst-tab-icon tagged"></div>
+                        </div>
+                        <div class="inst-tab-item ${currentTab === 'story' ? 'active' : ''}" data-tab="story">
+                            <div class="inst-tab-icon story"></div>
+                        </div>
+                        <div class="inst-tab-item ${currentTab === 'repost' ? 'active' : ''}" data-tab="repost">
+                            <div class="inst-tab-icon repost"></div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+                <!-- X Tab -->
+                <div class="tab-content" data-tab="x">
+
+
+                </div>
+
 
                 <!-- POP Tab -->
                 <div class="tab-content" data-tab="pop">
@@ -240,6 +319,7 @@
                         </div>
                     </div>
                 </div>
+
             </main>
 
             <!-- Bottom Navigation -->
@@ -252,10 +332,19 @@
                 </button>
                 <button class="nav-item" data-tab="contents">
                     <span>Contents</span>
+                </button>     
+                <!--           
+                <button class="nav-item" data-tab="inst">
+                    <span>Instgram</span>
                 </button>
+                <button class="nav-item" data-tab="x">
+                    <span>X</span>
+                </button>
+                -->
                 <button class="nav-item" data-tab="pop">
                     <span>POP</span>
                 </button>
+                
             </nav>
         </div>
     </div>

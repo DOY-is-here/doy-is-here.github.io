@@ -133,20 +133,13 @@ function showYouTubeEmbed(video) {
     
     // 임베드 컨테이너 생성
     const embedDiv = document.createElement('div');
-    embedDiv.id = 'embed-overlay';
-    embedDiv.innerHTML = renderYouTubeEmbed(video.youtubeId, video.title);
+    embedDiv.id = 'video-player-overlay';
+    embedDiv.innerHTML = renderYouTubeEmbed(video);
     root.appendChild(embedDiv);
     
     // 닫기 버튼 이벤트
-    document.getElementById('closeEmbed').addEventListener('click', () => {
+    document.getElementById('closeVideoPlayer').addEventListener('click', () => {
         embedDiv.remove();
-    });
-    
-    // 배경 클릭 시 닫기
-    embedDiv.addEventListener('click', (e) => {
-        if (e.target === embedDiv) {
-            embedDiv.remove();
-        }
     });
 }
 

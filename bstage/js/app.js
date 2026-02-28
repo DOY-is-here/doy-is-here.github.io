@@ -181,6 +181,12 @@ init() {
             case 'pop':
                 this.initializePop();
                 break;
+            case 'x':
+                this.initializeX();
+                break;
+            case 'inst':
+                this.initializeInst();
+                break;
         }
     }
 
@@ -580,6 +586,14 @@ init() {
         console.log('POP tab initialized');
     }
 
+    initializeInst() {
+        console.log('INST tab initialized');
+    }
+
+    initializeX() {
+        console.log('X tab initialized');
+    }
+    
     // ========== 유틸리티 ==========
     initializeImageCarousels() {
         const tracks = document.querySelectorAll('.media-container-track');

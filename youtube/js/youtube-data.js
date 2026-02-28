@@ -940,22 +940,21 @@ export const lives = allVideos.filter(v => v.type === 'live');
 
 // 재생목록 카테고리 목록
 export const playlists = [
-    { id: 'official', name: 'Official', icon: '🎵' },
-    { id: 'nomad-drive', name: 'NOMAD DRIVE', icon: '🚗' },
-    { id: 'nobackgo', name: '노빠꾸 NOBACKGO', icon: '🎮' },
-    { id: 'nogotit', name: '노가리 NO! GOT IT!', icon: '🎤' },
-    { id: 'noriter', name: '놀이터 NORITER', icon: '🎪' },
-    { id: 'notes', name: 'Notes', icon: '📝' },
-    { id: 'cover', name: 'Cover', icon: '🎸' },
-    { id: 'behind', name: 'Behind', icon: '🎬' },
-    { id: 'dance-practice', name: 'Dance Practice', icon: '💃' },
-    { id: 'who-am-i', name: 'Who Am I', icon: '👤' },
-    { id: 'dossont', name: '도쏜트', icon: '🍽️' },
-    { id: 'special', name: 'Special', icon: '✨' },
-    { id: 'teaser', name: 'Teaser', icon: '🎬' },
-    { id: 'track', name: 'Track', icon: '🎧' },
-    { id: 'choreography', name: 'Choreography', icon: '🕺' },
-    { id: 'profile', name: 'Profile', icon: '📸' }
+    { id: 'nomad-drive', name: 'NOMAD DRIVE'},
+    { id: 'nobackgo', name: '노매드의 노빠꾸 | NOBACKGO'},
+    { id: 'nogotit', name: '팟캐스트 노가리 | NO! GOT IT!' },
+    { id: 'noriter', name: '노매드 놀이터 | NORITER' },
+    { id: 'cover', name: 'Microphone And Dances'},
+    { id: 'mv', name: 'MUSIC VIDEO' },
+    { id: 'who-am-i', name: 'Who Am I'},
+    { id: 'dossont', name: '도쏜트' },
+    { id: 'special', name: 'Special' },
+    { id: 'drive', name: 'NOMAD DRIVE'},
+    { id: 'first-ep', name: "1st EP 'NOMAD'"},
+    { id: 'first-single', name: "1st Single 'Call Me Back'"},
+    { id: 'carnival', name: 'CARNIVAL'},
+    { id: 'making-bts', name: 'MAKING BTS'},
+    { id: 'on-air', name: 'ON AIR'},
 ];
 
 // 재생목록별 영상 가져오기
