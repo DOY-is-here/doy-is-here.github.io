@@ -443,6 +443,24 @@ export const groups = [
         "tweetNum": null
     },
     {
+        "id": "group-250420",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2025-04-20T12:00:00Z",
+        "displayDate": "2025.4.20.",
+        "text": "",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250420.jpg"
+        ],
+        "type": "group",
+        "rawDate": "250420",
+        "tweetNum": null
+    },
+    {
         "id": "group-250412",
         "author": {
             "name": "NOMAD",
