@@ -622,7 +622,8 @@ export const groups = [
         "displayDate": "2025.3.16.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250316.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250316.jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250316%20(2).jpg"
         ],
         "type": "group",
         "rawDate": "250316",
@@ -640,7 +641,8 @@ export const groups = [
         "displayDate": "2025.3.15.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250315.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250315.jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250315%20(2).jpg"
         ],
         "type": "group",
         "rawDate": "250315",
@@ -658,7 +660,8 @@ export const groups = [
         "displayDate": "2025.3.14.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250314.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250314.jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250314%20(2).jpg"
         ],
         "type": "group",
         "rawDate": "250314",
@@ -712,7 +715,8 @@ export const groups = [
         "displayDate": "2025.3.11.",
         "text": "",
         "images": [
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250311-2.jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250311-2.jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250311-2%20(2).jpg"
         ],
         "type": "group",
         "rawDate": "250311",
@@ -749,7 +753,9 @@ export const groups = [
         "text": "",
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250310-3%20(1).jpeg",
-            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250310-3%20(2).jpeg"
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250310-3%20(2).jpeg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250310-3%20(3).jpg",
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/250310-3%20(4).jpg"
         ],
         "type": "group",
         "rawDate": "250310",
@@ -1853,6 +1859,24 @@ export const groups = [
         "tweetNum": null
     },
     {
+        "id": "group-241105",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-11-05T12:00:00Z",
+        "displayDate": "2024.11.5.",
+        "text": "",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/241105.jpg"
+        ],
+        "type": "group",
+        "rawDate": "241105",
+        "tweetNum": null
+    },
+    {
         "id": "group-241103",
         "author": {
             "name": "NOMAD",
@@ -2699,6 +2723,42 @@ export const groups = [
         "tweetNum": null
     },
     {
+        "id": "group-240514",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-05-14T12:00:00Z",
+        "displayDate": "2024.5.14.",
+        "text": "",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240514.jpg"
+        ],
+        "type": "group",
+        "rawDate": "240514",
+        "tweetNum": null
+    },
+    {
+        "id": "group-240505",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-05-05T12:00:00Z",
+        "displayDate": "2024.5.5.",
+        "text": "",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240505.jpg"
+        ],
+        "type": "group",
+        "rawDate": "240505",
+        "tweetNum": null
+    },
+    {
         "id": "group-240426",
         "author": {
             "name": "NOMAD",
@@ -3296,6 +3356,24 @@ export const groups = [
         ],
         "type": "group",
         "rawDate": "240206",
+        "tweetNum": null
+    },
+    {
+        "id": "group-240124",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-01-24T12:00:00Z",
+        "displayDate": "2024.1.24.",
+        "text": "",
+        "images": [
+            "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/240124.jpg"
+        ],
+        "type": "group",
+        "rawDate": "240124",
         "tweetNum": null
     },
     {
