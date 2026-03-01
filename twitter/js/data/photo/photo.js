@@ -11,7 +11,7 @@ export const photos = [
         },
         "date": "2025-12-08T12:00:00Z",
         "displayDate": "2025.12.8.",
-        "text": "",
+        "text": "[#도의] <br>D        Y<br>     O    <br>#NOMAD #노매드 <br>#DOY #도의",
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251208%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251208%20(2).jpg"
