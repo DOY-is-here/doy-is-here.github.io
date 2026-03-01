@@ -21,7 +21,7 @@ export function initTabs() {
             document.querySelector(`.tab-content[data-content="${tab.dataset.tab}"]`).classList.add("active");
             
             // 스크롤 맨 위로 초기화
-            window.scrollTo(0, 0);
+            (document.getElementById("insta-root") || window).scrollTop = 0;
             
             setTimeout(() => {
                 initGridVideoThumbnails();
@@ -56,7 +56,7 @@ export function switchTab(tabName) {
     });
     
     // 스크롤 맨 위로 초기화
-    window.scrollTo(0, 0);
+    (document.getElementById("insta-root") || window).scrollTop = 0;
     
     // 비디오 썸네일 초기화
     setTimeout(() => {

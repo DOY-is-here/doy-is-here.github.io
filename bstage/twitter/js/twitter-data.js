@@ -12,7 +12,7 @@ export const tweets = [
         },
         "date": "2025-12-08T12:00:00Z",
         "displayDate": "2025.12.8.",
-        "text": "",
+        "text": "[ #도의 ] <br>D        Y<br>     O    <br><br>#NOMAD #노매드 <br>#DOY #도의",
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251208%20(1).jpg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251208%20(2).jpg"
@@ -85,8 +85,8 @@ export const tweets = [
             "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
             "verified": true
         },
-        "date": "2025-11-22T12:00:00Z",
-        "displayDate": "2025.11.22.",
+        "date": "2025-11-25T12:00:00Z",
+        "displayDate": "2025.11.25.",
         "text": "",
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251122%20(1).jpg",
@@ -95,7 +95,7 @@ export const tweets = [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-photo/251122%20(4).jpg"
         ],
         "type": "photo",
-        "rawDate": "251122",
+        "rawDate": "251125",
         "tweetNum": null
     },
     {
@@ -9152,3 +9152,4 @@ export function getTweetsByTab(tab) {
             return tweets;
     }
 }
+

@@ -516,6 +516,39 @@ init() {
         this.showContentsDetail(contentId);
     }
 
+
+
+    // ========== POP 탭 ==========
+    initializePop() {
+        console.log('POP tab initialized');
+        const feed = document.getElementById('pop-feed');
+        const iframe = document.getElementById('pop-iframe');
+        if (feed) feed.style.display = 'block';
+        if (iframe) iframe.style.display = 'none';
+    }
+
+    openPop() {
+        const feed = document.getElementById('pop-feed');
+        const iframe = document.getElementById('pop-iframe');
+        if (feed) feed.style.display = 'none';
+        if (iframe) {
+            iframe.style.cssText = 'position:fixed; top:0; left:50%; transform:translateX(-50%); width:394px; height:100vh; border:none; display:block; z-index:9999;';
+        }
+    }
+
+    // ========== INST 탭 ==========
+    initializeInst() {
+        console.log('INST tab initialized');
+        // iframe이 자체적으로 로드됨 - 별도 처리 불필요
+    }
+
+    // ========== X 탭 ==========
+    initializeX() {
+        console.log('X tab initialized');
+    }
+    
+
+
     // ========== 헤더 관리 ==========
     activatePostHeader() {
         const header = document.querySelector('.header');
@@ -534,6 +567,9 @@ init() {
                     } else {
                         this.showNOMADTab();
                     }
+                } else if (this.currentTab === 'pop') {
+                    this.initializePop();
+                    this.deactivatePostHeader();
                 } else if (this.currentTab === 'contents') {
                     const contentIMG = document.querySelector('.tab-content[data-tab="content-img"]');
                     const contentVID = document.querySelector('.tab-content[data-tab="content-video"]');
@@ -581,19 +617,7 @@ init() {
         if (profileBtn) profileBtn.onclick = null;
     }
 
-    // ========== POP 탭 ==========
-    initializePop() {
-        console.log('POP tab initialized');
-    }
 
-    initializeInst() {
-        console.log('INST tab initialized');
-    }
-
-    initializeX() {
-        console.log('X tab initialized');
-    }
-    
     // ========== 유틸리티 ==========
     initializeImageCarousels() {
         const tracks = document.querySelectorAll('.media-container-track');

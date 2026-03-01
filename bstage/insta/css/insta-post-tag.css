@@ -1,8 +1,9 @@
 /* 태그탭 포스트 전용 스타일 */
 
 .post-detail.from-tagged {
-    background: #FFFFFF;
+    background: #151515;
     padding-bottom: 50px;
+    padding-top: 48px;
 }
 
 .post-detail.from-tagged .post-header {
@@ -10,7 +11,7 @@
     align-items: center;
     padding: 12px 14px;
     gap: 10px;
-    border-bottom: 1px solid #EAEDF0;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.1);
 }
 
 .post-coauthor {
@@ -18,7 +19,7 @@
     align-items: center;
     gap: 8px;
     padding: 8px 14px;
-    border-bottom: 1px solid #EAEDF0;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.1);
 }
 
 .coauthor-avatars {
@@ -32,11 +33,10 @@
     height: 24px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid #D9D9DA;
     position: absolute;
     left: -6px;
     top: -2px;
-    box-shadow: 0 0 0 2px #fff;
+    box-shadow: 0 0 0 2px rgba(238, 238, 238, 0.1);
 }
 
 .coauthor-avatar:first-child {
@@ -67,7 +67,7 @@
 
 .coauthor-text {
     font-size: 14px;
-    color: #0B1014;
+    color: rgb(238, 238, 238);
     white-space: nowrap;
 }
 
@@ -77,13 +77,13 @@
 
 .post-coauthor .post-date {
     font-size: 12px;
-    color: #0C0F14;
+    color: rgb(238, 238, 238);
     margin-top: 2px;
 }
 
 .post-detail.from-tagged .post-date {
     font-size: 12px;
-    color: #0C0F14;
+    color: rgb(238, 238, 238);
     margin-top: 2px;
 }
 
@@ -144,23 +144,27 @@
 }
 
 .post-detail.from-tagged .slider-dots {
-    position: absolute;
-    bottom: -19px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 4px;
+  position: absolute;
+  bottom: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+  align-items: center;            
 }
 
 .post-detail.from-tagged .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #DCE0E5;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #DCE0E5;
+
+  flex: 0 0 6px;                 
+  box-sizing: border-box;
 }
 
 .post-detail.from-tagged .dot.active {
-    background: #5465F6;
+    background: rgb(0, 144, 255);
 }
 
 .post-detail.from-tagged .post-actions {
@@ -187,7 +191,7 @@
 .post-detail.from-tagged .post-caption {
     padding: 4px 14px;
     font-size: 15px;
-    color: #0C0F14;
+    color: rgb(238, 238, 238);
 }
 
 .post-detail.from-tagged .caption-username {

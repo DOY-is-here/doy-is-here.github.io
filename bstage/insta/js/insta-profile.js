@@ -4,12 +4,7 @@
 export function createProfileHTML(currentTab, getPostCount) {
     return `
         <div class="insta-header">
-            <div class="header-back"></div>
             <div class="header-title">doy.is.here</div>
-            <div class="header-icons">
-                <div class="header-icon bell"></div>
-                <div class="header-icon dots"></div>
-            </div>
         </div>
         
         ${createProfileHeader(getPostCount)}

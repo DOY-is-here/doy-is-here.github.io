@@ -9,13 +9,7 @@ export function createProfilePage() {
         <div id="profile-page" class="page active">
             <div class="topbar-header">
                 <div class="topbar-left">
-                    <button class="topbar-icon back"></button>   
                     <p class="topbar-title">NOMAD<br><b id="tweet-count">게시물 ${tweetCount}개</b></p>
-                </div>
-                <div class="topbar-right">
-                    <button class="topbar-icon grok"></button>
-                    <button class="topbar-icon search"></button>
-                    <button class="topbar-icon more"></button>
                 </div>
             </div>
      

@@ -33,11 +33,11 @@ export function highlightHashtags(text) {
     return text.replace(/#(\S+)/g, '<span class="tweet-hashtag">#$1</span>');
 }
 
-// HTML 이스케이프
+// HTML 이스케이프 (<br> 태그는 보존)
 export function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
-    return div.innerHTML;
+    return div.innerHTML.replace(/&lt;br&gt;/gi, '<br>');
 }
 
 // 트윗 개수 계산

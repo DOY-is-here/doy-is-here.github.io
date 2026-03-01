@@ -3,13 +3,13 @@
   margin-top: 12px;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #D1D8DD;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .media-grid {
   display: grid;
   gap: 3px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
   width: 322px;
 }
 
@@ -27,7 +27,7 @@
   width: 100%;
   height: auto;
   max-height: 429px;
-  object-fit: contain;
+  object-fit: cover;
   object-position: top;
 }
 
@@ -46,6 +46,7 @@
 
 /* 미디어 2개 - 16:9 비율 틀 */
 .media-grid.count-2 {
+  width: 322px;
   grid-template-columns: 1fr 1fr;
   aspect-ratio: 16 / 9;
 }
@@ -63,6 +64,7 @@
 
 /* 미디어 3개 - 16:9 비율 틀 */
 .media-grid.count-3 {
+  width: 322px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   aspect-ratio: 16 / 9;
@@ -85,6 +87,7 @@
 
 /* 미디어 4개 - 16:9 비율 틀 */
 .media-grid.count-4 {
+  width: 322px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   aspect-ratio: 16 / 9;

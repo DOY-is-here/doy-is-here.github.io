@@ -41,7 +41,7 @@ window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
     initSwipe();
     
     if (restoreScroll) {
-        setTimeout(() => window.scrollTo(0, savedScrollPosition), 0);
+        setTimeout(() => { const r = document.getElementById("insta-root"); if(r) r.scrollTop = savedScrollPosition; }, 0);
     }
     
     requestAnimationFrame(() => {
@@ -54,7 +54,7 @@ window.showProfile = function(initialTab = 'grid', restoreScroll = false) {
 
 window.showStoryGroup = function(date) {
     const stories = getStories();
-    savedScrollPosition = window.scrollY || window.pageYOffset;
+    savedScrollPosition = (document.getElementById("insta-root") || window).scrollTop || window.scrollY || 0;
     root.innerHTML = `<div class="story-viewer">${showStoryGroup(date, stories)}</div>`;
     initStoryViewer();
 };
@@ -64,7 +64,7 @@ window.previousStory = previousStory;
 
 window.showPost = function(postId, initialSlide = 0) {
     const savedTab = getCurrentTab();
-    savedScrollPosition = window.scrollY || window.pageYOffset;
+    savedScrollPosition = (document.getElementById("insta-root") || window).scrollTop || window.scrollY || 0;
     
     let tabPosts = getPostsByTab(savedTab);
     

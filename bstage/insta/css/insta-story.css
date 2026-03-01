@@ -11,6 +11,7 @@
     z-index: 9999;
     display: flex;
     flex-direction: column;
+    margin-top: 48px;
 }
 
 /* 스토리 헤더 */
@@ -40,7 +41,7 @@
 
 .story-progress-fill {
     height: 100%;
-    background: #FFFFFF;
+    background: rgb(238, 238, 238);
     width: 0%;
     transition: width 0.1s linear;
 }
@@ -69,13 +70,13 @@
 
 .story-username {
     font-size: 15px;
-    color: #FFFFFF;
+    color: rgb(238, 238, 238);
     padding: 3px;
 }
 
 .story-time {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgb(153, 153, 153);
 }
 
 .story-close {
