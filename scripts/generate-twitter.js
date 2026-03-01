@@ -8,9 +8,9 @@ const FOLDERS = {
 };
 
 const OUTPUT_FILES = {
-    tweets: 'twitter/js/tweets.js',
-    group: 'twitter/js/data/group/group.js',
-    photo: 'twitter/js/data/photo/photo.js'
+    tweets: 'bstage/twitter/js/tweets.js',
+    group: 'bstage/twitter/js/data/group/group.js',
+    photo: 'bstage/twitter/js/data/photo/photo.js'
 };
 
 const METADATA_FILES = {

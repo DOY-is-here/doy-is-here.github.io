@@ -66,14 +66,14 @@ jobs:
             echo "✅ twitter-photo-metadata.json exists"
             wc -l metadata/twitter-photo-metadata.json
           fi
-          if [ -f "twitter/js/tweets.js" ]; then
+          if [ -f "bstage/twitter/js/tweets.js" ]; then
             echo "✅ tweets.js exists"
-            wc -l twitter/js/tweets.js
+            wc -l bstage/twitter/js/tweets.js
           fi
-          if [ -f "twitter/js/data/group/group.js" ]; then
+          if [ -f "bstage/twitter/js/data/group/group.js" ]; then
             echo "✅ group.js exists"
           fi
-          if [ -f "twitter/js/data/photo/photo.js" ]; then
+          if [ -f "bstage/twitter/js/data/photo/photo.js" ]; then
             echo "✅ photo.js exists"
           fi
       
@@ -81,7 +81,7 @@ jobs:
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add -A metadata/ twitter/
+          git add -A metadata/ bstage/twitter/
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
