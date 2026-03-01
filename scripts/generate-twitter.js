@@ -123,6 +123,49 @@ function groupMediaByTweet(mediaFiles, folderPath, type, metadata) {
     const tweets = [];
     let appliedCount = 0;
     
+    // 텍스트 전용 트윗 추가 (미디어 없이 metadata에만 text가 있는 경우)
+    Object.keys(metadata).forEach(rawDate => {
+        const entry = metadata[rawDate];
+        
+        if (typeof entry === 'object' && entry.text !== undefined) {
+            // 단일 트윗: text가 있고 해당 날짜에 미디어가 없는 경우
+            if (entry.text.trim() !== '' && !grouped[rawDate]) {
+                tweets.push({
+                    id: `${type}-${rawDate}-text`,
+                    author: PROFILE,
+                    date: formatISODate(rawDate),
+                    displayDate: formatDisplayDate(rawDate),
+                    text: entry.text,
+                    images: [],
+                    type: type,
+                    rawDate: rawDate,
+                    tweetNum: null
+                });
+                console.log(`   📝 텍스트 전용 트윗 추가: ${rawDate}`);
+            }
+        } else if (typeof entry === 'object') {
+            // 다중 트윗 (1, 2, 3...)
+            Object.keys(entry).forEach(num => {
+                const subEntry = entry[num];
+                const tweetKey = `${rawDate}-${num}`;
+                if (subEntry.text && subEntry.text.trim() !== '' && !grouped[tweetKey]) {
+                    tweets.push({
+                        id: `${type}-${tweetKey}-text`,
+                        author: PROFILE,
+                        date: formatISODate(rawDate),
+                        displayDate: formatDisplayDate(rawDate),
+                        text: subEntry.text,
+                        images: [],
+                        type: type,
+                        rawDate: rawDate,
+                        tweetNum: parseInt(num)
+                    });
+                    console.log(`   📝 텍스트 전용 트윗 추가: ${tweetKey}`);
+                }
+            });
+        }
+    });
+
     Object.keys(grouped).forEach(tweetKey => {
         const group = grouped[tweetKey];
         const media = group.media;
