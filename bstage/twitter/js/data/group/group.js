@@ -168,6 +168,54 @@ export const groups = [
         "tweetNum": null
     },
     {
+        "id": "group-251005-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2025-10-05T12:00:00Z",
+        "displayDate": "2025.10.5.",
+        "text": "패션한국 Vol.9 Cover Story DAY 3 — 다섯 개의 초상, 하나의 이야기<br><br>🔗 https://sports.hankooki.com/news/articleView.html?idxno=6912048<br><br>#NOMAD #노매드",
+        "images": [],
+        "type": "group",
+        "rawDate": "251005",
+        "tweetNum": null
+    },
+    {
+        "id": "group-251004-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2025-10-04T12:00:00Z",
+        "displayDate": "2025.10.4.",
+        "text": "패션한국 Vol.9 Cover Story DAY 2 — 다섯 개의 시선, 하나의 호흡<br><br>🔗 https://sports.hankooki.com/news/articleView.html?idxno=6911997 <br><br>#NOMAD #노매드",
+        "images": [],
+        "type": "group",
+        "rawDate": "251004",
+        "tweetNum": null
+    },
+    {
+        "id": "group-251001-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2025-10-01T12:00:00Z",
+        "displayDate": "2025.10.1.",
+        "text": "패션한국 vol.9 커버스토리 DAY 1, 노매드(NOMAD) 다섯 멤버가 전하는 희망<br><br>🔗 https://sports.hankooki.com/news/articleView.html?idxno=6911765<br><br>#NOMAD #노매드",
+        "images": [],
+        "type": "group",
+        "rawDate": "251001",
+        "tweetNum": null
+    },
+    {
         "id": "group-250928",
         "author": {
             "name": "NOMAD",
@@ -184,6 +232,22 @@ export const groups = [
         ],
         "type": "group",
         "rawDate": "250928",
+        "tweetNum": null
+    },
+    {
+        "id": "group-250927-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2025-09-27T12:00:00Z",
+        "displayDate": "2025.9.27.",
+        "text": "패션한국 vol.9 ‘노매드(Nomad)’ 티저, 자유와 도전의 메시지 담다<br><br>🔗 https://sports.hankooki.com/news/articleView.html?idxno=6911287<br><br>#NOMAD #노매드<br><br>𝐇𝐀𝐏𝐏𝐘 𝐃𝐎𝐘 𝐃𝐀𝐘 😎<br><br>#NOMAD #노매드 <br>#DOY #도의<br>#HAPPY_DOY_DAY #HBD_DOY",
+        "images": [],
+        "type": "group",
+        "rawDate": "250927",
         "tweetNum": null
     },
     {
@@ -347,6 +411,22 @@ export const groups = [
         ],
         "type": "group",
         "rawDate": "250612",
+        "tweetNum": null
+    },
+    {
+        "id": "group-250608-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2025-06-08T12:00:00Z",
+        "displayDate": "2025.6.8.",
+        "text": "[#도의]<br>✈️<br><br>#NOMAD #노매드 <br>#DOY #도의",
+        "images": [],
+        "type": "group",
+        "rawDate": "250608",
         "tweetNum": null
     },
     {
@@ -1535,6 +1615,22 @@ export const groups = [
         "tweetNum": 1
     },
     {
+        "id": "group-241203-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-12-03T12:00:00Z",
+        "displayDate": "2024.12.3.",
+        "text": "[NEWS]<br><br>노매드, 한국 e스포츠산업 학회 명예 홍보대사 위촉<br>https://m.entertain.naver.com/article/477/0000524324<br><br>#NOMAD #노매드",
+        "images": [],
+        "type": "group",
+        "rawDate": "241203",
+        "tweetNum": null
+    },
+    {
         "id": "group-241201",
         "author": {
             "name": "NOMAD",
@@ -1695,6 +1791,22 @@ export const groups = [
         ],
         "type": "group",
         "rawDate": "241117",
+        "tweetNum": null
+    },
+    {
+        "id": "group-241115-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-11-15T12:00:00Z",
+        "displayDate": "2024.11.15.",
+        "text": "[NEWS] 노매드, 데뷔 첫 버스킹 성료…400여명 몰려 성황<br><br>https://m.entertain.naver.com/article/477/0000521952<br><br>#NOMAD #노매드",
+        "images": [],
+        "type": "group",
+        "rawDate": "241115",
         "tweetNum": null
     },
     {
@@ -2057,6 +2169,22 @@ export const groups = [
         ],
         "type": "group",
         "rawDate": "241024",
+        "tweetNum": null
+    },
+    {
+        "id": "group-241022-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-10-22T12:00:00Z",
+        "displayDate": "2024.10.22.",
+        "text": "[NEWS]<br><br>노매드, 도쿄 한류 박람회서 '아시아 루키' 입증<br>https://m.entertain.naver.com/article/477/0000518075<br><br>#NOMAD #노매드",
+        "images": [],
+        "type": "group",
+        "rawDate": "241022",
         "tweetNum": null
     },
     {
@@ -2444,6 +2572,38 @@ export const groups = [
         "tweetNum": null
     },
     {
+        "id": "group-240912-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-09-12T12:00:00Z",
+        "displayDate": "2024.9.12.",
+        "text": "[NEWS]<br><br>노매드, 2024 도쿄 한류 박람회 아시아 루키 선정…\"떠오르는 글로벌 아티스트 증명\"<br>https://m.entertain.naver.com/article/477/0000511861<br><br>#NOMAD #노매드",
+        "images": [],
+        "type": "group",
+        "rawDate": "240912",
+        "tweetNum": null
+    },
+    {
+        "id": "group-240911-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-09-11T12:00:00Z",
+        "displayDate": "2024.9.11.",
+        "text": "[NEWS]<br><br>노매드, 10월 싱글 1집으로 컴백 확정<br>https://m.entertain.naver.com/article/144/0000987938<br><br>#NOMAD #노매드",
+        "images": [],
+        "type": "group",
+        "rawDate": "240911",
+        "tweetNum": null
+    },
+    {
         "id": "group-240906",
         "author": {
             "name": "NOMAD",
@@ -2723,6 +2883,22 @@ export const groups = [
         "tweetNum": null
     },
     {
+        "id": "group-240614-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-06-14T12:00:00Z",
+        "displayDate": "2024.6.14.",
+        "text": "그룹 노매드(NOMAD), 멕시코시티에서 K-POP 전파 나선다<br><br>https://naver.me/FafMVu81<br><br>#NOMAD #노매드<br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "240614",
+        "tweetNum": null
+    },
+    {
         "id": "group-240606-2",
         "author": {
             "name": "NOMAD",
@@ -2796,6 +2972,22 @@ export const groups = [
         "tweetNum": null
     },
     {
+        "id": "group-240515-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-05-15T12:00:00Z",
+        "displayDate": "2024.5.15.",
+        "text": "[INTERVIEW]<br>#OBS 독특한 연예뉴스<br><br>어디서도 들을 수 없었던 이야기...'5인 5색' 노매드의 매력<br><br>🎬 https://youtu.be/mIZW4lpsOTc?si=OBWR2DgmEzwv2ypQ<br><br>#NOMAD #노매드 <br>#DOY #SANGHA #ONE #RIVR #JUNHO <br>#도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "240515",
+        "tweetNum": null
+    },
+    {
         "id": "group-240514",
         "author": {
             "name": "NOMAD",
@@ -2829,6 +3021,22 @@ export const groups = [
         ],
         "type": "group",
         "rawDate": "240505",
+        "tweetNum": null
+    },
+    {
+        "id": "group-240429-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-04-29T12:00:00Z",
+        "displayDate": "2024.4.29.",
+        "text": "JAPAN SHOWCASE <br>Behind the stage 📸<br><br>#NOMAD #노매드<br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "240429",
         "tweetNum": null
     },
     {
@@ -3339,6 +3547,54 @@ export const groups = [
         "tweetNum": null
     },
     {
+        "id": "group-240228-2-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-02-28T12:00:00Z",
+        "displayDate": "2024.2.28.",
+        "text": "“우리 곡은 우리가 만든다” 노매드, 신인답지 않은 패기<br><br>https://naver.me/5JV97cLH<br><br>#NOMAD #노매드 <br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "240228",
+        "tweetNum": 2
+    },
+    {
+        "id": "group-240228-1-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-02-28T12:00:00Z",
+        "displayDate": "2024.2.28.",
+        "text": "9년 연습생 끝 데뷔한 노매드 “발 닿는 곳이 무대” 자신감 가득한 출사표<br><br>https://naver.me/FKOdFjsg<br><br>#NOMAD #노매드 <br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "240228",
+        "tweetNum": 1
+    },
+    {
+        "id": "group-240216-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-02-16T12:00:00Z",
+        "displayDate": "2024.2.16.",
+        "text": "“떨리기보다 기대”…노매드, 직접 들려주는 데뷔 앨범 스토리<br>\"Looking forward to it rather than nervous\"... Nomad's debut album story<br><br>https://naver.me/FwSiIzyg<br><br>#NOMAD #노매드<br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "240216",
+        "tweetNum": null
+    },
+    {
         "id": "group-240213",
         "author": {
             "name": "NOMAD",
@@ -3414,6 +3670,54 @@ export const groups = [
         "tweetNum": null
     },
     {
+        "id": "group-240207-3-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-02-07T12:00:00Z",
+        "displayDate": "2024.2.7.",
+        "text": "Replying to <br>@NOMAD_is_here<br>[인터뷰] MHN 스포츠<br><br>신인 보이그룹 노매드, \"데뷔는 우리 이야기의 시작점\"<br>▶ https://naver.me/xUFy0M5B<br><br>#NOMAD #노매드<br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "240207",
+        "tweetNum": 3
+    },
+    {
+        "id": "group-240207-2-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-02-07T12:00:00Z",
+        "displayDate": "2024.2.7.",
+        "text": "[인터뷰] MHN 스포츠 <br><br>'신인 보이그룹' 노매드 '멤버 전원 20대? 증명할 자신 있어'[인터뷰①]<br>▶ https://naver.me/5CrS68F6<br><br>승무원-운동선수 준비하다 노매드로...데뷔 전 이렇게 뭉쳤다[인터뷰②]<br>▶ https://naver.me/xec7p52P<br><br>노매드 도의, \"음악으로 세상을 좋은 방향으로 이끄는 데 이바지하고 싶어\"<br>▶ https://naver.me/G6fG8svy<br><br>#NOMAD #노매드<br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "240207",
+        "tweetNum": 2
+    },
+    {
+        "id": "group-240207-1-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-02-07T12:00:00Z",
+        "displayDate": "2024.2.7.",
+        "text": "[뉴스] 노매드, 레트로 감성 티저사진 공개... 데뷔 앨범 앞두고 기대감 UP<br><br>https://naver.me/5fPuoyV2<br><br>#NOMAD #노매드<br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "240207",
+        "tweetNum": 1
+    },
+    {
         "id": "group-240206",
         "author": {
             "name": "NOMAD",
@@ -3432,6 +3736,22 @@ export const groups = [
         "tweetNum": null
     },
     {
+        "id": "group-240202-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-02-02T12:00:00Z",
+        "displayDate": "2024.2.2.",
+        "text": "[인터뷰] \"음악에 진심\"… 노매드의 이유있는 자신감 <br>선공개곡 5곡 순차 공개… 2월말 데뷔<br>\"구속받지 않는, 자유로운 음악 추구\"<br><br>http://naver.me/F40VC668<br><br>#NOMAD #노매드<br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "240202",
+        "tweetNum": null
+    },
+    {
         "id": "group-240124",
         "author": {
             "name": "NOMAD",
@@ -3447,6 +3767,22 @@ export const groups = [
         ],
         "type": "group",
         "rawDate": "240124",
+        "tweetNum": null
+    },
+    {
+        "id": "group-240112-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2024-01-12T12:00:00Z",
+        "displayDate": "2024.1.12.",
+        "text": "글로벌 유명 프로듀서 대거 참여...‘노매드’ 1st EP 수록곡 추가공개<br><br>Many famous global producers participate... Additional songs included in 'NOMAD' 1st EP released<br><br>https://mhns.co.kr/news/articleView.html?idxno=571311<br><br>#NOMAD #노매드 #DOY #SANGHA #ONE #RIVR #JUNHO #도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "240112",
         "tweetNum": null
     },
     {
@@ -3479,7 +3815,7 @@ export const groups = [
         },
         "date": "2023-12-30T12:00:00Z",
         "displayDate": "2023.12.30.",
-        "text": "",
+        "text": "📷 Behind cut #노매드<br><br>NOMAD 노매드 'Lights on' Performance Video<br><br>🎬https://youtu.be/SPh6FzSjOVk<br><br>#NOMAD #노매드<br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호<br><br>Behind cut #노매드<br><br>NOMAD 노매드 'Lights on' Performance Video<br><br>🎬https://youtu.be/SPh6FzSjOVk<br><br>#NOMAD #노매드<br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호",
         "images": [
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/231230%20(1).jpeg",
             "https://raw.githubusercontent.com/DOY-is-here/doy-is-here.github.io/main/x-group/231230%20(2).png",
@@ -3508,6 +3844,22 @@ export const groups = [
         ],
         "type": "group",
         "rawDate": "231228",
+        "tweetNum": null
+    },
+    {
+        "id": "group-231227-text",
+        "author": {
+            "name": "NOMAD",
+            "username": "NOMAD_is_here",
+            "avatar": "https://pbs.twimg.com/profile_images/1863098273033805824/MvJmELpF_400x400.jpg",
+            "verified": true
+        },
+        "date": "2023-12-27T12:00:00Z",
+        "displayDate": "2023.12.27.",
+        "text": "노매드, 1st EP 수록곡 ‘Lights on’ 퍼포먼스 비디오 오늘 선공개<br><br>NOMAD will pre-release performance video of 'Lights on' that B-side Track of 1st EP today<br><br>http://naver.me/GzgRxcGt<br><br>#NOMAD #노매드<br>#DOY #SANGHA #ONE #RIVR #JUNHO<br>#도의 #상하 #원 #리버 #준호",
+        "images": [],
+        "type": "group",
+        "rawDate": "231227",
         "tweetNum": null
     },
     {
