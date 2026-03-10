@@ -166,7 +166,26 @@ function updateMetadataStructure(existingMetadata, fileStructure) {
             }
         }
     }
-    
+
+    // ✅ 파일이 없어도 text가 있는 기존 항목 보존 (텍스트 전용 트윗)
+    for (const [rawDate, existing] of Object.entries(existingMetadata)) {
+        if (updatedMetadata[rawDate]) continue; // 이미 처리된 날짜는 스킵
+
+        // 단일 구조에 text가 있는 경우
+        if (typeof existing === 'object' && existing.text !== undefined && existing.text !== '') {
+            updatedMetadata[rawDate] = existing;
+            console.log(`   💾 텍스트 전용 항목 보존: ${rawDate}`);
+        }
+        // 다중 구조에 text가 있는 경우
+        else if (typeof existing === 'object' && !existing.text) {
+            const hasText = Object.values(existing).some(v => v.text && v.text !== '');
+            if (hasText) {
+                updatedMetadata[rawDate] = existing;
+                console.log(`   💾 텍스트 전용 항목 보존 (다중): ${rawDate}`);
+            }
+        }
+    }
+
     console.log(`   ✅ 업데이트 완료: ${Object.keys(updatedMetadata).length}개`);
     
     return { updatedMetadata, changes };
